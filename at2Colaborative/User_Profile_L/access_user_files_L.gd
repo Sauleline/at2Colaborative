@@ -5,6 +5,8 @@ var saveFileName = "User_Save.tres"
 
 var user1 = User.new()
 
+var test = "test"
+
 func _ready():
 	user1.user_name = "Test"
 	verifySaveDirectory(saveFilePath)
