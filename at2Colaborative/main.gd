@@ -10,6 +10,7 @@ func game_over():
 
 func new_game():
 	score = 0
+	$Background.set_instance_shader_parameter("spin_speed", 1.0)
 	$Player.start($StartPosition.position)
 	$StartTimer.start()
 	$MobTimer.wait_time = 1
