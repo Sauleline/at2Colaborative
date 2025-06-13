@@ -1,28 +1,32 @@
 extends Node
 
 var saveFilePath = "user://save/"
-var saveFileName = "User_Save.tres"
+var saveMainFileName = "UserProfiles.tres"
+var saveUserFileName = " "
+var userProfiles = null
 
-var user1 = User.new()
-
-var test = "test"
-
+func openUserProfiles():
+	userProfiles = ResourceLoader.load(saveFilePath+saveMainFileName).duplicate(true)
+	
+func getUser():
+	return User
+	
 func _ready():
-	user1.user_name = "Test"
 	verifySaveDirectory(saveFilePath)
-	save_user(user1)
-	var user2 = load_data()
-	print(user2.user_name)
 
 func verifySaveDirectory(path : String):
 	DirAccess.make_dir_absolute(path)
 	
-func save_user(user):
-	ResourceSaver.save(user, saveFilePath+saveFileName)
+func new_user(userName):
+	var user = User.new()
+	user.user_name = userName
+	userProfiles.add_user(user.user_name)
 	
-
+func save_user(user):
+	ResourceSaver.save(user, saveFilePath+saveUserFileName)
+	
 func load_data():
-	return ResourceLoader.load(saveFilePath+saveFileName).duplicate(true)
+	return ResourceLoader.load(saveFilePath+saveUserFileName).duplicate(true)
 
 	
 	
