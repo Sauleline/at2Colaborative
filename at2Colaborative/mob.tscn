@@ -46,7 +46,7 @@ animations = [{
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_jbnni"]
 radius = 37.0
-height = 102.0
+height = 100.0
 
 [node name="Mob" type="RigidBody2D" groups=["mobs"]]
 rotation = 1.5708
