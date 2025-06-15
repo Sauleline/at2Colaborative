@@ -1,3 +1,3 @@
-[gd_scene format=3 uid="uid://dkeh4l3ebbyn7"]
+[gd_scene format=3 uid="uid://d24sjpjxm4pxl"]
 
-[node name="SinglePlayerLevelSelect" type="Node2D"]
+[node name="SinglePlayerLevelSelect" type="CanvasLayer"]
