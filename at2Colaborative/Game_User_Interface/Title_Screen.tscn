@@ -1,0 +1,81 @@
+[gd_scene load_steps=7 format=3 uid="uid://1abapmdihvfw"]
+
+[ext_resource type="Theme" uid="uid://dwdqkuxyspo32" path="res://Game_User_Interface/Theme.tres" id="1_wjfn0"]
+[ext_resource type="Script" uid="uid://cprlecy5x3lag" path="res://Game_User_Interface/single_player.gd" id="2_yc8ls"]
+[ext_resource type="Script" uid="uid://b8k8jdwcw80ph" path="res://Game_User_Interface/wardrobe.gd" id="3_puuhi"]
+[ext_resource type="Script" uid="uid://djcjoj2xh6hre" path="res://Game_User_Interface/settings.gd" id="4_0l30m"]
+[ext_resource type="Script" uid="uid://b6n6plecqc4a1" path="res://Game_User_Interface/multiplayer.gd" id="5_f3pfb"]
+[ext_resource type="Script" uid="uid://dunb4d4bn0p2f" path="res://Game_User_Interface/quit.gd" id="6_tpwak"]
+
+[node name="TitleScreen" type="CanvasLayer"]
+
+[node name="Single_Player" type="Button" parent="."]
+offset_left = 652.0
+offset_top = 252.0
+offset_right = 1052.0
+offset_bottom = 409.0
+theme = ExtResource("1_wjfn0")
+text = "Single Player"
+script = ExtResource("2_yc8ls")
+
+[node name="Wardrobe" type="Button" parent="."]
+offset_left = 100.0
+offset_top = 439.0
+offset_right = 400.0
+offset_bottom = 596.0
+theme = ExtResource("1_wjfn0")
+text = "Wardrobe"
+script = ExtResource("3_puuhi")
+
+[node name="Settings" type="Button" parent="."]
+offset_left = 425.0
+offset_top = 439.0
+offset_right = 725.0
+offset_bottom = 596.0
+theme = ExtResource("1_wjfn0")
+text = "Settings"
+script = ExtResource("4_0l30m")
+
+[node name="Multiplayer" type="Button" parent="."]
+offset_left = 100.0
+offset_top = 252.0
+offset_right = 500.0
+offset_bottom = 409.0
+theme = ExtResource("1_wjfn0")
+action_mode = 0
+text = "Multiplayer"
+script = ExtResource("5_f3pfb")
+
+[node name="Label" type="Label" parent="."]
+offset_left = 217.0
+offset_top = 50.0
+offset_right = 917.0
+offset_bottom = 225.0
+theme = ExtResource("1_wjfn0")
+theme_override_font_sizes/font_size = 125
+text = "Game Name"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Quit" type="Button" parent="."]
+offset_left = 750.0
+offset_top = 437.0
+offset_right = 1050.0
+offset_bottom = 594.0
+theme = ExtResource("1_wjfn0")
+text = "Quit"
+script = ExtResource("6_tpwak")
+
+[node name="Change_User" type="Button" parent="."]
+offset_left = 1002.0
+offset_top = 50.0
+offset_right = 1102.0
+offset_bottom = 150.0
+text = "Change
+User"
+
+[connection signal="pressed" from="Single_Player" to="Single_Player" method="_on_pressed"]
+[connection signal="pressed" from="Wardrobe" to="Wardrobe" method="_on_pressed"]
+[connection signal="pressed" from="Settings" to="Settings" method="_on_pressed"]
+[connection signal="pressed" from="Multiplayer" to="Multiplayer" method="_on_pressed"]
+[connection signal="pressed" from="Quit" to="Quit" method="_on_pressed"]
