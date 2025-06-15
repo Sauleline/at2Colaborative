@@ -1,13 +1,49 @@
-[gd_scene load_steps=7 format=3 uid="uid://1abapmdihvfw"]
+[gd_scene load_steps=8 format=3 uid="uid://1abapmdihvfw"]
 
+[ext_resource type="Script" uid="uid://b0h8c4vqajvri" path="res://Game_User_Interface/title_screen.gd" id="1_5fu7q"]
 [ext_resource type="Theme" uid="uid://dwdqkuxyspo32" path="res://Game_User_Interface/Theme.tres" id="1_wjfn0"]
-[ext_resource type="Script" uid="uid://cprlecy5x3lag" path="res://Game_User_Interface/single_player.gd" id="2_yc8ls"]
-[ext_resource type="Script" uid="uid://b8k8jdwcw80ph" path="res://Game_User_Interface/wardrobe.gd" id="3_puuhi"]
-[ext_resource type="Script" uid="uid://djcjoj2xh6hre" path="res://Game_User_Interface/settings.gd" id="4_0l30m"]
-[ext_resource type="Script" uid="uid://b6n6plecqc4a1" path="res://Game_User_Interface/multiplayer.gd" id="5_f3pfb"]
-[ext_resource type="Script" uid="uid://dunb4d4bn0p2f" path="res://Game_User_Interface/quit.gd" id="6_tpwak"]
+
+[sub_resource type="GDScript" id="GDScript_r5ysx"]
+script/source = "extends Button
+
+func _on_pressed() -> void:
+	get_tree().change_scene_to_file(\"res://Game_User_Interface/Single_Player_Level_Select.tscn\")
+"
+
+[sub_resource type="GDScript" id="GDScript_tl6ip"]
+script/source = "extends Button
+
+
+func _on_pressed() -> void:
+	get_tree().change_scene_to_file(\"res://Game_User_Interface/Wardrobe.tscn\")
+"
+
+[sub_resource type="GDScript" id="GDScript_f3jgk"]
+script/source = "extends Button
+
+
+func _on_pressed() -> void:
+	get_tree().change_scene_to_file(\"res://Game_User_Interface/Settings.tscn\")
+"
+
+[sub_resource type="GDScript" id="GDScript_wjfn0"]
+script/source = "extends Button
+	
+
+func _on_pressed() -> void:
+	get_tree().change_scene_to_file(\"res://Game_User_Interface/Multiplayer_Level_Select.tscn\")
+"
+
+[sub_resource type="GDScript" id="GDScript_yc8ls"]
+script/source = "extends Button
+
+
+func _on_pressed() -> void:
+	get_tree().quit()
+"
 
 [node name="TitleScreen" type="CanvasLayer"]
+script = ExtResource("1_5fu7q")
 
 [node name="Single_Player" type="Button" parent="."]
 offset_left = 652.0
@@ -16,7 +52,7 @@ offset_right = 1052.0
 offset_bottom = 409.0
 theme = ExtResource("1_wjfn0")
 text = "Single Player"
-script = ExtResource("2_yc8ls")
+script = SubResource("GDScript_r5ysx")
 
 [node name="Wardrobe" type="Button" parent="."]
 offset_left = 100.0
@@ -25,7 +61,7 @@ offset_right = 400.0
 offset_bottom = 596.0
 theme = ExtResource("1_wjfn0")
 text = "Wardrobe"
-script = ExtResource("3_puuhi")
+script = SubResource("GDScript_tl6ip")
 
 [node name="Settings" type="Button" parent="."]
 offset_left = 425.0
@@ -34,7 +70,7 @@ offset_right = 725.0
 offset_bottom = 596.0
 theme = ExtResource("1_wjfn0")
 text = "Settings"
-script = ExtResource("4_0l30m")
+script = SubResource("GDScript_f3jgk")
 
 [node name="Multiplayer" type="Button" parent="."]
 offset_left = 100.0
@@ -44,7 +80,7 @@ offset_bottom = 409.0
 theme = ExtResource("1_wjfn0")
 action_mode = 0
 text = "Multiplayer"
-script = ExtResource("5_f3pfb")
+script = SubResource("GDScript_wjfn0")
 
 [node name="Label" type="Label" parent="."]
 offset_left = 217.0
@@ -64,7 +100,7 @@ offset_right = 1050.0
 offset_bottom = 594.0
 theme = ExtResource("1_wjfn0")
 text = "Quit"
-script = ExtResource("6_tpwak")
+script = SubResource("GDScript_yc8ls")
 
 [node name="Change_User" type="Button" parent="."]
 offset_left = 1002.0
@@ -74,8 +110,8 @@ offset_bottom = 150.0
 text = "Change
 User"
 
-[connection signal="pressed" from="Single_Player" to="Single_Player" method="_on_pressed"]
-[connection signal="pressed" from="Wardrobe" to="Wardrobe" method="_on_pressed"]
-[connection signal="pressed" from="Settings" to="Settings" method="_on_pressed"]
-[connection signal="pressed" from="Multiplayer" to="Multiplayer" method="_on_pressed"]
-[connection signal="pressed" from="Quit" to="Quit" method="_on_pressed"]
+[connection signal="pressed" from="Single_Player" to="." method="_on_single_player_pressed"]
+[connection signal="pressed" from="Wardrobe" to="." method="_on_wardrobe_pressed"]
+[connection signal="pressed" from="Settings" to="." method="_on_settings_pressed"]
+[connection signal="pressed" from="Multiplayer" to="." method="_on_multiplayer_pressed"]
+[connection signal="pressed" from="Quit" to="." method="_on_quit_pressed"]
