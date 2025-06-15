@@ -24,9 +24,9 @@ shader_parameter/pixel_filter = 300.0
 
 [sub_resource type="Curve2D" id="Curve2D_0xm2m"]
 _data = {
-"points": PackedVector2Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 480, 0, 0, 0, 0, 0, 480, 720, 0, 0, 0, 0, 0, 720, 0, 0, 0, 0, 0, 0)
+"points": PackedVector2Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 480, 0, 0, 0, 0, 0, 792, 0, 0, 0, 0, 0, 792, 729, 0, 0, 0, 0, 0, 720, 0, 0, 0, 0, 0, 0)
 }
-point_count = 5
+point_count = 6
 
 [node name="Main" type="Node"]
 script = ExtResource("1_h2yge")
@@ -35,8 +35,8 @@ mob_scene = ExtResource("2_1bvp3")
 [node name="Background" type="ColorRect" parent="."]
 material = SubResource("ShaderMaterial_7mycd")
 offset_top = -1.0
-offset_right = 480.0
-offset_bottom = 719.0
+offset_right = 1152.0
+offset_bottom = 647.0
 
 [node name="Player" parent="." instance=ExtResource("1_ig7tw")]
 
@@ -53,6 +53,7 @@ one_shot = true
 position = Vector2(240, 450)
 
 [node name="MobPath" type="Path2D" parent="."]
+scale = Vector2(1.45455, 0.888889)
 curve = SubResource("Curve2D_0xm2m")
 
 [node name="MobSpawnLocation" type="PathFollow2D" parent="MobPath"]
