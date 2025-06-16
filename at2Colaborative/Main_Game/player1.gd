@@ -9,12 +9,12 @@ extends CharacterBody2D
 
 func _physics_process(delta):
 	velocity.y += gravity * delta
-	var dir = Input.get_axis("move_left", "move_right")
+	var dir = Input.get_axis("p1left", "p1right")
 	if dir != 0:
 		velocity.x = lerp(velocity.x, dir * speed, acceleration)
 	else:
 		velocity.x = lerp(velocity.x, 0.0, friction)
 
 	move_and_slide()
-	if Input.is_action_just_pressed("jump") and is_on_floor():
+	if Input.is_action_just_pressed("p1jump") and is_on_floor():
 		velocity.y = jump_speed
