@@ -1,9 +1,9 @@
 [gd_scene load_steps=2 format=3 uid="uid://fxkn3r0wdh7v"]
 
-[ext_resource type="Script" uid="uid://dkt7fq7murtp0" path="res://User_Profile_L/access_user_files_L.gd" id="1_is4jm"]
+[ext_resource type="Script" uid="uid://d2nd3w5upjk8a" path="res://User_Profile_L/main.gd" id="1_yhow0"]
 
 [node name="UserProfileUi" type="Node2D"]
-script = ExtResource("1_is4jm")
+script = ExtResource("1_yhow0")
 
 [node name="Button" type="Button" parent="."]
 anchors_preset = 8
