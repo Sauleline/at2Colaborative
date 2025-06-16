@@ -1,3 +1,35 @@
-[gd_scene format=3 uid="uid://c7186ew75hwss"]
+[gd_scene load_steps=3 format=3 uid="uid://ecv35nc7xcgi"]
 
-[node name="Terrain" type="Node"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_nraoy"]
+size = Vector2(768, 40)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wewki"]
+size = Vector2(40, 405.5)
+
+[node name="Terrain" type="RigidBody2D"]
+gravity_scale = 0.0
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_left = 173.0
+offset_top = 585.0
+offset_right = 941.0
+offset_bottom = 625.0
+metadata/_edit_use_anchors_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(557, 605)
+shape = SubResource("RectangleShape2D_nraoy")
+
+[node name="ColorRect2" type="ColorRect" parent="."]
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 173.0
+offset_top = 222.0
+offset_right = 213.0
+offset_bottom = 622.0
+grow_vertical = 0
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
+position = Vector2(193, 422.25)
+shape = SubResource("RectangleShape2D_wewki")
