@@ -1,3 +1,32 @@
-[gd_scene format=3 uid="uid://dlatpq687jg82"]
+[gd_scene load_steps=5 format=3 uid="uid://dlatpq687jg82"]
 
-[node name="Platformer" type="Node"]
+[ext_resource type="Script" uid="uid://c0k0ka4wwvckr" path="res://Main_Game/player.gd" id="1_boqdv"]
+[ext_resource type="Texture2D" uid="uid://v2q1nfjvbkar" path="res://Art/player.png" id="1_rvp0r"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_boqdv"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_rvp0r")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rvp0r"]
+size = Vector2(32, 64)
+
+[node name="Player" type="Node"]
+script = ExtResource("1_boqdv")
+
+[node name="RigidBody2D" type="RigidBody2D" parent="."]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="RigidBody2D"]
+position = Vector2(16, 32)
+scale = Vector2(3, 3)
+sprite_frames = SubResource("SpriteFrames_boqdv")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D"]
+position = Vector2(16, 32)
+shape = SubResource("RectangleShape2D_rvp0r")
