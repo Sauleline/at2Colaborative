@@ -1,0 +1,142 @@
+[gd_scene load_steps=10 format=3 uid="uid://1abapmdihvfw"]
+
+[ext_resource type="Script" uid="uid://b0h8c4vqajvri" path="res://Game_User_Interface/title_screen.gd" id="1_5fu7q"]
+[ext_resource type="Theme" uid="uid://dwdqkuxyspo32" path="res://Game_User_Interface/Theme.tres" id="1_wjfn0"]
+[ext_resource type="Shader" uid="uid://c0xbt0jdme1rs" path="res://main.gdshader" id="2_r5ysx"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_tl6ip"]
+shader = ExtResource("2_r5ysx")
+shader_parameter/polar_coordinates = false
+shader_parameter/polar_center = Vector2(0.5, 0.5)
+shader_parameter/polar_zoom = 1.0
+shader_parameter/polar_repeat = 1.0
+shader_parameter/spin_rotation = 0.0
+shader_parameter/spin_speed = 1.0
+shader_parameter/offset = Vector2(0, 0)
+shader_parameter/colour_1 = Color(0.690196, 0.0431373, 0.411765, 1)
+shader_parameter/colour_2 = Color(0.258824, 0.0392157, 0.333333, 1)
+shader_parameter/colour_3 = Color(0.352591, 0.59681, 0.614429, 1)
+shader_parameter/contrast = 2.0
+shader_parameter/spin_amount = 0.36
+shader_parameter/pixel_filter = 700.0
+
+[sub_resource type="GDScript" id="GDScript_r5ysx"]
+script/source = "extends Button
+
+func _on_pressed() -> void:
+	get_tree().change_scene_to_file(\"res://Game_User_Interface/Single_Player_Level_Select.tscn\")
+"
+
+[sub_resource type="GDScript" id="GDScript_tl6ip"]
+script/source = "extends Button
+
+
+func _on_pressed() -> void:
+	get_tree().change_scene_to_file(\"res://Game_User_Interface/Wardrobe.tscn\")
+"
+
+[sub_resource type="GDScript" id="GDScript_f3jgk"]
+script/source = "extends Button
+
+
+func _on_pressed() -> void:
+	get_tree().change_scene_to_file(\"res://Game_User_Interface/Settings.tscn\")
+"
+
+[sub_resource type="GDScript" id="GDScript_wjfn0"]
+script/source = "extends Button
+	
+
+func _on_pressed() -> void:
+	get_tree().change_scene_to_file(\"res://Game_User_Interface/Multiplayer_Level_Select.tscn\")
+"
+
+[sub_resource type="GDScript" id="GDScript_yc8ls"]
+script/source = "extends Button
+
+
+func _on_pressed() -> void:
+	get_tree().quit()
+"
+
+[node name="TitleScreen" type="CanvasLayer"]
+script = ExtResource("1_5fu7q")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+material = SubResource("ShaderMaterial_tl6ip")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Single_Player" type="Button" parent="."]
+offset_left = 652.0
+offset_top = 252.0
+offset_right = 1052.0
+offset_bottom = 409.0
+theme = ExtResource("1_wjfn0")
+text = "Single Player"
+script = SubResource("GDScript_r5ysx")
+
+[node name="Wardrobe" type="Button" parent="."]
+offset_left = 100.0
+offset_top = 439.0
+offset_right = 400.0
+offset_bottom = 596.0
+theme = ExtResource("1_wjfn0")
+text = "Wardrobe"
+script = SubResource("GDScript_tl6ip")
+
+[node name="Settings" type="Button" parent="."]
+offset_left = 425.0
+offset_top = 439.0
+offset_right = 725.0
+offset_bottom = 596.0
+theme = ExtResource("1_wjfn0")
+text = "Settings"
+script = SubResource("GDScript_f3jgk")
+
+[node name="Multiplayer" type="Button" parent="."]
+offset_left = 100.0
+offset_top = 252.0
+offset_right = 500.0
+offset_bottom = 409.0
+theme = ExtResource("1_wjfn0")
+action_mode = 0
+text = "Multiplayer"
+script = SubResource("GDScript_wjfn0")
+
+[node name="Title" type="Label" parent="."]
+offset_left = 217.0
+offset_top = 50.0
+offset_right = 917.0
+offset_bottom = 225.0
+theme = ExtResource("1_wjfn0")
+theme_override_font_sizes/font_size = 125
+text = "Game Name"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Quit" type="Button" parent="."]
+offset_left = 750.0
+offset_top = 437.0
+offset_right = 1050.0
+offset_bottom = 594.0
+theme = ExtResource("1_wjfn0")
+text = "Quit"
+script = SubResource("GDScript_yc8ls")
+
+[node name="Change_User" type="Button" parent="."]
+offset_left = 1002.0
+offset_top = 50.0
+offset_right = 1102.0
+offset_bottom = 150.0
+text = "Change
+User"
+
+[connection signal="pressed" from="Single_Player" to="." method="_on_single_player_pressed"]
+[connection signal="pressed" from="Wardrobe" to="." method="_on_wardrobe_pressed"]
+[connection signal="pressed" from="Settings" to="." method="_on_settings_pressed"]
+[connection signal="pressed" from="Multiplayer" to="." method="_on_multiplayer_pressed"]
+[connection signal="pressed" from="Quit" to="." method="_on_quit_pressed"]
