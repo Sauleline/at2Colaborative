@@ -3,8 +3,8 @@ extends CharacterBody2D
 @export var speed = 1200
 @export var jump_speed = -1800
 @export var gravity = 4000
-@export_range(0.0, 1.0) var friction = 0.1
-@export_range(0.0 , 1.0) var acceleration = 0.25
+@export_range(0.0, 1.0) var friction = 0.5
+@export_range(0.0 , 1.0) var acceleration = 0.1
 
 
 func _physics_process(delta):
