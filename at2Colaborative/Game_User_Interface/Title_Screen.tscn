@@ -27,6 +27,14 @@ func _on_pressed() -> void:
 	get_tree().change_scene_to_file(\"res://Game_User_Interface/Single_Player_Level_Select.tscn\")
 "
 
+[sub_resource type="GDScript" id="GDScript_wjfn0"]
+script/source = "extends Button
+	
+
+func _on_pressed() -> void:
+	get_tree().change_scene_to_file(\"res://Game_User_Interface/Multiplayer_Level_Select.tscn\")
+"
+
 [sub_resource type="GDScript" id="GDScript_tl6ip"]
 script/source = "extends Button
 
@@ -41,14 +49,6 @@ script/source = "extends Button
 
 func _on_pressed() -> void:
 	get_tree().change_scene_to_file(\"res://Game_User_Interface/Settings.tscn\")
-"
-
-[sub_resource type="GDScript" id="GDScript_wjfn0"]
-script/source = "extends Button
-	
-
-func _on_pressed() -> void:
-	get_tree().change_scene_to_file(\"res://Game_User_Interface/Multiplayer_Level_Select.tscn\")
 "
 
 [sub_resource type="GDScript" id="GDScript_yc8ls"]
@@ -90,6 +90,16 @@ theme = ExtResource("1_wjfn0")
 text = "Single Player"
 script = SubResource("GDScript_r5ysx")
 
+[node name="Multi_Player" type="Button" parent="."]
+offset_left = 100.0
+offset_top = 252.0
+offset_right = 500.0
+offset_bottom = 409.0
+theme = ExtResource("1_wjfn0")
+action_mode = 0
+text = "Multiplayer"
+script = SubResource("GDScript_wjfn0")
+
 [node name="Wardrobe" type="Button" parent="."]
 offset_left = 100.0
 offset_top = 439.0
@@ -107,16 +117,6 @@ offset_bottom = 596.0
 theme = ExtResource("1_wjfn0")
 text = "Settings"
 script = SubResource("GDScript_f3jgk")
-
-[node name="Multiplayer" type="Button" parent="."]
-offset_left = 100.0
-offset_top = 252.0
-offset_right = 500.0
-offset_bottom = 409.0
-theme = ExtResource("1_wjfn0")
-action_mode = 0
-text = "Multiplayer"
-script = SubResource("GDScript_wjfn0")
 
 [node name="Quit" type="Button" parent="."]
 offset_left = 750.0
@@ -138,7 +138,7 @@ text = "Change
 User"
 
 [connection signal="pressed" from="Single_Player" to="." method="_on_single_player_pressed"]
+[connection signal="pressed" from="Multi_Player" to="." method="_on_multiplayer_pressed"]
 [connection signal="pressed" from="Wardrobe" to="." method="_on_wardrobe_pressed"]
 [connection signal="pressed" from="Settings" to="." method="_on_settings_pressed"]
-[connection signal="pressed" from="Multiplayer" to="." method="_on_multiplayer_pressed"]
 [connection signal="pressed" from="Quit" to="." method="_on_quit_pressed"]

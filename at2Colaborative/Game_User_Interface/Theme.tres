@@ -6,3 +6,4 @@ font_names = PackedStringArray("Comic Sans MS")
 [resource]
 default_font = SubResource("SystemFont_abrne")
 default_font_size = 60
+Button/styles/disabled = null
