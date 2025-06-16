@@ -32,6 +32,18 @@ func addUser():
 	OptionUserSelect.clear()
 	populate_user_list()
 	
+func removeUser():
+	var ID = OptionUserSelect.get_selected_id()
+	var Text = OptionUserSelect.get_item_text(ID)
+	var userFilePath = userProfiles.userProfilesDict[Text]
+	OptionUserSelect.remove_item(ID)
+	userProfiles.remove_user(Text)
+	removeUserFile(userFilePath)
+	OptionUserSelect.clear()
+	populate_user_list()
 
 func _on_add_user_pressed() -> void:
 	addUser() 
+
+func _on_remove_user_pressed() -> void:
+	removeUser() # Replace with function body.

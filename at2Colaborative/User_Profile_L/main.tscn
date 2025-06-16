@@ -40,5 +40,14 @@ offset_bottom = 100.0
 text = "Select User
 "
 
+[node name="RemoveUser" type="Button" parent="."]
+offset_left = 255.0
+offset_top = 107.0
+offset_right = 370.0
+offset_bottom = 145.0
+text = "Remove User
+"
+
 [connection signal="pressed" from="AddUser" to="." method="_on_add_user_pressed"]
 [connection signal="pressed" from="SelectUser" to="." method="_on_select_user_pressed"]
+[connection signal="pressed" from="RemoveUser" to="." method="_on_remove_user_pressed"]

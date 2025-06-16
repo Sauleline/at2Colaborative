@@ -26,10 +26,15 @@ func new_user(userName):
 	user.userName = userName
 	saveUserFileName = user.userName+".tres"
 	userProfiles.add_user(user)
+
+func removeUserFile(userFilePath):
+	var dir = DirAccess.open(saveFilePath)
+	dir.remove(saveFilePath+userFilePath)
 	ResourceSaver.save(userProfiles, saveFilePath+saveMainFileName)
 	
 func save_user():
 	ResourceSaver.save(user, saveFilePath+saveUserFileName)
+	ResourceSaver.save(userProfiles, saveFilePath+saveMainFileName)
 	
 func open_user():
 	if ResourceLoader.exists(saveFilePath + saveUserFileName):
