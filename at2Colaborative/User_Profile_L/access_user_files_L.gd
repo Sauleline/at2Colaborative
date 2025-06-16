@@ -26,6 +26,7 @@ func new_user(userName):
 	user.userName = userName
 	saveUserFileName = user.userName+".tres"
 	userProfiles.add_user(user)
+	ResourceSaver.save(userProfiles, saveFilePath+saveMainFileName)
 	
 func save_user():
 	ResourceSaver.save(user, saveFilePath+saveUserFileName)
