@@ -5,7 +5,10 @@ extends CharacterBody2D
 @export var gravity = 4000
 @export_range(0.0, 1.0) var friction = 0.5
 @export_range(0.0 , 1.0) var acceleration = 0.1
+@export var level = "Level 10 Crook"
 
+func _ready():
+	$"Level Display".text = level
 
 func _physics_process(delta):
 	velocity.y += gravity * delta

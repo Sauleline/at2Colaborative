@@ -28,3 +28,13 @@ animation = &"standing"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_gragq")
+
+[node name="Level Display" type="Label" parent="."]
+offset_left = -72.0
+offset_top = -80.0
+offset_right = 72.0
+offset_bottom = -40.0
+text = "Level 10 Crook"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
