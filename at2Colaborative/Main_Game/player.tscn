@@ -1,16 +1,16 @@
 [gd_scene load_steps=5 format=3 uid="uid://gq8bk5h87loy"]
 
 [ext_resource type="Script" uid="uid://dh2q4d51je4yd" path="res://Main_Game/player.gd" id="1_rvp0r"]
-[ext_resource type="Texture2D" uid="uid://v2q1nfjvbkar" path="res://Art/player.png" id="2_boqdv"]
+[ext_resource type="Texture2D" uid="uid://bpfr73qhoymbq" path="res://Art/dame da ne guy.png" id="3_0s2u3"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_0s2u3"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("2_boqdv")
+"texture": ExtResource("3_0s2u3")
 }],
 "loop": true,
-"name": &"standing",
+"name": &"Dame Dame Guy",
 "speed": 5.0
 }]
 
@@ -21,20 +21,24 @@ size = Vector2(64, 64)
 script = ExtResource("1_rvp0r")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(9.53674e-07, 0)
-scale = Vector2(6.4, 3.2)
+position = Vector2(3.8147e-06, 7.62939e-06)
+scale = Vector2(0.297674, 0.137931)
 sprite_frames = SubResource("SpriteFrames_0s2u3")
-animation = &"standing"
+animation = &"Dame Dame Guy"
+autoplay = "Dame Dame Guy"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_gragq")
 
 [node name="Level Display" type="Label" parent="."]
-offset_left = -72.0
+offset_left = -80.0
 offset_top = -80.0
-offset_right = 72.0
+offset_right = 80.0
 offset_bottom = -40.0
-text = "Level 10 Crook"
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 8
+theme_override_font_sizes/font_size = 19
+text = "Level Display"
 horizontal_alignment = 1
 vertical_alignment = 1
 autowrap_mode = 2

@@ -13,6 +13,10 @@ func _ready():
 func _physics_process(delta):
 	velocity.y += gravity * delta
 	var dir = Input.get_axis("p1left", "p1right")
+	if (velocity.x < 0):
+		$AnimatedSprite2D.flip_h = false
+	else:
+		$AnimatedSprite2D.flip_h = true
 	if dir != 0:
 		velocity.x = lerp(velocity.x, dir * speed, acceleration)
 	else:
