@@ -1,35 +1,17 @@
-[gd_scene load_steps=5 format=3 uid="uid://1abapmdihvfw"]
+[gd_scene load_steps=4 format=3 uid="uid://1abapmdihvfw"]
 
 [ext_resource type="Script" uid="uid://b0h8c4vqajvri" path="res://Game_User_Interface/title_screen.gd" id="1_5fu7q"]
 [ext_resource type="Theme" uid="uid://dwdqkuxyspo32" path="res://Game_User_Interface/Theme.tres" id="1_wjfn0"]
-[ext_resource type="Shader" path="res://main.gdshader" id="2_r5ysx"]
-
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_tl6ip"]
-shader = ExtResource("2_r5ysx")
-shader_parameter/polar_coordinates = false
-shader_parameter/polar_center = Vector2(0.5, 0.5)
-shader_parameter/polar_zoom = 1.0
-shader_parameter/polar_repeat = 1.0
-shader_parameter/spin_rotation = 0.0
-shader_parameter/spin_speed = 1.0
-shader_parameter/offset = Vector2(0, 0)
-shader_parameter/colour_1 = Color(0.690196, 0.0431373, 0.411765, 1)
-shader_parameter/colour_2 = Color(0.258824, 0.0392157, 0.333333, 1)
-shader_parameter/colour_3 = Color(0.352591, 0.59681, 0.614429, 1)
-shader_parameter/contrast = 2.0
-shader_parameter/spin_amount = 0.36
-shader_parameter/pixel_filter = 700.0
+[ext_resource type="PackedScene" uid="uid://dyn2qf6aui3uv" path="res://Game_User_Interface/UI_Background.tscn" id="2_r5ysx"]
 
 [node name="TitleScreen" type="CanvasLayer"]
 script = ExtResource("1_5fu7q")
 
-[node name="Background" type="ColorRect" parent="."]
-material = SubResource("ShaderMaterial_tl6ip")
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
+[node name="Background" parent="." instance=ExtResource("2_r5ysx")]
+offset_left = 5.0
+offset_top = 6.0
+offset_right = 5.0
+offset_bottom = 6.0
 
 [node name="Title" type="Label" parent="."]
 offset_left = 217.0
