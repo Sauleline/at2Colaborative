@@ -17,4 +17,6 @@ func _on_player_hit_checkpoint(checkpoint: Area2D, number:int):
 
 
 func _on_player_respawn() -> void:
+	$Player.velocity.x = 0
+	$Player.velocity.y = 0
 	$Player.position = $PlayerSpawn.position

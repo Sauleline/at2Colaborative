@@ -31,8 +31,6 @@ func _physics_process(delta):
 
 func _on_area_2d_area_entered(area: Area2D) -> void:
 	if (area.get_parent().name == "Hitboxes"):
-		velocity.x = 0
-		velocity.y = 0
 		emit_signal("respawn")
 	if (area.get_parent().name == "Checkpoints"):
 		emit_signal("hitCheckpoint", area, int(area.name))
