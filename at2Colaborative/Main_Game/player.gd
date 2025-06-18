@@ -1,5 +1,7 @@
 extends CharacterBody2D
 
+signal hitCheckpoint(checkpoint: Area2D, number: int)
+
 @export var speed = 600
 @export var jump_speed = -750
 @export var gravity = 2000
@@ -25,3 +27,7 @@ func _physics_process(delta):
 	move_and_slide()
 	if Input.is_action_just_pressed("p1jump") and is_on_floor():
 		velocity.y = jump_speed
+
+func _on_area_2d_area_entered(area: Area2D) -> void:
+	if (area.get_parent().name == "Checkpoints"):
+		emit_signal("hitCheckpoint", area, int(area.name))

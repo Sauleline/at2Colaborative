@@ -13,6 +13,9 @@ config_version=5
 config/name="at2Colaborative"
 run/main_scene="uid://1abapmdihvfw"
 config/features=PackedStringArray("4.4", "Forward Plus")
+boot_splash/show_image=false
+boot_splash/fullsize=false
+boot_splash/use_filter=false
 
 [display]
 

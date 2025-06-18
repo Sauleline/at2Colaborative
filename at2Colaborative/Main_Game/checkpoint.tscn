@@ -1,0 +1,16 @@
+[gd_scene load_steps=2 format=3 uid="uid://bt6nqr1i764ly"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_sywrr"]
+size = Vector2(64, 96)
+
+[node name="Checkpoint" type="Area2D"]
+
+[node name="Activated" type="ColorRect" parent="."]
+offset_left = -32.0
+offset_top = -64.0
+offset_right = 32.0
+offset_bottom = 32.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -16)
+shape = SubResource("RectangleShape2D_sywrr")
