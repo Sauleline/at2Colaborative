@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dpwioa8sjfo7f"
-path="res://.godot/imported/Stronghold_ChimneyFire.png-5a27c6ff42c2483f9a7b82f369da91a6.ctex"
+path="res://.godot/imported/Stronghold_ChimneyFire.png-aae2e2592c17ed4f603dac78c436a433.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://art/terrains/Multi_Platformer_Tileset_v2/Stronghold/Props/Animated/Stronghold_ChimneyFire.png"
-dest_files=["res://.godot/imported/Stronghold_ChimneyFire.png-5a27c6ff42c2483f9a7b82f369da91a6.ctex"]
+source_file="res://Art/terrains/Multi_Platformer_Tileset_v2/Stronghold/Props/Animated/Stronghold_ChimneyFire.png"
+dest_files=["res://.godot/imported/Stronghold_ChimneyFire.png-aae2e2592c17ed4f603dac78c436a433.ctex"]
 
 [params]
 
