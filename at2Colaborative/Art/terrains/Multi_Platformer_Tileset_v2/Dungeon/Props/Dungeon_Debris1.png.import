@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://fqoh6abxkjxa"
-path="res://.godot/imported/Dungeon_Debris1.png-e8685c6bd41b5949eb7f61207dabbd20.ctex"
+path="res://.godot/imported/Dungeon_Debris1.png-db37bd54972ee732aa7040a7ebb3b79f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Art/terrains/Multi_Platformer_Tileset_v2/Dungeon/Props/Dungeon_Debris1.png"
-dest_files=["res://.godot/imported/Dungeon_Debris1.png-e8685c6bd41b5949eb7f61207dabbd20.ctex"]
+source_file="res://art/terrains/Multi_Platformer_Tileset_v2/Dungeon/Props/Dungeon_Debris1.png"
+dest_files=["res://.godot/imported/Dungeon_Debris1.png-db37bd54972ee732aa7040a7ebb3b79f.ctex"]
 
 [params]
 
