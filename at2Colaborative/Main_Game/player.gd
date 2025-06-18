@@ -12,7 +12,19 @@ signal respawn()
 
 func _ready():
 	$"Level Display".text = level
-
+	if ($AnimatedSprite2D.animation == "Jackson"):
+		$AnimatedSprite2D.scale.x = 0.08
+		$AnimatedSprite2D.scale.y = 0.08
+	elif ($AnimatedSprite2D.animation == "Joel"):
+		$AnimatedSprite2D.scale.x = 0.067
+		$AnimatedSprite2D.scale.y = 0.067
+	elif ($AnimatedSprite2D.animation == "Dame Da Ne Guy"):
+		$AnimatedSprite2D.scale.x = 0.149
+		$AnimatedSprite2D.scale.y = 0.069
+	elif ($AnimatedSprite2D.animation == "Pluey"):
+		$AnimatedSprite2D.scale.x = 0.133
+		$AnimatedSprite2D.scale.y = 0.133
+		
 func _physics_process(delta):
 	velocity.y += gravity * delta
 	var dir = Input.get_axis("p1left", "p1right")

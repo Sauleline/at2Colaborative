@@ -1,8 +1,10 @@
-[gd_scene load_steps=7 format=3 uid="uid://gq8bk5h87loy"]
+[gd_scene load_steps=9 format=3 uid="uid://gq8bk5h87loy"]
 
 [ext_resource type="Script" uid="uid://dh2q4d51je4yd" path="res://Main_Game/player.gd" id="1_rvp0r"]
 [ext_resource type="Texture2D" uid="uid://bpfr73qhoymbq" path="res://Art/dame da ne guy.png" id="3_0s2u3"]
 [ext_resource type="Texture2D" uid="uid://ca3ijslxka5rs" path="res://Art/pluey.jpg" id="3_g6ucm"]
+[ext_resource type="Texture2D" uid="uid://ejh5wyqjcl2k" path="res://Art/jackson.jpg" id="3_wsymt"]
+[ext_resource type="Texture2D" uid="uid://ctio5uyu77gse" path="res://Art/joel.png" id="4_wr33q"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_gragq"]
 size = Vector2(106.667, 106.667)
@@ -17,7 +19,23 @@ animations = [{
 "texture": ExtResource("3_0s2u3")
 }],
 "loop": true,
-"name": &"Dame Dame Guy",
+"name": &"Dame Da Ne Guy",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_wsymt")
+}],
+"loop": true,
+"name": &"Jackson",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_wr33q")
+}],
+"loop": true,
+"name": &"Joel",
 "speed": 5.0
 }, {
 "frames": [{
@@ -44,22 +62,22 @@ shape = SubResource("RectangleShape2D_gragq")
 shape = SubResource("RectangleShape2D_boqdv")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(-5.96046e-08, 1.66893e-06)
-scale = Vector2(0.148837, 0.0689655)
+position = Vector2(1.90735e-06, 1.13687e-13)
+scale = Vector2(0.133333, 0.133333)
 sprite_frames = SubResource("SpriteFrames_0s2u3")
-animation = &"Pluey"
+animation = &"Jackson"
 
 [node name="Level Display" type="Label" parent="."]
 offset_left = -56.0
-offset_top = -40.0
+offset_top = -72.0
 offset_right = 56.0
-offset_bottom = -16.0
+offset_bottom = -24.0
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 8
 theme_override_font_sizes/font_size = 10
 text = "Level 10 Crook"
 horizontal_alignment = 1
-vertical_alignment = 1
+vertical_alignment = 2
 autowrap_mode = 2
 
 [connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]

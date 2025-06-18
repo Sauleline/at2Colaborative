@@ -79,7 +79,7 @@ scale = Vector2(5, 1)
 
 [node name="Player" parent="." instance=ExtResource("3_blark")]
 position = Vector2(128, 128)
-level = "Level 20 Goon"
+level = "Level 2 Jackson"
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
 zoom = Vector2(1.15, 1.15)
