@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cexrit067mufw"
-path="res://.godot/imported/Stronghold_FurniturePiece1.png-74549f483a1dfb8bf85e7dda228c04c4.ctex"
+path="res://.godot/imported/Stronghold_FurniturePiece1.png-17864fda4b774f8995e3f6a7769c1c95.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Art/terrains/Multi_Platformer_Tileset_v2/Stronghold/Props/Stronghold_FurniturePiece1.png"
-dest_files=["res://.godot/imported/Stronghold_FurniturePiece1.png-74549f483a1dfb8bf85e7dda228c04c4.ctex"]
+source_file="res://art/terrains/Multi_Platformer_Tileset_v2/Stronghold/Props/Stronghold_FurniturePiece1.png"
+dest_files=["res://.godot/imported/Stronghold_FurniturePiece1.png-17864fda4b774f8995e3f6a7769c1c95.ctex"]
 
 [params]
 
