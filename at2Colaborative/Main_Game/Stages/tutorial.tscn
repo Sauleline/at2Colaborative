@@ -77,13 +77,9 @@ position = Vector2(768, -352)
 position = Vector2(480, -224)
 scale = Vector2(5, 1)
 
-[node name="1" parent="Hitboxes" instance=ExtResource("4_blark")]
-position = Vector2(832, 592)
-scale = Vector2(25, 5)
-
 [node name="Player" parent="." instance=ExtResource("3_blark")]
 position = Vector2(128, 128)
-level = "Level 100 Mafia Boss"
+level = "Level 20 Goon"
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
 zoom = Vector2(1.15, 1.15)

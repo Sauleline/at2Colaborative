@@ -1,7 +1,8 @@
-[gd_scene load_steps=6 format=3 uid="uid://gq8bk5h87loy"]
+[gd_scene load_steps=7 format=3 uid="uid://gq8bk5h87loy"]
 
 [ext_resource type="Script" uid="uid://dh2q4d51je4yd" path="res://Main_Game/player.gd" id="1_rvp0r"]
 [ext_resource type="Texture2D" uid="uid://bpfr73qhoymbq" path="res://Art/dame da ne guy.png" id="3_0s2u3"]
+[ext_resource type="Texture2D" uid="uid://ca3ijslxka5rs" path="res://Art/pluey.jpg" id="3_g6ucm"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_gragq"]
 size = Vector2(106.667, 106.667)
@@ -17,6 +18,14 @@ animations = [{
 }],
 "loop": true,
 "name": &"Dame Dame Guy",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_g6ucm")
+}],
+"loop": true,
+"name": &"Pluey",
 "speed": 5.0
 }]
 
@@ -35,11 +44,10 @@ shape = SubResource("RectangleShape2D_gragq")
 shape = SubResource("RectangleShape2D_boqdv")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(9.53674e-07, -7.15256e-07)
+position = Vector2(-5.96046e-08, 1.66893e-06)
 scale = Vector2(0.148837, 0.0689655)
 sprite_frames = SubResource("SpriteFrames_0s2u3")
-animation = &"Dame Dame Guy"
-autoplay = "Dame Dame Guy"
+animation = &"Pluey"
 
 [node name="Level Display" type="Label" parent="."]
 offset_left = -56.0

@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=4 uid="uid://dv3f50xk8cl5n"]
+[gd_scene load_steps=6 format=3 uid="uid://dv3f50xk8cl5n"]
 
 [ext_resource type="Script" uid="uid://kj8jfnh4gi6u" path="res://Main_Game/Stages/stageController.gd" id="1_odrku"]
 [ext_resource type="PackedScene" uid="uid://scl3b7ko3tw4" path="res://Main_Game/Terrain_Tilemap.tscn" id="2_j6u3g"]
@@ -10,7 +10,6 @@
 script = ExtResource("1_odrku")
 
 [node name="Terrain" parent="." instance=ExtResource("2_j6u3g")]
-tile_map_data = PackedByteArray("AAD8/wQABAATAAAAAAD9/wQABAATAAAAAAD+/wQABAATAAAAAAD//wQABAATAAAAAAAAAAQABAATAAAAAAABAAQABAATAAAAAAACAAQABAATAAAAAAADAAQABAATAAAAAAAEAAQABAATAAAAAAAFAAQABAATAAAAAAD7/wQABAASAAAAAAAGAAQABAAUAAAAAAA=")
 
 [node name="Checkpoints" type="Node" parent="."]
 
