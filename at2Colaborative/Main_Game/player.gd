@@ -1,10 +1,10 @@
 extends CharacterBody2D
 
-@export var speed = 1200
-@export var jump_speed = -1800
-@export var gravity = 4000
-@export_range(0.0, 1.0) var friction = 0.5
-@export_range(0.0 , 1.0) var acceleration = 0.1
+@export var speed = 300
+@export var jump_speed = -300
+@export var gravity = 1000
+@export_range(0.0, 1.0) var friction = 0.03
+@export_range(0.0 , 1.0) var acceleration = 0.05
 @export var level = "Level 10 Crook"
 
 func _ready():

@@ -1,8 +1,8 @@
 extends Node
 
-func _ready():
-	$Player.position = $PlayerSpawn.position
+@export var stageNum = 0
 
-func _process(delta):
-	if ($Player.position[1] > 1000):
-		$Player.position = $PlayerSpawn.position
+func _ready():
+	var stageTo = "res://Main_Game/Stages/stage%s.tscn"%str(stageNum)
+	print(stageTo)
+	get_tree().change_scene_to_file(stageTo)

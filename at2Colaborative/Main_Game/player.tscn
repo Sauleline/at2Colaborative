@@ -15,19 +15,21 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_gragq"]
-size = Vector2(64, 64)
+size = Vector2(160, 160)
 
 [node name="Player" type="CharacterBody2D"]
 script = ExtResource("1_rvp0r")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(3.8147e-06, 7.62939e-06)
-scale = Vector2(0.297674, 0.137931)
+position = Vector2(3.24693e-06, 7.10323e-06)
+scale = Vector2(0.223256, 0.103448)
 sprite_frames = SubResource("SpriteFrames_0s2u3")
 animation = &"Dame Dame Guy"
 autoplay = "Dame Dame Guy"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-2.98023e-07, -2.98023e-07)
+scale = Vector2(0.3, 0.3)
 shape = SubResource("RectangleShape2D_gragq")
 
 [node name="Level Display" type="Label" parent="."]

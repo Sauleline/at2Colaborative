@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=4 uid="uid://bgy513udje8fy"]
+
+[ext_resource type="Script" uid="uid://kj8jfnh4gi6u" path="res://Main_Game/Stages/stageController.gd" id="1_2p5ui"]
+[ext_resource type="PackedScene" uid="uid://scl3b7ko3tw4" path="res://Main_Game/Terrain_Tilemap.tscn" id="2_2p5ui"]
+[ext_resource type="PackedScene" uid="uid://gq8bk5h87loy" path="res://Main_Game/player.tscn" id="3_l0ic6"]
+
+[node name="Stage0" type="Node"]
+script = ExtResource("1_2p5ui")
+
+[node name="Terrain" parent="." instance=ExtResource("2_2p5ui")]
+scale = Vector2(2, 2)
+tile_map_data = PackedByteArray("AAAPABMAAQABAAEAAAAQABMAAQABAAEAAAARABMAAQABAAEAAAASABMAAQABAAEAAAATABMAAQABAAEAAAAUABMAAQABAAEAAAA=")
+
+[node name="Player" parent="." instance=ExtResource("3_l0ic6")]
+position = Vector2(542, 528)
+friction = 0.005
+
+[node name="Camera2D" type="Camera2D" parent="Player"]
+
+[node name="PlayerSpawn" type="Marker2D" parent="."]
+position = Vector2(594, 399)
