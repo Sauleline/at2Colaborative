@@ -42,9 +42,9 @@ animation = &"Dame Dame Guy"
 autoplay = "Dame Dame Guy"
 
 [node name="Level Display" type="Label" parent="."]
-offset_left = -64.0
+offset_left = -56.0
 offset_top = -40.0
-offset_right = 64.0
+offset_right = 56.0
 offset_bottom = -16.0
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 8
