@@ -1,10 +1,14 @@
-[gd_scene load_steps=3 format=3 uid="uid://cey4wjam18cii"]
+[gd_scene load_steps=4 format=3 uid="uid://bvstsjjenfx6r"]
 
-[ext_resource type="PackedScene" uid="uid://dyn2qf6aui3uv" path="res://Game_User_Interface/UI_Background.tscn" id="1_6amtt"]
+[ext_resource type="PackedScene" path="res://Game_User_Interface/UI_Background.tscn" id="1_6amtt"]
 [ext_resource type="Script" uid="uid://d2nd3w5upjk8a" path="res://User_Profile_L/main.gd" id="1_8hsud"]
+[ext_resource type="Script" uid="uid://c3eigbtuqj7ba" path="res://global.gd" id="2_arqv2"]
 
 [node name="UserProfileSelect" type="CanvasLayer"]
 script = ExtResource("1_8hsud")
+
+[node name="Global" type="Node" parent="."]
+script = ExtResource("2_arqv2")
 
 [node name="Background" parent="." instance=ExtResource("1_6amtt")]
 
@@ -101,6 +105,7 @@ text = "Player Two"
 horizontal_alignment = 1
 vertical_alignment = 1
 
+[connection signal="userNameSelected" from="." to="Global" method="_on_user_profile_select_user_name_selected"]
 [connection signal="pressed" from="SelectUser" to="." method="_on_select_user_pressed"]
 [connection signal="pressed" from="PlayerTwoButton" to="." method="_on_player_two_button_pressed"]
 [connection signal="pressed" from="CreateNewUser" to="." method="_on_create_new_user_pressed"]
