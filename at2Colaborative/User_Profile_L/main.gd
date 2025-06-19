@@ -1,8 +1,10 @@
 extends "access_user_files_L.gd"
 
 @onready var OptionUserSelect = $OptionSelectUser 
-var PlayerOne = null
-var PlayerTwo = null
+@onready var PlayerOneButton = $PlayerOneButton 
+@onready var PlayerTwoButton = $PlayerTwoButton 
+var PlayerOne 
+var PlayerTwo 
 
 func populate_user_list():
 	OptionUserSelect.clear()
@@ -19,11 +21,17 @@ func selectUser():
 	var Text = OptionUserSelect.get_item_text(ID)
 	saveUserFileName = userProfiles.userProfilesDict[Text]
 	open_user()
-	print(user.userName)
+	return User
 
 func _on_select_user_pressed() -> void:
-	selectUser()
-	get_tree().change_scene_to_file("res://Game_User_Interface/Title_Screen.tscn")
+	var SelectedUser = selectUser()
+	if PlayerOneButton.is_pressed():
+		PlayerOne = SelectedUser
+	elif PlayerTwoButton.is_pressed():
+		PlayerTwo = SelectedUser
+	else:
+		pass
+
 	
 func removeUser():
 	var ID = OptionUserSelect.get_selected_id()
