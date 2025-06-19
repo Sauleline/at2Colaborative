@@ -18,4 +18,3 @@ sources/0 = SubResource("TileSetAtlasSource_wyaxr")
 [node name="DamageTilemap" type="TileMapLayer"]
 scale = Vector2(2, 2)
 tile_set = SubResource("TileSet_x2xrf")
-collision_enabled = false

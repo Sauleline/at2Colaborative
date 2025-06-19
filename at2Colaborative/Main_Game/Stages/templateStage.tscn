@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://kj8jfnh4gi6u" path="res://Main_Game/Stages/stageController.gd" id="1_odrku"]
 [ext_resource type="PackedScene" uid="uid://scl3b7ko3tw4" path="res://Main_Game/Terrain_Tilemap.tscn" id="2_j6u3g"]
 [ext_resource type="PackedScene" uid="uid://bfsd75ne6drno" path="res://Main_Game/Damage_Tilemap.tscn" id="3_6voqf"]
-[ext_resource type="PackedScene" uid="uid://gq8bk5h87loy" path="res://Main_Game/player.tscn" id="3_mykci"]
+[ext_resource type="PackedScene" uid="uid://gq8bk5h87loy" path="res://Main_Game/player1.tscn" id="3_mykci"]
 [ext_resource type="PackedScene" uid="uid://bt6nqr1i764ly" path="res://Main_Game/checkpoint.tscn" id="4_0giw5"]
 
 [node name="Stage0" type="Node"]
