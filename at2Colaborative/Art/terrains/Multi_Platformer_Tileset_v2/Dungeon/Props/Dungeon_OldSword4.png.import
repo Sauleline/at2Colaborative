@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://si1jo63slkq"
-path="res://.godot/imported/Dungeon_OldSword4.png-303c39713438be284aee8514e889bd67.ctex"
+path="res://.godot/imported/Dungeon_OldSword4.png-5593949261dd3b8b08ba651e9eab0007.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Art/terrains/Multi_Platformer_Tileset_v2/Dungeon/Props/Dungeon_OldSword4.png"
-dest_files=["res://.godot/imported/Dungeon_OldSword4.png-303c39713438be284aee8514e889bd67.ctex"]
+source_file="res://art/terrains/Multi_Platformer_Tileset_v2/Dungeon/Props/Dungeon_OldSword4.png"
+dest_files=["res://.godot/imported/Dungeon_OldSword4.png-5593949261dd3b8b08ba651e9eab0007.ctex"]
 
 [params]
 

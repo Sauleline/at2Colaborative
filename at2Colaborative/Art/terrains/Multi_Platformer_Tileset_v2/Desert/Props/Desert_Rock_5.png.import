@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://f8xp24b2y6ap"
-path="res://.godot/imported/Desert_Rock_5.png-d5e232dc9177ab272920afe23d985c2f.ctex"
+path="res://.godot/imported/Desert_Rock_5.png-9d099d2a5c95abc5f46d25e9ade21636.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Art/terrains/Multi_Platformer_Tileset_v2/Desert/Props/Desert_Rock_5.png"
-dest_files=["res://.godot/imported/Desert_Rock_5.png-d5e232dc9177ab272920afe23d985c2f.ctex"]
+source_file="res://art/terrains/Multi_Platformer_Tileset_v2/Desert/Props/Desert_Rock_5.png"
+dest_files=["res://.godot/imported/Desert_Rock_5.png-9d099d2a5c95abc5f46d25e9ade21636.ctex"]
 
 [params]
 

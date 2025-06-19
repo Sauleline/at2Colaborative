@@ -1,0 +1,56 @@
+[gd_scene load_steps=3 format=3 uid="uid://u1r23s2u4n13"]
+
+[ext_resource type="Script" uid="uid://dcgxx33j2yye1" path="res://User_Profile_L/user_profile_create.gd" id="1_n7lnn"]
+[ext_resource type="PackedScene" uid="uid://dyn2qf6aui3uv" path="res://Game_User_Interface/UI_Background.tscn" id="2_o6pgg"]
+
+[node name="UserCreate" type="CanvasLayer"]
+script = ExtResource("1_n7lnn")
+
+[node name="Background" parent="." instance=ExtResource("2_o6pgg")]
+
+[node name="AddUser" type="Button" parent="."]
+anchors_preset = -1
+anchor_left = 0.368924
+anchor_top = 0.390432
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -107.0
+offset_top = 273.0
+offset_right = 4.0
+offset_bottom = 311.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Add User"
+metadata/_edit_use_anchors_ = true
+
+[node name="Exit" type="Button" parent="."]
+anchors_preset = -1
+anchor_left = 0.368924
+anchor_top = 0.390432
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 172.0
+offset_top = 273.0
+offset_right = 283.0
+offset_bottom = 311.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Exit"
+metadata/_edit_use_anchors_ = true
+
+[node name="UserInputName" type="LineEdit" parent="."]
+anchors_preset = -1
+anchor_left = -0.118056
+anchor_top = -0.103395
+anchor_bottom = 0.00617284
+offset_left = 159.0
+offset_top = 592.0
+offset_right = 303.0
+offset_bottom = 631.0
+placeholder_text = "Enter User Name"
+alignment = 1
+max_length = 20
+metadata/_edit_use_anchors_ = true
+
+[connection signal="pressed" from="AddUser" to="." method="_on_add_user_pressed"]
+[connection signal="pressed" from="Exit" to="." method="_on_exit_pressed"]
