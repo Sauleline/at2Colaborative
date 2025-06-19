@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://bfsd75ne6drno"]
+
+[ext_resource type="Texture2D" uid="uid://cdbd4nrx1wdpx" path="res://Art/terrains/terrain tile maps/damageTiles.png" id="1_w7r5a"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_wyaxr"]
+texture = ExtResource("1_w7r5a")
+0:0/0 = 0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+2:0/0 = 0
+2:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8)
+1:0/0 = 0
+1:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(0, -8, 8, -8, 8, 8, 0, 8)
+
+[sub_resource type="TileSet" id="TileSet_x2xrf"]
+physics_layer_0/collision_layer = 1
+sources/0 = SubResource("TileSetAtlasSource_wyaxr")
+
+[node name="DamageTilemap" type="TileMapLayer"]
+scale = Vector2(2, 2)
+tile_set = SubResource("TileSet_x2xrf")
