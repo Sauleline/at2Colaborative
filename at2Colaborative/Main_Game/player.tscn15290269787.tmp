@@ -1,0 +1,56 @@
+[gd_scene load_steps=6 format=3 uid="uid://gq8bk5h87loy"]
+
+[ext_resource type="Script" uid="uid://dh2q4d51je4yd" path="res://Main_Game/player.gd" id="1_rvp0r"]
+[ext_resource type="Texture2D" uid="uid://bpfr73qhoymbq" path="res://Art/dame da ne guy.png" id="3_0s2u3"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gragq"]
+size = Vector2(160, 160)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_boqdv"]
+size = Vector2(48, 48)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_0s2u3"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_0s2u3")
+}],
+"loop": true,
+"name": &"Dame Dame Guy",
+"speed": 5.0
+}]
+
+[node name="Player" type="CharacterBody2D"]
+script = ExtResource("1_rvp0r")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-2.98023e-07, -2.98023e-07)
+scale = Vector2(0.3, 0.3)
+shape = SubResource("RectangleShape2D_gragq")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("RectangleShape2D_boqdv")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(3.24693e-06, 7.10323e-06)
+scale = Vector2(0.223256, 0.103448)
+sprite_frames = SubResource("SpriteFrames_0s2u3")
+animation = &"Dame Dame Guy"
+autoplay = "Dame Dame Guy"
+
+[node name="Level Display" type="Label" parent="."]
+offset_left = -80.0
+offset_top = -56.0
+offset_right = 80.0
+offset_bottom = -24.0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 8
+theme_override_font_sizes/font_size = 19
+text = "Level Display"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]

@@ -1,0 +1,27 @@
+[gd_scene load_steps=3 format=3 uid="uid://dyn2qf6aui3uv"]
+
+[ext_resource type="Shader" uid="uid://c0xbt0jdme1rs" path="res://main.gdshader" id="1_v1baa"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_cpmu6"]
+shader = ExtResource("1_v1baa")
+shader_parameter/polar_coordinates = false
+shader_parameter/polar_center = Vector2(0.5, 0.5)
+shader_parameter/polar_zoom = 1.0
+shader_parameter/polar_repeat = 1.0
+shader_parameter/spin_rotation = 0.0
+shader_parameter/spin_speed = 1.0
+shader_parameter/offset = Vector2(0, 0)
+shader_parameter/colour_1 = Color(0.690196, 0.0431373, 0.411765, 1)
+shader_parameter/colour_2 = Color(0.258824, 0.0392157, 0.333333, 1)
+shader_parameter/colour_3 = Color(0.352591, 0.59681, 0.614429, 1)
+shader_parameter/contrast = 2.0
+shader_parameter/spin_amount = 0.36
+shader_parameter/pixel_filter = 700.0
+
+[node name="Background" type="ColorRect"]
+material = SubResource("ShaderMaterial_cpmu6")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
