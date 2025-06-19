@@ -80,3 +80,4 @@ User"
 [connection signal="pressed" from="Wardrobe" to="." method="_on_wardrobe_pressed"]
 [connection signal="pressed" from="Settings" to="." method="_on_settings_pressed"]
 [connection signal="pressed" from="Quit" to="." method="_on_quit_pressed"]
+[connection signal="pressed" from="Change_User" to="." method="_on_change_user_pressed"]

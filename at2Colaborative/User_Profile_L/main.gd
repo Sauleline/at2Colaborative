@@ -21,6 +21,7 @@ func selectUser():
 
 func _on_select_user_pressed() -> void:
 	selectUser()
+	get_tree().change_scene_to_file("res://Game_User_Interface/Title_Screen.tscn")
 	
 func removeUser():
 	var ID = OptionUserSelect.get_selected_id()
