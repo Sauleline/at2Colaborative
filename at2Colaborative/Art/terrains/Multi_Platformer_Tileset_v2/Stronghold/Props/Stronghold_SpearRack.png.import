@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dtyqdpg1xvm3i"
-path="res://.godot/imported/Stronghold_SpearRack.png-d5b4e55816fead682c75a89a1c8ba5d0.ctex"
+path="res://.godot/imported/Stronghold_SpearRack.png-63a30518c5e1ab7d7895eea7eb1bfb3d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://art/terrains/Multi_Platformer_Tileset_v2/Stronghold/Props/Stronghold_SpearRack.png"
-dest_files=["res://.godot/imported/Stronghold_SpearRack.png-d5b4e55816fead682c75a89a1c8ba5d0.ctex"]
+source_file="res://Art/terrains/Multi_Platformer_Tileset_v2/Stronghold/Props/Stronghold_SpearRack.png"
+dest_files=["res://.godot/imported/Stronghold_SpearRack.png-63a30518c5e1ab7d7895eea7eb1bfb3d.ctex"]
 
 [params]
 
