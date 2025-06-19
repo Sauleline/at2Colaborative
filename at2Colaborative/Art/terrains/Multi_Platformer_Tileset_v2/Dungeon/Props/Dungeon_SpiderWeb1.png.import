@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bj66gosow2uao"
-path="res://.godot/imported/Dungeon_SpiderWeb1.png-3e8c41ad41c620212ae1c3937d41fdb0.ctex"
+path="res://.godot/imported/Dungeon_SpiderWeb1.png-8e8f4eb5b3d403dedfe7f6ef1bc9e483.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Art/terrains/Multi_Platformer_Tileset_v2/Dungeon/Props/Dungeon_SpiderWeb1.png"
-dest_files=["res://.godot/imported/Dungeon_SpiderWeb1.png-3e8c41ad41c620212ae1c3937d41fdb0.ctex"]
+source_file="res://art/terrains/Multi_Platformer_Tileset_v2/Dungeon/Props/Dungeon_SpiderWeb1.png"
+dest_files=["res://.godot/imported/Dungeon_SpiderWeb1.png-8e8f4eb5b3d403dedfe7f6ef1bc9e483.ctex"]
 
 [params]
 

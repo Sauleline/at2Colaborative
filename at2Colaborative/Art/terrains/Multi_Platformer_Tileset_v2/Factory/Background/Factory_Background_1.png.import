@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bh1yycvj80lme"
-path="res://.godot/imported/Factory_Background_1.png-70aabd8953bb72fbd58dbf57129433ca.ctex"
+path="res://.godot/imported/Factory_Background_1.png-9faad10b34a5c7741234ece73cf8536c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Art/terrains/Multi_Platformer_Tileset_v2/Factory/Background/Factory_Background_1.png"
-dest_files=["res://.godot/imported/Factory_Background_1.png-70aabd8953bb72fbd58dbf57129433ca.ctex"]
+source_file="res://art/terrains/Multi_Platformer_Tileset_v2/Factory/Background/Factory_Background_1.png"
+dest_files=["res://.godot/imported/Factory_Background_1.png-9faad10b34a5c7741234ece73cf8536c.ctex"]
 
 [params]
 

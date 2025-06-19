@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dchact1elki6l"
-path="res://.godot/imported/Grassland_Terrain_47Tiles.png-f6362655e586818cb52445a828a93cda.ctex"
+path="res://.godot/imported/Grassland_Terrain_47Tiles.png-d0892fc48c10c6af766c63800eeb5957.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Art/terrains/Multi_Platformer_Tileset_v2/GrassLand/Terrain/Grassland_Terrain_47Tiles.png"
-dest_files=["res://.godot/imported/Grassland_Terrain_47Tiles.png-f6362655e586818cb52445a828a93cda.ctex"]
+source_file="res://art/terrains/Multi_Platformer_Tileset_v2/GrassLand/Terrain/Grassland_Terrain_47Tiles.png"
+dest_files=["res://.godot/imported/Grassland_Terrain_47Tiles.png-d0892fc48c10c6af766c63800eeb5957.ctex"]
 
 [params]
 
