@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dmej1sv8eif5b"
-path="res://.godot/imported/SnowLand_Door.png-d4a091f1f6cc270cf6911cac7d4fddbf.ctex"
+path="res://.godot/imported/SnowLand_Door.png-91f992b8c6d474ec098a6be14bd093e0.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://art/terrains/Multi_Platformer_Tileset_v2/SnowLand/Props/SnowLand_Door.png"
-dest_files=["res://.godot/imported/SnowLand_Door.png-d4a091f1f6cc270cf6911cac7d4fddbf.ctex"]
+source_file="res://Art/terrains/Multi_Platformer_Tileset_v2/SnowLand/Props/SnowLand_Door.png"
+dest_files=["res://.godot/imported/SnowLand_Door.png-91f992b8c6d474ec098a6be14bd093e0.ctex"]
 
 [params]
 
