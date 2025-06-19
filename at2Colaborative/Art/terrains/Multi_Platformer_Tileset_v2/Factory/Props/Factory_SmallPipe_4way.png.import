@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://8vy5vmp7m1lw"
-path="res://.godot/imported/Factory_SmallPipe_4way.png-26da0cfd1d9103ca7a597f4d93ea92a9.ctex"
+path="res://.godot/imported/Factory_SmallPipe_4way.png-f74be4ae29a60111961dfe022f435add.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://art/terrains/Multi_Platformer_Tileset_v2/Factory/Props/Factory_SmallPipe_4way.png"
-dest_files=["res://.godot/imported/Factory_SmallPipe_4way.png-26da0cfd1d9103ca7a597f4d93ea92a9.ctex"]
+source_file="res://Art/terrains/Multi_Platformer_Tileset_v2/Factory/Props/Factory_SmallPipe_4way.png"
+dest_files=["res://.godot/imported/Factory_SmallPipe_4way.png-f74be4ae29a60111961dfe022f435add.ctex"]
 
 [params]
 
