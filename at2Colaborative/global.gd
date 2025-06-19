@@ -1,5 +1,15 @@
 extends Node
 
-func _on_user_profile_select_user_name_selected(Text) -> void:
-	var userName = Text
+var PlayerOne
+var PlayerTwo
+
+func addPlayers(playerone, playertwo):
+	PlayerOne = playerone
+	PlayerTwo = playertwo
+	
+func getPlayerOne():
+	return PlayerOne
+
+func getPlayerTwo():
+	return PlayerTwo
 	

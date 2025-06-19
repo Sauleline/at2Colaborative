@@ -3,7 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://scl3b7ko3tw4" path="res://Main_Game/Terrain_Tilemap.tscn" id="1_1fhw6"]
 [ext_resource type="PackedScene" uid="uid://bfsd75ne6drno" path="res://Main_Game/Damage_Tilemap.tscn" id="2_meonu"]
 [ext_resource type="PackedScene" uid="uid://bt6nqr1i764ly" path="res://Main_Game/checkpoint.tscn" id="3_ynmmp"]
-[ext_resource type="PackedScene" uid="uid://gq8bk5h87loy" path="res://Main_Game/player.tscn" id="4_ypmr7"]
+[ext_resource type="PackedScene" uid="uid://dyjri6mtn6mqa" path="res://Main_Game/player.tscn" id="4_ypmr7"]
 
 [sub_resource type="GDScript" id="GDScript_poylq"]
 script/source = "extends Node

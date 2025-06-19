@@ -4,7 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://scl3b7ko3tw4" path="res://Main_Game/Terrain_Tilemap.tscn" id="2_j6if3"]
 [ext_resource type="PackedScene" uid="uid://bfsd75ne6drno" path="res://Main_Game/Damage_Tilemap.tscn" id="3_67uyl"]
 [ext_resource type="PackedScene" uid="uid://bt6nqr1i764ly" path="res://Main_Game/checkpoint.tscn" id="4_2gg66"]
-[ext_resource type="PackedScene" uid="uid://gq8bk5h87loy" path="res://Main_Game/player.tscn" id="5_t8yy3"]
+[ext_resource type="PackedScene" uid="uid://dyjri6mtn6mqa" path="res://Main_Game/player.tscn" id="5_t8yy3"]
 
 [node name="testStage" type="Node"]
 script = ExtResource("1_va6x4")

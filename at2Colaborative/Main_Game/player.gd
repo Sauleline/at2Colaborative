@@ -18,8 +18,11 @@ var scaleMap = {"Jackson": [0.08, 0.08],
 				"Pluey": [0.133, 0.133]}
 
 func _ready():
-	$"Level Display".text = $Global.userName
-	print($Global.userName)
+	var player = Global.getPlayerOne()
+	$"Level Display".text = player.userName
+	
+	#$"Level Display".text = $Global.userName
+	#print($Global.userName)
 	$Sprite.scale.x = scaleMap[$Sprite.animation][0]
 	$Sprite.scale.y = scaleMap[$Sprite.animation][1]
 	
