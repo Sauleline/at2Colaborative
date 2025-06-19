@@ -19,12 +19,13 @@ grow_horizontal = 2
 grow_vertical = 2
 text = "Add User"
 
-[node name="UserInputName" type="TextEdit" parent="."]
+[node name="UserInputName" type="LineEdit" parent="."]
 offset_left = 16.0
 offset_top = 10.0
 offset_right = 160.0
 offset_bottom = 49.0
 placeholder_text = "Enter User Name"
+max_length = 20
 
 [node name="OptionSelectUser" type="OptionButton" parent="."]
 offset_left = 19.0

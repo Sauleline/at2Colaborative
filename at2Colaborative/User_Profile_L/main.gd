@@ -43,7 +43,15 @@ func removeUser():
 	populate_user_list()
 
 func _on_add_user_pressed() -> void:
-	addUser() 
+	var input = UserNameInput.text
+	input = input.strip_edges()
+	if input.is_empty():
+		pass
+	else:
+		addUser() 
 
 func _on_remove_user_pressed() -> void:
-	removeUser() # Replace with function body.
+	if not userProfiles.userProfilesDict:
+		pass
+	else:
+		removeUser() # Replace with function body.
