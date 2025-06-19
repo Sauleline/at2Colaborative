@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://dyjri6mtn6mqa"]
+[gd_scene load_steps=12 format=3 uid="uid://dyjri6mtn6mqa"]
 
 [ext_resource type="Script" uid="uid://dh2q4d51je4yd" path="res://Main_Game/player.gd" id="1_rvp0r"]
 [ext_resource type="Script" uid="uid://c3eigbtuqj7ba" path="res://global.gd" id="2_64xtq"]
@@ -49,6 +49,9 @@ size = Vector2(106.667, 106.667)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_boqdv"]
 size = Vector2(33, 33)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_64xtq"]
+size = Vector2(32, 16)
+
 [node name="Player" type="CharacterBody2D"]
 scale = Vector2(2, 2)
 script = ExtResource("1_rvp0r")
@@ -87,11 +90,25 @@ position = Vector2(2.38419e-07, 2.38419e-07)
 scale = Vector2(0.3, 0.3)
 shape = SubResource("RectangleShape2D_gragq")
 
-[node name="Area2D" type="Area2D" parent="."]
+[node name="Hitbox" type="Area2D" parent="."]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hitbox"]
 shape = SubResource("RectangleShape2D_boqdv")
 debug_color = Color(0.699314, 0.277037, 1, 0.42)
 
-[connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]
-[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[node name="Fist" type="Area2D" parent="."]
+monitoring = false
+
+[node name="ColorRect" type="ColorRect" parent="Fist"]
+visible = false
+offset_top = -8.0
+offset_right = 32.0
+offset_bottom = 8.0
+
+[node name="FistHitbox" type="CollisionShape2D" parent="Fist"]
+position = Vector2(16, 0)
+shape = SubResource("RectangleShape2D_64xtq")
+disabled = true
+
+[connection signal="area_entered" from="Hitbox" to="." method="_on_area_2d_area_entered"]
+[connection signal="body_entered" from="Hitbox" to="." method="_on_area_2d_body_entered"]
