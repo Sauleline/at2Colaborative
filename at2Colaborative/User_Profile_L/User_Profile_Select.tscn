@@ -12,23 +12,50 @@ script = ExtResource("1_8hsud")
 anchors_preset = -1
 anchor_left = 0.0989583
 anchor_top = -0.109568
-anchor_right = 0.229167
+anchor_right = 0.223958
 anchor_bottom = -0.0478395
-offset_left = 646.0
-offset_top = 264.0
-offset_right = 870.0
-offset_bottom = 304.0
+offset_left = 652.0
+offset_top = 263.0
+offset_right = 876.0
+offset_bottom = 303.0
 metadata/_edit_use_anchors_ = true
 
 [node name="SelectUser" type="Button" parent="."]
 anchors_preset = -1
 anchor_top = -0.0509259
-anchor_right = 0.0694444
-offset_left = 761.0
-offset_top = 141.0
-offset_right = 876.0
-offset_bottom = 179.0
+anchor_right = 0.0598958
+offset_left = 767.0
+offset_top = 140.0
+offset_right = 882.0
+offset_bottom = 178.0
 text = "Select User
+"
+metadata/_edit_use_anchors_ = true
+
+[node name="PlayerOneButton" type="Button" parent="."]
+anchors_preset = -1
+anchor_top = -0.0509259
+anchor_right = 0.0590278
+offset_left = 766.0
+offset_top = 53.0
+offset_right = 881.0
+offset_bottom = 91.0
+toggle_mode = true
+text = "Player One
+"
+metadata/_edit_use_anchors_ = true
+
+[node name="PlayerTwoButton" type="Button" parent="."]
+anchors_preset = -1
+anchor_left = -0.00694444
+anchor_top = -0.0509259
+anchor_right = 0.0425347
+offset_left = 969.0
+offset_top = 53.0
+offset_right = 1084.0
+offset_bottom = 91.0
+toggle_mode = true
+text = "Player Two
 "
 metadata/_edit_use_anchors_ = true
 
@@ -36,25 +63,44 @@ metadata/_edit_use_anchors_ = true
 anchors_preset = -1
 anchor_top = -0.0509259
 anchor_right = 0.223958
-offset_left = 760.0
-offset_top = 326.0
-offset_right = 875.0
-offset_bottom = 364.0
+offset_left = 759.0
+offset_top = 592.0
+offset_right = 874.0
+offset_bottom = 630.0
 text = "Add User"
 metadata/_edit_use_anchors_ = true
 
 [node name="RemoveUser" type="Button" parent="."]
 anchors_preset = -1
-anchor_left = -0.0407986
+anchor_left = -0.0503472
 anchor_top = -0.0462963
 anchor_bottom = 0.00771605
-offset_left = 1014.0
-offset_top = 137.0
-offset_right = 1129.0
-offset_bottom = 175.0
+offset_left = 1020.0
+offset_top = 136.0
+offset_right = 1135.0
+offset_bottom = 174.0
 text = "Remove User
 "
 metadata/_edit_use_anchors_ = true
 
+[node name="PlayerOne" type="Label" parent="."]
+offset_left = 46.0
+offset_top = 281.0
+offset_right = 280.0
+offset_bottom = 340.0
+text = "Player One"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Player Two" type="Label" parent="."]
+offset_left = 376.0
+offset_top = 283.0
+offset_right = 610.0
+offset_bottom = 342.0
+text = "Player Two"
+horizontal_alignment = 1
+vertical_alignment = 1
+
 [connection signal="pressed" from="SelectUser" to="." method="_on_select_user_pressed"]
+[connection signal="pressed" from="PlayerTwoButton" to="." method="_on_player_two_button_pressed"]
 [connection signal="pressed" from="CreateNewUser" to="." method="_on_create_new_user_pressed"]
