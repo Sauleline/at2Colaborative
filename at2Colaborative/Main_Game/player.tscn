@@ -48,7 +48,7 @@ size = Vector2(106.667, 106.667)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_boqdv"]
 size = Vector2(33, 33)
 
-[node name="Player1" type="CharacterBody2D"]
+[node name="Player" type="CharacterBody2D"]
 scale = Vector2(2, 2)
 script = ExtResource("1_rvp0r")
 
