@@ -1,6 +1,8 @@
 extends "access_user_files_L.gd"
 
 @onready var OptionUserSelect = $OptionSelectUser 
+var PlayerOne = null
+var PlayerTwo = null
 
 func populate_user_list():
 	OptionUserSelect.clear()
