@@ -11,7 +11,6 @@ func _on_add_user_pressed() -> void:
 	var input = UserNameInput.text
 	input = input.strip_edges()
 	if input.is_empty():
-		print("empty")
 		pass
 	else:
 		addUser()
