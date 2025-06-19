@@ -18,6 +18,10 @@ boot_splash/show_image=false
 boot_splash/fullsize=false
 boot_splash/use_filter=false
 
+[autoload]
+
+Global="*res://global.gd"
+
 [display]
 
 window/stretch/mode="canvas_items"

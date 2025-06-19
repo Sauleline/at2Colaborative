@@ -1,11 +1,11 @@
 [gd_scene load_steps=8 format=4 uid="uid://bgy513udje8fy"]
 
-[ext_resource type="Script" uid="uid://kj8jfnh4gi6u" path="res://Main_Game/stageController.gd" id="1_t1or4"]
+[ext_resource type="Script" path="res://Main_Game/stageController.gd" id="1_t1or4"]
 [ext_resource type="PackedScene" uid="uid://scl3b7ko3tw4" path="res://Main_Game/Terrain_Tilemap.tscn" id="2_t3dws"]
-[ext_resource type="PackedScene" uid="uid://gq8bk5h87loy" path="res://Main_Game/player.tscn" id="3_blark"]
-[ext_resource type="PackedScene" uid="uid://bfsd75ne6drno" path="res://Main_Game/Damage_Tilemap.tscn" id="3_s6nb4"]
+[ext_resource type="PackedScene" uid="uid://dyjri6mtn6mqa" path="res://Main_Game/player.tscn" id="3_blark"]
+[ext_resource type="PackedScene" path="res://Main_Game/Damage_Tilemap.tscn" id="3_s6nb4"]
 [ext_resource type="Theme" uid="uid://dwdqkuxyspo32" path="res://Game_User_Interface/Theme.tres" id="3_t1or4"]
-[ext_resource type="PackedScene" uid="uid://bt6nqr1i764ly" path="res://Main_Game/checkpoint.tscn" id="3_t3dws"]
+[ext_resource type="PackedScene" path="res://Main_Game/checkpoint.tscn" id="3_t3dws"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2p5ui"]
 size = Vector2(64, 64)

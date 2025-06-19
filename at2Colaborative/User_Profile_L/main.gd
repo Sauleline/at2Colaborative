@@ -20,8 +20,7 @@ func selectUser():
 	var Text = OptionUserSelect.get_item_text(ID)
 	saveUserFileName = userProfiles.userProfilesDict[Text]
 	open_user()
-	print(user.userName)
-	emit_signal('userNameSelected',user)
+	emit_signal('userNameSelected',Text)
 
 func _on_select_user_pressed() -> void:
 	selectUser()

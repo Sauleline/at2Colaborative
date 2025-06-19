@@ -8,7 +8,6 @@ signal respawn()
 @export var gravity = 2000
 @export_range(0.0, 1.0) var friction = 0.06
 @export_range(0.0 , 1.0) var acceleration = 0.05
-@export var userName = "Level 10 Crook"
 
 func mapRange(x, inMin, inMax, outMin, outMax):
 	return ((x - inMin) * (outMax - outMin) / (inMax - inMin) + outMin)
@@ -19,9 +18,11 @@ var scaleMap = {"Jackson": [0.08, 0.08],
 				"Pluey": [0.133, 0.133]}
 
 func _ready():
-	$"Level Display".text = userName
+	$"Level Display".text = $Global.userName
+	print($Global.userName)
 	$Sprite.scale.x = scaleMap[$Sprite.animation][0]
 	$Sprite.scale.y = scaleMap[$Sprite.animation][1]
+	
 		
 func _physics_process(delta):
 	velocity.y += gravity * delta
