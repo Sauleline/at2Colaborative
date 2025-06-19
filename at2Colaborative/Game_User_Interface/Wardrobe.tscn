@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://bd7sfwiwehvqn"]
 
-[ext_resource type="PackedScene" uid="uid://dyn2qf6aui3uv" path="res://Game_User_Interface/UI_Background.tscn" id="1_3wu08"]
+[ext_resource type="PackedScene" path="res://Game_User_Interface/UI_Background.tscn" id="1_3wu08"]
 
 [node name="Wardrobe" type="CanvasLayer"]
 

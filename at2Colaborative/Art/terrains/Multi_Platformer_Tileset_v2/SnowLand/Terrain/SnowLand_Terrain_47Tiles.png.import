@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://biiomaimyg3rl"
-path="res://.godot/imported/SnowLand_Terrain_47Tiles.png-1a6a13c3bf5d664720885acb53a044ed.ctex"
+path="res://.godot/imported/SnowLand_Terrain_47Tiles.png-4ad4c367a8fc0751eb5219b995eef205.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Art/terrains/Multi_Platformer_Tileset_v2/SnowLand/Terrain/SnowLand_Terrain_47Tiles.png"
-dest_files=["res://.godot/imported/SnowLand_Terrain_47Tiles.png-1a6a13c3bf5d664720885acb53a044ed.ctex"]
+source_file="res://art/terrains/Multi_Platformer_Tileset_v2/SnowLand/Terrain/SnowLand_Terrain_47Tiles.png"
+dest_files=["res://.godot/imported/SnowLand_Terrain_47Tiles.png-4ad4c367a8fc0751eb5219b995eef205.ctex"]
 
 [params]
 

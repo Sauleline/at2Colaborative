@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://dw2vfnm8rkagw" path="res://Game_User_Interface/single_player_level_select.gd" id="1_ndrbo"]
 [ext_resource type="Theme" uid="uid://dwdqkuxyspo32" path="res://Game_User_Interface/Theme.tres" id="2_b4mwh"]
-[ext_resource type="PackedScene" uid="uid://dyn2qf6aui3uv" path="res://Game_User_Interface/UI_Background.tscn" id="2_boqba"]
+[ext_resource type="PackedScene" path="res://Game_User_Interface/UI_Background.tscn" id="2_boqba"]
 
 [node name="SinglePlayerLevelSelect" type="CanvasLayer"]
 script = ExtResource("1_ndrbo")

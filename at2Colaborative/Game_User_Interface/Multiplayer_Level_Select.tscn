@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://ccvjumxyd5f5v"]
 
-[ext_resource type="PackedScene" uid="uid://dyn2qf6aui3uv" path="res://Game_User_Interface/UI_Background.tscn" id="1_s3t23"]
+[ext_resource type="PackedScene" path="res://Game_User_Interface/UI_Background.tscn" id="1_s3t23"]
 
 [node name="MultiplayerLevelSelect" type="CanvasLayer"]
 
