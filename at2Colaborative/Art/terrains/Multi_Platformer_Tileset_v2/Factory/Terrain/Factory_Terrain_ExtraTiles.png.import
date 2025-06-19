@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bgbnnci4sdr36"
-path="res://.godot/imported/Factory_Terrain_ExtraTiles.png-d30e80dc98ecb822bfd5a5dfd69745b1.ctex"
+path="res://.godot/imported/Factory_Terrain_ExtraTiles.png-1143cf7aac0de2ca2ff9d765c1caca28.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://art/terrains/Multi_Platformer_Tileset_v2/Factory/Terrain/Factory_Terrain_ExtraTiles.png"
-dest_files=["res://.godot/imported/Factory_Terrain_ExtraTiles.png-d30e80dc98ecb822bfd5a5dfd69745b1.ctex"]
+source_file="res://Art/terrains/Multi_Platformer_Tileset_v2/Factory/Terrain/Factory_Terrain_ExtraTiles.png"
+dest_files=["res://.godot/imported/Factory_Terrain_ExtraTiles.png-1143cf7aac0de2ca2ff9d765c1caca28.ctex"]
 
 [params]
 

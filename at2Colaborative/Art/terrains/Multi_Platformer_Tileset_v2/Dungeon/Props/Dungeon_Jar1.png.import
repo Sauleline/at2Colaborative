@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bysypbvfwuki4"
-path="res://.godot/imported/Dungeon_Jar1.png-9238752b690d75b252953798c1f107b6.ctex"
+path="res://.godot/imported/Dungeon_Jar1.png-aed2e882925004f542d0346740033fc9.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://art/terrains/Multi_Platformer_Tileset_v2/Dungeon/Props/Dungeon_Jar1.png"
-dest_files=["res://.godot/imported/Dungeon_Jar1.png-9238752b690d75b252953798c1f107b6.ctex"]
+source_file="res://Art/terrains/Multi_Platformer_Tileset_v2/Dungeon/Props/Dungeon_Jar1.png"
+dest_files=["res://.godot/imported/Dungeon_Jar1.png-aed2e882925004f542d0346740033fc9.ctex"]
 
 [params]
 
