@@ -1,10 +1,11 @@
-[gd_scene load_steps=9 format=3 uid="uid://gq8bk5h87loy"]
+[gd_scene load_steps=10 format=3 uid="uid://gq8bk5h87loy"]
 
 [ext_resource type="Script" uid="uid://dh2q4d51je4yd" path="res://Main_Game/player.gd" id="1_rvp0r"]
 [ext_resource type="Texture2D" uid="uid://bpfr73qhoymbq" path="res://Art/dame da ne guy.png" id="3_0s2u3"]
 [ext_resource type="Texture2D" uid="uid://ca3ijslxka5rs" path="res://Art/pluey.jpg" id="3_g6ucm"]
 [ext_resource type="Texture2D" uid="uid://ejh5wyqjcl2k" path="res://Art/jackson.jpg" id="3_wsymt"]
 [ext_resource type="Texture2D" uid="uid://ctio5uyu77gse" path="res://Art/joel.png" id="4_wr33q"]
+[ext_resource type="Texture2D" uid="uid://cpdp378h02gdv" path="res://Art/hats/team captain.png" id="6_wr33q"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_gragq"]
 size = Vector2(106.667, 106.667)
@@ -56,17 +57,6 @@ position = Vector2(2.38419e-07, 2.38419e-07)
 scale = Vector2(0.3, 0.3)
 shape = SubResource("RectangleShape2D_gragq")
 
-[node name="Area2D" type="Area2D" parent="."]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-shape = SubResource("RectangleShape2D_boqdv")
-
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(1.90735e-06, 1.13687e-13)
-scale = Vector2(0.133333, 0.133333)
-sprite_frames = SubResource("SpriteFrames_0s2u3")
-animation = &"Jackson"
-
 [node name="Level Display" type="Label" parent="."]
 offset_left = -56.0
 offset_top = -72.0
@@ -79,5 +69,25 @@ text = "Level 10 Crook"
 horizontal_alignment = 1
 vertical_alignment = 2
 autowrap_mode = 2
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("RectangleShape2D_boqdv")
+
+[node name="Sprite" type="AnimatedSprite2D" parent="."]
+position = Vector2(2.71051e-20, 1.61559e-27)
+scale = Vector2(0.133333, 0.133333)
+sprite_frames = SubResource("SpriteFrames_0s2u3")
+animation = &"Pluey"
+
+[node name="Hat Marker" type="Marker2D" parent="."]
+position = Vector2(-4.54747e-13, -24)
+scale = Vector2(1, 1)
+
+[node name="Hat" type="Sprite2D" parent="Hat Marker"]
+position = Vector2(4.54747e-13, 8)
+scale = Vector2(0.0888889, 0.0888889)
+texture = ExtResource("6_wr33q")
 
 [connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]

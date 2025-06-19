@@ -12,26 +12,28 @@ signal respawn()
 
 func _ready():
 	$"Level Display".text = level
-	if ($AnimatedSprite2D.animation == "Jackson"):
-		$AnimatedSprite2D.scale.x = 0.08
-		$AnimatedSprite2D.scale.y = 0.08
-	elif ($AnimatedSprite2D.animation == "Joel"):
-		$AnimatedSprite2D.scale.x = 0.067
-		$AnimatedSprite2D.scale.y = 0.067
-	elif ($AnimatedSprite2D.animation == "Dame Da Ne Guy"):
-		$AnimatedSprite2D.scale.x = 0.149
-		$AnimatedSprite2D.scale.y = 0.069
-	elif ($AnimatedSprite2D.animation == "Pluey"):
-		$AnimatedSprite2D.scale.x = 0.133
-		$AnimatedSprite2D.scale.y = 0.133
+	if ($Sprite.animation == "Jackson"):
+		$Sprite.scale.x = 0.08
+		$Sprite.scale.y = 0.08
+	elif ($Sprite.animation == "Joel"):
+		$Sprite.scale.x = 0.067
+		$Sprite.scale.y = 0.067
+	elif ($Sprite.animation == "Dame Da Ne Guy"):
+		$Sprite.scale.x = 0.149
+		$Sprite.scale.y = 0.069
+	elif ($Sprite.animation == "Pluey"):
+		$Sprite.scale.x = 0.133
+		$Sprite.scale.y = 0.133
 		
 func _physics_process(delta):
 	velocity.y += gravity * delta
 	var dir = Input.get_axis("p1left", "p1right")
 	if (velocity.x < 0):
-		$AnimatedSprite2D.flip_h = false
+		$Sprite.flip_h = false
+		$"Hat Marker/Hat".flip_h = false
 	else:
-		$AnimatedSprite2D.flip_h = true
+		$Sprite.flip_h = true
+		$"Hat Marker/Hat".flip_h = true
 	if dir != 0:
 		velocity.x = lerp(velocity.x, dir * speed, acceleration)
 	else:
