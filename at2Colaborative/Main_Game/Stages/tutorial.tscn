@@ -1,6 +1,7 @@
-[gd_scene load_steps=8 format=4 uid="uid://bgy513udje8fy"]
+[gd_scene load_steps=9 format=4 uid="uid://bgy513udje8fy"]
 
 [ext_resource type="Script" uid="uid://kj8jfnh4gi6u" path="res://Main_Game/stageController.gd" id="1_t1or4"]
+[ext_resource type="Script" uid="uid://c3eigbtuqj7ba" path="res://global.gd" id="2_s6nb4"]
 [ext_resource type="PackedScene" uid="uid://scl3b7ko3tw4" path="res://Main_Game/Terrain_Tilemap.tscn" id="2_t3dws"]
 [ext_resource type="PackedScene" uid="uid://dyjri6mtn6mqa" path="res://Main_Game/player.tscn" id="3_blark"]
 [ext_resource type="PackedScene" uid="uid://bfsd75ne6drno" path="res://Main_Game/Damage_Tilemap.tscn" id="3_s6nb4"]
@@ -12,6 +13,9 @@ size = Vector2(64, 64)
 
 [node name="Tutorial" type="Node"]
 script = ExtResource("1_t1or4")
+
+[node name="Global" type="Node" parent="."]
+script = ExtResource("2_s6nb4")
 
 [node name="Damage" parent="." instance=ExtResource("3_s6nb4")]
 modulate = Color(1, 1, 1, 0.5)

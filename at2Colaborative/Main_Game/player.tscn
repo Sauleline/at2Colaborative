@@ -2,11 +2,11 @@
 
 [ext_resource type="Script" uid="uid://dh2q4d51je4yd" path="res://Main_Game/player.gd" id="1_rvp0r"]
 [ext_resource type="Script" uid="uid://c3eigbtuqj7ba" path="res://global.gd" id="2_64xtq"]
-[ext_resource type="Texture2D" uid="uid://bpfr73qhoymbq" path="res://art/dame da ne guy.png" id="3_0s2u3"]
-[ext_resource type="Texture2D" uid="uid://ca3ijslxka5rs" path="res://art/pluey.jpg" id="3_g6ucm"]
-[ext_resource type="Texture2D" uid="uid://ejh5wyqjcl2k" path="res://art/jackson.jpg" id="3_wsymt"]
-[ext_resource type="Texture2D" uid="uid://ctio5uyu77gse" path="res://art/joel.png" id="4_wr33q"]
-[ext_resource type="Texture2D" uid="uid://cpdp378h02gdv" path="res://art/hats/team captain.png" id="6_wr33q"]
+[ext_resource type="Texture2D" uid="uid://bpfr73qhoymbq" path="res://Art/dame da ne guy.png" id="3_0s2u3"]
+[ext_resource type="Texture2D" uid="uid://ca3ijslxka5rs" path="res://Art/pluey.jpg" id="3_g6ucm"]
+[ext_resource type="Texture2D" uid="uid://ejh5wyqjcl2k" path="res://Art/jackson.jpg" id="3_wsymt"]
+[ext_resource type="Texture2D" uid="uid://ctio5uyu77gse" path="res://Art/joel.png" id="4_wr33q"]
+[ext_resource type="Texture2D" uid="uid://cpdp378h02gdv" path="res://Art/hats/team captain.png" id="6_wr33q"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_0s2u3"]
 animations = [{
