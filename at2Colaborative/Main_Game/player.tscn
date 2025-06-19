@@ -1,17 +1,17 @@
-[gd_scene load_steps=10 format=3 uid="uid://dai41bh41wsus"]
+[gd_scene load_steps=10 format=3 uid="uid://gq8bk5h87loy"]
 
-[ext_resource type="Script" uid="uid://tychx0g1tico" path="res://Main_Game/player2.gd" id="1_pfpgt"]
-[ext_resource type="Texture2D" uid="uid://bpfr73qhoymbq" path="res://Art/dame da ne guy.png" id="2_rskqm"]
-[ext_resource type="Texture2D" uid="uid://ejh5wyqjcl2k" path="res://Art/jackson.jpg" id="3_ialyv"]
-[ext_resource type="Texture2D" uid="uid://ctio5uyu77gse" path="res://Art/joel.png" id="4_rlqt7"]
-[ext_resource type="Texture2D" uid="uid://ca3ijslxka5rs" path="res://Art/pluey.jpg" id="5_pjovm"]
-[ext_resource type="Texture2D" uid="uid://cpdp378h02gdv" path="res://Art/hats/team captain.png" id="6_mjfoo"]
+[ext_resource type="Script" uid="uid://dh2q4d51je4yd" path="res://Main_Game/player.gd" id="1_rvp0r"]
+[ext_resource type="Texture2D" uid="uid://bpfr73qhoymbq" path="res://Art/dame da ne guy.png" id="3_0s2u3"]
+[ext_resource type="Texture2D" uid="uid://ca3ijslxka5rs" path="res://Art/pluey.jpg" id="3_g6ucm"]
+[ext_resource type="Texture2D" uid="uid://ejh5wyqjcl2k" path="res://Art/jackson.jpg" id="3_wsymt"]
+[ext_resource type="Texture2D" uid="uid://ctio5uyu77gse" path="res://Art/joel.png" id="4_wr33q"]
+[ext_resource type="Texture2D" uid="uid://cpdp378h02gdv" path="res://Art/hats/team captain.png" id="6_wr33q"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_0s2u3"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("2_rskqm")
+"texture": ExtResource("3_0s2u3")
 }],
 "loop": true,
 "name": &"Dame Da Ne Guy",
@@ -19,7 +19,7 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("3_ialyv")
+"texture": ExtResource("3_wsymt")
 }],
 "loop": true,
 "name": &"Jackson",
@@ -27,7 +27,7 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("4_rlqt7")
+"texture": ExtResource("4_wr33q")
 }],
 "loop": true,
 "name": &"Joel",
@@ -35,7 +35,7 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("5_pjovm")
+"texture": ExtResource("3_g6ucm")
 }],
 "loop": true,
 "name": &"Pluey",
@@ -48,9 +48,9 @@ size = Vector2(106.667, 106.667)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_boqdv"]
 size = Vector2(33, 33)
 
-[node name="Player1" type="CharacterBody2D"]
+[node name="Player" type="CharacterBody2D"]
 scale = Vector2(2, 2)
-script = ExtResource("1_pfpgt")
+script = ExtResource("1_rvp0r")
 
 [node name="Sprite" type="AnimatedSprite2D" parent="."]
 position = Vector2(2.71051e-20, 1.61559e-27)
@@ -61,7 +61,7 @@ animation = &"Dame Da Ne Guy"
 [node name="Hat" type="Sprite2D" parent="."]
 position = Vector2(0, -16)
 scale = Vector2(0.25, 0.25)
-texture = ExtResource("6_mjfoo")
+texture = ExtResource("6_wr33q")
 offset = Vector2(0, -16)
 
 [node name="Level Display" type="Label" parent="."]

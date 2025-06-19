@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://blnfbrg5cfswg"
-path="res://.godot/imported/GrassLand_LoneTrunk.png-fc276763cb2686ef1bf62411c4472145.ctex"
+path="res://.godot/imported/GrassLand_LoneTrunk.png-e1d97b9d8e310d73cfe2e483f8331d49.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://art/terrains/Multi_Platformer_Tileset_v2/GrassLand/Props/GrassLand_LoneTrunk.png"
-dest_files=["res://.godot/imported/GrassLand_LoneTrunk.png-fc276763cb2686ef1bf62411c4472145.ctex"]
+source_file="res://Art/terrains/Multi_Platformer_Tileset_v2/GrassLand/Props/GrassLand_LoneTrunk.png"
+dest_files=["res://.godot/imported/GrassLand_LoneTrunk.png-e1d97b9d8e310d73cfe2e483f8331d49.ctex"]
 
 [params]
 

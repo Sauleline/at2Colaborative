@@ -1,18 +1,17 @@
-[gd_scene load_steps=9 format=4 uid="uid://bgy513udje8fy"]
+[gd_scene load_steps=8 format=4 uid="uid://bgy513udje8fy"]
 
-[ext_resource type="Script" uid="uid://kj8jfnh4gi6u" path="res://Main_Game/Stages/stageController.gd" id="1_yjrh1"]
+[ext_resource type="Script" uid="uid://kj8jfnh4gi6u" path="res://Main_Game/stageController.gd" id="1_t1or4"]
 [ext_resource type="PackedScene" uid="uid://scl3b7ko3tw4" path="res://Main_Game/Terrain_Tilemap.tscn" id="2_t3dws"]
-[ext_resource type="PackedScene" uid="uid://gq8bk5h87loy" path="res://Main_Game/player1.tscn" id="3_blark"]
+[ext_resource type="PackedScene" uid="uid://gq8bk5h87loy" path="res://Main_Game/player.tscn" id="3_blark"]
 [ext_resource type="PackedScene" uid="uid://bfsd75ne6drno" path="res://Main_Game/Damage_Tilemap.tscn" id="3_s6nb4"]
 [ext_resource type="Theme" uid="uid://dwdqkuxyspo32" path="res://Game_User_Interface/Theme.tres" id="3_t1or4"]
 [ext_resource type="PackedScene" uid="uid://bt6nqr1i764ly" path="res://Main_Game/checkpoint.tscn" id="3_t3dws"]
-[ext_resource type="PackedScene" uid="uid://dai41bh41wsus" path="res://Main_Game/player2.tscn" id="6_s6nb4"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2p5ui"]
 size = Vector2(64, 64)
 
 [node name="Tutorial" type="Node"]
-script = ExtResource("1_yjrh1")
+script = ExtResource("1_t1or4")
 
 [node name="Damage" parent="." instance=ExtResource("3_s6nb4")]
 modulate = Color(1, 1, 1, 0.5)
@@ -95,25 +94,15 @@ vertical_alignment = 1
 [node name="0" parent="Checkpoints" instance=ExtResource("3_t3dws")]
 position = Vector2(1216, -256)
 
-[node name="Player2" parent="." instance=ExtResource("6_s6nb4")]
-position = Vector2(272, 128)
-
-[node name="Player1" parent="." instance=ExtResource("3_blark")]
+[node name="Player" parent="." instance=ExtResource("3_blark")]
 position = Vector2(128, 128)
 
-[node name="Player1Spawn" type="Marker2D" parent="."]
-position = Vector2(128, 128)
-
-[node name="Player2Spawn" type="Marker2D" parent="."]
-position = Vector2(128, 128)
-
-[node name="Camera" type="Camera2D" parent="."]
-position = Vector2(192, -16)
-scale = Vector2(2, 2)
+[node name="Camera" type="Camera2D" parent="Player"]
 position_smoothing_enabled = true
 position_smoothing_speed = 15.0
 
-[connection signal="hitArea" from="Player2" to="." method="_on_player2_hit_area"]
-[connection signal="respawn" from="Player2" to="." method="_on_player2_respawn"]
-[connection signal="hitArea" from="Player1" to="." method="_on_player1_hit_area"]
-[connection signal="respawn" from="Player1" to="." method="_on_player1_respawn"]
+[node name="PlayerSpawn" type="Marker2D" parent="."]
+position = Vector2(128, 128)
+
+[connection signal="hitArea" from="Player" to="." method="_on_player_hit_area"]
+[connection signal="respawn" from="Player" to="." method="_on_player_respawn"]
