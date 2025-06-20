@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://ygry3o8v6mlg"
-path="res://.godot/imported/Cave_StoneMound_Big.png-45967924a6354839d3d86dfea795f568.ctex"
+path="res://.godot/imported/Cave_StoneMound_Big.png-7ce329d5c7ba07e102308ca523a667da.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://art/terrains/Multi_Platformer_Tileset_v2/Cave/Props/Cave_StoneMound_Big.png"
-dest_files=["res://.godot/imported/Cave_StoneMound_Big.png-45967924a6354839d3d86dfea795f568.ctex"]
+source_file="res://Art/terrains/Multi_Platformer_Tileset_v2/Cave/Props/Cave_StoneMound_Big.png"
+dest_files=["res://.godot/imported/Cave_StoneMound_Big.png-7ce329d5c7ba07e102308ca523a667da.ctex"]
 
 [params]
 
