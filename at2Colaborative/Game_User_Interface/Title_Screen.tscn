@@ -12,6 +12,8 @@ script = ExtResource("1_5fu7q")
 script = ExtResource("2_tl6ip")
 
 [node name="Background" parent="." instance=ExtResource("2_r5ysx")]
+metadata/_edit_use_anchors_ = true
+metadata/_edit_lock_ = true
 
 [node name="Title" type="Label" parent="."]
 offset_left = 217.0
@@ -22,6 +24,16 @@ theme = ExtResource("1_wjfn0")
 theme_override_font_sizes/font_size = 125
 text = "Game Name"
 horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Users Logged" type="Label" parent="."]
+offset_left = 32.0
+offset_top = 16.0
+offset_right = 384.0
+offset_bottom = 64.0
+theme = ExtResource("1_wjfn0")
+theme_override_font_sizes/font_size = 19
+text = "Welcome back Guest and Guest"
 vertical_alignment = 1
 
 [node name="Single_Player" type="Button" parent="."]

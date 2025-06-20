@@ -1,5 +1,13 @@
 extends CanvasLayer
 
+func _ready() -> void:
+	var p1 = "Guest"
+	var p2 = "Guest"
+	if(Global.getPlayerOne()):
+		p1 = Global.getPlayerOne().userName
+	if(Global.getPlayerTwo()):
+		p2 = Global.getPlayerTwo().userName
+	$"Users Logged".text = 'Welcome Back '+ p1 + ' and ' + p2
 
 func _on_multiplayer_pressed() -> void:
 	get_tree().change_scene_to_file("res://Game_User_Interface/Multiplayer_Level_Select.tscn")
