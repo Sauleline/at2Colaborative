@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://ctio5uyu77gse"
-path="res://.godot/imported/joel.png-4847002f77376b930c4393d094736bb2.ctex"
+path="res://.godot/imported/joel.png-8eeef060335f5cf647ff97e442dbb357.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Art/joel.png"
-dest_files=["res://.godot/imported/joel.png-4847002f77376b930c4393d094736bb2.ctex"]
+source_file="res://art/joel.png"
+dest_files=["res://.godot/imported/joel.png-8eeef060335f5cf647ff97e442dbb357.ctex"]
 
 [params]
 

@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://ce57x2eqrxgj2"
-path="res://.godot/imported/Cave_ExplorerBones.png-304b58e8ecbc8be94d03c4529385aab2.ctex"
+path="res://.godot/imported/Cave_ExplorerBones.png-59c81b1ab60dd7202dd105b2d2f38eeb.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Art/terrains/Multi_Platformer_Tileset_v2/Cave/Props/Cave_ExplorerBones.png"
-dest_files=["res://.godot/imported/Cave_ExplorerBones.png-304b58e8ecbc8be94d03c4529385aab2.ctex"]
+source_file="res://art/terrains/Multi_Platformer_Tileset_v2/Cave/Props/Cave_ExplorerBones.png"
+dest_files=["res://.godot/imported/Cave_ExplorerBones.png-59c81b1ab60dd7202dd105b2d2f38eeb.ctex"]
 
 [params]
 

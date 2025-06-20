@@ -7,9 +7,3 @@ func addPlayers(playerone, playertwo):
 	PlayerOne = playerone
 	PlayerTwo = playertwo
 	
-func getPlayerOne():
-	return PlayerOne
-
-func getPlayerTwo():
-	return PlayerTwo
-	
