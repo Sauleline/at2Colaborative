@@ -67,6 +67,19 @@ text = "Player Two
 "
 metadata/_edit_use_anchors_ = true
 
+[node name="UnselectUser" type="Button" parent="."]
+anchors_preset = -1
+anchor_left = -0.00694444
+anchor_top = -0.0509259
+anchor_right = 0.0425347
+offset_left = 969.0
+offset_top = 140.0
+offset_right = 1084.0
+offset_bottom = 178.0
+text = "Unselect User
+"
+metadata/_edit_use_anchors_ = true
+
 [node name="CreateNewUser" type="Button" parent="."]
 anchors_preset = -1
 anchor_top = -0.0509259
@@ -93,11 +106,12 @@ metadata/_edit_use_anchors_ = true
 anchors_preset = -1
 anchor_left = -0.0503472
 anchor_top = -0.0462963
+anchor_right = 0.145833
 anchor_bottom = 0.00771605
-offset_left = 1020.0
-offset_top = 136.0
-offset_right = 1135.0
-offset_bottom = 174.0
+offset_left = 467.0
+offset_top = 587.0
+offset_right = 582.0
+offset_bottom = 625.0
 text = "Remove User
 "
 metadata/_edit_use_anchors_ = true
@@ -123,6 +137,7 @@ vertical_alignment = 1
 [connection signal="pressed" from="SelectUser" to="." method="_on_select_user_pressed"]
 [connection signal="pressed" from="PlayerOneButton" to="." method="_on_player_one_button_pressed"]
 [connection signal="pressed" from="PlayerTwoButton" to="." method="_on_player_two_button_pressed"]
+[connection signal="pressed" from="UnselectUser" to="." method="_on_unselect_user_pressed"]
 [connection signal="pressed" from="CreateNewUser" to="." method="_on_create_new_user_pressed"]
 [connection signal="pressed" from="BackButton" to="." method="_on_back_button_pressed"]
 [connection signal="pressed" from="RemoveUser" to="." method="_on_remove_user_pressed"]
