@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://c0r6whkbffmb3"
-path="res://.godot/imported/Cave_Terrain_BgdTiles.png-39bd31e2775bc61037a567e5e3de17bf.ctex"
+path="res://.godot/imported/Cave_Terrain_BgdTiles.png-2d287a4ea1a7b60477be80250d46dcc2.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://art/terrains/Multi_Platformer_Tileset_v2/Cave/Terrain/Cave_Terrain_BgdTiles.png"
-dest_files=["res://.godot/imported/Cave_Terrain_BgdTiles.png-39bd31e2775bc61037a567e5e3de17bf.ctex"]
+source_file="res://Art/terrains/Multi_Platformer_Tileset_v2/Cave/Terrain/Cave_Terrain_BgdTiles.png"
+dest_files=["res://.godot/imported/Cave_Terrain_BgdTiles.png-2d287a4ea1a7b60477be80250d46dcc2.ctex"]
 
 [params]
 
