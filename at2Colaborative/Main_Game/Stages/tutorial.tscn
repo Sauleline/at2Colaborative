@@ -27,6 +27,29 @@ tile_map_data = PackedByteArray("AAACAAYAAQABAAEAAAACAAcAAQABAAEAAAACAAgAAQABAAE
 
 [node name="Tutorial Text" type="Node" parent="."]
 
+[node name="Jump_2" type="Label" parent="Tutorial Text"]
+offset_left = -1154.0
+offset_top = -2060.0
+offset_right = -875.0
+offset_bottom = -2011.0
+size_flags_horizontal = 4
+theme = ExtResource("3_t1or4")
+theme_override_font_sizes/font_size = 16
+text = "Jump!"
+horizontal_alignment = 1
+
+[node name="Sliding" type="Label" parent="Tutorial Text"]
+offset_left = -1479.0
+offset_top = -2353.0
+offset_right = -1217.0
+offset_bottom = -2304.0
+size_flags_horizontal = 4
+theme = ExtResource("3_t1or4")
+theme_override_font_sizes/font_size = 16
+text = "Sliding can give high speeds on slopes
+Hold D to slide"
+horizontal_alignment = 1
+
 [node name="DoubleJumping" type="Label" parent="Tutorial Text"]
 offset_left = -2094.0
 offset_top = -1590.0
@@ -89,10 +112,10 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="End" type="Label" parent="Tutorial Text"]
-offset_left = 48.0
-offset_top = -480.0
-offset_right = 208.0
-offset_bottom = -415.0
+offset_left = 136.0
+offset_top = -2114.0
+offset_right = 296.0
+offset_bottom = -2049.0
 theme = ExtResource("3_t1or4")
 theme_override_font_sizes/font_size = 16
 text = "This'll be where the 
