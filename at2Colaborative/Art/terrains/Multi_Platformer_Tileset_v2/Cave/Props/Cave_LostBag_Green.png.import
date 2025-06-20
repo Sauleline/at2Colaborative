@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://br5qov8gef264"
-path="res://.godot/imported/Cave_LostBag_Green.png-3cc3d5e09c24f8f5607580c8fd5e8512.ctex"
+path="res://.godot/imported/Cave_LostBag_Green.png-03d3d5b18f19673709af78fd052faa8d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Art/terrains/Multi_Platformer_Tileset_v2/Cave/Props/Cave_LostBag_Green.png"
-dest_files=["res://.godot/imported/Cave_LostBag_Green.png-3cc3d5e09c24f8f5607580c8fd5e8512.ctex"]
+source_file="res://art/terrains/Multi_Platformer_Tileset_v2/Cave/Props/Cave_LostBag_Green.png"
+dest_files=["res://.godot/imported/Cave_LostBag_Green.png-03d3d5b18f19673709af78fd052faa8d.ctex"]
 
 [params]
 

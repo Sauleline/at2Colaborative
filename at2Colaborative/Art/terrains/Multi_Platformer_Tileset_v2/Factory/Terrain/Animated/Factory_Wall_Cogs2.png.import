@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://163pqfmq6mb"
-path="res://.godot/imported/Factory_Wall_Cogs2.png-a6df83f31f2a10c8353a7f085fc275df.ctex"
+path="res://.godot/imported/Factory_Wall_Cogs2.png-4ca2f1dc2d1e05bfd61d45271baf922e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Art/terrains/Multi_Platformer_Tileset_v2/Factory/Terrain/Animated/Factory_Wall_Cogs2.png"
-dest_files=["res://.godot/imported/Factory_Wall_Cogs2.png-a6df83f31f2a10c8353a7f085fc275df.ctex"]
+source_file="res://art/terrains/Multi_Platformer_Tileset_v2/Factory/Terrain/Animated/Factory_Wall_Cogs2.png"
+dest_files=["res://.godot/imported/Factory_Wall_Cogs2.png-4ca2f1dc2d1e05bfd61d45271baf922e.ctex"]
 
 [params]
 
