@@ -19,7 +19,7 @@ var scaleMap = {"Jackson": [0.08, 0.08],
 				"Pluey": [0.133, 0.133]}
 
 func _ready():
-	if (Global.getPlayerOne()):
+d	if (Global.getPlayerOne()):
 		var player = Global.getPlayerOne()
 		$"Level Display".text = player.userName
 	else:
