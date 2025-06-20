@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cmj8jpi1if7bv"
-path="res://.godot/imported/Stronghold_Terrain_ExtraTiles.png-2c3df10463df9e402da959ebabce05a3.ctex"
+path="res://.godot/imported/Stronghold_Terrain_ExtraTiles.png-2b9b0209a9cc977e9e8de81e72b34e51.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://art/terrains/Multi_Platformer_Tileset_v2/Stronghold/Terrain/Stronghold_Terrain_ExtraTiles.png"
-dest_files=["res://.godot/imported/Stronghold_Terrain_ExtraTiles.png-2c3df10463df9e402da959ebabce05a3.ctex"]
+source_file="res://Art/terrains/Multi_Platformer_Tileset_v2/Stronghold/Terrain/Stronghold_Terrain_ExtraTiles.png"
+dest_files=["res://.godot/imported/Stronghold_Terrain_ExtraTiles.png-2b9b0209a9cc977e9e8de81e72b34e51.ctex"]
 
 [params]
 

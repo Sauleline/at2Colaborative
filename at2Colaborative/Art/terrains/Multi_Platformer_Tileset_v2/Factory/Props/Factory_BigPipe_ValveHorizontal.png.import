@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cr6avor082a07"
-path="res://.godot/imported/Factory_BigPipe_ValveHorizontal.png-55964bee9539624450c370950ea09d3b.ctex"
+path="res://.godot/imported/Factory_BigPipe_ValveHorizontal.png-81e1d225efa991d2f97295ef4a612fb8.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://art/terrains/Multi_Platformer_Tileset_v2/Factory/Props/Factory_BigPipe_ValveHorizontal.png"
-dest_files=["res://.godot/imported/Factory_BigPipe_ValveHorizontal.png-55964bee9539624450c370950ea09d3b.ctex"]
+source_file="res://Art/terrains/Multi_Platformer_Tileset_v2/Factory/Props/Factory_BigPipe_ValveHorizontal.png"
+dest_files=["res://.godot/imported/Factory_BigPipe_ValveHorizontal.png-81e1d225efa991d2f97295ef4a612fb8.ctex"]
 
 [params]
 

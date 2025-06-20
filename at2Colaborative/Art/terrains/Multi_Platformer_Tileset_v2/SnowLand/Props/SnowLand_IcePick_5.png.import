@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://wlqy4getrook"
-path="res://.godot/imported/SnowLand_IcePick_5.png-a28e7ca7cd386f8b6d20dcc1834a3c05.ctex"
+path="res://.godot/imported/SnowLand_IcePick_5.png-4ad95b4e9464a3504d717607aa60c0da.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://art/terrains/Multi_Platformer_Tileset_v2/SnowLand/Props/SnowLand_IcePick_5.png"
-dest_files=["res://.godot/imported/SnowLand_IcePick_5.png-a28e7ca7cd386f8b6d20dcc1834a3c05.ctex"]
+source_file="res://Art/terrains/Multi_Platformer_Tileset_v2/SnowLand/Props/SnowLand_IcePick_5.png"
+dest_files=["res://.godot/imported/SnowLand_IcePick_5.png-4ad95b4e9464a3504d717607aa60c0da.ctex"]
 
 [params]
 

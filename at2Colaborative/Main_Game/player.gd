@@ -9,6 +9,8 @@ signal respawn()
 @export_range(0.05, 2) var punchTime = 0.2
 @export_range(0.0, 1.0) var friction = 0.06
 @export_range(0.0 , 1.0) var acceleration = 0.05
+var jumpCount = 2
+
 
 func mapRange(x, inMin, inMax, outMin, outMax):
 	return ((x - inMin) * (outMax - outMin) / (inMax - inMin) + outMin)
@@ -38,6 +40,12 @@ func _physics_process(delta):
 		$Sprite.flip_h = true
 		$Hat.flip_h = true
 		$Fist.rotation = deg_to_rad(0)
+	if Input.is_action_just_pressed("p1punch"):
+		$Fist/FistHitbox.disabled = false
+		$Fist/ColorRect.visible = true
+		await get_tree().create_timer(punchTime).timeout
+		$Fist/FistHitbox.disabled = true
+		$Fist/ColorRect.visible = false
 	if dir != 0:
 		velocity.x = lerp(velocity.x, dir * speed, acceleration)
 	else:
@@ -47,14 +55,12 @@ func _physics_process(delta):
 	else:
 		$Hat.rotation = deg_to_rad(mapRange(abs(velocity.x), 0, 600, 0, 30))
 	move_and_slide()
-	if Input.is_action_just_pressed("p1jump") and is_on_floor():
+	if is_on_floor():
+		jumpCount = 2
+	if Input.is_action_just_pressed("p1jump") and (jumpCount > 0):
 		velocity.y = jump_speed
-	if Input.is_action_just_pressed("p1punch"):
-		$Fist/FistHitbox.disabled = false
-		$Fist/ColorRect.visible = true
-		await get_tree().create_timer(punchTime).timeout
-		$Fist/FistHitbox.disabled = true
-		$Fist/ColorRect.visible = false
+		jumpCount -= 1
+
 
 func _on_area_2d_area_entered(area: Area2D) -> void:
 	if (area.get_parent().name == "Checkpoints"):
