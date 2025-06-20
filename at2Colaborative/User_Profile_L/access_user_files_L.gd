@@ -12,12 +12,23 @@ func openUserProfiles():
 	else:
 		ResourceSaver.save(userProfiles, saveFilePath+saveMainFileName)
 	
-func getUser():
-	return User
-	
 func _ready():
 	verifySaveDirectory(saveFilePath)
-	openUserProfiles()	
+	openUserProfiles()
+	returningUsers()
+	
+func returningUsers():
+	verifySaveDirectory(saveFilePath)
+	openUserProfiles()
+	if (userProfiles.PlayerOne):
+		saveUserFileName = userProfiles.userProfilesDict[userProfiles.PlayerOne]
+		open_user()
+		Global.PlayerOne = user
+	
+	if (userProfiles.PlayerTwo):
+		saveUserFileName = userProfiles.userProfilesDict[userProfiles.PlayerTwo]
+		open_user()
+		Global.PlayerTwo = user
 
 func verifySaveDirectory(path : String):
 	DirAccess.make_dir_absolute(path)

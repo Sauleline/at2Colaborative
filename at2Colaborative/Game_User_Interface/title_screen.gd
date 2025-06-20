@@ -3,10 +3,11 @@ extends CanvasLayer
 func _ready() -> void:
 	var p1 = "Guest"
 	var p2 = "Guest"
-	if(Global.getPlayerOne()):
-		p1 = Global.getPlayerOne().userName
-	if(Global.getPlayerTwo()):
-		p2 = Global.getPlayerTwo().userName
+	AccessUsers.returningUsers()
+	if(Global.PlayerOne):
+		p1 = Global.PlayerOne.userName
+	if(Global.PlayerTwo):
+		p2 = Global.PlayerTwo.userName
 	$"Users Logged".text = 'Welcome Back '+ p1 + ' and ' + p2
 
 func _on_multiplayer_pressed() -> void:

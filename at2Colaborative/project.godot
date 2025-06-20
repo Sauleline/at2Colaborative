@@ -21,6 +21,7 @@ boot_splash/use_filter=false
 [autoload]
 
 Global="*res://global.gd"
+AccessUsers="*res://User_Profile_L/access_user_files_L.gd"
 
 [display]
 

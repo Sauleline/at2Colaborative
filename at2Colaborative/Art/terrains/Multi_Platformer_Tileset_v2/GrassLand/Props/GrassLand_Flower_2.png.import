@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bbcin5ip2cdtk"
-path="res://.godot/imported/GrassLand_Flower_2.png-39dcd31a2fffde1a2e3a032699a2a24c.ctex"
+path="res://.godot/imported/GrassLand_Flower_2.png-63b8cc3d6801f0fcea387fbdecbeabf4.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Art/terrains/Multi_Platformer_Tileset_v2/GrassLand/Props/GrassLand_Flower_2.png"
-dest_files=["res://.godot/imported/GrassLand_Flower_2.png-39dcd31a2fffde1a2e3a032699a2a24c.ctex"]
+source_file="res://art/terrains/Multi_Platformer_Tileset_v2/GrassLand/Props/GrassLand_Flower_2.png"
+dest_files=["res://.godot/imported/GrassLand_Flower_2.png-63b8cc3d6801f0fcea387fbdecbeabf4.ctex"]
 
 [params]
 
