@@ -6,6 +6,7 @@ signal respawn()
 @export var speed = 600
 @export var jump_speed = -750
 @export var gravity = 2000
+@export_range(0.05, 2) var punchTime = 0.2
 @export_range(0.0, 1.0) var friction = 0.06
 @export_range(0.0 , 1.0) var acceleration = 0.05
 
@@ -18,14 +19,13 @@ var scaleMap = {"Jackson": [0.08, 0.08],
 				"Pluey": [0.133, 0.133]}
 
 func _ready():
-	var player = Global.getPlayerOne()
-	$"Level Display".text = player.userName
-	
-	#$"Level Display".text = $Global.userName
-	#print($Global.userName)
+	if (Global.getPlayerOne()):
+		var player = Global.getPlayerOne()
+		$"Level Display".text = player.userName
+	else:
+		$"Level Display".text = "Guest"
 	$Sprite.scale.x = scaleMap[$Sprite.animation][0]
 	$Sprite.scale.y = scaleMap[$Sprite.animation][1]
-	
 		
 func _physics_process(delta):
 	velocity.y += gravity * delta
@@ -33,9 +33,11 @@ func _physics_process(delta):
 	if (dir == -1):
 		$Sprite.flip_h = false
 		$Hat.flip_h = false
+		$Fist.rotation = deg_to_rad(180)
 	elif (dir == 1):
 		$Sprite.flip_h = true
 		$Hat.flip_h = true
+		$Fist.rotation = deg_to_rad(0)
 	if dir != 0:
 		velocity.x = lerp(velocity.x, dir * speed, acceleration)
 	else:
@@ -47,6 +49,12 @@ func _physics_process(delta):
 	move_and_slide()
 	if Input.is_action_just_pressed("p1jump") and is_on_floor():
 		velocity.y = jump_speed
+	if Input.is_action_just_pressed("p1punch"):
+		$Fist/FistHitbox.disabled = false
+		$Fist/ColorRect.visible = true
+		await get_tree().create_timer(punchTime).timeout
+		$Fist/FistHitbox.disabled = true
+		$Fist/ColorRect.visible = false
 
 func _on_area_2d_area_entered(area: Area2D) -> void:
 	if (area.get_parent().name == "Checkpoints"):

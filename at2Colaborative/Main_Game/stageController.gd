@@ -19,5 +19,7 @@ func _on_player_hit_area(area: Area2D, number: int) -> void:
 	for i in len($Checkpoints.get_children()):
 		if(int($Checkpoints.get_child(i).name) == number):
 			$Checkpoints.get_child(i).find_child('Activated1').color = Color(0,1,0)
+			$Checkpoints.get_child(i).find_child('Activated2').color = Color(0,1,0)
 		else:
 			$Checkpoints.get_child(i).find_child('Activated1').color = Color(1,1,1)
+			$Checkpoints.get_child(i).find_child('Activated2').color = Color(1,1,1)
