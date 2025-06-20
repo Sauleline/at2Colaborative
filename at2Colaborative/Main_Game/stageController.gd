@@ -3,10 +3,12 @@ extends Node
 func _ready():
 	$Damage.modulate = Color(1,1,1,0)
 	_on_player_respawn()
+	var stopWatch = 0 
 
 func _process(_delta):
 	if ($Player.position[1] > 1000):
 		_on_player_respawn()
+	var stopWatch =+ 1
 
 # You have to attach the player signals to this each time
 func _on_player_respawn() -> void:
