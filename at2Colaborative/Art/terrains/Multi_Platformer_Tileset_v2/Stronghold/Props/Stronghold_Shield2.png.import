@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://iga4btvnm5s7"
-path="res://.godot/imported/Stronghold_Shield2.png-6d8f6c99313c956a41a254ec7bf19ee3.ctex"
+path="res://.godot/imported/Stronghold_Shield2.png-320008860f2c4b18aad9b215b1666945.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Art/terrains/Multi_Platformer_Tileset_v2/Stronghold/Props/Stronghold_Shield2.png"
-dest_files=["res://.godot/imported/Stronghold_Shield2.png-6d8f6c99313c956a41a254ec7bf19ee3.ctex"]
+source_file="res://art/terrains/Multi_Platformer_Tileset_v2/Stronghold/Props/Stronghold_Shield2.png"
+dest_files=["res://.godot/imported/Stronghold_Shield2.png-320008860f2c4b18aad9b215b1666945.ctex"]
 
 [params]
 

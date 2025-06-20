@@ -79,11 +79,11 @@ func _on_unselect_user_pressed() -> void:
 	
 func resetUser():
 	var userSelected = selectUser()
-	if PlayerOne == 1:
+	if PlayerOne is not bool:
 		if PlayerOne.userName == userSelected.userName:
 			PlayerOne = false
 			PlayerOneLabel.text = "Player One"
-	elif PlayerTwo == 2:
+	elif PlayerTwo is not bool:
 		if PlayerTwo.userName == userSelected.userName:
 			PlayerTwo = false
 			PlayerTwoLabel.text = "Player Two"
