@@ -7,3 +7,4 @@ extends Resource
 @export var buttonIndex = 0
 @export var currentSprite = null
 @export var userCosmetics = []
+@export var scores = {}

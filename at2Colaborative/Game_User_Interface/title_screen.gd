@@ -3,6 +3,7 @@ extends CanvasLayer
 func _ready() -> void:
 	var p1 = "Guest"
 	var p2 = "Guest"
+	AccessUsers.returningUsers()
 	if(Global.getPlayerOne()):
 		p1 = Global.getPlayerOne().userName
 	if(Global.getPlayerTwo()):

@@ -23,6 +23,25 @@ func _ready():
 	verifySaveDirectory(saveFilePath)
 	openUserProfiles()
 	populate_user_list()
+	returningUser()
+
+	
+func returningUser():
+	if userProfiles.PlayerOne is not bool:
+		saveUserFileName = userProfiles.userProfilesDict[userProfiles.PlayerOne]
+		open_user()
+		PlayerOne = user
+		OptionUserSelect.set_item_disabled(user.buttonIndex, true)
+		PlayerOneLabel.text = PlayerOne.userName
+		OptionUserSelect.select(0)
+	
+	if userProfiles.PlayerTwo is not bool:
+		saveUserFileName = userProfiles.userProfilesDict[userProfiles.PlayerTwo]
+		open_user()
+		PlayerTwo = user
+		OptionUserSelect.set_item_disabled(user.buttonIndex, true)
+		PlayerTwoLabel.text = PlayerTwo.userName
+		OptionUserSelect.select(0)
 	
 func selectUser():
 	var ID = OptionUserSelect.get_selected_id()
@@ -79,11 +98,11 @@ func _on_unselect_user_pressed() -> void:
 	
 func resetUser():
 	var userSelected = selectUser()
-	if PlayerOne == 1:
+	if PlayerOne is not bool:
 		if PlayerOne.userName == userSelected.userName:
 			PlayerOne = false
 			PlayerOneLabel.text = "Player One"
-	elif PlayerTwo == 2:
+	elif PlayerTwo is not bool:
 		if PlayerTwo.userName == userSelected.userName:
 			PlayerTwo = false
 			PlayerTwoLabel.text = "Player Two"
@@ -118,4 +137,9 @@ func _on_player_two_button_pressed() -> void:
 
 func _on_back_button_pressed() -> void:
 	Global.addPlayers(PlayerOne, PlayerTwo)
+	if PlayerOne is not bool:
+		userProfiles.addPlayerOne(PlayerOne.userName)
+	if PlayerTwo is not bool:
+		userProfiles.addPlayerTwo(PlayerTwo.userName)
+	ResourceSaver.save(userProfiles, saveFilePath+saveMainFileName)
 	get_tree().change_scene_to_file("res://Game_User_Interface/Title_Screen.tscn")
