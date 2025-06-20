@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://scl3b7ko3tw4"]
 
-[ext_resource type="TileSet" uid="uid://b1osijup8oo1m" path="res://Art/terrains/terrain tile maps/Terrain_Tilemap.tres" id="1_tmrgt"]
+[ext_resource type="TileSet" uid="uid://c6x3hsvlwj7hl" path="res://Art/terrains/terrain tile maps/Terrain_Tilemap.tres" id="1_tmrgt"]
 
 [node name="Terrain" type="TileMapLayer"]
 scale = Vector2(2, 2)

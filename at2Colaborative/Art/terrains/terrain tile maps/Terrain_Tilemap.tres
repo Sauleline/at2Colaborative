@@ -1,12 +1,12 @@
 [gd_resource type="TileSet" load_steps=15 format=3 uid="uid://c6x3hsvlwj7hl"]
 
-[ext_resource type="Texture2D" uid="uid://csqg6wd18u8y6" path="res://art/terrains/terrain tile maps/caveFull.png" id="1_67xl3"]
-[ext_resource type="Texture2D" uid="uid://dlvegnxfiy0d2" path="res://art/terrains/terrain tile maps/desert full.png" id="2_ivx0q"]
-[ext_resource type="Texture2D" uid="uid://dnndvrj85ttwr" path="res://art/terrains/terrain tile maps/dungeon full.png" id="3_crevn"]
-[ext_resource type="Texture2D" uid="uid://dhytqx5iqx4vw" path="res://art/terrains/terrain tile maps/factory full.png" id="4_i6y0d"]
-[ext_resource type="Texture2D" uid="uid://llmnnb1bylpd" path="res://art/terrains/terrain tile maps/grassland full.png" id="5_unxr0"]
-[ext_resource type="Texture2D" uid="uid://b7igia6ne3vee" path="res://art/terrains/terrain tile maps/snowland full.png" id="6_tkjpb"]
-[ext_resource type="Texture2D" uid="uid://d1sx88mnbhgr3" path="res://art/terrains/terrain tile maps/stronghold full.png" id="7_a7xx5"]
+[ext_resource type="Texture2D" uid="uid://csqg6wd18u8y6" path="res://Art/terrains/terrain tile maps/caveFull.png" id="1_67xl3"]
+[ext_resource type="Texture2D" uid="uid://dlvegnxfiy0d2" path="res://Art/terrains/terrain tile maps/desert full.png" id="2_ivx0q"]
+[ext_resource type="Texture2D" uid="uid://dnndvrj85ttwr" path="res://Art/terrains/terrain tile maps/dungeon full.png" id="3_crevn"]
+[ext_resource type="Texture2D" uid="uid://dhytqx5iqx4vw" path="res://Art/terrains/terrain tile maps/factory full.png" id="4_i6y0d"]
+[ext_resource type="Texture2D" uid="uid://llmnnb1bylpd" path="res://Art/terrains/terrain tile maps/grassland full.png" id="5_unxr0"]
+[ext_resource type="Texture2D" uid="uid://b7igia6ne3vee" path="res://Art/terrains/terrain tile maps/snowland full.png" id="6_tkjpb"]
+[ext_resource type="Texture2D" uid="uid://d1sx88mnbhgr3" path="res://Art/terrains/terrain tile maps/stronghold full.png" id="7_a7xx5"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_yqugj"]
 resource_name = "Cave"
@@ -3051,7 +3051,6 @@ texture = ExtResource("7_a7xx5")
 29:2/0/terrains_peering_bit/bottom_side = 13
 29:3/0 = 0
 29:3/0/terrain_set = 0
-29:3/0/terrain = 13
 29:3/0/terrains_peering_bit/bottom_side = 13
 29:3/0/terrains_peering_bit/top_side = 13
 29:4/0 = 0
