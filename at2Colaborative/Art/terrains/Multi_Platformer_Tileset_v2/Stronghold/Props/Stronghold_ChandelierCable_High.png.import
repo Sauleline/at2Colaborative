@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://ddjp1oqjdpa3n"
-path="res://.godot/imported/Stronghold_ChandelierCable_High.png-960bbc70d8b3a387468eb6d8d944972d.ctex"
+path="res://.godot/imported/Stronghold_ChandelierCable_High.png-3eecbc4474d5ed5284890b18dbd29330.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Art/terrains/Multi_Platformer_Tileset_v2/Stronghold/Props/Stronghold_ChandelierCable_High.png"
-dest_files=["res://.godot/imported/Stronghold_ChandelierCable_High.png-960bbc70d8b3a387468eb6d8d944972d.ctex"]
+source_file="res://art/terrains/Multi_Platformer_Tileset_v2/Stronghold/Props/Stronghold_ChandelierCable_High.png"
+dest_files=["res://.godot/imported/Stronghold_ChandelierCable_High.png-3eecbc4474d5ed5284890b18dbd29330.ctex"]
 
 [params]
 
