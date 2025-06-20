@@ -97,7 +97,6 @@ shape = SubResource("RectangleShape2D_boqdv")
 debug_color = Color(0.699314, 0.277037, 1, 0.42)
 
 [node name="Fist" type="Area2D" parent="."]
-monitoring = false
 
 [node name="ColorRect" type="ColorRect" parent="Fist"]
 visible = false
