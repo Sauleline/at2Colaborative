@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://c0u8h4cf03oa4"
-path="res://.godot/imported/Stronghold_Chair.png-51c62d9265c12bff92bc587eae80b528.ctex"
+path="res://.godot/imported/Stronghold_Chair.png-4b9af2f935f467f693efb45be50018ee.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://art/terrains/Multi_Platformer_Tileset_v2/Stronghold/Props/Stronghold_Chair.png"
-dest_files=["res://.godot/imported/Stronghold_Chair.png-51c62d9265c12bff92bc587eae80b528.ctex"]
+source_file="res://Art/terrains/Multi_Platformer_Tileset_v2/Stronghold/Props/Stronghold_Chair.png"
+dest_files=["res://.godot/imported/Stronghold_Chair.png-4b9af2f935f467f693efb45be50018ee.ctex"]
 
 [params]
 
