@@ -46,6 +46,8 @@ func _physics_process(delta):
 		await get_tree().create_timer(punchTime).timeout
 		$Fist/FistHitbox.disabled = true
 		$Fist/ColorRect.visible = false
+	if Input.is_action_just_pressed("p1shoot"):
+		player_shoot()
 	if dir != 0:
 		velocity.x = lerp(velocity.x, dir * speed, acceleration)
 	else:
@@ -61,6 +63,8 @@ func _physics_process(delta):
 		velocity.y = jump_speed
 		jumpCount -= 1
 
+func player_shoot():
+	pass
 
 func _on_area_2d_area_entered(area: Area2D) -> void:
 	if (area.get_parent().name == "Checkpoints"):
