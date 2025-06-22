@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dnndvrj85ttwr"
-path="res://.godot/imported/dungeon full.png-f7edbcee0715bf730a5c30bc5c0ec271.ctex"
+path="res://.godot/imported/dungeon full.png-4c8db93bac2b2b7e26f0dfeef73a90d9.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Art/terrains/terrain tile maps/dungeon full.png"
-dest_files=["res://.godot/imported/dungeon full.png-f7edbcee0715bf730a5c30bc5c0ec271.ctex"]
+source_file="res://art/terrains/terrain tile maps/dungeon full.png"
+dest_files=["res://.godot/imported/dungeon full.png-4c8db93bac2b2b7e26f0dfeef73a90d9.ctex"]
 
 [params]
 
