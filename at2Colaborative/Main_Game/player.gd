@@ -12,7 +12,6 @@ signal respawn()
 @export_range(0.0 , 1.0) var acceleration = 0.05
 var jumpCount = 2
 
-
 func mapRange(x, inMin, inMax, outMin, outMax):
 	return ((x - inMin) * (outMax - outMin) / (inMax - inMin) + outMin)
 
@@ -25,8 +24,12 @@ func _ready():
 	if (Global.PlayerOne):
 		var player = Global.PlayerOne
 		$"Level Display".text = player.userName
+		$Sprite.play(player.currentSprite)
+		$Hat.play(player.currentHat)
 	else:
 		$"Level Display".text = "Guest"
+		$Hat.play("none")
+		$Sprite.play("Pluey")
 	$Sprite.scale.x = scaleMap[$Sprite.animation][0]
 	$Sprite.scale.y = scaleMap[$Sprite.animation][1]
 		

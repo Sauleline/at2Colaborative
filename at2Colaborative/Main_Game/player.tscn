@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://dyjri6mtn6mqa"]
+[gd_scene load_steps=15 format=3 uid="uid://dyjri6mtn6mqa"]
 
 [ext_resource type="Script" uid="uid://dh2q4d51je4yd" path="res://Main_Game/player.gd" id="1_rvp0r"]
 [ext_resource type="Script" uid="uid://c3eigbtuqj7ba" path="res://global.gd" id="2_64xtq"]
@@ -7,6 +7,8 @@
 [ext_resource type="Texture2D" uid="uid://ejh5wyqjcl2k" path="res://Art/jackson.jpg" id="3_wsymt"]
 [ext_resource type="Texture2D" uid="uid://ctio5uyu77gse" path="res://Art/joel.png" id="4_wr33q"]
 [ext_resource type="Texture2D" uid="uid://cpdp378h02gdv" path="res://Art/hats/team captain.png" id="6_wr33q"]
+[ext_resource type="Texture2D" uid="uid://dxg0mondhfl0g" path="res://Art/hats/gibus.png" id="7_tmng6"]
+[ext_resource type="Texture2D" uid="uid://cmxwp4uvhrlfp" path="res://Art/hats/none.png" id="8_ndv38"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_0s2u3"]
 animations = [{
@@ -43,6 +45,33 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="SpriteFrames" id="SpriteFrames_ndv38"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("7_tmng6")
+}],
+"loop": true,
+"name": &"gibus",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("8_ndv38")
+}],
+"loop": true,
+"name": &"none",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_wr33q")
+}],
+"loop": true,
+"name": &"team captain",
+"speed": 5.0
+}]
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_gragq"]
 size = Vector2(106.667, 106.667)
 
@@ -65,10 +94,11 @@ scale = Vector2(0.133333, 0.133333)
 sprite_frames = SubResource("SpriteFrames_0s2u3")
 animation = &"Dame Da Ne Guy"
 
-[node name="Hat" type="Sprite2D" parent="."]
+[node name="Hat" type="AnimatedSprite2D" parent="."]
 position = Vector2(0, -16)
 scale = Vector2(0.25, 0.25)
-texture = ExtResource("6_wr33q")
+sprite_frames = SubResource("SpriteFrames_ndv38")
+animation = &"gibus"
 offset = Vector2(0, -16)
 
 [node name="Level Display" type="Label" parent="."]
