@@ -56,7 +56,7 @@ func _physics_process(delta):
 		$Hat.rotation = deg_to_rad(mapRange(abs(velocity.x), 0, 600, 0, -30))
 	else:
 		$Hat.rotation = deg_to_rad(mapRange(abs(velocity.x), 0, 600, 0, 30))
-	move_and_slide()
+	move_and_slide()	
 	if is_on_floor():
 		jumpCount = 2
 	if Input.is_action_just_pressed("p1jump") and (jumpCount > 0):

@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://djvgwyp7pdbdq"
-path="res://.godot/imported/Stronghold_BigDoor.png-b8292b0445b50887fe88f10c38c1eabc.ctex"
+path="res://.godot/imported/Stronghold_BigDoor.png-62afcc6e429025c65d2085f50d8c57a6.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Art/terrains/Multi_Platformer_Tileset_v2/Stronghold/Props/Stronghold_BigDoor.png"
-dest_files=["res://.godot/imported/Stronghold_BigDoor.png-b8292b0445b50887fe88f10c38c1eabc.ctex"]
+source_file="res://art/terrains/Multi_Platformer_Tileset_v2/Stronghold/Props/Stronghold_BigDoor.png"
+dest_files=["res://.godot/imported/Stronghold_BigDoor.png-62afcc6e429025c65d2085f50d8c57a6.ctex"]
 
 [params]
 
