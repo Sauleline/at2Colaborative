@@ -11,6 +11,7 @@ func openUserProfiles():
 		userProfiles = ResourceLoader.load(saveFilePath + saveMainFileName).duplicate(true)
 	else:
 		ResourceSaver.save(userProfiles, saveFilePath+saveMainFileName)
+		get_tree().change_scene_to_file("res://User_Profile_L/User_Profile_Create.tscn")
 	
 func _ready():
 	verifySaveDirectory(saveFilePath)
