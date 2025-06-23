@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bedqtnpg8jykq"
-path="res://.godot/imported/SnowLand_SnowPile_3.png-550be686ffeb7099e3d54de51ac3f970.ctex"
+path="res://.godot/imported/SnowLand_SnowPile_3.png-282694a30aacc887c1e9d438279c302a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://art/terrains/Multi_Platformer_Tileset_v2/SnowLand/Props/SnowLand_SnowPile_3.png"
-dest_files=["res://.godot/imported/SnowLand_SnowPile_3.png-550be686ffeb7099e3d54de51ac3f970.ctex"]
+source_file="res://Art/terrains/Multi_Platformer_Tileset_v2/SnowLand/Props/SnowLand_SnowPile_3.png"
+dest_files=["res://.godot/imported/SnowLand_SnowPile_3.png-282694a30aacc887c1e9d438279c302a.ctex"]
 
 [params]
 

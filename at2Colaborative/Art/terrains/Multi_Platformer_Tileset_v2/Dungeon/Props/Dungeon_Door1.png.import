@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://d2y3tp8fgfoe6"
-path="res://.godot/imported/Dungeon_Door1.png-82639c0e2bd50df35deb942f3e99c094.ctex"
+path="res://.godot/imported/Dungeon_Door1.png-e3ee8f457be1f17e4d9e30ab4dcd685c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://art/terrains/Multi_Platformer_Tileset_v2/Dungeon/Props/Dungeon_Door1.png"
-dest_files=["res://.godot/imported/Dungeon_Door1.png-82639c0e2bd50df35deb942f3e99c094.ctex"]
+source_file="res://Art/terrains/Multi_Platformer_Tileset_v2/Dungeon/Props/Dungeon_Door1.png"
+dest_files=["res://.godot/imported/Dungeon_Door1.png-e3ee8f457be1f17e4d9e30ab4dcd685c.ctex"]
 
 [params]
 

@@ -1,6 +1,7 @@
-[gd_scene load_steps=6 format=4 uid="uid://dv3f50xk8cl5n"]
+[gd_scene load_steps=7 format=4 uid="uid://dv3f50xk8cl5n"]
 
 [ext_resource type="PackedScene" uid="uid://scl3b7ko3tw4" path="res://Main_Game/Terrain_Tilemap.tscn" id="1_1fhw6"]
+[ext_resource type="Script" uid="uid://c3eigbtuqj7ba" path="res://global.gd" id="1_mykci"]
 [ext_resource type="PackedScene" uid="uid://bfsd75ne6drno" path="res://Main_Game/Damage_Tilemap.tscn" id="2_meonu"]
 [ext_resource type="PackedScene" uid="uid://bt6nqr1i764ly" path="res://Main_Game/checkpoint.tscn" id="3_ynmmp"]
 [ext_resource type="PackedScene" uid="uid://dyjri6mtn6mqa" path="res://Main_Game/player.tscn" id="4_ypmr7"]
@@ -36,10 +37,18 @@ func _on_player_hit_area(area: Area2D, number: int) -> void:
 [node name="Stage0" type="Node"]
 script = SubResource("GDScript_poylq")
 
-[node name="Terrain" parent="." instance=ExtResource("1_1fhw6")]
+[node name="Global" type="Node" parent="."]
+script = ExtResource("1_mykci")
 
 [node name="Damage" parent="." instance=ExtResource("2_meonu")]
 tile_map_data = PackedByteArray("AAAEAAIAAAAAAAAAAAAGAAIAAAABAAAAAAAIAAIAAAACAAAAAAAIAAMAAAACAAAAAFAIAAQAAAACAAAAADAIAAUAAAACAAAAAGAGAAMAAAABAAAAAFAGAAQAAAABAAAAADAGAAUAAAABAAAAAGA=")
+
+[node name="Back" parent="." instance=ExtResource("1_1fhw6")]
+
+[node name="Terrain" parent="." instance=ExtResource("1_1fhw6")]
+
+[node name="End" parent="." instance=ExtResource("3_ynmmp")]
+position = Vector2(-96, 96)
 
 [node name="Checkpoints" type="Node" parent="."]
 
@@ -48,5 +57,15 @@ position = Vector2(-96, 96)
 
 [node name="Player" parent="." instance=ExtResource("4_ypmr7")]
 
+[node name="Camera" type="Camera2D" parent="Player"]
+scale = Vector2(0.5, 0.5)
+position_smoothing_enabled = true
+position_smoothing_speed = 15.0
+
 [node name="PlayerSpawn" type="Marker2D" parent="."]
 position = Vector2(32, 96)
+
+[node name="Fore" parent="." instance=ExtResource("1_1fhw6")]
+
+[connection signal="hitArea" from="Player" to="." method="_on_player_hit_area"]
+[connection signal="respawn" from="Player" to="." method="_on_player_respawn"]
