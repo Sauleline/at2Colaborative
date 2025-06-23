@@ -1,7 +1,7 @@
 extends Node
 
 func _ready():
-	$Damage.modulate = Color(1,1,1,0.2)
+	$Damage.modulate = Color(1,1,1,0)
 	_on_player_respawn()
 	var stopWatch = 0 
 
