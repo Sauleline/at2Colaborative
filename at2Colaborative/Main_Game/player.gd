@@ -1,6 +1,7 @@
 extends CharacterBody2D
 
 signal hitArea(area: Area2D, number: int)
+signal beatStage()
 signal respawn()
 
 @export var speed = 600
@@ -69,6 +70,8 @@ func player_shoot():
 func _on_area_2d_area_entered(area: Area2D) -> void:
 	if (area.get_parent().name == "Checkpoints"):
 		emit_signal("hitArea", area, int(area.name))
+	if (area.name == "End"):
+		emit_signal("beatStage")
 
 func _on_area_2d_body_entered(body: Node2D) -> void:
 	if(body.name == "Damage"):
