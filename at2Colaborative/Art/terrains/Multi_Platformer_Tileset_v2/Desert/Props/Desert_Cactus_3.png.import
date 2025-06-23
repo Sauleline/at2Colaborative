@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dhlatqmup3ih0"
-path="res://.godot/imported/Desert_Cactus_3.png-28eed2bac2959ee8f8291a001268ad8a.ctex"
+path="res://.godot/imported/Desert_Cactus_3.png-c39b526dc360c5c4cc6597d4efa9c233.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Art/terrains/Multi_Platformer_Tileset_v2/Desert/Props/Desert_Cactus_3.png"
-dest_files=["res://.godot/imported/Desert_Cactus_3.png-28eed2bac2959ee8f8291a001268ad8a.ctex"]
+source_file="res://art/terrains/Multi_Platformer_Tileset_v2/Desert/Props/Desert_Cactus_3.png"
+dest_files=["res://.godot/imported/Desert_Cactus_3.png-c39b526dc360c5c4cc6597d4efa9c233.ctex"]
 
 [params]
 
