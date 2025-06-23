@@ -139,5 +139,9 @@ position = Vector2(16, 0)
 shape = SubResource("RectangleShape2D_64xtq")
 disabled = true
 
+[node name="PunchTimer" type="Timer" parent="."]
+one_shot = true
+
 [connection signal="area_entered" from="Hitbox" to="." method="_on_area_2d_area_entered"]
 [connection signal="body_entered" from="Hitbox" to="." method="_on_area_2d_body_entered"]
+[connection signal="timeout" from="PunchTimer" to="." method="_on_punch_timer_timeout"]

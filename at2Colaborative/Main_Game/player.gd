@@ -45,11 +45,7 @@ func _physics_process(delta):
 		$Hat.flip_h = true
 		$Fist.rotation = deg_to_rad(0)
 	if Input.is_action_just_pressed("p1punch"):
-		$Fist/FistHitbox.disabled = false
-		$Fist/ColorRect.visible = true
-		await get_tree().create_timer(punchTime).timeout
-		$Fist/FistHitbox.disabled = true
-		$Fist/ColorRect.visible = false
+		player_punch()
 	if Input.is_action_just_pressed("p1shoot"):
 		player_shoot()
 	if dir != 0:
@@ -69,6 +65,14 @@ func _physics_process(delta):
 
 func player_shoot():
 	pass
+
+func player_punch():
+		$Fist/FistHitbox.disabled = false
+		$Fist/ColorRect.visible = true
+		$PunchTimer.start(punchTime)
+func _on_punch_timer_timeout() -> void:
+		$Fist/FistHitbox.disabled = true
+		$Fist/ColorRect.visible = false
 
 func _on_area_2d_area_entered(area: Area2D) -> void:
 	if (area.get_parent().name == "Checkpoints"):
