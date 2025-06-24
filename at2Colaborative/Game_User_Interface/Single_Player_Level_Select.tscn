@@ -18,7 +18,7 @@ offset_right = 384.0
 offset_bottom = 64.0
 theme = ExtResource("2_b4mwh")
 theme_override_font_sizes/font_size = 19
-text = "Welcome back Guest and Guest"
+text = "Welcome back Guest"
 vertical_alignment = 1
 
 [node name="Title" type="Label" parent="."]
@@ -53,18 +53,31 @@ size_flags_vertical = 3
 theme_override_font_sizes/font_size = 0
 
 [node name="PB" type="Label" parent="Grid/Level 0"]
-layout_mode = 0
-offset_top = 96.0
-offset_right = 160.0
-offset_bottom = 176.0
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -80.0
+offset_top = -80.0
+offset_right = 80.0
+grow_horizontal = 2
+grow_vertical = 0
 theme_override_font_sizes/font_size = 30
 text = "PB: 0:00"
 horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="Level" type="Label" parent="Grid/Level 0"]
-offset_right = 160.0
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -80.0
+offset_right = 80.0
 offset_bottom = 80.0
+grow_horizontal = 2
 theme_override_font_sizes/font_size = 40
 text = "Tutorial"
 horizontal_alignment = 1
@@ -77,18 +90,31 @@ size_flags_vertical = 3
 theme_override_font_sizes/font_size = 0
 
 [node name="PB" type="Label" parent="Grid/Level 1"]
-layout_mode = 0
-offset_top = 96.0
-offset_right = 160.0
-offset_bottom = 176.0
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -80.0
+offset_top = -80.0
+offset_right = 80.0
+grow_horizontal = 2
+grow_vertical = 0
 theme_override_font_sizes/font_size = 30
 text = "PB: 0:00"
 horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="Level" type="Label" parent="Grid/Level 1"]
-offset_right = 160.0
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -80.0
+offset_right = 80.0
 offset_bottom = 80.0
+grow_horizontal = 2
 theme_override_font_sizes/font_size = 40
 text = "Level 1"
 horizontal_alignment = 1
@@ -101,18 +127,31 @@ size_flags_vertical = 3
 theme_override_font_sizes/font_size = 0
 
 [node name="PB" type="Label" parent="Grid/Level 2"]
-layout_mode = 0
-offset_top = 96.0
-offset_right = 160.0
-offset_bottom = 176.0
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -80.0
+offset_top = -80.0
+offset_right = 80.0
+grow_horizontal = 2
+grow_vertical = 0
 theme_override_font_sizes/font_size = 30
 text = "PB: 0:00"
 horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="Level" type="Label" parent="Grid/Level 2"]
-offset_right = 160.0
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -80.0
+offset_right = 80.0
 offset_bottom = 80.0
+grow_horizontal = 2
 theme_override_font_sizes/font_size = 40
 text = "Level 2"
 horizontal_alignment = 1
@@ -125,18 +164,31 @@ size_flags_vertical = 3
 theme_override_font_sizes/font_size = 0
 
 [node name="PB" type="Label" parent="Grid/Level 3"]
-layout_mode = 0
-offset_top = 96.0
-offset_right = 160.0
-offset_bottom = 176.0
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -80.0
+offset_top = -80.0
+offset_right = 80.0
+grow_horizontal = 2
+grow_vertical = 0
 theme_override_font_sizes/font_size = 30
 text = "PB: 0:00"
 horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="Level" type="Label" parent="Grid/Level 3"]
-offset_right = 160.0
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -80.0
+offset_right = 80.0
 offset_bottom = 80.0
+grow_horizontal = 2
 theme_override_font_sizes/font_size = 40
 text = "Level 3"
 horizontal_alignment = 1
@@ -149,18 +201,31 @@ size_flags_vertical = 3
 theme_override_font_sizes/font_size = 0
 
 [node name="PB" type="Label" parent="Grid/Level 4"]
-layout_mode = 0
-offset_top = 96.0
-offset_right = 160.0
-offset_bottom = 176.0
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -80.0
+offset_top = -80.0
+offset_right = 80.0
+grow_horizontal = 2
+grow_vertical = 0
 theme_override_font_sizes/font_size = 30
 text = "PB: 0:00"
 horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="Level" type="Label" parent="Grid/Level 4"]
-offset_right = 160.0
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -80.0
+offset_right = 80.0
 offset_bottom = 80.0
+grow_horizontal = 2
 theme_override_font_sizes/font_size = 40
 text = "Level 4"
 horizontal_alignment = 1
@@ -173,18 +238,31 @@ size_flags_vertical = 3
 theme_override_font_sizes/font_size = 0
 
 [node name="PB" type="Label" parent="Grid/Level 5"]
-layout_mode = 0
-offset_top = 96.0
-offset_right = 160.0
-offset_bottom = 176.0
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -80.0
+offset_top = -80.0
+offset_right = 80.0
+grow_horizontal = 2
+grow_vertical = 0
 theme_override_font_sizes/font_size = 30
 text = "PB: 0:00"
 horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="Level" type="Label" parent="Grid/Level 5"]
-offset_right = 160.0
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -80.0
+offset_right = 80.0
 offset_bottom = 80.0
+grow_horizontal = 2
 theme_override_font_sizes/font_size = 40
 text = "Level 5"
 horizontal_alignment = 1
@@ -197,18 +275,31 @@ size_flags_vertical = 3
 theme_override_font_sizes/font_size = 0
 
 [node name="PB" type="Label" parent="Grid/Level 6"]
-layout_mode = 0
-offset_top = 96.0
-offset_right = 160.0
-offset_bottom = 176.0
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -80.0
+offset_top = -80.0
+offset_right = 80.0
+grow_horizontal = 2
+grow_vertical = 0
 theme_override_font_sizes/font_size = 30
 text = "PB: 0:00"
 horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="Level" type="Label" parent="Grid/Level 6"]
-offset_right = 160.0
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -80.0
+offset_right = 80.0
 offset_bottom = 80.0
+grow_horizontal = 2
 theme_override_font_sizes/font_size = 40
 text = "Level 6"
 horizontal_alignment = 1
@@ -221,18 +312,31 @@ size_flags_vertical = 3
 theme_override_font_sizes/font_size = 0
 
 [node name="PB" type="Label" parent="Grid/Level 7"]
-layout_mode = 0
-offset_top = 96.0
-offset_right = 160.0
-offset_bottom = 176.0
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -80.0
+offset_top = -80.0
+offset_right = 80.0
+grow_horizontal = 2
+grow_vertical = 0
 theme_override_font_sizes/font_size = 30
 text = "PB: 0:00"
 horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="Level" type="Label" parent="Grid/Level 7"]
-offset_right = 160.0
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -80.0
+offset_right = 80.0
 offset_bottom = 80.0
+grow_horizontal = 2
 theme_override_font_sizes/font_size = 40
 text = "Level 7"
 horizontal_alignment = 1
@@ -245,18 +349,31 @@ size_flags_vertical = 3
 theme_override_font_sizes/font_size = 0
 
 [node name="PB" type="Label" parent="Grid/Level 8"]
-layout_mode = 0
-offset_top = 96.0
-offset_right = 160.0
-offset_bottom = 176.0
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -80.0
+offset_top = -80.0
+offset_right = 80.0
+grow_horizontal = 2
+grow_vertical = 0
 theme_override_font_sizes/font_size = 30
 text = "PB: 0:00"
 horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="Level" type="Label" parent="Grid/Level 8"]
-offset_right = 160.0
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -80.0
+offset_right = 80.0
 offset_bottom = 80.0
+grow_horizontal = 2
 theme_override_font_sizes/font_size = 40
 text = "Level 8"
 horizontal_alignment = 1
@@ -269,18 +386,31 @@ size_flags_vertical = 3
 theme_override_font_sizes/font_size = 0
 
 [node name="PB" type="Label" parent="Grid/Level 9"]
-layout_mode = 0
-offset_top = 96.0
-offset_right = 160.0
-offset_bottom = 176.0
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -80.0
+offset_top = -80.0
+offset_right = 80.0
+grow_horizontal = 2
+grow_vertical = 0
 theme_override_font_sizes/font_size = 30
 text = "PB: 0:00"
 horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="Level" type="Label" parent="Grid/Level 9"]
-offset_right = 160.0
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -80.0
+offset_right = 80.0
 offset_bottom = 80.0
+grow_horizontal = 2
 theme_override_font_sizes/font_size = 40
 text = "Level 9"
 horizontal_alignment = 1
@@ -293,16 +423,40 @@ offset_right = 1128.0
 offset_bottom = 608.0
 draw_focus_border = true
 
-[node name="VBoxContainer" type="VBoxContainer" parent="Leaderboard"]
+[node name="vertContainer" type="VBoxContainer" parent="Leaderboard"]
 layout_mode = 2
 
-[connection signal="mouse_entered" from="Grid/Level 0" to="." method="_on_level_0_mouse_entered"]
-[connection signal="mouse_entered" from="Grid/Level 1" to="." method="_on_level_1_mouse_entered"]
-[connection signal="mouse_entered" from="Grid/Level 2" to="." method="_on_level_2_mouse_entered"]
-[connection signal="mouse_entered" from="Grid/Level 3" to="." method="_on_level_3_mouse_entered"]
-[connection signal="mouse_entered" from="Grid/Level 4" to="." method="_on_level_4_mouse_entered"]
-[connection signal="mouse_entered" from="Grid/Level 5" to="." method="_on_level_5_mouse_entered"]
-[connection signal="mouse_entered" from="Grid/Level 6" to="." method="_on_level_6_mouse_entered"]
-[connection signal="mouse_entered" from="Grid/Level 7" to="." method="_on_level_7_mouse_entered"]
-[connection signal="mouse_entered" from="Grid/Level 8" to="." method="_on_level_8_mouse_entered"]
-[connection signal="mouse_entered" from="Grid/Level 9" to="." method="_on_level_9_mouse_entered"]
+[node name="Back" type="Button" parent="."]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -160.0
+offset_top = 24.0
+offset_right = -32.0
+offset_bottom = 70.0
+grow_horizontal = 0
+theme = ExtResource("2_b4mwh")
+theme_override_font_sizes/font_size = 24
+text = "Back"
+
+[connection signal="mouse_entered" from="Grid/Level 0" to="." method="populateLeaderboard" binds= [0]]
+[connection signal="pressed" from="Grid/Level 0" to="." method="goToLevel" binds= [0]]
+[connection signal="mouse_entered" from="Grid/Level 1" to="." method="populateLeaderboard" binds= [1]]
+[connection signal="pressed" from="Grid/Level 1" to="." method="goToLevel" binds= [1]]
+[connection signal="mouse_entered" from="Grid/Level 2" to="." method="populateLeaderboard" binds= [2]]
+[connection signal="pressed" from="Grid/Level 2" to="." method="goToLevel" binds= [2]]
+[connection signal="mouse_entered" from="Grid/Level 3" to="." method="populateLeaderboard" binds= [3]]
+[connection signal="pressed" from="Grid/Level 3" to="." method="goToLevel" binds= [3]]
+[connection signal="mouse_entered" from="Grid/Level 4" to="." method="populateLeaderboard" binds= [4]]
+[connection signal="pressed" from="Grid/Level 4" to="." method="goToLevel" binds= [4]]
+[connection signal="mouse_entered" from="Grid/Level 5" to="." method="populateLeaderboard" binds= [5]]
+[connection signal="pressed" from="Grid/Level 5" to="." method="goToLevel" binds= [5]]
+[connection signal="mouse_entered" from="Grid/Level 6" to="." method="populateLeaderboard" binds= [6]]
+[connection signal="pressed" from="Grid/Level 6" to="." method="goToLevel" binds= [6]]
+[connection signal="mouse_entered" from="Grid/Level 7" to="." method="populateLeaderboard" binds= [7]]
+[connection signal="pressed" from="Grid/Level 7" to="." method="goToLevel" binds= [7]]
+[connection signal="mouse_entered" from="Grid/Level 8" to="." method="populateLeaderboard" binds= [8]]
+[connection signal="pressed" from="Grid/Level 8" to="." method="goToLevel" binds= [8]]
+[connection signal="mouse_entered" from="Grid/Level 9" to="." method="populateLeaderboard" binds= [9]]
+[connection signal="pressed" from="Grid/Level 9" to="." method="goToLevel" binds= [9]]
+[connection signal="pressed" from="Back" to="." method="_on_back_pressed"]

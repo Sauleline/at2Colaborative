@@ -1,4 +1,4 @@
-[gd_scene load_steps=0 format=3 uid="uid://bsii2bg3dsoji"]
+[gd_scene format=3 uid="uid://bsii2bg3dsoji"]
 
 [node name="Pausemenu" type="Node2D"]
 

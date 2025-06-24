@@ -1,20 +1,22 @@
 extends Node
 
+@onready var score = 0
+
 func _ready():
 	$Damage.modulate = Color(1,1,1,0)
 	_on_player_respawn()
-	var stopWatch = 0 
 
 func _process(_delta):
 	if ($Player.position[1] > 1000):
 		_on_player_respawn()
-	var stopWatch =+ 1
+	$Player/Camera/HUD/Time.text = Global.intToSecMin(score)
 
 # You have to attach the player signals to this each time
 func _on_player_respawn() -> void:
 	$Player.velocity.x = 0
 	$Player.velocity.y = 0
 	$Player.position = $PlayerSpawn.position
+	$Player.jumpCount = 2
 
 func _on_player_hit_area(area: Area2D, number: int) -> void:
 	$PlayerSpawn.position = area.position
@@ -25,3 +27,6 @@ func _on_player_hit_area(area: Area2D, number: int) -> void:
 		else:
 			$Checkpoints.get_child(i).find_child('Activated1').color = Color(1,1,1)
 			$Checkpoints.get_child(i).find_child('Activated2').color = Color(1,1,1)
+
+func _on_score_timer_timeout() -> void:
+	score += 1

@@ -1,0 +1,50 @@
+[gd_scene load_steps=8 format=3 uid="uid://baxdhggu7thav"]
+
+[ext_resource type="Script" uid="uid://kj8jfnh4gi6u" path="res://Main_Game/stageController.gd" id="1_qb6a1"]
+[ext_resource type="Script" uid="uid://c3eigbtuqj7ba" path="res://global.gd" id="2_57p5b"]
+[ext_resource type="PackedScene" uid="uid://bfsd75ne6drno" path="res://Main_Game/Damage_Tilemap.tscn" id="3_k3qp2"]
+[ext_resource type="PackedScene" uid="uid://scl3b7ko3tw4" path="res://Main_Game/Terrain_Tilemap.tscn" id="4_d4qfi"]
+[ext_resource type="PackedScene" uid="uid://bt6nqr1i764ly" path="res://Main_Game/checkpoint.tscn" id="5_c4if5"]
+[ext_resource type="PackedScene" uid="uid://dyjri6mtn6mqa" path="res://Main_Game/player.tscn" id="6_1d0o4"]
+[ext_resource type="PackedScene" uid="uid://4n7aivnwu15g" path="res://Main_Game/hud.tscn" id="7_ub0ov"]
+
+[node name="Stage1" type="Node"]
+script = ExtResource("1_qb6a1")
+
+[node name="Global" type="Node" parent="."]
+script = ExtResource("2_57p5b")
+
+[node name="Damage" parent="." instance=ExtResource("3_k3qp2")]
+
+[node name="Back" parent="." instance=ExtResource("4_d4qfi")]
+
+[node name="Terrain" parent="." instance=ExtResource("4_d4qfi")]
+
+[node name="End" parent="." instance=ExtResource("5_c4if5")]
+position = Vector2(-96, 96)
+
+[node name="Checkpoints" type="Node" parent="."]
+
+[node name="0" parent="Checkpoints" instance=ExtResource("5_c4if5")]
+position = Vector2(-192, 96)
+
+[node name="Player" parent="." instance=ExtResource("6_1d0o4")]
+
+[node name="Camera" type="Camera2D" parent="Player"]
+scale = Vector2(0.5, 0.5)
+position_smoothing_enabled = true
+position_smoothing_speed = 15.0
+
+[node name="HUD" parent="Player/Camera" instance=ExtResource("7_ub0ov")]
+
+[node name="PlayerSpawn" type="Marker2D" parent="."]
+position = Vector2(32, 96)
+
+[node name="Fore" parent="." instance=ExtResource("4_d4qfi")]
+
+[node name="Score Timer" type="Timer" parent="."]
+autostart = true
+
+[connection signal="hitArea" from="Player" to="." method="_on_player_hit_area"]
+[connection signal="respawn" from="Player" to="." method="_on_player_respawn"]
+[connection signal="timeout" from="Score Timer" to="." method="_on_score_timer_timeout"]
