@@ -29,8 +29,8 @@ text = "Back"
 [node name="HatSelect" type="OptionButton" parent="."]
 offset_left = 192.0
 offset_top = 64.0
-offset_right = 448.0
-offset_bottom = 96.0
+offset_right = 440.0
+offset_bottom = 88.0
 theme_override_fonts/font = SubResource("SystemFont_n3qb1")
 
 [connection signal="pressed" from="Back" to="." method="_on_back_pressed"]

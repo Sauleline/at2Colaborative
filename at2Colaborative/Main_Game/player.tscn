@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://dyjri6mtn6mqa"]
+[gd_scene load_steps=16 format=3 uid="uid://dyjri6mtn6mqa"]
 
 [ext_resource type="Script" uid="uid://dh2q4d51je4yd" path="res://Main_Game/player.gd" id="1_rvp0r"]
 [ext_resource type="Script" uid="uid://c3eigbtuqj7ba" path="res://global.gd" id="2_64xtq"]
@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://ejh5wyqjcl2k" path="res://Art/jackson.jpg" id="3_wsymt"]
 [ext_resource type="Texture2D" uid="uid://ctio5uyu77gse" path="res://Art/joel.png" id="4_wr33q"]
 [ext_resource type="Texture2D" uid="uid://cpdp378h02gdv" path="res://Art/hats/team captain.png" id="6_wr33q"]
+[ext_resource type="Texture2D" uid="uid://cytco0ictpgmt" path="res://icon.svg" id="7_6l7ma"]
 [ext_resource type="Texture2D" uid="uid://dxg0mondhfl0g" path="res://Art/hats/gibus.png" id="7_tmng6"]
 [ext_resource type="Texture2D" uid="uid://cmxwp4uvhrlfp" path="res://Art/hats/none.png" id="8_ndv38"]
 
@@ -42,6 +43,14 @@ animations = [{
 }],
 "loop": true,
 "name": &"Pluey",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("7_6l7ma")
+}],
+"loop": true,
+"name": &"icon svg",
 "speed": 5.0
 }]
 
@@ -89,10 +98,10 @@ script = ExtResource("1_rvp0r")
 script = ExtResource("2_64xtq")
 
 [node name="Sprite" type="AnimatedSprite2D" parent="."]
-position = Vector2(2.71051e-20, 1.61559e-27)
-scale = Vector2(0.133333, 0.133333)
+position = Vector2(-9.53674e-07, -9.53674e-07)
+scale = Vector2(0.25, 0.25)
 sprite_frames = SubResource("SpriteFrames_0s2u3")
-animation = &"Dame Da Ne Guy"
+animation = &"icon svg"
 
 [node name="Hat" type="AnimatedSprite2D" parent="."]
 position = Vector2(0, -16)
@@ -137,7 +146,6 @@ offset_bottom = 8.0
 [node name="FistHitbox" type="CollisionShape2D" parent="Fist"]
 position = Vector2(16, 0)
 shape = SubResource("RectangleShape2D_64xtq")
-disabled = true
 
 [node name="PunchTimer" type="Timer" parent="."]
 one_shot = true

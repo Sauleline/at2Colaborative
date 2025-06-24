@@ -18,7 +18,8 @@ func mapRange(x, inMin, inMax, outMin, outMax):
 var scaleMap = {"Jackson": [0.08, 0.08],
 				"Joel": [0.067, 0.067],
 				"Dame Da Ne Guy": [0.149, 0.069],
-				"Pluey": [0.133, 0.133]}
+				"Pluey": [0.133, 0.133],
+				"icon svg":[0.25, 0.25]}
 
 func _ready():
 	if (Global.PlayerOne):
