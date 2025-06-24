@@ -2,28 +2,24 @@
 
 [ext_resource type="Script" uid="uid://dw2vfnm8rkagw" path="res://Game_User_Interface/single_player_level_select.gd" id="1_ndrbo"]
 [ext_resource type="Theme" uid="uid://dwdqkuxyspo32" path="res://Game_User_Interface/Theme.tres" id="2_b4mwh"]
-[ext_resource type="PackedScene" path="res://Game_User_Interface/UI_Background.tscn" id="2_boqba"]
+[ext_resource type="PackedScene" uid="uid://dyn2qf6aui3uv" path="res://Game_User_Interface/UI_Background.tscn" id="2_boqba"]
 
 [node name="SinglePlayerLevelSelect" type="CanvasLayer"]
 script = ExtResource("1_ndrbo")
 
 [node name="Background" parent="." instance=ExtResource("2_boqba")]
+metadata/_edit_use_anchors_ = true
+metadata/_edit_lock_ = true
 
-[node name="Level_Name" type="Button" parent="."]
-offset_left = 300.0
-offset_top = 250.0
-offset_right = 550.0
-offset_bottom = 500.0
+[node name="Users Logged" type="Label" parent="."]
+offset_left = 32.0
+offset_top = 16.0
+offset_right = 384.0
+offset_bottom = 64.0
 theme = ExtResource("2_b4mwh")
-text = "Level 1"
-
-[node name="Tutorial" type="Button" parent="."]
-offset_left = 25.0
-offset_top = 250.0
-offset_right = 275.0
-offset_bottom = 500.0
-theme = ExtResource("2_b4mwh")
-text = "Tutorial"
+theme_override_font_sizes/font_size = 19
+text = "Welcome back Guest and Guest"
+vertical_alignment = 1
 
 [node name="Title" type="Label" parent="."]
 offset_left = 217.0
@@ -36,4 +32,277 @@ text = "Single Player"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[connection signal="pressed" from="Tutorial" to="." method="_on_tutorial_pressed"]
+[node name="Grid" type="GridContainer" parent="."]
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 32.0
+offset_top = -408.0
+offset_right = -320.0
+offset_bottom = -40.0
+grow_horizontal = 2
+grow_vertical = 0
+theme = ExtResource("2_b4mwh")
+columns = 5
+
+[node name="Level 0" type="Button" parent="Grid"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 0
+
+[node name="PB" type="Label" parent="Grid/Level 0"]
+layout_mode = 0
+offset_top = 96.0
+offset_right = 160.0
+offset_bottom = 176.0
+theme_override_font_sizes/font_size = 30
+text = "PB: 0:00"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Level" type="Label" parent="Grid/Level 0"]
+offset_right = 160.0
+offset_bottom = 80.0
+theme_override_font_sizes/font_size = 40
+text = "Tutorial"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Level 1" type="Button" parent="Grid"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 0
+
+[node name="PB" type="Label" parent="Grid/Level 1"]
+layout_mode = 0
+offset_top = 96.0
+offset_right = 160.0
+offset_bottom = 176.0
+theme_override_font_sizes/font_size = 30
+text = "PB: 0:00"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Level" type="Label" parent="Grid/Level 1"]
+offset_right = 160.0
+offset_bottom = 80.0
+theme_override_font_sizes/font_size = 40
+text = "Level 1"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Level 2" type="Button" parent="Grid"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 0
+
+[node name="PB" type="Label" parent="Grid/Level 2"]
+layout_mode = 0
+offset_top = 96.0
+offset_right = 160.0
+offset_bottom = 176.0
+theme_override_font_sizes/font_size = 30
+text = "PB: 0:00"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Level" type="Label" parent="Grid/Level 2"]
+offset_right = 160.0
+offset_bottom = 80.0
+theme_override_font_sizes/font_size = 40
+text = "Level 2"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Level 3" type="Button" parent="Grid"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 0
+
+[node name="PB" type="Label" parent="Grid/Level 3"]
+layout_mode = 0
+offset_top = 96.0
+offset_right = 160.0
+offset_bottom = 176.0
+theme_override_font_sizes/font_size = 30
+text = "PB: 0:00"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Level" type="Label" parent="Grid/Level 3"]
+offset_right = 160.0
+offset_bottom = 80.0
+theme_override_font_sizes/font_size = 40
+text = "Level 3"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Level 4" type="Button" parent="Grid"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 0
+
+[node name="PB" type="Label" parent="Grid/Level 4"]
+layout_mode = 0
+offset_top = 96.0
+offset_right = 160.0
+offset_bottom = 176.0
+theme_override_font_sizes/font_size = 30
+text = "PB: 0:00"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Level" type="Label" parent="Grid/Level 4"]
+offset_right = 160.0
+offset_bottom = 80.0
+theme_override_font_sizes/font_size = 40
+text = "Level 4"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Level 5" type="Button" parent="Grid"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 0
+
+[node name="PB" type="Label" parent="Grid/Level 5"]
+layout_mode = 0
+offset_top = 96.0
+offset_right = 160.0
+offset_bottom = 176.0
+theme_override_font_sizes/font_size = 30
+text = "PB: 0:00"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Level" type="Label" parent="Grid/Level 5"]
+offset_right = 160.0
+offset_bottom = 80.0
+theme_override_font_sizes/font_size = 40
+text = "Level 5"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Level 6" type="Button" parent="Grid"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 0
+
+[node name="PB" type="Label" parent="Grid/Level 6"]
+layout_mode = 0
+offset_top = 96.0
+offset_right = 160.0
+offset_bottom = 176.0
+theme_override_font_sizes/font_size = 30
+text = "PB: 0:00"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Level" type="Label" parent="Grid/Level 6"]
+offset_right = 160.0
+offset_bottom = 80.0
+theme_override_font_sizes/font_size = 40
+text = "Level 6"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Level 7" type="Button" parent="Grid"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 0
+
+[node name="PB" type="Label" parent="Grid/Level 7"]
+layout_mode = 0
+offset_top = 96.0
+offset_right = 160.0
+offset_bottom = 176.0
+theme_override_font_sizes/font_size = 30
+text = "PB: 0:00"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Level" type="Label" parent="Grid/Level 7"]
+offset_right = 160.0
+offset_bottom = 80.0
+theme_override_font_sizes/font_size = 40
+text = "Level 7"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Level 8" type="Button" parent="Grid"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 0
+
+[node name="PB" type="Label" parent="Grid/Level 8"]
+layout_mode = 0
+offset_top = 96.0
+offset_right = 160.0
+offset_bottom = 176.0
+theme_override_font_sizes/font_size = 30
+text = "PB: 0:00"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Level" type="Label" parent="Grid/Level 8"]
+offset_right = 160.0
+offset_bottom = 80.0
+theme_override_font_sizes/font_size = 40
+text = "Level 8"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Level 9" type="Button" parent="Grid"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 0
+
+[node name="PB" type="Label" parent="Grid/Level 9"]
+layout_mode = 0
+offset_top = 96.0
+offset_right = 160.0
+offset_bottom = 176.0
+theme_override_font_sizes/font_size = 30
+text = "PB: 0:00"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Level" type="Label" parent="Grid/Level 9"]
+offset_right = 160.0
+offset_bottom = 80.0
+theme_override_font_sizes/font_size = 40
+text = "Level 9"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Leaderboard" type="ScrollContainer" parent="."]
+offset_left = 856.0
+offset_top = 240.0
+offset_right = 1128.0
+offset_bottom = 608.0
+draw_focus_border = true
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Leaderboard"]
+layout_mode = 2
+
+[connection signal="mouse_entered" from="Grid/Level 0" to="." method="_on_level_0_mouse_entered"]
+[connection signal="mouse_entered" from="Grid/Level 1" to="." method="_on_level_1_mouse_entered"]
+[connection signal="mouse_entered" from="Grid/Level 2" to="." method="_on_level_2_mouse_entered"]
+[connection signal="mouse_entered" from="Grid/Level 3" to="." method="_on_level_3_mouse_entered"]
+[connection signal="mouse_entered" from="Grid/Level 4" to="." method="_on_level_4_mouse_entered"]
+[connection signal="mouse_entered" from="Grid/Level 5" to="." method="_on_level_5_mouse_entered"]
+[connection signal="mouse_entered" from="Grid/Level 6" to="." method="_on_level_6_mouse_entered"]
+[connection signal="mouse_entered" from="Grid/Level 7" to="." method="_on_level_7_mouse_entered"]
+[connection signal="mouse_entered" from="Grid/Level 8" to="." method="_on_level_8_mouse_entered"]
+[connection signal="mouse_entered" from="Grid/Level 9" to="." method="_on_level_9_mouse_entered"]
