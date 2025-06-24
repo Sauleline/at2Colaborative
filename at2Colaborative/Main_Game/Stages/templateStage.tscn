@@ -2,17 +2,14 @@
 
 [ext_resource type="PackedScene" uid="uid://scl3b7ko3tw4" path="res://Main_Game/Terrain_Tilemap.tscn" id="1_1fhw6"]
 [ext_resource type="Script" uid="uid://kj8jfnh4gi6u" path="res://Main_Game/stageController.gd" id="1_6voqf"]
-[ext_resource type="Script" uid="uid://c3eigbtuqj7ba" path="res://global.gd" id="1_mykci"]
 [ext_resource type="PackedScene" uid="uid://bfsd75ne6drno" path="res://Main_Game/Damage_Tilemap.tscn" id="2_meonu"]
 [ext_resource type="PackedScene" uid="uid://bt6nqr1i764ly" path="res://Main_Game/checkpoint.tscn" id="3_ynmmp"]
 [ext_resource type="PackedScene" uid="uid://dyjri6mtn6mqa" path="res://Main_Game/player.tscn" id="4_ypmr7"]
 [ext_resource type="PackedScene" uid="uid://4n7aivnwu15g" path="res://Main_Game/hud.tscn" id="7_0giw5"]
+[ext_resource type="PackedScene" uid="uid://bsii2bg3dsoji" path="res://Main_Game/pausemenu.tscn" id="7_sq7vt"]
 
 [node name="Stage0" type="Node"]
 script = ExtResource("1_6voqf")
-
-[node name="Global" type="Node" parent="."]
-script = ExtResource("1_mykci")
 
 [node name="Damage" parent="." instance=ExtResource("2_meonu")]
 
@@ -36,6 +33,8 @@ position_smoothing_enabled = true
 position_smoothing_speed = 15.0
 
 [node name="HUD" parent="Player/Camera" instance=ExtResource("7_0giw5")]
+
+[node name="Pause Menu" parent="Player/Camera" instance=ExtResource("7_sq7vt")]
 
 [node name="PlayerSpawn" type="Marker2D" parent="."]
 position = Vector2(32, 96)

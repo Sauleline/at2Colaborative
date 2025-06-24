@@ -11,16 +11,12 @@ func _ready() -> void:
 	var scene = preload("res://Game_User_Interface/singlePlayerButton.tscn")
 	for i in range(levelCount):
 		var instance = scene.instantiate()
+		instance.pressed.connect(_goToLevel.bind(i))
+		instance.mouse_entered.connect(_populateLeaderboard.bind(i))
+		instance.get_children()[1].text = "Level " + str(i)
+		if i == 0:
+			instance.get_children()[1].text = "Tutorial"
 		$Grid.add_child(instance)
-	
-	var temp = 0
-	for i in $Grid.get_children():
-		i.pressed.connect(_goToLevel.bind(temp))
-		i.mouse_entered.connect(_populateLeaderboard.bind(temp))
-		i.get_children()[1].text = "Level " + str(temp)
-		if i.name == "Level 0":
-			i.get_children()[1].text = "Tutorial"
-		temp += 1
 
 var _populateLeaderboard = func populateLeaderboard(level: int):
 	for i in $Leaderboard/vertContainer.get_children():

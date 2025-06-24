@@ -18,31 +18,7 @@ animations = [{
 "texture": ExtResource("3_0s2u3")
 }],
 "loop": true,
-"name": &"Dame Da Ne Guy",
-"speed": 5.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("3_wsymt")
-}],
-"loop": true,
-"name": &"Jackson",
-"speed": 5.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("4_wr33q")
-}],
-"loop": true,
-"name": &"Joel",
-"speed": 5.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("3_g6ucm")
-}],
-"loop": true,
-"name": &"Pluey",
+"name": &"dame da ne guy",
 "speed": 5.0
 }, {
 "frames": [{
@@ -51,6 +27,30 @@ animations = [{
 }],
 "loop": true,
 "name": &"icon svg",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_wsymt")
+}],
+"loop": true,
+"name": &"jack",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_wr33q")
+}],
+"loop": true,
+"name": &"joel",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_g6ucm")
+}],
+"loop": true,
+"name": &"pluey",
 "speed": 5.0
 }]
 
@@ -101,7 +101,7 @@ script = ExtResource("2_64xtq")
 position = Vector2(-9.53674e-07, -9.53674e-07)
 scale = Vector2(0.25, 0.25)
 sprite_frames = SubResource("SpriteFrames_0s2u3")
-animation = &"icon svg"
+animation = &"dame da ne guy"
 
 [node name="Hat" type="AnimatedSprite2D" parent="."]
 position = Vector2(0, -16)

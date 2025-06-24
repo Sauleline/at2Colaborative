@@ -15,10 +15,10 @@ var jumpCount = 2
 func mapRange(x, inMin, inMax, outMin, outMax):
 	return ((x - inMin) * (outMax - outMin) / (inMax - inMin) + outMin)
 
-var scaleMap = {"Jackson": [0.08, 0.08],
-				"Joel": [0.067, 0.067],
-				"Dame Da Ne Guy": [0.149, 0.069],
-				"Pluey": [0.133, 0.133],
+var scaleMap = {"jack": [0.08, 0.08],
+				"joel": [0.067, 0.067],
+				"dame da ne guy": [0.149, 0.069],
+				"pluey": [0.133, 0.133],
 				"icon svg":[0.25, 0.25]}
 
 func _ready():

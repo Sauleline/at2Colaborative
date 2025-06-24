@@ -1,6 +1,7 @@
 extends Node
 
 @onready var score = 0
+@onready var deaths = -1
 
 func _ready():
 	$Damage.modulate = Color(1,1,1,0)
@@ -9,12 +10,19 @@ func _ready():
 	_on_player_respawn()
 
 func _process(_delta):
+	if Input.is_action_just_pressed("pause"):
+		$"Player/Camera/Pause Menu".show()
+		get_tree().paused = true
+	
 	if ($Player.position[1] > 1000):
 		_on_player_respawn()
+	@warning_ignore("integer_division")
 	$Player/Camera/HUD/Time.text = Global.intToSecMin(score/10)
 
 # You have to attach the player signals to this each time
 func _on_player_respawn() -> void:
+	deaths += 1
+	$Player/Camera/HUD/DeathCount.text = "Deaths: " + str(deaths)
 	$Player.velocity.x = 0
 	$Player.velocity.y = 0
 	$Player.position = $PlayerSpawn.position
