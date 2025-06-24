@@ -43,7 +43,6 @@ position = Vector2(32, 96)
 [node name="Fore" parent="." instance=ExtResource("1_1fhw6")]
 
 [node name="Score Timer" type="Timer" parent="."]
-autostart = true
 
 [connection signal="hitArea" from="Player" to="." method="_on_player_hit_area"]
 [connection signal="respawn" from="Player" to="." method="_on_player_respawn"]

@@ -4,12 +4,15 @@ extends Node
 
 func _ready():
 	$Damage.modulate = Color(1,1,1,0)
+	$"Score Timer".wait_time = 0.1
+	$"Score Timer".start()
 	_on_player_respawn()
 
 func _process(_delta):
 	if ($Player.position[1] > 1000):
 		_on_player_respawn()
-	$Player/Camera/HUD/Time.text = Global.intToSecMin(score)
+	$Player/Camera/HUD/Time.text = Global.intToSecMin(score/10)
+	print(score)
 
 # You have to attach the player signals to this each time
 func _on_player_respawn() -> void:
