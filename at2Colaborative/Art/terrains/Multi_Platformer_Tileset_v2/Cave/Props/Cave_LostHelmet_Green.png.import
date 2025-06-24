@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cygmtmaxuvyxj"
-path="res://.godot/imported/Cave_LostHelmet_Green.png-43889a430b6fd4d96194843c530044dd.ctex"
+path="res://.godot/imported/Cave_LostHelmet_Green.png-e4ad60a87d03cfc560d46a00b8c90949.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Art/terrains/Multi_Platformer_Tileset_v2/Cave/Props/Cave_LostHelmet_Green.png"
-dest_files=["res://.godot/imported/Cave_LostHelmet_Green.png-43889a430b6fd4d96194843c530044dd.ctex"]
+source_file="res://art/terrains/Multi_Platformer_Tileset_v2/Cave/Props/Cave_LostHelmet_Green.png"
+dest_files=["res://.godot/imported/Cave_LostHelmet_Green.png-e4ad60a87d03cfc560d46a00b8c90949.ctex"]
 
 [params]
 

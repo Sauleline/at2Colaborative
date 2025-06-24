@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://bsii2bg3dsoji"]
+
+[node name="Pausemenu" type="Node2D"]
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+
+[node name="Quit" type="Button" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "Quit"
+
+[node name="Restart" type="Button" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "Restart"

@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://qblin2syegbq"
-path="res://.godot/imported/Factory_Handle_Left.png-e06ee018b68c1059e7501bf2745368ae.ctex"
+path="res://.godot/imported/Factory_Handle_Left.png-8dbad13a203644d5cce04ce378350ae9.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Art/terrains/Multi_Platformer_Tileset_v2/Factory/Props/Factory_Handle_Left.png"
-dest_files=["res://.godot/imported/Factory_Handle_Left.png-e06ee018b68c1059e7501bf2745368ae.ctex"]
+source_file="res://art/terrains/Multi_Platformer_Tileset_v2/Factory/Props/Factory_Handle_Left.png"
+dest_files=["res://.godot/imported/Factory_Handle_Left.png-8dbad13a203644d5cce04ce378350ae9.ctex"]
 
 [params]
 
