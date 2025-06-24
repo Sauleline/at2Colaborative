@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dxg0mondhfl0g"
-path="res://.godot/imported/gibus.png-e06d5c94c6782ed75ac4f371af709148.ctex"
+path="res://.godot/imported/gibus.png-9f33882b85c1b8ec357b805537701205.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://art/hats/gibus.png"
-dest_files=["res://.godot/imported/gibus.png-e06d5c94c6782ed75ac4f371af709148.ctex"]
+source_file="res://Art/hats/gibus.png"
+dest_files=["res://.godot/imported/gibus.png-9f33882b85c1b8ec357b805537701205.ctex"]
 
 [params]
 

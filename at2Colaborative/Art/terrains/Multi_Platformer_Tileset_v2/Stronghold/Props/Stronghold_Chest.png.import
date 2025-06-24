@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://djtwwcdkqj0ih"
-path="res://.godot/imported/Stronghold_Chest.png-4830c4d892c77f113af97cce4ead6859.ctex"
+path="res://.godot/imported/Stronghold_Chest.png-2001d9fa34b6dab8105a793ebe79767d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://art/terrains/Multi_Platformer_Tileset_v2/Stronghold/Props/Stronghold_Chest.png"
-dest_files=["res://.godot/imported/Stronghold_Chest.png-4830c4d892c77f113af97cce4ead6859.ctex"]
+source_file="res://Art/terrains/Multi_Platformer_Tileset_v2/Stronghold/Props/Stronghold_Chest.png"
+dest_files=["res://.godot/imported/Stronghold_Chest.png-2001d9fa34b6dab8105a793ebe79767d.ctex"]
 
 [params]
 

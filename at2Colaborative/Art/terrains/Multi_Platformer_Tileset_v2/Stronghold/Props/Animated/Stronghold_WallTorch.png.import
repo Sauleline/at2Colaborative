@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://butt07ei0fmjm"
-path="res://.godot/imported/Stronghold_WallTorch.png-93f428af39dd8cf00e552b6698d8e715.ctex"
+path="res://.godot/imported/Stronghold_WallTorch.png-b96ef02c2208629a60ffd1e5df665265.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://art/terrains/Multi_Platformer_Tileset_v2/Stronghold/Props/Animated/Stronghold_WallTorch.png"
-dest_files=["res://.godot/imported/Stronghold_WallTorch.png-93f428af39dd8cf00e552b6698d8e715.ctex"]
+source_file="res://Art/terrains/Multi_Platformer_Tileset_v2/Stronghold/Props/Animated/Stronghold_WallTorch.png"
+dest_files=["res://.godot/imported/Stronghold_WallTorch.png-b96ef02c2208629a60ffd1e5df665265.ctex"]
 
 [params]
 
