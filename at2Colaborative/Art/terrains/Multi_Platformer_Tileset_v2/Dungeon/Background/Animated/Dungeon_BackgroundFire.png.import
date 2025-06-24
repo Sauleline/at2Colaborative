@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://u1d1iiwpnm7k"
-path="res://.godot/imported/Dungeon_BackgroundFire.png-a0a16f49e3f5477bdcb5b5af6b31f984.ctex"
+path="res://.godot/imported/Dungeon_BackgroundFire.png-fe42fb448505ff693c3eab87605a9379.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Art/terrains/Multi_Platformer_Tileset_v2/Dungeon/Background/Animated/Dungeon_BackgroundFire.png"
-dest_files=["res://.godot/imported/Dungeon_BackgroundFire.png-a0a16f49e3f5477bdcb5b5af6b31f984.ctex"]
+source_file="res://art/terrains/Multi_Platformer_Tileset_v2/Dungeon/Background/Animated/Dungeon_BackgroundFire.png"
+dest_files=["res://.godot/imported/Dungeon_BackgroundFire.png-fe42fb448505ff693c3eab87605a9379.ctex"]
 
 [params]
 
