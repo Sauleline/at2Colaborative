@@ -6,15 +6,18 @@
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_ckgw5"]
 shader = ExtResource("2_8tp52")
-shader_parameter/blur = 2.0
+shader_parameter/blur = 2.5
 
 [node name="Pause Menu" type="CanvasLayer"]
 script = ExtResource("1_g75e1")
 
 [node name="Blur" type="ColorRect" parent="."]
 material = SubResource("ShaderMaterial_ckgw5")
-offset_right = 1152.0
-offset_bottom = 648.0
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
 anchors_preset = 8
@@ -41,6 +44,12 @@ theme = ExtResource("2_3qn22")
 theme_override_font_sizes/font_size = 60
 text = "Restart"
 
+[node name="Respawn" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme = ExtResource("2_3qn22")
+theme_override_font_sizes/font_size = 60
+text = "Respawn"
+
 [node name="Quit" type="Button" parent="VBoxContainer"]
 layout_mode = 2
 theme = ExtResource("2_3qn22")
@@ -49,4 +58,5 @@ text = "Quit"
 
 [connection signal="pressed" from="VBoxContainer/Resume" to="." method="_on_resume_pressed"]
 [connection signal="pressed" from="VBoxContainer/Restart" to="." method="_on_restart_pressed"]
+[connection signal="pressed" from="VBoxContainer/Respawn" to="." method="_on_respawn_pressed"]
 [connection signal="pressed" from="VBoxContainer/Quit" to="." method="_on_quit_pressed"]

@@ -14,7 +14,8 @@ signal respawn()
 @export_range(0.0, 1.0) var friction = 0.06
 @export_range(0.0 , 1.0) var acceleration = 0.03
 @export var character = "steve"
-var jumpCount = 2
+@export var maxJumps = 1
+var jumpCount = maxJumps
 var wallSlide = false
 var punching = false
 
@@ -94,7 +95,7 @@ func _physics_process(delta):
 		$Hat.rotation = deg_to_rad(mapRange(abs(velocity.x), 0, 600, 0, 30))
 	
 	if is_on_floor():
-		jumpCount = 2
+		jumpCount = maxJumps
 	
 	if wallSlide:
 		$Sprite.play(character+"WallHold")

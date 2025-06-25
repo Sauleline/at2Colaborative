@@ -9,4 +9,7 @@ func addPlayers(playerone, playertwo):
 	
 func intToSecMin(x: int):
 	@warning_ignore("integer_division")
-	return str(floor(x/60))+":"+str(x-(floor(x/60)*60)).pad_zeros(2)
+	var minutes = int(x / 60)
+	@warning_ignore("integer_division")
+	var seconds = x - int(x / 60)*60
+	return ("%02d" % minutes) + (":%02d" % seconds)
