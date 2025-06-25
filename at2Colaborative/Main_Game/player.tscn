@@ -13,6 +13,11 @@
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_0s2u3"]
 animations = [{
+"frames": [],
+"loop": true,
+"name": &"animation",
+"speed": 5.0
+}, {
 "frames": [{
 "duration": 1.0,
 "texture": ExtResource("3_0s2u3")
@@ -101,7 +106,7 @@ script = ExtResource("2_64xtq")
 position = Vector2(-9.53674e-07, -9.53674e-07)
 scale = Vector2(0.25, 0.25)
 sprite_frames = SubResource("SpriteFrames_0s2u3")
-animation = &"dame da ne guy"
+animation = &"animation"
 
 [node name="Hat" type="AnimatedSprite2D" parent="."]
 position = Vector2(0, -16)
