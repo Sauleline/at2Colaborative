@@ -6,38 +6,48 @@ signal respawn()
 
 @export var speed = 600
 @export var jump_speed = -750
+@export var wallJumpSpeed = -750
+@export var wallJumpHorizontal = 1000
 @export var gravity = 2000
 @export var wall_jump_multiplier = 0.8
 @export_range(0.05, 2) var punchTime = 0.2
 @export_range(0.0, 1.0) var friction = 0.06
 @export_range(0.0 , 1.0) var acceleration = 0.05
-@export var character = 'steve'
+@export_range(0.0, 2000) var wallSlideGravity = 1000
 var jumpCount = 2
 var wallSlide = false
 
 func mapRange(x, inMin, inMax, outMin, outMax):
 	return ((x - inMin) * (outMax - outMin) / (inMax - inMin) + outMin)
 
+var scaleMap = {"jack": [0.08, 0.08],
+				"joel": [0.067, 0.067],
+				"dame da ne guy": [0.149, 0.069],
+				"pluey": [0.133, 0.133],
+				"icon svg":[0.25, 0.25]}
+
 func _ready():
 	if (Global.PlayerOne):
 		var player = Global.PlayerOne
 		$"Level Display".text = player.userName
-		$Sprite.play(character+'Idle')
+		$Sprite.play(player.currentSprite)
 		$Hat.play(player.currentHat)
 	else:
 		$"Level Display".text = "Guest"
 		$Hat.play("none")
-		$Sprite.play(character+'Idle')
+		$Sprite.play("Pluey")
+	$Sprite.scale.x = scaleMap[$Sprite.animation][0]
+	$Sprite.scale.y = scaleMap[$Sprite.animation][1]
 		
 func _physics_process(delta):
 	velocity.y += gravity * delta
 	var dir = Input.get_axis("p1left", "p1right")
 	if (dir == -1):
-		$Sprite.flip_h = true
+		$Sprite.flip_h = false
 		$Hat.flip_h = false
 		$Fist.rotation = deg_to_rad(180)
 	elif (dir == 1):
-		$Sprite.flip_h = false
+		$Sprite.flip_h = true
 		$Hat.flip_h = true
 		$Fist.rotation = deg_to_rad(0)
 	if Input.is_action_just_pressed("p1punch"):
@@ -55,12 +65,26 @@ func _physics_process(delta):
 	move_and_slide()	
 	if is_on_floor():
 		jumpCount = 2
-	if Input.is_action_just_pressed("p1jump") and (jumpCount > 0):
+	if Input.is_action_just_pressed("p1jump") and (jumpCount > 0) and (wallSlide == false):
 		velocity.y = jump_speed
 		jumpCount -= 1
-	if is_on_wall() and not is_on_floor():
-		if Input.is_action_just_pressed("p1left") or ("p1right"):
-			var wallSlide = true
+	if (is_on_wall() and not is_on_floor()) and (velocity.y > 0) and wallSlide == false :
+		if Input.is_action_pressed("p1left") or ("p1right"):
+			wallSlide = true
+			gravity = wallSlideGravity
+	
+
+	if (is_on_floor() or not is_on_wall() or (velocity.y <= 0)) and wallSlide == true :
+		wallSlide = false
+		gravity = 2000
+	if Input.is_action_just_pressed("p1jump") and (wallSlide == true):
+		velocity.y = wallJumpSpeed
+		if Input.is_action_pressed("p1left"):
+			velocity.x = wallJumpHorizontal
+		if Input.is_action_pressed("p1right"):
+			velocity.x = wallJumpHorizontal * -1
+		wallSlide = false
+		gravity = 2000
 		
 
 func player_shoot():
