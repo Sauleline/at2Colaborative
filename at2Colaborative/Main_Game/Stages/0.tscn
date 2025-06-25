@@ -4,10 +4,10 @@
 [ext_resource type="PackedScene" uid="uid://bfsd75ne6drno" path="res://Main_Game/Damage_Tilemap.tscn" id="3_mnflg"]
 [ext_resource type="PackedScene" uid="uid://scl3b7ko3tw4" path="res://Main_Game/Terrain_Tilemap.tscn" id="4_c4v3y"]
 [ext_resource type="Theme" uid="uid://dwdqkuxyspo32" path="res://Game_User_Interface/Theme.tres" id="5_8qvap"]
-[ext_resource type="PackedScene" path="res://Main_Game/checkpoint.tscn" id="6_jreen"]
+[ext_resource type="PackedScene" uid="uid://bt6nqr1i764ly" path="res://Main_Game/checkpoint.tscn" id="6_jreen"]
 [ext_resource type="PackedScene" uid="uid://dyjri6mtn6mqa" path="res://Main_Game/player.tscn" id="7_irss0"]
-[ext_resource type="PackedScene" path="res://Main_Game/hud.tscn" id="8_60qsc"]
-[ext_resource type="PackedScene" path="res://Main_Game/pausemenu.tscn" id="8_mnflg"]
+[ext_resource type="PackedScene" uid="uid://4n7aivnwu15g" path="res://Main_Game/hud.tscn" id="8_60qsc"]
+[ext_resource type="PackedScene" uid="uid://bsii2bg3dsoji" path="res://Main_Game/pausemenu.tscn" id="8_mnflg"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2p5ui"]
 size = Vector2(64, 64)

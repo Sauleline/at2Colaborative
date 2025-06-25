@@ -11,12 +11,12 @@ signal respawn()
 @export var gravity = 2000
 @export_range(0.0, 2000) var wallSlideGravity = 1000
 @export var wall_jump_multiplier = 0.8
-@export_range(0.05, 2) var punchTime = 0.2
 @export_range(0.0, 1.0) var friction = 0.06
 @export_range(0.0 , 1.0) var acceleration = 0.03
 @export var character = "steve"
 var jumpCount = 2
 var wallSlide = false
+var punching = false
 
 func mapRange(x, inMin, inMax, outMin, outMax):
 	return ((x - inMin) * (outMax - outMin) / (inMax - inMin) + outMin)
@@ -25,16 +25,23 @@ func _ready():
 	if (Global.PlayerOne):
 		var player = Global.PlayerOne
 		$"Level Display".text = player.userName
-		$Sprite.play(character+'Idle')
 		$Hat.play(player.currentHat)
 	else:
 		$"Level Display".text = "Guest"
 		$Hat.play("none")
-		$Sprite.play("Pluey")
-		
+	$Sprite.play(character+'Idle')
+
 func _physics_process(delta):
 	velocity.y += gravity * delta
+
+	if Input.is_action_just_pressed("p1punch") and is_on_floor():
+		player_punch()
+	if Input.is_action_just_pressed("p1shoot"):
+		player_shoot()
+	
 	var dir = Input.get_axis("p1left", "p1right")
+	if punching:
+		dir = 0
 	if (dir == -1):
 		$Sprite.flip_h = true
 		$Hat.flip_h = false
@@ -44,32 +51,6 @@ func _physics_process(delta):
 		$Hat.flip_h = true
 		$Fist.rotation = deg_to_rad(0)
 	
-	if Input.is_action_just_pressed("p1punch"):
-		player_punch()
-	if Input.is_action_just_pressed("p1shoot"):
-		player_shoot()
-	
-	if dir != 0:
-		if is_on_floor():
-			$Sprite.play(character+'Run')
-		else:
-			$Sprite.play(character+"Jump")
-		velocity.x = lerp(velocity.x, dir * speed, acceleration)
-	else:
-		if is_on_floor():
-			$Sprite.play(character+"Idle")
-		velocity.x = lerp(velocity.x, 0.0, friction)
-	
-	if velocity.x > 0:
-		$Hat.rotation = deg_to_rad(mapRange(abs(velocity.x), 0, 600, 0, -30))
-	elif velocity.x < 0:
-		$Hat.rotation = deg_to_rad(mapRange(abs(velocity.x), 0, 600, 0, 30))
-	
-	move_and_slide()
-	
-	if is_on_floor():
-		jumpCount = 2
-
 	if Input.is_action_just_pressed("p1jump") and (jumpCount > 0) and (wallSlide == false):
 		velocity.y = jump_speed
 		jumpCount -= 1
@@ -92,20 +73,38 @@ func _physics_process(delta):
 			velocity.x = wallJumpHorizontal * -1
 		wallSlide = false
 		gravity = 2000
+
+	if dir != 0:
+		if is_on_floor():
+			$Sprite.play(character+'Run')
+		else:
+			$Sprite.play(character+"Jump")
+		velocity.x = lerp(velocity.x, dir * speed, acceleration)
+	else:
+		if is_on_floor() and not punching:
+			$Sprite.play(character+"Idle")
+		velocity.x = lerp(velocity.x, 0.0, friction)
+	
+	if velocity.x > 0:
+		$Hat.rotation = deg_to_rad(mapRange(abs(velocity.x), 0, 600, 0, -30))
+	elif velocity.x < 0:
+		$Hat.rotation = deg_to_rad(mapRange(abs(velocity.x), 0, 600, 0, 30))
+	
+	if is_on_floor():
+		jumpCount = 2
 	
 	if wallSlide:
 		$Sprite.play(character+"WallHold")
+	
+	move_and_slide()
 
 func player_shoot():
 	pass
 
 func player_punch():
-		$Fist/FistHitbox.disabled = false
-		$Fist/ColorRect.visible = true
-		$PunchTimer.start(punchTime)
-func _on_punch_timer_timeout() -> void:
-		$Fist/FistHitbox.disabled = true
-		$Fist/ColorRect.visible = false
+	punching = true
+	$Sprite.play(character+"Punch")
+	$Fist/FistHitbox.disabled = false
 
 func _on_area_2d_area_entered(area: Area2D) -> void:
 	if (area.get_parent().name == "Checkpoints"):
@@ -116,3 +115,8 @@ func _on_area_2d_area_entered(area: Area2D) -> void:
 func _on_area_2d_body_entered(body: Node2D) -> void:
 	if(body.name == "Damage"):
 		emit_signal("respawn")
+
+func _on_sprite_animation_finished() -> void:
+	if $Sprite.animation == character+"Punch":
+		punching = false
+		$Fist/FistHitbox.disabled = true
