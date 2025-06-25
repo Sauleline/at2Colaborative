@@ -1,10 +1,20 @@
-[gd_scene load_steps=3 format=3 uid="uid://bsii2bg3dsoji"]
+[gd_scene load_steps=5 format=3 uid="uid://bsii2bg3dsoji"]
 
 [ext_resource type="Script" uid="uid://bqnoitgmi2cso" path="res://Main_Game/pausemenu.gd" id="1_g75e1"]
 [ext_resource type="Theme" uid="uid://dwdqkuxyspo32" path="res://Game_User_Interface/Theme.tres" id="2_3qn22"]
+[ext_resource type="Shader" uid="uid://gqpbkolr52w7" path="res://blur.gdshader" id="2_8tp52"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_ckgw5"]
+shader = ExtResource("2_8tp52")
+shader_parameter/blur = 2.0
 
 [node name="Pause Menu" type="CanvasLayer"]
 script = ExtResource("1_g75e1")
+
+[node name="Blur" type="ColorRect" parent="."]
+material = SubResource("ShaderMaterial_ckgw5")
+offset_right = 1152.0
+offset_bottom = 648.0
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
 anchors_preset = 8

@@ -1,13 +1,14 @@
 [gd_scene load_steps=4 format=3 uid="uid://bi8pcdfenbp5q"]
 
-[ext_resource type="PackedScene" path="res://Game_User_Interface/UI_Background.tscn" id="1_abk0k"]
-[ext_resource type="Script" path="res://Game_User_Interface/settings.gd" id="1_l7ch7"]
+[ext_resource type="PackedScene" uid="uid://dyn2qf6aui3uv" path="res://Game_User_Interface/UI_Background.tscn" id="1_abk0k"]
+[ext_resource type="Script" uid="uid://bdxmofpa0ndx" path="res://Game_User_Interface/settings.gd" id="1_l7ch7"]
 [ext_resource type="Theme" uid="uid://dwdqkuxyspo32" path="res://Game_User_Interface/Theme.tres" id="3_2grg5"]
 
 [node name="Settings" type="CanvasLayer"]
 script = ExtResource("1_l7ch7")
 
 [node name="Background" parent="." instance=ExtResource("1_abk0k")]
+metadata/_edit_lock_ = true
 
 [node name="Debug Level" type="Button" parent="."]
 anchors_preset = 8
