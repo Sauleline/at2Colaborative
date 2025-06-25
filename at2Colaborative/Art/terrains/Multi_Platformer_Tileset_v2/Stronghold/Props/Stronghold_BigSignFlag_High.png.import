@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cxlsxbpp8c40"
-path="res://.godot/imported/Stronghold_BigSignFlag_High.png-876bd0fc288fe3e42df4038b964c6f3e.ctex"
+path="res://.godot/imported/Stronghold_BigSignFlag_High.png-927411c4b1cc9ead2fbd7a8dfd863fd8.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Art/terrains/Multi_Platformer_Tileset_v2/Stronghold/Props/Stronghold_BigSignFlag_High.png"
-dest_files=["res://.godot/imported/Stronghold_BigSignFlag_High.png-876bd0fc288fe3e42df4038b964c6f3e.ctex"]
+source_file="res://art/terrains/Multi_Platformer_Tileset_v2/Stronghold/Props/Stronghold_BigSignFlag_High.png"
+dest_files=["res://.godot/imported/Stronghold_BigSignFlag_High.png-927411c4b1cc9ead2fbd7a8dfd863fd8.ctex"]
 
 [params]
 
