@@ -1,6 +1,7 @@
 extends CharacterBody2D
 
 signal hitArea(area: Area2D, number: int)
+signal beatStage()
 signal respawn()
 
 @export var speed = 600
@@ -13,21 +14,25 @@ signal respawn()
 var jumpCount = 2
 var wallSlide = false
 
-
 func mapRange(x, inMin, inMax, outMin, outMax):
 	return ((x - inMin) * (outMax - outMin) / (inMax - inMin) + outMin)
 
-var scaleMap = {"Jackson": [0.08, 0.08],
-				"Joel": [0.067, 0.067],
-				"Dame Da Ne Guy": [0.149, 0.069],
-				"Pluey": [0.133, 0.133]}
+var scaleMap = {"jack": [0.08, 0.08],
+				"joel": [0.067, 0.067],
+				"dame da ne guy": [0.149, 0.069],
+				"pluey": [0.133, 0.133],
+				"icon svg":[0.25, 0.25]}
 
 func _ready():
 	if (Global.PlayerOne):
 		var player = Global.PlayerOne
 		$"Level Display".text = player.userName
+		$Sprite.play(player.currentSprite)
+		$Hat.play(player.currentHat)
 	else:
 		$"Level Display".text = "Guest"
+		$Hat.play("none")
+		$Sprite.play("Pluey")
 	$Sprite.scale.x = scaleMap[$Sprite.animation][0]
 	$Sprite.scale.y = scaleMap[$Sprite.animation][1]
 		
@@ -43,11 +48,7 @@ func _physics_process(delta):
 		$Hat.flip_h = true
 		$Fist.rotation = deg_to_rad(0)
 	if Input.is_action_just_pressed("p1punch"):
-		$Fist/FistHitbox.disabled = false
-		$Fist/ColorRect.visible = true
-		await get_tree().create_timer(punchTime).timeout
-		$Fist/FistHitbox.disabled = true
-		$Fist/ColorRect.visible = false
+		player_punch()
 	if Input.is_action_just_pressed("p1shoot"):
 		player_shoot()
 	if dir != 0:
@@ -58,7 +59,7 @@ func _physics_process(delta):
 		$Hat.rotation = deg_to_rad(mapRange(abs(velocity.x), 0, 600, 0, -30))
 	else:
 		$Hat.rotation = deg_to_rad(mapRange(abs(velocity.x), 0, 600, 0, 30))
-	move_and_slide()
+	move_and_slide()	
 	if is_on_floor():
 		jumpCount = 2
 	if Input.is_action_just_pressed("p1jump") and (jumpCount > 0):
@@ -72,9 +73,19 @@ func _physics_process(delta):
 func player_shoot():
 	pass
 
+func player_punch():
+		$Fist/FistHitbox.disabled = false
+		$Fist/ColorRect.visible = true
+		$PunchTimer.start(punchTime)
+func _on_punch_timer_timeout() -> void:
+		$Fist/FistHitbox.disabled = true
+		$Fist/ColorRect.visible = false
+
 func _on_area_2d_area_entered(area: Area2D) -> void:
 	if (area.get_parent().name == "Checkpoints"):
 		emit_signal("hitArea", area, int(area.name))
+	if (area.name == "End"):
+		emit_signal("beatStage")
 
 func _on_area_2d_body_entered(body: Node2D) -> void:
 	if(body.name == "Damage"):

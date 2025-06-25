@@ -1,7 +1,37 @@
-[gd_scene load_steps=2 format=3 uid="uid://bd7sfwiwehvqn"]
+[gd_scene load_steps=6 format=3 uid="uid://bd7sfwiwehvqn"]
 
-[ext_resource type="PackedScene" path="res://Game_User_Interface/UI_Background.tscn" id="1_3wu08"]
+[ext_resource type="Script" uid="uid://ceptjivr6wceq" path="res://Game_User_Interface/wardrobe.gd" id="1_1tqt2"]
+[ext_resource type="PackedScene" uid="uid://dyn2qf6aui3uv" path="res://Game_User_Interface/UI_Background.tscn" id="1_3wu08"]
+[ext_resource type="Script" uid="uid://c3eigbtuqj7ba" path="res://global.gd" id="1_nrjde"]
+[ext_resource type="Theme" uid="uid://dwdqkuxyspo32" path="res://Game_User_Interface/Theme.tres" id="4_n3qb1"]
+
+[sub_resource type="SystemFont" id="SystemFont_n3qb1"]
+font_names = PackedStringArray("Comic Sans MS")
 
 [node name="Wardrobe" type="CanvasLayer"]
+script = ExtResource("1_1tqt2")
+
+[node name="Global" type="Node" parent="."]
+script = ExtResource("1_nrjde")
 
 [node name="Background" parent="." instance=ExtResource("1_3wu08")]
+metadata/_edit_lock_ = true
+
+[node name="Back" type="Button" parent="."]
+offset_left = 24.0
+offset_top = 24.0
+offset_right = 104.0
+offset_bottom = 104.0
+theme = ExtResource("4_n3qb1")
+theme_override_font_sizes/font_size = 24
+text = "Back"
+
+[node name="HatSelect" type="OptionButton" parent="."]
+offset_left = 192.0
+offset_top = 64.0
+offset_right = 440.0
+offset_bottom = 88.0
+theme_override_fonts/font = SubResource("SystemFont_n3qb1")
+
+[connection signal="pressed" from="Back" to="." method="_on_back_pressed"]
+[connection signal="item_selected" from="HatSelect" to="." method="_on_hat_select_item_selected"]
