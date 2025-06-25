@@ -6,11 +6,14 @@ signal respawn()
 
 @export var speed = 600
 @export var jump_speed = -750
+@export var wallJumpSpeed = -750
+@export var wallJumpHorizontal = 1000
 @export var gravity = 2000
 @export var wall_jump_multiplier = 0.8
 @export_range(0.05, 2) var punchTime = 0.2
 @export_range(0.0, 1.0) var friction = 0.06
 @export_range(0.0 , 1.0) var acceleration = 0.05
+@export_range(0.0, 2000) var wallSlideGravity = 1000
 var jumpCount = 2
 var wallSlide = false
 
@@ -62,12 +65,26 @@ func _physics_process(delta):
 	move_and_slide()	
 	if is_on_floor():
 		jumpCount = 2
-	if Input.is_action_just_pressed("p1jump") and (jumpCount > 0):
+	if Input.is_action_just_pressed("p1jump") and (jumpCount > 0) and (wallSlide == false):
 		velocity.y = jump_speed
 		jumpCount -= 1
-	if is_on_wall() and not is_on_floor():
-		if Input.is_action_just_pressed("p1left") or ("p1right"):
-			var wallSlide = true
+	if (is_on_wall() and not is_on_floor()) and (velocity.y > 0) and wallSlide == false :
+		if Input.is_action_pressed("p1left") or ("p1right"):
+			wallSlide = true
+			gravity = wallSlideGravity
+	
+
+	if (is_on_floor() or not is_on_wall() or (velocity.y <= 0)) and wallSlide == true :
+		wallSlide = false
+		gravity = 2000
+	if Input.is_action_just_pressed("p1jump") and (wallSlide == true):
+		velocity.y = wallJumpSpeed
+		if Input.is_action_pressed("p1left"):
+			velocity.x = wallJumpHorizontal
+		if Input.is_action_pressed("p1right"):
+			velocity.x = wallJumpHorizontal * -1
+		wallSlide = false
+		gravity = 2000
 		
 
 func player_shoot():

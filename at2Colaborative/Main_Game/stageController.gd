@@ -16,6 +16,7 @@ func _process(_delta):
 	
 	if ($Player.position[1] > 1000):
 		_on_player_respawn()
+	
 	@warning_ignore("integer_division")
 	$Player/Camera/HUD/Time.text = Global.intToSecMin(score/10)
 
