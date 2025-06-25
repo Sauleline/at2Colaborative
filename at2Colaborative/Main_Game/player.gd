@@ -11,40 +11,33 @@ signal respawn()
 @export_range(0.05, 2) var punchTime = 0.2
 @export_range(0.0, 1.0) var friction = 0.06
 @export_range(0.0 , 1.0) var acceleration = 0.05
+@export var character = 'steve'
 var jumpCount = 2
 var wallSlide = false
 
 func mapRange(x, inMin, inMax, outMin, outMax):
 	return ((x - inMin) * (outMax - outMin) / (inMax - inMin) + outMin)
 
-var scaleMap = {"jack": [0.08, 0.08],
-				"joel": [0.067, 0.067],
-				"dame da ne guy": [0.149, 0.069],
-				"pluey": [0.133, 0.133],
-				"icon svg":[0.25, 0.25]}
-
 func _ready():
 	if (Global.PlayerOne):
 		var player = Global.PlayerOne
 		$"Level Display".text = player.userName
-		$Sprite.play(player.currentSprite)
+		$Sprite.play(character+'Idle')
 		$Hat.play(player.currentHat)
 	else:
 		$"Level Display".text = "Guest"
 		$Hat.play("none")
-		$Sprite.play("Pluey")
-	$Sprite.scale.x = scaleMap[$Sprite.animation][0]
-	$Sprite.scale.y = scaleMap[$Sprite.animation][1]
+		$Sprite.play(character+'Idle')
 		
 func _physics_process(delta):
 	velocity.y += gravity * delta
 	var dir = Input.get_axis("p1left", "p1right")
 	if (dir == -1):
-		$Sprite.flip_h = false
+		$Sprite.flip_h = true
 		$Hat.flip_h = false
 		$Fist.rotation = deg_to_rad(180)
 	elif (dir == 1):
-		$Sprite.flip_h = true
+		$Sprite.flip_h = false
 		$Hat.flip_h = true
 		$Fist.rotation = deg_to_rad(0)
 	if Input.is_action_just_pressed("p1punch"):
