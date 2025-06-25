@@ -1,4 +1,4 @@
-[gd_scene load_steps=68 format=3 uid="uid://dyjri6mtn6mqa"]
+[gd_scene load_steps=69 format=3 uid="uid://dyjri6mtn6mqa"]
 
 [ext_resource type="Script" uid="uid://dh2q4d51je4yd" path="res://Main_Game/player.gd" id="1_rvp0r"]
 [ext_resource type="Texture2D" uid="uid://hv1br05i7hqk" path="res://art/2D-Pixel-Art-Character-Template/2D-Pixel-Art-Character-Template/Idle/Player Idle 48x48.png" id="3_wr33q"]
@@ -11,6 +11,7 @@
 [ext_resource type="Texture2D" uid="uid://dxg0mondhfl0g" path="res://art/hats/gibus.png" id="7_tmng6"]
 [ext_resource type="Texture2D" uid="uid://cmxwp4uvhrlfp" path="res://art/hats/none.png" id="8_ndv38"]
 [ext_resource type="Texture2D" uid="uid://g8m13muigqo5" path="res://art/2D-Pixel-Art-Character-Template/2D-Pixel-Art-Character-Template/Wall Land/player wall land 48x48.png" id="8_og813"]
+[ext_resource type="AudioStream" uid="uid://c6wkjsr2xmduf" path="res://art/sound/jump.wav" id="12_0nq3h"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_tmng6"]
 atlas = ExtResource("3_wr33q")
@@ -492,6 +493,12 @@ debug_color = Color(0.699314, 0.277037, 1, 0.42)
 position = Vector2(16, 0)
 shape = SubResource("RectangleShape2D_64xtq")
 debug_color = Color(0.98055, 0.0671374, 0.312238, 0.42)
+
+[node name="SFX" type="Node" parent="."]
+
+[node name="Jump" type="AudioStreamPlayer" parent="SFX"]
+stream = ExtResource("12_0nq3h")
+bus = &"SFX"
 
 [connection signal="animation_finished" from="Sprite" to="." method="_on_sprite_animation_finished"]
 [connection signal="area_entered" from="Hitbox" to="." method="_on_area_2d_area_entered"]

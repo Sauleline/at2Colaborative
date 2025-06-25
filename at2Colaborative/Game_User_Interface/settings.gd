@@ -1,4 +1,17 @@
 extends CanvasLayer
 
+func _ready():
+	for i in $SliderSplitter.get_children():
+		i.value = db_to_linear(AudioServer.get_bus_volume_db(AudioServer.get_bus_index(i.name)))
+
 func _on_debug_level_pressed() -> void:
 	get_tree().change_scene_to_file("res://Main_Game/Stages/templateStage.tscn")
+
+func _on_back_pressed() -> void:
+	get_tree().change_scene_to_file("res://Game_User_Interface/Title_Screen.tscn")
+
+func changeVolume(_value_changed: bool, bus: String):
+	AudioServer.set_bus_volume_db(AudioServer.get_bus_index(bus), linear_to_db($SliderSplitter.find_child(bus).value))
+
+func updateLabel(value_changed: float, bus: String):
+	$SliderSplitter.find_child(bus).find_child("Level").text = str(int(value_changed*100))

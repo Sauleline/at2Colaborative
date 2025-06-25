@@ -55,6 +55,7 @@ func _physics_process(delta):
 	if Input.is_action_just_pressed("p1jump") and (jumpCount > 0) and (wallSlide == false) and not punching:
 		velocity.y = jump_speed
 		jumpCount -= 1
+		$SFX/Jump.play()
 	
 	if (is_on_wall() and not is_on_floor()) and (velocity.y > 0) and wallSlide == false :
 		if Input.is_action_pressed("p1left") or ("p1right"):
@@ -68,6 +69,7 @@ func _physics_process(delta):
 	
 	if Input.is_action_just_pressed("p1jump") and (wallSlide == true):
 		velocity.y = wallJumpSpeed
+		$SFX/Jump.play()
 		if Input.is_action_pressed("p1left"):
 			velocity.x = wallJumpHorizontal
 		if Input.is_action_pressed("p1right"):
