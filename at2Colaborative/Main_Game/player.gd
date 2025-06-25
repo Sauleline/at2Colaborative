@@ -51,7 +51,7 @@ func _physics_process(delta):
 		$Hat.flip_h = true
 		$Fist.rotation = deg_to_rad(0)
 	
-	if Input.is_action_just_pressed("p1jump") and (jumpCount > 0) and (wallSlide == false):
+	if Input.is_action_just_pressed("p1jump") and (jumpCount > 0) and (wallSlide == false) and not punching:
 		velocity.y = jump_speed
 		jumpCount -= 1
 	
@@ -82,9 +82,12 @@ func _physics_process(delta):
 		velocity.x = lerp(velocity.x, dir * speed, acceleration)
 	else:
 		if is_on_floor() and not punching:
-			$Sprite.play(character+"Idle")
+			if velocity.x != 0:
+				$Sprite.play(character+"Walk")
+			else:
+				$Sprite.play(character+"Idle")
 		velocity.x = lerp(velocity.x, 0.0, friction)
-	
+
 	if velocity.x > 0:
 		$Hat.rotation = deg_to_rad(mapRange(abs(velocity.x), 0, 600, 0, -30))
 	elif velocity.x < 0:

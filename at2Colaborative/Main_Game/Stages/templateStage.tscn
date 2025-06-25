@@ -35,6 +35,7 @@ position_smoothing_speed = 15.0
 [node name="HUD" parent="Player/Camera" instance=ExtResource("7_0giw5")]
 
 [node name="Pause Menu" parent="Player/Camera" instance=ExtResource("7_sq7vt")]
+visible = false
 
 [node name="PlayerSpawn" type="Marker2D" parent="."]
 position = Vector2(32, 96)
