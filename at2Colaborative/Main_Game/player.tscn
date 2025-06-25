@@ -11,7 +11,7 @@
 [ext_resource type="Texture2D" uid="uid://dxg0mondhfl0g" path="res://art/hats/gibus.png" id="7_tmng6"]
 [ext_resource type="Texture2D" uid="uid://cmxwp4uvhrlfp" path="res://art/hats/none.png" id="8_ndv38"]
 [ext_resource type="Texture2D" uid="uid://g8m13muigqo5" path="res://art/2D-Pixel-Art-Character-Template/2D-Pixel-Art-Character-Template/Wall Land/player wall land 48x48.png" id="8_og813"]
-[ext_resource type="AudioStream" uid="uid://c6wkjsr2xmduf" path="res://art/sound/jump.wav" id="12_0nq3h"]
+[ext_resource type="AudioStream" uid="uid://c6wkjsr2xmduf" path="res://art/sound/sfx/jump.wav" id="12_0nq3h"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_tmng6"]
 atlas = ExtResource("3_wr33q")
