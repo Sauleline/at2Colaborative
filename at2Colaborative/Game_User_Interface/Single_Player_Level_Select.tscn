@@ -56,6 +56,8 @@ draw_focus_border = true
 
 [node name="vertContainer" type="VBoxContainer" parent="Leaderboard"]
 layout_mode = 2
+theme = ExtResource("2_b4mwh")
+theme_type_variation = &"fontSize"
 
 [node name="Back" type="Button" parent="."]
 anchors_preset = 1

@@ -22,10 +22,12 @@ var _populateLeaderboard = func populateLeaderboard(level: int):
 	for i in $Leaderboard/vertContainer.get_children():
 		$Leaderboard/vertContainer.remove_child(i)
 	var insertLabel = Label.new()
+	insertLabel.add_theme_font_size_override("font_size", 20)
 	insertLabel.text = "Level "+str(level)
 	$Leaderboard/vertContainer.add_child(insertLabel)
 	for i in range(40):
 		insertLabel = Label.new()
+		insertLabel.add_theme_font_size_override("font_size", 20)
 		insertLabel.text = str(i).pad_zeros(2)
 		$Leaderboard/vertContainer.add_child(insertLabel)
 

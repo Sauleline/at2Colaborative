@@ -18,12 +18,12 @@ func _process(_delta):
 		_on_player_respawn()
 	
 	@warning_ignore("integer_division")
-	$Player/Camera/HUD/Time.text = Global.intToSecMin(score)
+	$Player/Camera/HUD/Gameplay/Time.text = Global.intToSecMin(score)
 
 # You have to attach the player signals to this each time
 func _on_player_respawn() -> void:
 	deaths += 1
-	$Player/Camera/HUD/DeathCount.text = "Deaths: " + str(deaths)
+	$Player/Camera/HUD/Gameplay/DeathCount.text = "Deaths: " + str(deaths)
 	$Player.velocity.x = 0
 	$Player.velocity.y = 0
 	$Player.position = $PlayerSpawn.position
@@ -44,3 +44,9 @@ func _on_score_timer_timeout() -> void:
 
 func _on_player_beat_stage() -> void:
 	$"Score Timer".stop()
+	for i in $Player/Camera/HUD/Gameplay.get_children():
+		i.visible = false
+	$Player/Camera/HUD/ScoreScreen.visible = true
+	$Player/Camera/HUD/Blur.visible = true
+	@warning_ignore("integer_division")
+	$Player/Camera/HUD/ScoreScreen.text = "You died " + str(deaths) + " times\nand took " + str(Global.intToSecMin(score))
