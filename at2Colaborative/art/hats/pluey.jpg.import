@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bpfr73qhoymbq"
-path="res://.godot/imported/dame da ne guy.png-b6c7cc04c4f770a548a716a2585236fe.ctex"
+uid="uid://cttrv6bxgdvgf"
+path="res://.godot/imported/pluey.jpg-8873c03d80fc7a555087ea5a072450a2.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://art/dame da ne guy.png"
-dest_files=["res://.godot/imported/dame da ne guy.png-b6c7cc04c4f770a548a716a2585236fe.ctex"]
+source_file="res://art/hats/pluey.jpg"
+dest_files=["res://.godot/imported/pluey.jpg-8873c03d80fc7a555087ea5a072450a2.ctex"]
 
 [params]
 

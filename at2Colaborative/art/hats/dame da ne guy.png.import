@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ctio5uyu77gse"
-path="res://.godot/imported/joel.png-8eeef060335f5cf647ff97e442dbb357.ctex"
+uid="uid://derpbggd5t0f3"
+path="res://.godot/imported/dame da ne guy.png-95641f45bb25f98cb55da55a13dda6fc.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://art/joel.png"
-dest_files=["res://.godot/imported/joel.png-8eeef060335f5cf647ff97e442dbb357.ctex"]
+source_file="res://art/hats/dame da ne guy.png"
+dest_files=["res://.godot/imported/dame da ne guy.png-95641f45bb25f98cb55da55a13dda6fc.ctex"]
 
 [params]
 

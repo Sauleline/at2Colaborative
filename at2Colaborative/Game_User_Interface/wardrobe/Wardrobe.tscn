@@ -1,0 +1,43 @@
+[gd_scene load_steps=4 format=3 uid="uid://bd7sfwiwehvqn"]
+
+[ext_resource type="Script" uid="uid://ceptjivr6wceq" path="res://Game_User_Interface/wardrobe/wardrobe.gd" id="1_1tqt2"]
+[ext_resource type="PackedScene" uid="uid://dyn2qf6aui3uv" path="res://Game_User_Interface/UI_Background.tscn" id="1_3wu08"]
+[ext_resource type="Theme" uid="uid://dwdqkuxyspo32" path="res://Game_User_Interface/Theme.tres" id="4_n3qb1"]
+
+[node name="Wardrobe" type="CanvasLayer"]
+script = ExtResource("1_1tqt2")
+
+[node name="Background" parent="." instance=ExtResource("1_3wu08")]
+metadata/_edit_lock_ = true
+
+[node name="Back" type="Button" parent="."]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -112.0
+offset_top = 24.0
+offset_right = -32.0
+offset_bottom = 104.0
+grow_horizontal = 0
+theme = ExtResource("4_n3qb1")
+theme_override_font_sizes/font_size = 24
+text = "Back"
+
+[node name="Hats" type="GridContainer" parent="."]
+offset_left = 96.0
+offset_top = 104.0
+offset_right = 384.0
+offset_bottom = 520.0
+columns = 3
+
+[node name="Users Logged" type="Label" parent="."]
+offset_left = 32.0
+offset_top = 16.0
+offset_right = 384.0
+offset_bottom = 64.0
+theme = ExtResource("4_n3qb1")
+theme_override_font_sizes/font_size = 19
+text = "Welcome back Guest"
+vertical_alignment = 1
+
+[connection signal="pressed" from="Back" to="." method="_on_back_pressed"]

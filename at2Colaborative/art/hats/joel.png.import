@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ejh5wyqjcl2k"
-path="res://.godot/imported/jackson.jpg-a53f46dd9224409232cb64939c891241.ctex"
+uid="uid://drfv1em0ko6jh"
+path="res://.godot/imported/joel.png-25e2db1cb77a0b59582654ea160c5935.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://art/jackson.jpg"
-dest_files=["res://.godot/imported/jackson.jpg-a53f46dd9224409232cb64939c891241.ctex"]
+source_file="res://art/hats/joel.png"
+dest_files=["res://.godot/imported/joel.png-25e2db1cb77a0b59582654ea160c5935.ctex"]
 
 [params]
 

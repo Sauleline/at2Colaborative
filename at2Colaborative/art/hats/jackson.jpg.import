@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ca3ijslxka5rs"
-path="res://.godot/imported/pluey.jpg-23f4bc8c7959b1e9ffd4df5806d69069.ctex"
+uid="uid://dlpvch8v33bpe"
+path="res://.godot/imported/jackson.jpg-0aa5087ddf9ba1141f0d73fa6e36a511.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://art/pluey.jpg"
-dest_files=["res://.godot/imported/pluey.jpg-23f4bc8c7959b1e9ffd4df5806d69069.ctex"]
+source_file="res://art/hats/jackson.jpg"
+dest_files=["res://.godot/imported/jackson.jpg-0aa5087ddf9ba1141f0d73fa6e36a511.ctex"]
 
 [params]
 
