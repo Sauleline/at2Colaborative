@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://b6xe5rnrikv3t"]
+
+[ext_resource type="PackedScene" uid="uid://dyn2qf6aui3uv" path="res://Game_User_Interface/UI_Background.tscn" id="1_7k7w4"]
+[ext_resource type="Script" uid="uid://b7igli3txiq6x" path="res://Game_User_Interface/wardrobe/shop.gd" id="1_k5sxp"]
+
+[node name="Shop" type="CanvasLayer"]
+script = ExtResource("1_k5sxp")
+
+[node name="Background" parent="." instance=ExtResource("1_7k7w4")]
+metadata/_edit_lock_ = true

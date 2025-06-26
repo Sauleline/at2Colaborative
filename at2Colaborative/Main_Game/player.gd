@@ -23,13 +23,15 @@ func mapRange(x, inMin, inMax, outMin, outMax):
 	return ((x - inMin) * (outMax - outMin) / (inMax - inMin) + outMin)
 
 func _ready():
+	var hat = "none"
 	if (Global.PlayerOne):
 		var player = Global.PlayerOne
+		hat = player.currentHat
 		$"Level Display".text = player.userName
-		$Hat.play(player.currentHat)
 	else:
 		$"Level Display".text = "Guest"
-		$Hat.play("none")
+	var hatTexture = "res://art/hats/"+hat+".png"
+	$Hat.texture = load(hatTexture)
 	$Sprite.play(character+'Idle')
 
 func _physics_process(delta):
