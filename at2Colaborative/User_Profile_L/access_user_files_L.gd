@@ -2,11 +2,11 @@ extends Node
 
 var saveFilePath = "user://save/"
 var saveMainFileName = "UserProfiles.tres"
-var saveVolumeFileName = "Volume.tres"
+var savesettingsFileName = "settings.tres"
 var saveUserFileName = " "
 var user = User.new()
 var userProfiles = User_Profile.new()
-var volume = Volume.new()
+var settings = Settings.new()
 
 func openUserProfiles():
 	if ResourceLoader.exists(saveFilePath + saveMainFileName):
@@ -54,16 +54,17 @@ func open_user():
 	if ResourceLoader.exists(saveFilePath + saveUserFileName):
 		user = ResourceLoader.load(saveFilePath+saveUserFileName).duplicate(true)
 
-func save_vols(sfx: float, mus: float, mas: float):
-	volume.sfx = sfx
-	volume.mus = mus
-	volume.mas = mas
-	ResourceSaver.save(volume, saveFilePath + saveVolumeFileName)
+func save_settings_volume(sfx: float, mus: float, mas: float):
+	open_settings()
+	settings.sfx = sfx
+	settings.mus = mus
+	settings.mas = mas
+	ResourceSaver.save(settings, saveFilePath + savesettingsFileName)
 
-func open_vols():
-	if ResourceLoader.exists(saveFilePath + saveVolumeFileName):
-		volume = ResourceLoader.load(saveFilePath+saveVolumeFileName).duplicate(true)
+func open_settings():
+	if ResourceLoader.exists(saveFilePath + savesettingsFileName):
+		settings = ResourceLoader.load(saveFilePath+savesettingsFileName).duplicate(true)
 
-func loadVols():
-	open_vols()
-	return [volume.sfx, volume.mus, volume.mas]
+func load_settings():
+	open_settings()
+	return [settings.sfx, settings.mus, settings.mas]

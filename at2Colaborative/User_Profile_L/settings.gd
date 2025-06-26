@@ -1,4 +1,4 @@
-class_name Volume
+class_name Settings
 
 extends Resource
 
