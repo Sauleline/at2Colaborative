@@ -1,13 +1,16 @@
 extends CanvasLayer
 
 func _ready():
+	var settings = AccessUsers.loadVols()
 	for i in $SliderSplitter.get_children():
-		i.value = db_to_linear(AudioServer.get_bus_volume_db(AudioServer.get_bus_index(i.name)))
+		i.value = settings[i.get_index()]
 
 func _on_debug_level_pressed() -> void:
+	AccessUsers.save_vols($SliderSplitter/SFX.value, $SliderSplitter/Music.value, $SliderSplitter/Master.value)
 	get_tree().change_scene_to_file("res://Main_Game/Stages/templateStage.tscn")
 
 func _on_back_pressed() -> void:
+	AccessUsers.save_vols($SliderSplitter/SFX.value, $SliderSplitter/Music.value, $SliderSplitter/Master.value)
 	get_tree().change_scene_to_file("res://Game_User_Interface/Title_Screen.tscn")
 
 func changeVolume(_value_changed: bool, bus: String):

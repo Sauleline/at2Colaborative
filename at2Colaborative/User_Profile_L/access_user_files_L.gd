@@ -2,9 +2,11 @@ extends Node
 
 var saveFilePath = "user://save/"
 var saveMainFileName = "UserProfiles.tres"
+var saveVolumeFileName = "Volume.tres"
 var saveUserFileName = " "
 var user = User.new()
 var userProfiles = User_Profile.new()
+var volume = Volume.new()
 
 func openUserProfiles():
 	if ResourceLoader.exists(saveFilePath + saveMainFileName):
@@ -52,5 +54,16 @@ func open_user():
 	if ResourceLoader.exists(saveFilePath + saveUserFileName):
 		user = ResourceLoader.load(saveFilePath+saveUserFileName).duplicate(true)
 
-	
-	
+func save_vols(sfx: float, mus: float, mas: float):
+	volume.sfx = sfx
+	volume.mus = mus
+	volume.mas = mas
+	ResourceSaver.save(volume, saveFilePath + saveVolumeFileName)
+
+func open_vols():
+	if ResourceLoader.exists(saveFilePath + saveVolumeFileName):
+		volume = ResourceLoader.load(saveFilePath+saveVolumeFileName).duplicate(true)
+
+func loadVols():
+	open_vols()
+	return [volume.sfx, volume.mus, volume.mas]
