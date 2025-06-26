@@ -35,6 +35,21 @@ theme_override_font_sizes/font_size = 19
 text = "Welcome back Guest"
 vertical_alignment = 1
 
+[node name="Shop" type="Button" parent="."]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -128.0
+offset_top = -160.0
+offset_right = 128.0
+offset_bottom = -40.0
+grow_horizontal = 2
+grow_vertical = 0
+theme = ExtResource("4_n3qb1")
+text = "Shop"
+
 [node name="Hats" type="GridContainer" parent="."]
 offset_left = 64.0
 offset_top = 128.0
@@ -65,20 +80,5 @@ position = Vector2(0, -16)
 scale = Vector2(0.25, 0.25)
 texture = ExtResource("5_qy5g6")
 offset = Vector2(0, -16)
-
-[node name="Button" type="Button" parent="."]
-anchors_preset = 7
-anchor_left = 0.5
-anchor_top = 1.0
-anchor_right = 0.5
-anchor_bottom = 1.0
-offset_left = -128.0
-offset_top = -160.0
-offset_right = 128.0
-offset_bottom = -40.0
-grow_horizontal = 2
-grow_vertical = 0
-theme = ExtResource("4_n3qb1")
-text = "Shop"
 
 [connection signal="pressed" from="Back" to="." method="_on_back_pressed"]

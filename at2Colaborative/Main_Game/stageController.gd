@@ -43,7 +43,6 @@ func _on_score_timer_timeout() -> void:
 	score += 1
 
 func _on_player_beat_stage() -> void:
-	print(score)
 	$"Score Timer".stop()
 	for i in $Player/Camera/HUD/Gameplay.get_children():
 		i.visible = false
