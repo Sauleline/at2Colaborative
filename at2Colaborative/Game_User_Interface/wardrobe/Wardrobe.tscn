@@ -23,13 +23,6 @@ theme = ExtResource("4_n3qb1")
 theme_override_font_sizes/font_size = 24
 text = "Back"
 
-[node name="Hats" type="GridContainer" parent="."]
-offset_left = 96.0
-offset_top = 104.0
-offset_right = 384.0
-offset_bottom = 520.0
-columns = 3
-
 [node name="Users Logged" type="Label" parent="."]
 offset_left = 32.0
 offset_top = 16.0
@@ -39,5 +32,13 @@ theme = ExtResource("4_n3qb1")
 theme_override_font_sizes/font_size = 19
 text = "Welcome back Guest"
 vertical_alignment = 1
+
+[node name="Hats" type="GridContainer" parent="."]
+offset_left = 64.0
+offset_top = 128.0
+offset_right = 384.0
+offset_bottom = 576.0
+size_flags_vertical = 0
+columns = 5
 
 [connection signal="pressed" from="Back" to="." method="_on_back_pressed"]
