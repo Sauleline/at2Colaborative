@@ -5,7 +5,7 @@ extends Node
 
 func _ready():
 	$Damage.modulate = Color(1,1,1,0)
-	$"Score Timer".wait_time = 1
+	$"Score Timer".wait_time = 0.1
 	$"Score Timer".start()
 	_on_player_respawn()
 
@@ -18,7 +18,7 @@ func _process(_delta):
 		_on_player_respawn()
 	
 	@warning_ignore("integer_division")
-	$Player/Camera/HUD/Gameplay/Time.text = Global.intToSecMin(score)
+	$Player/Camera/HUD/Gameplay/Time.text = Global.intToSecMin(floor(score/10))
 
 # You have to attach the player signals to this each time
 func _on_player_respawn() -> void:
@@ -43,10 +43,11 @@ func _on_score_timer_timeout() -> void:
 	score += 1
 
 func _on_player_beat_stage() -> void:
+	print(score)
 	$"Score Timer".stop()
 	for i in $Player/Camera/HUD/Gameplay.get_children():
 		i.visible = false
 	$Player/Camera/HUD/ScoreScreen.visible = true
 	$Player/Camera/HUD/Blur.visible = true
 	@warning_ignore("integer_division")
-	$Player/Camera/HUD/ScoreScreen.text = "You died " + str(deaths) + " times\nand took " + str(Global.intToSecMin(score))
+	$Player/Camera/HUD/ScoreScreen.text = "You died " + str(deaths) + " times\nand took " + str(Global.intToSecMin(floor(score/10)))

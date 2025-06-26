@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://bd7sfwiwehvqn"]
+[gd_scene load_steps=6 format=3 uid="uid://bd7sfwiwehvqn"]
 
 [ext_resource type="Script" uid="uid://ceptjivr6wceq" path="res://Game_User_Interface/wardrobe/wardrobe.gd" id="1_1tqt2"]
 [ext_resource type="PackedScene" uid="uid://dyn2qf6aui3uv" path="res://Game_User_Interface/UI_Background.tscn" id="1_3wu08"]
 [ext_resource type="SpriteFrames" uid="uid://ci0sfvtne1n1r" path="res://art/2D-Pixel-Art-Character-Template/playerSpriteFrames.tres" id="4_j3igh"]
 [ext_resource type="Theme" uid="uid://dwdqkuxyspo32" path="res://Game_User_Interface/Theme.tres" id="4_n3qb1"]
+[ext_resource type="Texture2D" uid="uid://dserid5i8upoi" path="res://art/hats/jackson.png" id="5_qy5g6"]
 
 [node name="Wardrobe" type="CanvasLayer"]
 script = ExtResource("1_1tqt2")
@@ -42,14 +43,27 @@ offset_bottom = 576.0
 size_flags_vertical = 0
 columns = 5
 
+[node name="Skins" type="GridContainer" parent="."]
+offset_left = 768.0
+offset_top = 128.0
+offset_right = 1088.0
+offset_bottom = 576.0
+size_flags_vertical = 0
+columns = 5
+
 [node name="PlayerDisp" type="AnimatedSprite2D" parent="."]
 position = Vector2(576, 368)
 scale = Vector2(4.66667, 4.66667)
 sprite_frames = ExtResource("4_j3igh")
 animation = &"steveIdle"
 autoplay = "steveIdle"
-frame_progress = 0.639712
+frame_progress = 0.608545
+flip_h = true
 
 [node name="Hat" type="Sprite2D" parent="PlayerDisp"]
+position = Vector2(0, -16)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("5_qy5g6")
+offset = Vector2(0, -16)
 
 [connection signal="pressed" from="Back" to="." method="_on_back_pressed"]
