@@ -18,6 +18,12 @@ signal respawn()
 var jumpCount = maxJumps
 var wallSlide = false
 var punching = false
+var crouch = false
+var slopeSlide = false
+var slide = false
+var slope = 0
+var slideAnimation = false
+var counter = 0
 
 func mapRange(x, inMin, inMax, outMin, outMax):
 	return ((x - inMin) * (outMax - outMin) / (inMax - inMin) + outMin)
@@ -67,7 +73,7 @@ func _physics_process(delta):
 
 	if (is_on_floor() or not is_on_wall() or (velocity.y <= 0)) and wallSlide == true :
 		wallSlide = false
-		gravity = 2000
+		gravity = gravity * 2
 	
 	if Input.is_action_just_pressed("p1jump") and (wallSlide == true):
 		velocity.y = wallJumpSpeed
@@ -77,20 +83,51 @@ func _physics_process(delta):
 		if Input.is_action_pressed("p1right"):
 			velocity.x = wallJumpHorizontal * -1
 		wallSlide = false
-		gravity = 2000
-
-	if dir != 0:
+		gravity = gravity * 2
+		
+	if Input.is_action_pressed("p1slide") and (crouch == false):
+		gravity = gravity * 2
+		crouch = true
 		if is_on_floor():
-			$Sprite.play(character+'Run')
+			slope = get_floor_normal().y
+			print(slope)
+	if not Input.is_action_pressed("p1slide") and (crouch == true):
+		gravity = gravity * 0.5
+		crouch = false
+		
+	if (crouch == true) and is_on_floor() and (slope == -1) and (velocity.x != 0) and (slide == false):
+		slide = true
+		counter = 0 
+		friction -= 0.04
+		print("slide")
+		print(friction)
+		
+	if ((crouch == false) or not is_on_floor() or (slope != -1) or  (velocity.x == 0)) and (slide ==true) :
+		slide = false
+		friction += 0.04
+		print("noslide")
+		print(friction)
+		slideAnimation = false
+		
+	if (crouch == true) and is_on_floor() and (slope != -1) and (velocity.x != 0):
+		slopeSlide = true 
+	
+	if dir != 0 and (slide == false):
+		if is_on_floor():
+			if slideAnimation == false:
+				$Sprite.play(character+'Run')
 		else:
-			$Sprite.play(character+"Jump")
+			if slideAnimation == false:
+				$Sprite.play(character+"Jump")
 		velocity.x = lerp(velocity.x, dir * speed, acceleration)
 	else:
 		if is_on_floor() and not punching:
 			if velocity.x != 0:
-				$Sprite.play(character+"Walk")
+				if slideAnimation == false:
+					$Sprite.play(character+"Walk")
 			else:
-				$Sprite.play(character+"Idle")
+				if slideAnimation == false:
+					$Sprite.play(character+"Idle")
 		velocity.x = lerp(velocity.x, 0.0, friction)
 
 	if velocity.x > 0:
@@ -103,6 +140,19 @@ func _physics_process(delta):
 	
 	if wallSlide:
 		$Sprite.play(character+"WallHold")
+		
+	if crouch :
+		if slide == true:
+			counter += 1
+			print(counter)
+		if slide == true and slideAnimation == false and (counter <= 20):
+			$Sprite.play(character+"Roll")
+			slideAnimation = true
+		if slide == true and slideAnimation == true and (counter  > 20):
+			$Sprite.play(character+"Slide")
+		if slide == false:
+			$Sprite.play(character+"Crouch")
+			
 	
 	move_and_slide()
 
