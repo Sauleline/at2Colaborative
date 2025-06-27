@@ -4,7 +4,6 @@ func _ready() -> void:
 	var p1 = "Guest"
 	var p2 = "Guest"
 	AccessUsers.returningUsers()
-	AccessUsers.load_settings()
 	if(Global.PlayerOne):
 		p1 = Global.PlayerOne.userName
 	if(Global.PlayerTwo):

@@ -53,9 +53,7 @@ debug_color = Color(0.98055, 0.0671374, 0.312238, 0.42)
 [node name="Sprite" type="AnimatedSprite2D" parent="."]
 position = Vector2(4.76837e-07, 4.76837e-07)
 sprite_frames = ExtResource("2_g6ucm")
-animation = &"stevePunch"
-frame = 5
-frame_progress = 1.0
+animation = &"steveRun"
 
 [node name="Hat" type="Sprite2D" parent="."]
 position = Vector2(0, -16)

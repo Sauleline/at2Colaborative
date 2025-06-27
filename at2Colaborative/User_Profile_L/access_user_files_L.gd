@@ -1,82 +1,61 @@
 extends Node
 
 var saveFilePath = "user://save/"
-var saveMainFileName = "UserProfiles.tres"
-var savesettingsFileName = "settings.tres"
+var saveMainFileName = "GlobalSaveFile.tres"
 var saveUserFileName = " "
-var user = User.new()
-var userProfiles = User_Profile.new()
-var settings = Settings.new()
+var globalSaveFile = Global_Save_File.new()
+var settings = globalSaveFile.settings
 
 func openUserProfiles():
 	if ResourceLoader.exists(saveFilePath + saveMainFileName):
-		userProfiles = ResourceLoader.load(saveFilePath + saveMainFileName).duplicate(true)
+		globalSaveFile = ResourceLoader.load(saveFilePath + saveMainFileName).duplicate(true)
+		settings = globalSaveFile.settings
 	else:
-		ResourceSaver.save(userProfiles, saveFilePath+saveMainFileName)
-		get_tree().change_scene_to_file("res://User_Profile_L/User_Profile_Create.tscn")
+		ResourceSaver.save(globalSaveFile, saveFilePath+saveMainFileName)
+		globalSaveFile.settings = Settings.new()
+		settings = globalSaveFile.settings
 	
 func _ready():
 	verifySaveDirectory(saveFilePath)
 	openUserProfiles()
 	returningUsers()
-	open_settings()
 	
 func returningUsers():
 	verifySaveDirectory(saveFilePath)
 	openUserProfiles()
-	if (userProfiles.PlayerOne):
-		saveUserFileName = userProfiles.userProfilesDict[userProfiles.PlayerOne]
-		open_user()
+	if (globalSaveFile.PlayerOne):
+		var user = open_user(globalSaveFile.PlayerOne.userName)
 		Global.PlayerOne = user
-	
-	if (userProfiles.PlayerTwo):
-		saveUserFileName = userProfiles.userProfilesDict[userProfiles.PlayerTwo]
-		open_user()
+	if (globalSaveFile.PlayerTwo):
+		var user = open_user(globalSaveFile.PlayerTwo.userName)
 		Global.PlayerTwo = user
+	Global.settings = globalSaveFile.settings
 
 func verifySaveDirectory(path : String):
 	DirAccess.make_dir_absolute(path)
 	
 func new_user(userName):
+	var user = User.new()
 	user.userName = userName
 	saveUserFileName = user.userName+".tres"
-	userProfiles.add_user(user)
+	globalSaveFile.add_user(user)
+	save_user(user)
 
 func removeUserFile(userFilePath):
 	var dir = DirAccess.open(saveFilePath)
 	dir.remove(saveFilePath+userFilePath)
-	ResourceSaver.save(userProfiles, saveFilePath+saveMainFileName)
+	ResourceSaver.save(globalSaveFile, saveFilePath+saveMainFileName)
 	
-func save_user():
+func save_user(user):
+	saveUserFileName = globalSaveFile.userProfilesDict[user.userName]
 	ResourceSaver.save(user, saveFilePath+saveUserFileName)
-	ResourceSaver.save(userProfiles, saveFilePath+saveMainFileName)
+	ResourceSaver.save(globalSaveFile, saveFilePath+saveMainFileName)
 	
-func open_user():
+func open_user(userName):
+	saveUserFileName = globalSaveFile.userProfilesDict[userName]
 	if ResourceLoader.exists(saveFilePath + saveUserFileName):
-		user = ResourceLoader.load(saveFilePath+saveUserFileName).duplicate(true)
-
-func save_settings_volume(sfx: float, mus: float, mas: float):
-	open_settings()
-	settings.vols["sfx"] = sfx
-	settings.vols["mus"] = mus
-	settings.vols["mas"] = mas
-	save_settings()
-
-func open_settings():
-	if ResourceLoader.exists(saveFilePath + savesettingsFileName):
-		settings = ResourceLoader.load(saveFilePath+savesettingsFileName).duplicate(true)
-	else:
-		ResourceSaver.save(settings,saveFilePath+savesettingsFileName)
+		return ResourceLoader.load(saveFilePath+saveUserFileName).duplicate(true)
 
 func edit_setting(setting: String, value):
-	open_settings()
 	settings[setting] = value
-	save_settings()
-
-func save_settings():
-	ResourceSaver.save(settings, saveFilePath + savesettingsFileName)
-
-func load_settings():
-	open_settings()
-	Global.settings = settings
-	return settings
+	

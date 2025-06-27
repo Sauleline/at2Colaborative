@@ -6,7 +6,6 @@ var bannedNames = ['settings',"UserProfiles"]
 func addUser():
 	var username = UserNameInput.text
 	new_user(username)
-	save_user()
 
 func _on_add_user_pressed() -> void:
 	var input = UserNameInput.text

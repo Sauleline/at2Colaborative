@@ -1,13 +1,15 @@
 extends CanvasLayer
 
 func _ready():
-	var settings = AccessUsers.load_settings()
+	var settings = AccessUsers.settings
 	for i in $SliderSplitter.get_children():
 		i.value = settings.vols[i.editor_description]
 	$Fullscreen.button_pressed = settings.fullScreen
 
 func exiting():
-	AccessUsers.save_settings_volume($SliderSplitter/SFX.value, $SliderSplitter/Music.value, $SliderSplitter/Master.value)
+	AccessUsers.edit_setting("sfx", $SliderSplitter/SFX.value)
+	AccessUsers.edit_setting("mus", $SliderSplitter/Music.value)
+	AccessUsers.edit_setting("mas", $SliderSplitter/Master.value)
 	AccessUsers.edit_setting("fullScreen", $Fullscreen.button_pressed)
 	
 func _on_debug_level_pressed() -> void:
