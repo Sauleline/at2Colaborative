@@ -24,6 +24,7 @@ var slide = false
 var slope = 0
 var slideAnimation = false
 var counter = 0
+var crouchAnimation = false
 
 func mapRange(x, inMin, inMax, outMin, outMax):
 	return ((x - inMin) * (outMax - outMin) / (inMax - inMin) + outMin)
@@ -90,23 +91,20 @@ func _physics_process(delta):
 		crouch = true
 		if is_on_floor():
 			slope = get_floor_normal().y
-			print(slope)
 	if not Input.is_action_pressed("p1slide") and (crouch == true):
 		gravity = gravity * 0.5
 		crouch = false
+		crouchAnimation = false
+		
 		
 	if (crouch == true) and is_on_floor() and (slope == -1) and (velocity.x != 0) and (slide == false):
 		slide = true
 		counter = 0 
 		friction -= 0.04
-		print("slide")
-		print(friction)
 		
 	if ((crouch == false) or not is_on_floor() or (slope != -1) or  (velocity.x == 0)) and (slide ==true) :
 		slide = false
 		friction += 0.04
-		print("noslide")
-		print(friction)
 		slideAnimation = false
 		
 	if (crouch == true) and is_on_floor() and (slope != -1) and (velocity.x != 0):
@@ -126,8 +124,10 @@ func _physics_process(delta):
 				if slideAnimation == false:
 					$Sprite.play(character+"Walk")
 			else:
-				if slideAnimation == false:
+				if slideAnimation == false and crouchAnimation == false:
 					$Sprite.play(character+"Idle")
+		else:
+			$Sprite.play(character+"Jump")
 		velocity.x = lerp(velocity.x, 0.0, friction)
 
 	if velocity.x > 0:
@@ -150,8 +150,10 @@ func _physics_process(delta):
 			slideAnimation = true
 		if slide == true and slideAnimation == true and (counter  > 20):
 			$Sprite.play(character+"Slide")
-		if slide == false:
+		if slide == false and crouchAnimation == false:
+			crouchAnimation = true
 			$Sprite.play(character+"Crouch")
+			print(crouchAnimation)
 			
 	
 	move_and_slide()
