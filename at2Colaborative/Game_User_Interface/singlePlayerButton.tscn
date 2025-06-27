@@ -13,6 +13,7 @@ size_flags_vertical = 3
 texture_normal = ExtResource("2_rcxaq")
 texture_pressed = ExtResource("2_l5bpe")
 texture_hover = ExtResource("3_8lywk")
+ignore_texture_size = true
 stretch_mode = 0
 
 [node name="PB" type="Label" parent="."]

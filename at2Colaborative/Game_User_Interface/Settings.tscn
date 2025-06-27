@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://bi8pcdfenbp5q"]
+[gd_scene load_steps=5 format=3 uid="uid://bi8pcdfenbp5q"]
 
 [ext_resource type="PackedScene" uid="uid://dyn2qf6aui3uv" path="res://Game_User_Interface/UI_Background.tscn" id="1_abk0k"]
 [ext_resource type="Script" uid="uid://bdxmofpa0ndx" path="res://Game_User_Interface/settings.gd" id="1_l7ch7"]
 [ext_resource type="Theme" uid="uid://dwdqkuxyspo32" path="res://Game_User_Interface/Theme.tres" id="3_2grg5"]
+[ext_resource type="PackedScene" uid="uid://br4jpc6hlpimu" path="res://global_button.tscn" id="4_2grg5"]
 
 [node name="Settings" type="CanvasLayer"]
 script = ExtResource("1_l7ch7")
@@ -10,34 +11,21 @@ script = ExtResource("1_l7ch7")
 [node name="Background" parent="." instance=ExtResource("1_abk0k")]
 metadata/_edit_lock_ = true
 
-[node name="Debug Level" type="Button" parent="."]
-anchors_preset = 1
-anchor_left = 1.0
-anchor_right = 1.0
-offset_left = -352.0
+[node name="Debug Level" parent="." instance=ExtResource("4_2grg5")]
+offset_left = 800.0
 offset_top = 40.0
-offset_right = -32.0
+offset_right = 1120.0
 offset_bottom = 104.0
-grow_horizontal = 0
-theme = ExtResource("3_2grg5")
-theme_override_font_sizes/font_size = 20
 text = "Go to debug level yeah"
+fontSize = 20
 
-[node name="Back" type="Button" parent="."]
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -536.0
-offset_top = -284.0
-offset_right = -416.0
-offset_bottom = -233.0
-grow_horizontal = 2
-grow_vertical = 2
-theme = ExtResource("3_2grg5")
-theme_override_font_sizes/font_size = 30
+[node name="Back" parent="." instance=ExtResource("4_2grg5")]
+offset_left = 40.0
+offset_top = 40.0
+offset_right = 160.0
+offset_bottom = 91.0
 text = "Back"
+fontSize = 20
 
 [node name="Fullscreen" type="CheckButton" parent="."]
 offset_left = 360.0

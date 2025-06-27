@@ -1,10 +1,14 @@
-[gd_scene load_steps=6 format=3 uid="uid://bvstsjjenfx6r"]
+[gd_scene load_steps=8 format=3 uid="uid://bvstsjjenfx6r"]
 
 [ext_resource type="PackedScene" uid="uid://dyn2qf6aui3uv" path="res://Game_User_Interface/UI_Background.tscn" id="1_6amtt"]
 [ext_resource type="Script" uid="uid://d2nd3w5upjk8a" path="res://User_Profile_L/main.gd" id="1_8hsud"]
 [ext_resource type="Script" uid="uid://c3eigbtuqj7ba" path="res://global.gd" id="2_arqv2"]
 [ext_resource type="Theme" uid="uid://dwdqkuxyspo32" path="res://Game_User_Interface/Theme.tres" id="4_5oaw7"]
-[ext_resource type="ButtonGroup" uid="uid://d0oe7qv8rm57s" path="res://User_Profile_L/PlayerButtonGroup.tres" id="4_xi7xc"]
+[ext_resource type="PackedScene" uid="uid://br4jpc6hlpimu" path="res://global_button.tscn" id="5_vk3n7"]
+
+[sub_resource type="ButtonGroup" id="ButtonGroup_5oaw7"]
+
+[sub_resource type="ButtonGroup" id="ButtonGroup_vk3n7"]
 
 [node name="UserProfileSelect" type="CanvasLayer"]
 script = ExtResource("1_8hsud")
@@ -19,117 +23,71 @@ anchors_preset = -1
 anchor_left = 0.0989583
 anchor_top = -0.109568
 anchor_right = 0.223958
-anchor_bottom = -0.0478395
-offset_left = 652.0
+anchor_bottom = -0.072531
+offset_left = 638.0
 offset_top = 263.0
-offset_right = 876.0
+offset_right = 862.0
 offset_bottom = 303.0
 allow_reselect = true
 metadata/_edit_use_anchors_ = true
 
-[node name="SelectUser" type="Button" parent="."]
-anchors_preset = -1
-anchor_top = -0.0509259
-anchor_right = 0.0598958
-offset_left = 767.0
-offset_top = 140.0
-offset_right = 882.0
-offset_bottom = 178.0
-theme = ExtResource("4_5oaw7")
-theme_override_font_sizes/font_size = 24
-text = "Select User
-"
-metadata/_edit_use_anchors_ = true
-
-[node name="PlayerOneButton" type="Button" parent="."]
-anchors_preset = -1
-anchor_top = -0.0509259
-anchor_right = 0.0590278
-offset_left = 766.0
-offset_top = 53.0
-offset_right = 881.0
-offset_bottom = 91.0
-theme = ExtResource("4_5oaw7")
-theme_override_font_sizes/font_size = 24
+[node name="PlayerOneButton" parent="." instance=ExtResource("5_vk3n7")]
+offset_left = 752.0
+offset_top = 32.0
+offset_right = 928.0
 toggle_mode = true
-button_group = ExtResource("4_xi7xc")
-text = "Player One
-"
-metadata/_edit_use_anchors_ = true
+button_group = SubResource("ButtonGroup_5oaw7")
+text = "Player One"
+fontSize = 24
 
-[node name="PlayerTwoButton" type="Button" parent="."]
-anchors_preset = -1
-anchor_left = -0.00694444
-anchor_top = -0.0509259
-anchor_right = 0.0425347
-offset_left = 969.0
-offset_top = 53.0
-offset_right = 1084.0
-offset_bottom = 91.0
-theme = ExtResource("4_5oaw7")
-theme_override_font_sizes/font_size = 24
+[node name="PlayerTwoButton" parent="." instance=ExtResource("5_vk3n7")]
+offset_left = 944.0
+offset_top = 32.0
+offset_right = 1120.0
 toggle_mode = true
-button_group = ExtResource("4_xi7xc")
-text = "Player Two
-"
-metadata/_edit_use_anchors_ = true
+button_group = SubResource("ButtonGroup_vk3n7")
+text = "Player Two"
+fontSize = 24
 
-[node name="UnselectUser" type="Button" parent="."]
-anchors_preset = -1
-anchor_left = -0.00694444
-anchor_top = -0.0509259
-anchor_right = 0.0425347
-offset_left = 969.0
-offset_top = 140.0
-offset_right = 1084.0
-offset_bottom = 178.0
-theme = ExtResource("4_5oaw7")
-theme_override_font_sizes/font_size = 24
-text = "Unselect User
-"
-metadata/_edit_use_anchors_ = true
+[node name="UnselectUser" parent="." instance=ExtResource("5_vk3n7")]
+offset_left = 944.0
+offset_top = 112.0
+offset_right = 1120.0
+offset_bottom = 176.0
+text = "Unselect User"
+fontSize = 24
 
-[node name="CreateNewUser" type="Button" parent="."]
-anchors_preset = -1
-anchor_top = -0.0509259
-anchor_right = 0.223958
-offset_left = 759.0
-offset_top = 592.0
-offset_right = 874.0
-offset_bottom = 630.0
-theme = ExtResource("4_5oaw7")
-theme_override_font_sizes/font_size = 24
+[node name="SelectUser" parent="." instance=ExtResource("5_vk3n7")]
+offset_left = 752.0
+offset_top = 112.0
+offset_right = 928.0
+offset_bottom = 176.0
+text = "Select User"
+fontSize = 24
+
+[node name="CreateNewUser" parent="." instance=ExtResource("5_vk3n7")]
+offset_left = 768.0
+offset_top = 560.0
+offset_right = 1120.0
+offset_bottom = 624.0
 text = "Add User"
-metadata/_edit_use_anchors_ = true
+fontSize = 24
 
-[node name="BackButton" type="Button" parent="."]
-anchors_preset = -1
-anchor_top = -0.0509259
-anchor_right = 0.223958
-offset_left = 23.0
-offset_top = 591.0
-offset_right = 138.0
-offset_bottom = 629.0
-theme = ExtResource("4_5oaw7")
-theme_override_font_sizes/font_size = 24
+[node name="BackButton" parent="." instance=ExtResource("5_vk3n7")]
+offset_left = 32.0
+offset_top = 560.0
+offset_right = 384.0
+offset_bottom = 624.0
 text = "Back"
-metadata/_edit_use_anchors_ = true
+fontSize = 24
 
-[node name="RemoveUser" type="Button" parent="."]
-anchors_preset = -1
-anchor_left = -0.0503472
-anchor_top = -0.0462963
-anchor_right = 0.145833
-anchor_bottom = 0.00771605
-offset_left = 467.0
-offset_top = 587.0
-offset_right = 582.0
-offset_bottom = 625.0
-theme = ExtResource("4_5oaw7")
-theme_override_font_sizes/font_size = 24
-text = "Remove User
-"
-metadata/_edit_use_anchors_ = true
+[node name="RemoveUser" parent="." instance=ExtResource("5_vk3n7")]
+offset_left = 400.0
+offset_top = 560.0
+offset_right = 752.0
+offset_bottom = 624.0
+text = "Remove User"
+fontSize = 24
 
 [node name="PlayerOne" type="Label" parent="."]
 offset_left = 46.0
@@ -153,10 +111,10 @@ text = "Player Two"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[connection signal="pressed" from="SelectUser" to="." method="_on_select_user_pressed"]
 [connection signal="pressed" from="PlayerOneButton" to="." method="_on_player_one_button_pressed"]
 [connection signal="pressed" from="PlayerTwoButton" to="." method="_on_player_two_button_pressed"]
 [connection signal="pressed" from="UnselectUser" to="." method="_on_unselect_user_pressed"]
+[connection signal="pressed" from="SelectUser" to="." method="_on_select_user_pressed"]
 [connection signal="pressed" from="CreateNewUser" to="." method="_on_create_new_user_pressed"]
 [connection signal="pressed" from="BackButton" to="." method="_on_back_button_pressed"]
 [connection signal="pressed" from="RemoveUser" to="." method="_on_remove_user_pressed"]
