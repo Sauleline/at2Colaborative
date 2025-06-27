@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://7vu8sw3c71ea"]
+[gd_scene load_steps=5 format=3 uid="uid://7vu8sw3c71ea"]
 
 [ext_resource type="Script" uid="uid://dcgxx33j2yye1" path="res://User_Profile_L/user_profile_create.gd" id="1_n7lnn"]
 [ext_resource type="PackedScene" uid="uid://dyn2qf6aui3uv" path="res://Game_User_Interface/UI_Background.tscn" id="2_o6pgg"]
+[ext_resource type="PackedScene" uid="uid://br4jpc6hlpimu" path="res://global_button.tscn" id="3_bwmfq"]
 [ext_resource type="Theme" uid="uid://dwdqkuxyspo32" path="res://Game_User_Interface/Theme.tres" id="3_o6pgg"]
 
 [node name="UserCreate" type="CanvasLayer"]
@@ -10,37 +11,19 @@ script = ExtResource("1_n7lnn")
 [node name="Background" parent="." instance=ExtResource("2_o6pgg")]
 metadata/_edit_lock_ = true
 
-[node name="AddUser" type="Button" parent="."]
-anchors_preset = -1
-anchor_left = 0.368924
-anchor_top = 0.390432
-anchor_right = 0.730903
-anchor_bottom = 0.50463
-offset_left = -393.0
-offset_top = 99.0001
-offset_right = -282.0
-offset_bottom = 137.0
-grow_horizontal = 2
-grow_vertical = 2
-theme = ExtResource("3_o6pgg")
+[node name="AddUser" parent="." instance=ExtResource("3_bwmfq")]
+offset_left = 32.0
+offset_top = 352.0
+offset_right = 560.0
+offset_bottom = 464.0
 text = "Add User"
-metadata/_edit_use_anchors_ = true
 
-[node name="Exit" type="Button" parent="."]
-anchors_preset = -1
-anchor_left = 0.132813
-anchor_top = 0.390432
-anchor_right = 0.494792
-anchor_bottom = 0.50463
-offset_left = 439.0
-offset_top = 99.0001
-offset_right = 550.0
-offset_bottom = 137.0
-grow_horizontal = 2
-grow_vertical = 2
-theme = ExtResource("3_o6pgg")
+[node name="Exit" parent="." instance=ExtResource("3_bwmfq")]
+offset_left = 592.0
+offset_top = 352.0
+offset_right = 1120.0
+offset_bottom = 464.0
 text = "Exit"
-metadata/_edit_use_anchors_ = true
 
 [node name="UserInputName" type="LineEdit" parent="."]
 anchors_preset = -1
@@ -59,7 +42,7 @@ max_length = 20
 metadata/_edit_use_anchors_ = true
 
 [node name="Label" type="Label" parent="."]
-offset_left = 48.0
+offset_left = 32.0
 offset_top = 32.0
 offset_right = 1120.0
 offset_bottom = 320.0

@@ -1,6 +1,7 @@
 extends "access_user_files_L.gd"
 
 @onready var UserNameInput = $UserInputName 
+var bannedNames = ['settings',"UserProfiles"]
 
 func addUser():
 	var username = UserNameInput.text
@@ -12,6 +13,8 @@ func _on_add_user_pressed() -> void:
 	input = input.strip_edges()
 	if input.is_empty():
 		pass
+	elif (input in bannedNames):
+		$Label.text = "Not Allowed!"
 	else:
 		addUser()
 		backToUserSelect() 

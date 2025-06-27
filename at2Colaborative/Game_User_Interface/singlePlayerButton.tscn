@@ -1,12 +1,20 @@
-[gd_scene load_steps=2 format=3 uid="uid://cglj7rree4gbi"]
+[gd_scene load_steps=5 format=3 uid="uid://cglj7rree4gbi"]
 
 [ext_resource type="Theme" uid="uid://dwdqkuxyspo32" path="res://Game_User_Interface/Theme.tres" id="1_x3mwi"]
+[ext_resource type="Texture2D" uid="uid://derpbggd5t0f3" path="res://art/hats/dame da ne guy.png" id="2_l5bpe"]
+[ext_resource type="Texture2D" uid="uid://brsttinke77ji" path="res://art/hats/dave.png" id="2_rcxaq"]
+[ext_resource type="Texture2D" uid="uid://dxg0mondhfl0g" path="res://art/hats/gibus.png" id="3_8lywk"]
 
-[node name="Level 0" type="Button"]
+[node name="Level 0" type="TextureButton"]
 offset_right = 192.0
 offset_bottom = 192.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
+texture_normal = ExtResource("2_rcxaq")
+texture_pressed = ExtResource("2_l5bpe")
+texture_hover = ExtResource("3_8lywk")
+ignore_texture_size = true
+stretch_mode = 0
 
 [node name="PB" type="Label" parent="."]
 layout_mode = 1

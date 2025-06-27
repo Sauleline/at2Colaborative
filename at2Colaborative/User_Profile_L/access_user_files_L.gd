@@ -19,6 +19,7 @@ func _ready():
 	verifySaveDirectory(saveFilePath)
 	openUserProfiles()
 	returningUsers()
+	open_settings()
 	
 func returningUsers():
 	verifySaveDirectory(saveFilePath)
@@ -56,15 +57,26 @@ func open_user():
 
 func save_settings_volume(sfx: float, mus: float, mas: float):
 	open_settings()
-	settings.sfx = sfx
-	settings.mus = mus
-	settings.mas = mas
-	ResourceSaver.save(settings, saveFilePath + savesettingsFileName)
+	settings.vols["sfx"] = sfx
+	settings.vols["mus"] = mus
+	settings.vols["mas"] = mas
+	save_settings()
 
 func open_settings():
 	if ResourceLoader.exists(saveFilePath + savesettingsFileName):
 		settings = ResourceLoader.load(saveFilePath+savesettingsFileName).duplicate(true)
+	else:
+		ResourceSaver.save(settings,saveFilePath+savesettingsFileName)
+
+func edit_setting(setting: String, value):
+	open_settings()
+	settings[setting] = value
+	save_settings()
+
+func save_settings():
+	ResourceSaver.save(settings, saveFilePath + savesettingsFileName)
 
 func load_settings():
 	open_settings()
-	return [settings.sfx, settings.mus, settings.mas]
+	Global.settings = settings
+	return settings

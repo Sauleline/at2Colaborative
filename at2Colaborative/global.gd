@@ -2,6 +2,7 @@ extends Node
 
 var PlayerOne
 var PlayerTwo
+var settings: Settings
 
 func addPlayers(playerone, playertwo):
 	PlayerOne = playerone
