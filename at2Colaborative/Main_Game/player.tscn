@@ -22,7 +22,7 @@ script = ExtResource("1_rvp0r")
 position = Vector2(4.76837e-07, 4.76837e-07)
 sprite_frames = ExtResource("2_g6ucm")
 animation = &"steveCrouch"
-frame_progress = 0.63432
+frame_progress = 0.976568
 
 [node name="Level Display" type="Label" parent="."]
 offset_left = -64.0

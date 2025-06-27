@@ -144,7 +144,6 @@ func _physics_process(delta):
 	if crouch :
 		if slide == true:
 			counter += 1
-			print(counter)
 		if slide == true and slideAnimation == false and (counter <= 20):
 			$Sprite.play(character+"Roll")
 			slideAnimation = true
