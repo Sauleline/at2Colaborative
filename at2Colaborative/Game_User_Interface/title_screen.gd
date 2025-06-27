@@ -14,6 +14,9 @@ func _ready() -> void:
 		DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_EXCLUSIVE_FULLSCREEN)
 	else:
 		DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_MAXIMIZED)
+	AudioServer.set_bus_volume_db(AudioServer.get_bus_index('SFX'), linear_to_db(Global.settings.vols["sfx"]))
+	AudioServer.set_bus_volume_db(AudioServer.get_bus_index('Music'), linear_to_db(Global.settings.vols["mus"]))
+	AudioServer.set_bus_volume_db(AudioServer.get_bus_index('Master'), linear_to_db(Global.settings.vols["mas"]))
 
 
 func _on_multiplayer_pressed() -> void:

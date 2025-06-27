@@ -4,6 +4,7 @@ func _ready():
 	var settings = AccessUsers.load_settings()
 	for i in $SliderSplitter.get_children():
 		i.value = settings.vols[i.editor_description]
+		AudioServer.set_bus_volume_db(AudioServer.get_bus_index(i.name), linear_to_db(i.value))
 	$Fullscreen.button_pressed = settings.fullScreen
 
 func exiting():
