@@ -10,7 +10,3 @@ func _ready():
 
 func _on_player_two_button_pressed() -> void:
 	PlayerOne.set_pressed(false) 
-	
-	
-
-	

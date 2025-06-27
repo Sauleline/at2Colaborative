@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://1abapmdihvfw"]
+[gd_scene load_steps=5 format=3 uid="uid://1abapmdihvfw"]
 
 [ext_resource type="Script" uid="uid://b0h8c4vqajvri" path="res://Game_User_Interface/title_screen.gd" id="1_5fu7q"]
 [ext_resource type="Theme" uid="uid://dwdqkuxyspo32" path="res://Game_User_Interface/Theme.tres" id="1_wjfn0"]
 [ext_resource type="PackedScene" uid="uid://dyn2qf6aui3uv" path="res://Game_User_Interface/UI_Background.tscn" id="2_r5ysx"]
+[ext_resource type="PackedScene" uid="uid://br4jpc6hlpimu" path="res://global_button.tscn" id="4_tl6ip"]
 
 [node name="TitleScreen" type="CanvasLayer"]
 script = ExtResource("1_5fu7q")
@@ -32,60 +33,55 @@ theme_override_font_sizes/font_size = 19
 text = "Welcome back Guest and Guest"
 vertical_alignment = 1
 
-[node name="Single_Player" type="Button" parent="."]
+[node name="Single_Player" parent="." instance=ExtResource("4_tl6ip")]
 offset_left = 584.0
 offset_top = 252.0
 offset_right = 1048.0
 offset_bottom = 408.0
-theme = ExtResource("1_wjfn0")
-text = "Single Player"
+text = "Singleplayer"
 
-[node name="Multi_Player" type="Button" parent="."]
+[node name="Multi_Player" parent="." instance=ExtResource("4_tl6ip")]
 offset_left = 104.0
 offset_top = 252.0
 offset_right = 568.0
 offset_bottom = 408.0
-theme = ExtResource("1_wjfn0")
-action_mode = 0
 text = "Multiplayer"
 
-[node name="Wardrobe" type="Button" parent="."]
+[node name="Wardrobe" parent="." instance=ExtResource("4_tl6ip")]
 offset_left = 104.0
 offset_top = 424.0
 offset_right = 400.0
 offset_bottom = 592.0
-theme = ExtResource("1_wjfn0")
 text = "Wardrobe"
+fontSize = 50
 
-[node name="Settings" type="Button" parent="."]
+[node name="Settings" parent="." instance=ExtResource("4_tl6ip")]
 offset_left = 416.0
 offset_top = 424.0
 offset_right = 736.0
 offset_bottom = 592.0
-theme = ExtResource("1_wjfn0")
 text = "Settings"
+fontSize = 50
 
-[node name="Quit" type="Button" parent="."]
+[node name="Change_User" parent="." instance=ExtResource("4_tl6ip")]
+offset_left = 1002.0
+offset_top = 48.0
+offset_right = 1102.0
+offset_bottom = 150.0
+text = "Change User"
+fontSize = 24
+
+[node name="Quit" parent="." instance=ExtResource("4_tl6ip")]
 offset_left = 752.0
 offset_top = 424.0
 offset_right = 1048.0
 offset_bottom = 592.0
-theme = ExtResource("1_wjfn0")
 text = "Quit"
-
-[node name="Change_User" type="Button" parent="."]
-offset_left = 1002.0
-offset_top = 50.0
-offset_right = 1102.0
-offset_bottom = 150.0
-theme = ExtResource("1_wjfn0")
-theme_override_font_sizes/font_size = 24
-text = "Change
-User"
+fontSize = 50
 
 [connection signal="pressed" from="Single_Player" to="." method="_on_single_player_pressed"]
 [connection signal="pressed" from="Multi_Player" to="." method="_on_multiplayer_pressed"]
 [connection signal="pressed" from="Wardrobe" to="." method="_on_wardrobe_pressed"]
 [connection signal="pressed" from="Settings" to="." method="_on_settings_pressed"]
-[connection signal="pressed" from="Quit" to="." method="_on_quit_pressed"]
 [connection signal="pressed" from="Change_User" to="." method="_on_change_user_pressed"]
+[connection signal="pressed" from="Quit" to="." method="_on_quit_pressed"]

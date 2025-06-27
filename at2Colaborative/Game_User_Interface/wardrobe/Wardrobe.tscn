@@ -1,7 +1,8 @@
-[gd_scene load_steps=6 format=3 uid="uid://bd7sfwiwehvqn"]
+[gd_scene load_steps=7 format=3 uid="uid://bd7sfwiwehvqn"]
 
 [ext_resource type="Script" uid="uid://ceptjivr6wceq" path="res://Game_User_Interface/wardrobe/wardrobe.gd" id="1_1tqt2"]
 [ext_resource type="PackedScene" uid="uid://dyn2qf6aui3uv" path="res://Game_User_Interface/UI_Background.tscn" id="1_3wu08"]
+[ext_resource type="PackedScene" uid="uid://br4jpc6hlpimu" path="res://global_button.tscn" id="3_igvr4"]
 [ext_resource type="SpriteFrames" uid="uid://ci0sfvtne1n1r" path="res://art/2D-Pixel-Art-Character-Template/playerSpriteFrames.tres" id="4_j3igh"]
 [ext_resource type="Theme" uid="uid://dwdqkuxyspo32" path="res://Game_User_Interface/Theme.tres" id="4_n3qb1"]
 [ext_resource type="Texture2D" uid="uid://dserid5i8upoi" path="res://art/hats/jackson.png" id="5_qy5g6"]
@@ -11,19 +12,6 @@ script = ExtResource("1_1tqt2")
 
 [node name="Background" parent="." instance=ExtResource("1_3wu08")]
 metadata/_edit_lock_ = true
-
-[node name="Back" type="Button" parent="."]
-anchors_preset = 1
-anchor_left = 1.0
-anchor_right = 1.0
-offset_left = -112.0
-offset_top = 24.0
-offset_right = -32.0
-offset_bottom = 104.0
-grow_horizontal = 0
-theme = ExtResource("4_n3qb1")
-theme_override_font_sizes/font_size = 24
-text = "Back"
 
 [node name="Users Logged" type="Label" parent="."]
 offset_left = 32.0
@@ -35,19 +23,19 @@ theme_override_font_sizes/font_size = 19
 text = "Welcome back Guest"
 vertical_alignment = 1
 
-[node name="Shop" type="Button" parent="."]
-anchors_preset = 7
-anchor_left = 0.5
-anchor_top = 1.0
-anchor_right = 0.5
-anchor_bottom = 1.0
-offset_left = -128.0
-offset_top = -160.0
-offset_right = 128.0
-offset_bottom = -40.0
-grow_horizontal = 2
-grow_vertical = 0
-theme = ExtResource("4_n3qb1")
+[node name="Back" parent="." instance=ExtResource("3_igvr4")]
+offset_left = 1040.0
+offset_top = 24.0
+offset_right = 1120.0
+offset_bottom = 104.0
+text = "Back"
+fontSize = 24
+
+[node name="Shop" parent="." instance=ExtResource("3_igvr4")]
+offset_left = 448.0
+offset_top = 488.0
+offset_right = 704.0
+offset_bottom = 608.0
 text = "Shop"
 
 [node name="Hats" type="GridContainer" parent="."]
