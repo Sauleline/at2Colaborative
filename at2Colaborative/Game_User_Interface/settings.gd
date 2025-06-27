@@ -3,14 +3,19 @@ extends CanvasLayer
 func _ready():
 	var settings = AccessUsers.load_settings()
 	for i in $SliderSplitter.get_children():
-		i.value = settings[i.get_index()]
+		i.value = settings.vols[i.editor_description]
+	$Fullscreen.button_pressed = settings.fullScreen
 
-func _on_debug_level_pressed() -> void:
+func exiting():
 	AccessUsers.save_settings_volume($SliderSplitter/SFX.value, $SliderSplitter/Music.value, $SliderSplitter/Master.value)
+	AccessUsers.edit_setting("fullScreen", $Fullscreen.button_pressed)
+	
+func _on_debug_level_pressed() -> void:
+	exiting()
 	get_tree().change_scene_to_file("res://Main_Game/Stages/templateStage.tscn")
 
 func _on_back_pressed() -> void:
-	AccessUsers.save_settings_volume($SliderSplitter/SFX.value, $SliderSplitter/Music.value, $SliderSplitter/Master.value)
+	exiting()
 	get_tree().change_scene_to_file("res://Game_User_Interface/Title_Screen.tscn")
 
 func changeVolume(_value_changed: bool, bus: String):

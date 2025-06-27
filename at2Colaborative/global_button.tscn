@@ -1,0 +1,18 @@
+[gd_scene load_steps=2 format=3 uid="uid://br4jpc6hlpimu"]
+
+[ext_resource type="Texture2D" uid="uid://dserid5i8upoi" path="res://art/hats/jackson.png" id="1_lg5dj"]
+
+[node name="GlobalButton" type="TextureButton"]
+offset_right = 128.0
+offset_bottom = 64.0
+texture_normal = ExtResource("1_lg5dj")
+stretch_mode = 0
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_top = 16.0
+offset_right = 128.0
+offset_bottom = 48.0
+text = "text"
+horizontal_alignment = 1
+vertical_alignment = 1

@@ -4,11 +4,17 @@ func _ready() -> void:
 	var p1 = "Guest"
 	var p2 = "Guest"
 	AccessUsers.returningUsers()
+	AccessUsers.load_settings()
 	if(Global.PlayerOne):
 		p1 = Global.PlayerOne.userName
 	if(Global.PlayerTwo):
 		p2 = Global.PlayerTwo.userName
 	$"Users Logged".text = 'Welcome Back '+ p1 + ' and ' + p2
+	if Global.settings.fullScreen:
+		DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_EXCLUSIVE_FULLSCREEN)
+	else:
+		DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_MAXIMIZED)
+
 
 func _on_multiplayer_pressed() -> void:
 	get_tree().change_scene_to_file("res://Game_User_Interface/Multiplayer_Level_Select.tscn")
