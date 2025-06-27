@@ -17,6 +17,7 @@ offset_top = 352.0
 offset_right = 560.0
 offset_bottom = 464.0
 text = "Add User"
+buttonColour = Color(0.7, 1, 0.7, 1)
 
 [node name="Exit" parent="." instance=ExtResource("3_bwmfq")]
 offset_left = 592.0
@@ -24,6 +25,7 @@ offset_top = 352.0
 offset_right = 1120.0
 offset_bottom = 464.0
 text = "Exit"
+buttonColour = Color(1, 0.7, 0.7, 1)
 
 [node name="UserInputName" type="LineEdit" parent="."]
 anchors_preset = -1

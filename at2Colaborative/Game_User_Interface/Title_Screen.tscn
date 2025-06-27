@@ -53,6 +53,7 @@ offset_top = 424.0
 offset_right = 400.0
 offset_bottom = 592.0
 text = "Wardrobe"
+fontSize = 50
 
 [node name="Settings" parent="." instance=ExtResource("4_tl6ip")]
 offset_left = 416.0
@@ -60,6 +61,7 @@ offset_top = 424.0
 offset_right = 736.0
 offset_bottom = 592.0
 text = "Settings"
+fontSize = 50
 
 [node name="Change_User" parent="." instance=ExtResource("4_tl6ip")]
 offset_left = 1002.0
@@ -75,6 +77,7 @@ offset_top = 424.0
 offset_right = 1048.0
 offset_bottom = 592.0
 text = "Quit"
+fontSize = 50
 
 [connection signal="pressed" from="Single_Player" to="." method="_on_single_player_pressed"]
 [connection signal="pressed" from="Multi_Player" to="." method="_on_multiplayer_pressed"]

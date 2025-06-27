@@ -38,21 +38,25 @@ size_flags_vertical = 3
 layout_mode = 2
 size_flags_vertical = 3
 text = "Resume"
+fontSize = 45
 
 [node name="Respawn" parent="VBoxContainer" instance=ExtResource("3_ckgw5")]
 layout_mode = 2
 size_flags_vertical = 3
 text = "Respawn"
+fontSize = 45
 
 [node name="Restart" parent="VBoxContainer" instance=ExtResource("3_ckgw5")]
 layout_mode = 2
 size_flags_vertical = 3
 text = "Restart"
+fontSize = 45
 
 [node name="Quit" parent="VBoxContainer" instance=ExtResource("3_ckgw5")]
 layout_mode = 2
 size_flags_vertical = 3
 text = "Quit"
+fontSize = 45
 
 [connection signal="pressed" from="VBoxContainer/Resume" to="." method="_on_resume_pressed"]
 [connection signal="pressed" from="VBoxContainer/Respawn" to="." method="_on_respawn_pressed"]
