@@ -1,19 +1,11 @@
-class_name User_Profile 
+class_name Global_Save_File
 
 extends Resource
 
 @export var userProfilesDict = {}
 @export var PlayerOne = false
 @export var PlayerTwo = false
-
-func addPlayerOne(playerOne):
-	PlayerOne = playerOne
-
-func addPlayerTwo(playerTwo):
-	PlayerTwo = playerTwo
-
-func get_user_names():
-	pass
+@export var settings = Settings.new()
 
 func add_user(user):
 	var saveFilePath = user.userName + ".tres"

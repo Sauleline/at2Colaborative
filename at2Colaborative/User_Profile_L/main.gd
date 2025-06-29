@@ -11,12 +11,11 @@ func populate_user_list():
 	OptionUserSelect.clear()
 	OptionUserSelect.add_item(" ", 0)
 	var index = 1
-	for x in userProfiles.userProfilesDict:
+	for x in globalSaveFile.userProfilesDict:
 		OptionUserSelect.add_item(x, index)
-		saveUserFileName = userProfiles.userProfilesDict[x]
-		open_user()
+		var user = open_user(x)
 		user.buttonIndex = index
-		save_user()
+		save_user(user)
 		index = index + 1
 		
 func _ready():
@@ -27,28 +26,22 @@ func _ready():
 
 	
 func returningUser():
-	if userProfiles.PlayerOne is not bool:
-		saveUserFileName = userProfiles.userProfilesDict[userProfiles.PlayerOne]
-		open_user()
-		PlayerOne = user
-		OptionUserSelect.set_item_disabled(user.buttonIndex, true)
+	if globalSaveFile.PlayerOne is not bool:
+		PlayerOne = open_user(globalSaveFile.PlayerOne.userName)
+		OptionUserSelect.set_item_disabled(PlayerOne.buttonIndex, true)
 		PlayerOneLabel.text = PlayerOne.userName
 		OptionUserSelect.select(0)
 	
-	if userProfiles.PlayerTwo is not bool:
-		saveUserFileName = userProfiles.userProfilesDict[userProfiles.PlayerTwo]
-		open_user()
-		PlayerTwo = user
-		OptionUserSelect.set_item_disabled(user.buttonIndex, true)
+	if globalSaveFile.PlayerTwo is not bool:
+		PlayerTwo = open_user(globalSaveFile.PlayerTwo)
+		OptionUserSelect.set_item_disabled(PlayerTwo.buttonIndex, true)
 		PlayerTwoLabel.text = PlayerTwo.userName
 		OptionUserSelect.select(0)
 	
 func selectUser():
 	var ID = OptionUserSelect.get_selected_id()
 	var Text = OptionUserSelect.get_item_text(ID)
-	saveUserFileName = userProfiles.userProfilesDict[Text]
-	open_user()
-	return user 
+	return open_user(Text)
 	
 func selectUserButton():
 	var userSelected = selectUser()
@@ -81,11 +74,15 @@ func unselectUser():
 			OptionUserSelect.set_item_disabled(PlayerOne.buttonIndex, false)
 			PlayerOne = false
 			PlayerOneLabel.text = "Player One"
+			globalSaveFile.PlayerOne = false
+			ResourceSaver.save(globalSaveFile, saveFilePath+saveMainFileName)
 	elif buttonPressed == 2: # player two
 		if PlayerTwo is not bool:
 			OptionUserSelect.set_item_disabled(PlayerTwo.buttonIndex, false)
 			PlayerTwo = false
 			PlayerTwoLabel.text = "Player Two"
+			globalSaveFile.PlayerTwo = false
+			ResourceSaver.save(globalSaveFile, saveFilePath+saveMainFileName)
 	else:
 		pass
 	
@@ -112,13 +109,13 @@ func resetUser():
 func removeUser():
 	var ID = OptionUserSelect.get_selected_id()
 	var Text = OptionUserSelect.get_item_text(ID)
-	var userFilePath = userProfiles.userProfilesDict[Text]
+	var userFilePath = globalSaveFile.userProfilesDict[Text]
 	OptionUserSelect.remove_item(ID)
-	userProfiles.remove_user(Text)
+	globalSaveFile.remove_user(Text)
 	removeUserFile(userFilePath)
 
 func _on_remove_user_pressed() -> void:
-	if not userProfiles.userProfilesDict:
+	if not globalSaveFile.userProfilesDict:
 		pass
 	elif OptionUserSelect.get_selected_id() == 0:
 		pass
@@ -138,8 +135,8 @@ func _on_player_two_button_pressed() -> void:
 func _on_back_button_pressed() -> void:
 	Global.addPlayers(PlayerOne, PlayerTwo)
 	if PlayerOne is not bool:
-		userProfiles.addPlayerOne(PlayerOne.userName)
+		globalSaveFile.PlayerOne = PlayerOne
 	if PlayerTwo is not bool:
-		userProfiles.addPlayerTwo(PlayerTwo.userName)
-	ResourceSaver.save(userProfiles, saveFilePath+saveMainFileName)
+		globalSaveFile.PlayerTwo = PlayerTwo
+	ResourceSaver.save(globalSaveFile, saveFilePath+saveMainFileName)
 	get_tree().change_scene_to_file("res://Game_User_Interface/Title_Screen.tscn")
