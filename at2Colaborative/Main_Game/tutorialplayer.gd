@@ -25,6 +25,9 @@ var slope = 0
 var slideAnimation = false
 var counter = 0
 var crouchAnimation = false
+var checkPointTouch = 0 
+var dJCheckPointTouch = false
+var crouchanimation = false
 
 func mapRange(x, inMin, inMax, outMin, outMax):
 	return ((x - inMin) * (outMax - outMin) / (inMax - inMin) + outMin)
@@ -42,6 +45,7 @@ func _ready():
 	$Sprite.play(character+'Idle')
 
 func _physics_process(delta):
+	move_and_slide()
 	velocity.y += gravity * delta
 
 	if Input.is_action_just_pressed("p1punch") and is_on_floor():
@@ -61,6 +65,9 @@ func _physics_process(delta):
 		$Hat.flip_h = true
 		$Fist.rotation = deg_to_rad(0)
 	
+	if is_on_floor():
+		jumpCount = maxJumps
+	
 	if Input.is_action_just_pressed("p1jump") and (jumpCount > 0) and (wallSlide == false) and not punching:
 		velocity.y = jump_speed
 		jumpCount -= 1
@@ -70,13 +77,17 @@ func _physics_process(delta):
 		if Input.is_action_pressed("p1left") or ("p1right"):
 			wallSlide = true
 			gravity = gravity * 0.5
+			
+	if checkPointTouch > 2 and dJCheckPointTouch == false:
+		maxJumps = 2
+		dJCheckPointTouch = true
 	
 
 	if (is_on_floor() or not is_on_wall() or (velocity.y <= 0)) and wallSlide == true :
 		wallSlide = false
 		gravity = gravity * 2
 	
-	if Input.is_action_just_pressed("p1jump") and (wallSlide == true):
+	if Input.is_action_just_pressed("p1jump") and (wallSlide == true) and checkPointTouch >1:
 		velocity.y = wallJumpSpeed
 		$SFX/Jump.play()
 		if Input.is_action_pressed("p1left"):
@@ -97,7 +108,7 @@ func _physics_process(delta):
 		crouchAnimation = false
 		
 		
-	if (crouch == true) and is_on_floor() and (slope == -1) and (velocity.x != 0) and (slide == false):
+	if (crouch == true) and is_on_floor() and (slope == -1) and (velocity.x != 0) and (slide == false) and checkPointTouch >2:
 		slide = true
 		counter = 0 
 		friction -= 0.04
@@ -107,7 +118,7 @@ func _physics_process(delta):
 		friction += 0.04
 		slideAnimation = false
 		
-	if (crouch == true) and is_on_floor() and (slope != -1) and (velocity.x != 0):
+	if (crouch == true) and is_on_floor() and (slope != -1) and (velocity.x != 0) and checkPointTouch > 2:
 		slopeSlide = true 
 	
 	if dir != 0 and (slide == false):
@@ -135,13 +146,12 @@ func _physics_process(delta):
 	elif velocity.x < 0:
 		$Hat.rotation = deg_to_rad(mapRange(abs(velocity.x), 0, 600, 0, 30))
 	
-	if is_on_floor():
-		jumpCount = maxJumps
+	
 	
 	if wallSlide:
 		$Sprite.play(character+"WallHold")
 		
-	if crouch :
+	if crouch:
 		if slide == true:
 			counter += 1
 		if slide == true and slideAnimation == false and (counter <= 20):
@@ -149,13 +159,14 @@ func _physics_process(delta):
 			slideAnimation = true
 		if slide == true and slideAnimation == true and (counter  > 20):
 			$Sprite.play(character+"Slide")
-		if slide == false and crouchAnimation == false:
+		if slide == false and crouchAnimation == false and velocity.x == 0 :
 			crouchAnimation = true
 			$Sprite.play(character+"Crouch")
-			print(crouchAnimation)
+	
+
 			
 	
-	move_and_slide()
+	
 
 func player_shoot():
 	pass
@@ -168,6 +179,7 @@ func player_punch():
 func _on_area_2d_area_entered(area: Area2D) -> void:
 	if (area.get_parent().name == "Checkpoints"):
 		emit_signal("hitArea", area, int(area.name))
+		checkPointTouch += 1
 	if (area.name == "End"):
 		emit_signal("beatStage")
 
