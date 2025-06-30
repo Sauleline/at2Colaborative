@@ -8,10 +8,12 @@ func _ready():
 	$Fullscreen.button_pressed = settings.fullScreen
 
 func exiting():
-	AccessUsers.edit_setting("sfx", $SliderSplitter/SFX.value)
-	AccessUsers.edit_setting("mus", $SliderSplitter/Music.value)
-	AccessUsers.edit_setting("mas", $SliderSplitter/Master.value)
-	AccessUsers.edit_setting("fullScreen", $Fullscreen.button_pressed)
+	pass
+	#settings stuff was changed so this doesn't work atm
+	#Global.settings.vols["sfx"] = $SliderSplitter/SFX.value
+	#Global.settings.vols["mus"] = $SliderSplitter/Music.value
+	#Global.settings.vols["mas"] = $SliderSplitter/Master.value
+	#Global.settings["fullScreen"] = $Fullscreen.button_pressed
 	
 func _on_debug_level_pressed() -> void:
 	exiting()
