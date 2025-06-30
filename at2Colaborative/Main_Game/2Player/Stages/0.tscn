@@ -19,10 +19,13 @@ modulate = Color(1, 1, 1, 0.5)
 [node name="Terrain" parent="." instance=ExtResource("3_a3gg2")]
 tile_map_data = PackedByteArray("AAD7/wQAAQASAAAAAAD8/wQAAQATAAAAAAD9/wQAAQATAAAAAAD+/wQAAQATAAAAAAD//wQAAQATAAAAAAAAAAQAAQATAAAAAAABAAQAAQATAAAAAAACAAQAAQATAAAAAAADAAQAAQATAAAAAAAEAAQAAQATAAAAAAAFAAQAAQATAAAAAAAGAAQAAQATAAAAAAAHAAQAAQATAAAAAAAIAAQAAQATAAAAAAAKAAQAAQAUAAAAAAAJAAQAAQAUAAAAAAA=")
 
+[node name="End" parent="." instance=ExtResource("4_eefhg")]
+position = Vector2(384, -32)
+
 [node name="Checkpoints" type="Node" parent="."]
 
 [node name="0" parent="Checkpoints" instance=ExtResource("4_eefhg")]
-position = Vector2(384, -32)
+position = Vector2(608, -32)
 
 [node name="Player2" parent="." instance=ExtResource("1_5l44h")]
 
@@ -47,7 +50,9 @@ position = Vector2(-128, 96)
 
 [node name="Score Timer" type="Timer" parent="."]
 
+[connection signal="beatStage" from="Player2" to="." method="stageWon" binds= [2]]
 [connection signal="hitArea" from="Player2" to="." method="_on_player_2_hit_area"]
 [connection signal="respawn" from="Player2" to="." method="_on_player_2_respawn"]
+[connection signal="beatStage" from="Player1" to="." method="stageWon" binds= [1]]
 [connection signal="hitArea" from="Player1" to="." method="_on_player_1_hit_area"]
 [connection signal="respawn" from="Player1" to="." method="_on_player_1_respawn"]

@@ -50,3 +50,9 @@ func _on_player_2_hit_area(area: Area2D, number: int) -> void:
 			$Checkpoints.get_child(i).find_child('Activated2').color = Color(0,1,0)
 		else:
 			$Checkpoints.get_child(i).find_child('Activated2').color = Color(1,1,1)
+
+func stageWon(playerNum: int):
+	$"Camera/Pause Menu".show()
+	get_tree().paused = true
+	print(playerNum)
+	
