@@ -1,7 +1,68 @@
-[gd_scene load_steps=2 format=3 uid="uid://ccvjumxyd5f5v"]
+[gd_scene load_steps=5 format=3 uid="uid://ccvjumxyd5f5v"]
 
+[ext_resource type="Script" uid="uid://c1q87p2mq2f3" path="res://Game_User_Interface/multiplayer_level_select.gd" id="1_ajjew"]
 [ext_resource type="PackedScene" uid="uid://dyn2qf6aui3uv" path="res://Game_User_Interface/UI_Background.tscn" id="1_s3t23"]
+[ext_resource type="Theme" uid="uid://dwdqkuxyspo32" path="res://Game_User_Interface/Theme.tres" id="3_32dk2"]
+[ext_resource type="PackedScene" uid="uid://br4jpc6hlpimu" path="res://global_button.tscn" id="4_bn6n3"]
 
 [node name="MultiplayerLevelSelect" type="CanvasLayer"]
+script = ExtResource("1_ajjew")
 
 [node name="Background" parent="." instance=ExtResource("1_s3t23")]
+metadata/_edit_lock_ = true
+
+[node name="Users Logged" type="Label" parent="."]
+offset_left = 32.0
+offset_top = 16.0
+offset_right = 384.0
+offset_bottom = 64.0
+theme = ExtResource("3_32dk2")
+theme_override_font_sizes/font_size = 19
+text = "Welcome back Guest"
+vertical_alignment = 1
+
+[node name="Title" type="Label" parent="."]
+offset_left = 217.0
+offset_top = 50.0
+offset_right = 917.0
+offset_bottom = 225.0
+theme = ExtResource("3_32dk2")
+theme_override_font_sizes/font_size = 125
+text = "Multiplayer"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Grid" type="GridContainer" parent="."]
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 32.0
+offset_top = -408.0
+offset_right = -320.0
+offset_bottom = -40.0
+grow_horizontal = 2
+grow_vertical = 0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+columns = 5
+
+[node name="Leaderboard" type="ScrollContainer" parent="."]
+offset_left = 864.0
+offset_top = 240.0
+offset_right = 1128.0
+offset_bottom = 608.0
+draw_focus_border = true
+
+[node name="vertContainer" type="VBoxContainer" parent="Leaderboard"]
+layout_mode = 2
+theme = ExtResource("3_32dk2")
+theme_type_variation = &"fontSize"
+
+[node name="Back" parent="." instance=ExtResource("4_bn6n3")]
+offset_left = 992.0
+offset_top = 24.0
+offset_right = 1120.0
+offset_bottom = 70.0
+text = "Back"
+fontSize = 20

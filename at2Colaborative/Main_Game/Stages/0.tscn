@@ -6,7 +6,7 @@
 [ext_resource type="Theme" uid="uid://dwdqkuxyspo32" path="res://Game_User_Interface/Theme.tres" id="5_8qvap"]
 [ext_resource type="PackedScene" uid="uid://bt6nqr1i764ly" path="res://Main_Game/checkpoint.tscn" id="6_jreen"]
 [ext_resource type="PackedScene" uid="uid://di3cplydq03nc" path="res://Main_Game/tutorialplayer.tscn" id="6_mnflg"]
-[ext_resource type="Script" path="res://Main_Game/tutorialplayer.gd" id="7_c4v3y"]
+[ext_resource type="Script" uid="uid://bb5lyqv8fai8r" path="res://Main_Game/tutorialplayer.gd" id="7_c4v3y"]
 [ext_resource type="PackedScene" uid="uid://4n7aivnwu15g" path="res://Main_Game/hud.tscn" id="8_60qsc"]
 [ext_resource type="PackedScene" uid="uid://bsii2bg3dsoji" path="res://Main_Game/pausemenu.tscn" id="8_mnflg"]
 [ext_resource type="AudioStream" uid="uid://b3vvs3ay45ym2" path="res://art/sound/music/Monkeys Spinning Monkeys.mp3" id="9_mnflg"]

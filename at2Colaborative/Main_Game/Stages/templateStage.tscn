@@ -4,7 +4,7 @@
 [ext_resource type="Script" uid="uid://kj8jfnh4gi6u" path="res://Main_Game/stageController.gd" id="1_6voqf"]
 [ext_resource type="PackedScene" uid="uid://bfsd75ne6drno" path="res://Main_Game/Damage_Tilemap.tscn" id="2_meonu"]
 [ext_resource type="PackedScene" uid="uid://bt6nqr1i764ly" path="res://Main_Game/checkpoint.tscn" id="3_ynmmp"]
-[ext_resource type="PackedScene" uid="uid://dyjri6mtn6mqa" path="res://Main_Game/player.tscn" id="4_ypmr7"]
+[ext_resource type="PackedScene" uid="uid://dyjri6mtn6mqa" path="res://Main_Game/2Player/player2.tscn" id="4_ypmr7"]
 [ext_resource type="PackedScene" uid="uid://4n7aivnwu15g" path="res://Main_Game/hud.tscn" id="7_0giw5"]
 [ext_resource type="PackedScene" uid="uid://bsii2bg3dsoji" path="res://Main_Game/pausemenu.tscn" id="7_sq7vt"]
 [ext_resource type="AudioStream" uid="uid://b3vvs3ay45ym2" path="res://art/sound/music/Monkeys Spinning Monkeys.mp3" id="8_sq7vt"]
@@ -48,7 +48,6 @@ position = Vector2(32, 96)
 [node name="Music" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("8_sq7vt")
 autoplay = true
-bus = &"Music"
 parameters/looping = true
 
 [connection signal="beatStage" from="Player" to="." method="_on_player_beat_stage"]
