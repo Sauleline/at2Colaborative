@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://b6y2yitwfmx53"]
+[gd_scene load_steps=8 format=3 uid="uid://di3cplydq03nc"]
 
 [ext_resource type="Script" uid="uid://dh2q4d51je4yd" path="res://Main_Game/player.gd" id="1_t02tv"]
 [ext_resource type="SpriteFrames" uid="uid://ci0sfvtne1n1r" path="res://art/2D-Pixel-Art-Character-Template/playerSpriteFrames.tres" id="2_mx3j7"]
@@ -66,6 +66,7 @@ offset = Vector2(0, -16)
 
 [node name="Jump" type="AudioStreamPlayer" parent="SFX"]
 stream = ExtResource("4_avyud")
+bus = &"SFX"
 
 [connection signal="animation_finished" from="Sprite" to="." method="_on_sprite_animation_finished"]
 [connection signal="area_entered" from="Hitbox" to="." method="_on_area_2d_area_entered"]
