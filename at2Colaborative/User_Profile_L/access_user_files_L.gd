@@ -57,5 +57,8 @@ func open_user(userName):
 		return ResourceLoader.load(saveFilePath+saveUserFileName).duplicate(true)
 
 func edit_setting(setting: String, value):
-	settings[setting] = value
-	
+	Global.settings[setting] = value
+
+func save_updates():
+	globalSaveFile.settings = Global.settings
+	ResourceSaver.save(globalSaveFile, saveFilePath+saveMainFileName)
