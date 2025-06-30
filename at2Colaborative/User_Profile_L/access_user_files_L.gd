@@ -56,9 +56,6 @@ func open_user(userName):
 	if ResourceLoader.exists(saveFilePath + saveUserFileName):
 		return ResourceLoader.load(saveFilePath+saveUserFileName).duplicate(true)
 
-func edit_setting(setting: String, value):
-	Global.settings[setting] = value
-
 func save_updates():
 	globalSaveFile.settings = Global.settings
 	ResourceSaver.save(globalSaveFile, saveFilePath+saveMainFileName)
