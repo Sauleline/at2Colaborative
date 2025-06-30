@@ -9,8 +9,6 @@ func _ready():
 	$optionList/Fullscreen.button_pressed = settings.fullScreen
 
 func exiting():
-	pass
-	#settings stuff was changed so this doesn't work atm
 	AccessUsers.openUserProfiles()
 	for i in $optionList.get_children():
 		if i.name != "Fullscreen":
@@ -24,6 +22,9 @@ func _on_debug_level_pressed() -> void:
 
 func _on_back_pressed() -> void:
 	exiting()
+	get_tree().change_scene_to_file("res://Game_User_Interface/Title_Screen.tscn")
+	
+func _on_no_save_pressed() -> void:
 	get_tree().change_scene_to_file("res://Game_User_Interface/Title_Screen.tscn")
 
 func changeVolume(_value_changed: bool, bus: String):

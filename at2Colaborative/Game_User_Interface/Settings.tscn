@@ -17,15 +17,25 @@ offset_top = 40.0
 offset_right = 1120.0
 offset_bottom = 104.0
 text = "Go to debug level yeah"
-fontSize = 20
+fontSize = 15
 
 [node name="Back" parent="." instance=ExtResource("4_2grg5")]
 offset_left = 40.0
 offset_top = 40.0
-offset_right = 160.0
+offset_right = 256.0
 offset_bottom = 91.0
-text = "Back"
-fontSize = 20
+text = "Save Changes"
+fontSize = 15
+buttonColour = Color(0.509804, 1, 0.509804, 1)
+
+[node name="noSave" parent="." instance=ExtResource("4_2grg5")]
+offset_left = 40.0
+offset_top = 112.0
+offset_right = 256.0
+offset_bottom = 163.0
+text = "Exit Without Saving"
+fontSize = 15
+buttonColour = Color(1, 0.509804, 0.509804, 1)
 
 [node name="optionList" type="VBoxContainer" parent="."]
 anchors_preset = 8
@@ -34,12 +44,12 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = -128.0
-offset_top = -132.0
+offset_top = -124.0
 offset_right = 128.0
-offset_bottom = 132.0
+offset_bottom = 124.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_constants/separation = 15
+theme_override_constants/separation = 20
 alignment = 1
 
 [node name="SFX" type="HSlider" parent="optionList"]
@@ -182,6 +192,7 @@ vertical_alignment = 1
 
 [connection signal="pressed" from="Debug Level" to="." method="_on_debug_level_pressed"]
 [connection signal="pressed" from="Back" to="." method="_on_back_pressed"]
+[connection signal="pressed" from="noSave" to="." method="_on_no_save_pressed"]
 [connection signal="drag_ended" from="optionList/SFX" to="." method="changeVolume" binds= ["SFX"]]
 [connection signal="value_changed" from="optionList/SFX" to="." method="updateLabel" binds= ["SFX"]]
 [connection signal="drag_ended" from="optionList/mus" to="." method="changeVolume" binds= ["mus"]]
