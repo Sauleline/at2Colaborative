@@ -3,17 +3,19 @@ extends CanvasLayer
 func _ready():
 	var settings = AccessUsers.settings
 	for i in $optionList.get_children():
-		i.value = settings.vols[i.name]
-		AudioServer.set_bus_volume_db(AudioServer.get_bus_index(i.name), linear_to_db(i.value))
-	$Fullscreen.button_pressed = settings.fullScreen
+		if i.name != "Fullscreen":
+			i.value = settings.vols[i.name]
+			AudioServer.set_bus_volume_db(AudioServer.get_bus_index(i.name), linear_to_db(i.value))
+	$optionList/Fullscreen.button_pressed = settings.fullScreen
 
 func exiting():
 	pass
 	#settings stuff was changed so this doesn't work atm
 	AccessUsers.openUserProfiles()
 	for i in $optionList.get_children():
-		Global.settings.vols[i.name] = i.value
-	Global.settings["fullScreen"] = $Fullscreen.button_pressed
+		if i.name != "Fullscreen":
+			Global.settings.vols[i.name] = i.value
+	Global.settings["fullScreen"] = $optionList/Fullscreen.button_pressed
 	AccessUsers.save_updates()
 	
 func _on_debug_level_pressed() -> void:
