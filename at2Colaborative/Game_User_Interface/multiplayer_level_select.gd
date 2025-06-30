@@ -16,9 +16,7 @@ func _ready() -> void:
 		var instance = scene.instantiate()
 		instance.pressed.connect(_goToLevel.bind(i))
 		instance.mouse_entered.connect(_populateLeaderboard.bind(i))
-		instance.get_children()[1].text = "Level " + str(i)
-		if i == 0:
-			instance.get_children()[1].text = "Tutorial"
+		instance.get_children()[1].text = "Level " + str(i+1)
 		$Grid.add_child(instance)
 
 var _populateLeaderboard = func populateLeaderboard(level: int):

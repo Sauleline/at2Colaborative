@@ -43,7 +43,7 @@ func _ready():
 
 func _physics_process(delta):
 	velocity.y += gravity * delta
-
+	
 	if Input.is_action_just_pressed("p1punch") and is_on_floor():
 		player_punch()
 	if Input.is_action_just_pressed("p1shoot"):
