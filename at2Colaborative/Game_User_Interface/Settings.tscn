@@ -89,7 +89,7 @@ grow_vertical = 2
 scale = Vector2(0.5, 0.5)
 theme = ExtResource("3_2grg5")
 theme_override_font_sizes/font_size = 40
-text = "100"
+text = "0"
 
 [node name="mus" type="HSlider" parent="optionList"]
 layout_mode = 2
@@ -128,7 +128,7 @@ grow_vertical = 2
 scale = Vector2(0.5, 0.5)
 theme = ExtResource("3_2grg5")
 theme_override_font_sizes/font_size = 40
-text = "100"
+text = "0"
 
 [node name="Master" type="HSlider" parent="optionList"]
 layout_mode = 2
@@ -167,7 +167,7 @@ grow_vertical = 2
 scale = Vector2(0.5, 0.5)
 theme = ExtResource("3_2grg5")
 theme_override_font_sizes/font_size = 40
-text = "100"
+text = "0"
 
 [node name="Fullscreen" type="CheckButton" parent="optionList"]
 layout_mode = 2
