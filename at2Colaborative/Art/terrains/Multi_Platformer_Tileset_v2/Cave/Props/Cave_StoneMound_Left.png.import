@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cgnw4q7k6gv3"
-path="res://.godot/imported/Cave_StoneMound_Left.png-969ce5f4c9eedc2641f3562df7a175d4.ctex"
+uid="uid://d1quqh8wui2vw"
+path="res://.godot/imported/Cave_StoneMound_Left.png-dcc1610772972fe4266d895af668b922.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Art/terrains/Multi_Platformer_Tileset_v2/Cave/Props/Cave_StoneMound_Left.png"
-dest_files=["res://.godot/imported/Cave_StoneMound_Left.png-969ce5f4c9eedc2641f3562df7a175d4.ctex"]
+source_file="res://art/terrains/Multi_Platformer_Tileset_v2/Cave/Props/Cave_StoneMound_Left.png"
+dest_files=["res://.godot/imported/Cave_StoneMound_Left.png-dcc1610772972fe4266d895af668b922.ctex"]
 
 [params]
 

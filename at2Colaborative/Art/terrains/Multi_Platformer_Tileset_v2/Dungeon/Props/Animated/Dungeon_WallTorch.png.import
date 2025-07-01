@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bf40cpa72guon"
-path="res://.godot/imported/Dungeon_WallTorch.png-66d731ab3bde500e36bb13dcf810acb4.ctex"
+uid="uid://bjy6lmo2d02eb"
+path="res://.godot/imported/Dungeon_WallTorch.png-f79c15de7a549d7f72fa3d76754a1a1c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Art/terrains/Multi_Platformer_Tileset_v2/Dungeon/Props/Animated/Dungeon_WallTorch.png"
-dest_files=["res://.godot/imported/Dungeon_WallTorch.png-66d731ab3bde500e36bb13dcf810acb4.ctex"]
+source_file="res://art/terrains/Multi_Platformer_Tileset_v2/Dungeon/Props/Animated/Dungeon_WallTorch.png"
+dest_files=["res://.godot/imported/Dungeon_WallTorch.png-f79c15de7a549d7f72fa3d76754a1a1c.ctex"]
 
 [params]
 

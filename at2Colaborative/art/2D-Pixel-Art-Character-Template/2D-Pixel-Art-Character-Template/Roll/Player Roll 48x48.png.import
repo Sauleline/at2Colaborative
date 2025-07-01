@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dsdumvnfjjbt6"
-path="res://.godot/imported/Player Roll 48x48.png-ec33e4f19755348339fb59ab595287cd.ctex"
+uid="uid://4b38prufek6t"
+path="res://.godot/imported/Player Roll 48x48.png-29036afde852fd6e25237d8c94dd4f77.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Art/2D-Pixel-Art-Character-Template/2D-Pixel-Art-Character-Template/Roll/Player Roll 48x48.png"
-dest_files=["res://.godot/imported/Player Roll 48x48.png-ec33e4f19755348339fb59ab595287cd.ctex"]
+source_file="res://art/2D-Pixel-Art-Character-Template/2D-Pixel-Art-Character-Template/Roll/Player Roll 48x48.png"
+dest_files=["res://.godot/imported/Player Roll 48x48.png-29036afde852fd6e25237d8c94dd4f77.ctex"]
 
 [params]
 

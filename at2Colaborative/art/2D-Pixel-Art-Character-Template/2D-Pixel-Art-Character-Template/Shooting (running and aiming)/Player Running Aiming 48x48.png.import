@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://d11p0qfsu3l5i"
-path="res://.godot/imported/Player Running Aiming 48x48.png-d6e4deb6e7e1c6ffa67062235cd75d09.ctex"
+uid="uid://d0k723nm2i4od"
+path="res://.godot/imported/Player Running Aiming 48x48.png-a3377b9efdce991bdb8bde7d72549f3f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Art/2D-Pixel-Art-Character-Template/2D-Pixel-Art-Character-Template/Shooting (running and aiming)/Player Running Aiming 48x48.png"
-dest_files=["res://.godot/imported/Player Running Aiming 48x48.png-d6e4deb6e7e1c6ffa67062235cd75d09.ctex"]
+source_file="res://art/2D-Pixel-Art-Character-Template/2D-Pixel-Art-Character-Template/Shooting (running and aiming)/Player Running Aiming 48x48.png"
+dest_files=["res://.godot/imported/Player Running Aiming 48x48.png-a3377b9efdce991bdb8bde7d72549f3f.ctex"]
 
 [params]
 

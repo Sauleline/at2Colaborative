@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://d3bfd1jnfy5nv"
-path="res://.godot/imported/player crouch-walk 48x48.png-9ef2db58f73cf81947f3b2c0d3ff5597.ctex"
+uid="uid://c604plylmv288"
+path="res://.godot/imported/player crouch-walk 48x48.png-cae5e58c1fb6f16a1bbd09931bdbf1ef.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Art/2D-Pixel-Art-Character-Template/2D-Pixel-Art-Character-Template/Crouch-Walk/player crouch-walk 48x48.png"
-dest_files=["res://.godot/imported/player crouch-walk 48x48.png-9ef2db58f73cf81947f3b2c0d3ff5597.ctex"]
+source_file="res://art/2D-Pixel-Art-Character-Template/2D-Pixel-Art-Character-Template/Crouch-Walk/player crouch-walk 48x48.png"
+dest_files=["res://.godot/imported/player crouch-walk 48x48.png-cae5e58c1fb6f16a1bbd09931bdbf1ef.ctex"]
 
 [params]
 

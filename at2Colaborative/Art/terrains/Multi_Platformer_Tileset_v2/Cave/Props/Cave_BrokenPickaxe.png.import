@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://djn0jgm8c0mud"
-path="res://.godot/imported/Cave_BrokenPickaxe.png-76b60d61b9d7cd549835b9ad24ff2d2f.ctex"
+uid="uid://djejsk6wdkm1t"
+path="res://.godot/imported/Cave_BrokenPickaxe.png-1ac9317c011d4360a42b488f050abc49.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Art/terrains/Multi_Platformer_Tileset_v2/Cave/Props/Cave_BrokenPickaxe.png"
-dest_files=["res://.godot/imported/Cave_BrokenPickaxe.png-76b60d61b9d7cd549835b9ad24ff2d2f.ctex"]
+source_file="res://art/terrains/Multi_Platformer_Tileset_v2/Cave/Props/Cave_BrokenPickaxe.png"
+dest_files=["res://.godot/imported/Cave_BrokenPickaxe.png-1ac9317c011d4360a42b488f050abc49.ctex"]
 
 [params]
 

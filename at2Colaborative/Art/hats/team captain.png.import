@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cpdp378h02gdv"
-path="res://.godot/imported/team captain.png-c7c8b8fad17d66749779b685b814d757.ctex"
+uid="uid://v22gg168a0ae"
+path="res://.godot/imported/team captain.png-76500e6b5cb27c66a8ff6573c2481d7c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Art/hats/team captain.png"
-dest_files=["res://.godot/imported/team captain.png-c7c8b8fad17d66749779b685b814d757.ctex"]
+source_file="res://art/hats/team captain.png"
+dest_files=["res://.godot/imported/team captain.png-76500e6b5cb27c66a8ff6573c2481d7c.ctex"]
 
 [params]
 

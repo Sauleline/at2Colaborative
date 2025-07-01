@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b8bvnt7c374mv"
-path="res://.godot/imported/Desert_LittleSnake_Idle.png-a17d19ea4d2e29ee5a6ff39cbba3674a.ctex"
+uid="uid://b2m5bsaiog7ma"
+path="res://.godot/imported/Desert_LittleSnake_Idle.png-f7a8f7c62c9b52c919a172afd8c76f11.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Art/terrains/Multi_Platformer_Tileset_v2/Desert/Props/Animated/Desert_LittleSnake_Idle.png"
-dest_files=["res://.godot/imported/Desert_LittleSnake_Idle.png-a17d19ea4d2e29ee5a6ff39cbba3674a.ctex"]
+source_file="res://art/terrains/Multi_Platformer_Tileset_v2/Desert/Props/Animated/Desert_LittleSnake_Idle.png"
+dest_files=["res://.godot/imported/Desert_LittleSnake_Idle.png-f7a8f7c62c9b52c919a172afd8c76f11.ctex"]
 
 [params]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bo12ohlgnfrhc"
-path="res://.godot/imported/Desert_Rock_6.png-d980a8a33fe858d9dc5625ba77ec3afe.ctex"
+uid="uid://5qmt3b7t4l6y"
+path="res://.godot/imported/Desert_Rock_6.png-89bb502a254ce62d3b3d1946486845f7.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Art/terrains/Multi_Platformer_Tileset_v2/Desert/Props/Desert_Rock_6.png"
-dest_files=["res://.godot/imported/Desert_Rock_6.png-d980a8a33fe858d9dc5625ba77ec3afe.ctex"]
+source_file="res://art/terrains/Multi_Platformer_Tileset_v2/Desert/Props/Desert_Rock_6.png"
+dest_files=["res://.godot/imported/Desert_Rock_6.png-89bb502a254ce62d3b3d1946486845f7.ctex"]
 
 [params]
 

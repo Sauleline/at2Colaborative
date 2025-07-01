@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://d04cmcomvjslk"
-path="res://.godot/imported/Cave_LostHelmet_Red.png-db2219199605bf0b8942a1a265c9e7bf.ctex"
+uid="uid://croqev8mm1jqn"
+path="res://.godot/imported/Cave_LostHelmet_Red.png-2aae0e1fb8468f2115132136027d8812.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Art/terrains/Multi_Platformer_Tileset_v2/Cave/Props/Cave_LostHelmet_Red.png"
-dest_files=["res://.godot/imported/Cave_LostHelmet_Red.png-db2219199605bf0b8942a1a265c9e7bf.ctex"]
+source_file="res://art/terrains/Multi_Platformer_Tileset_v2/Cave/Props/Cave_LostHelmet_Red.png"
+dest_files=["res://.godot/imported/Cave_LostHelmet_Red.png-2aae0e1fb8468f2115132136027d8812.ctex"]
 
 [params]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://mxcml0g5sich"
-path="res://.godot/imported/Desert_AnimalSkull.png-697b192e7f9618f5ca97f9cedd582780.ctex"
+uid="uid://cavomu450lga3"
+path="res://.godot/imported/Desert_AnimalSkull.png-5718755f5c2e61222d6a80a8ca0a4dba.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Art/terrains/Multi_Platformer_Tileset_v2/Desert/Props/Desert_AnimalSkull.png"
-dest_files=["res://.godot/imported/Desert_AnimalSkull.png-697b192e7f9618f5ca97f9cedd582780.ctex"]
+source_file="res://art/terrains/Multi_Platformer_Tileset_v2/Desert/Props/Desert_AnimalSkull.png"
+dest_files=["res://.godot/imported/Desert_AnimalSkull.png-5718755f5c2e61222d6a80a8ca0a4dba.ctex"]
 
 [params]
 

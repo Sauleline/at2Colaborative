@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ctpyb3wqstsom"
-path="res://.godot/imported/Desert_Terrain_ExtraTiles.png-21df11116bf291cd1ba0e9a8b182f10d.ctex"
+uid="uid://c8pno6tqvoy63"
+path="res://.godot/imported/Desert_Terrain_ExtraTiles.png-83659900d7eb325930acfbe4cab21db9.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Art/terrains/Multi_Platformer_Tileset_v2/Desert/Terrain/Desert_Terrain_ExtraTiles.png"
-dest_files=["res://.godot/imported/Desert_Terrain_ExtraTiles.png-21df11116bf291cd1ba0e9a8b182f10d.ctex"]
+source_file="res://art/terrains/Multi_Platformer_Tileset_v2/Desert/Terrain/Desert_Terrain_ExtraTiles.png"
+dest_files=["res://.godot/imported/Desert_Terrain_ExtraTiles.png-83659900d7eb325930acfbe4cab21db9.ctex"]
 
 [params]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://3qe3i7yexime"
-path="res://.godot/imported/Player Side-Climb 48x48.png-f941bd1c8635552cc58f634ed7fbf922.ctex"
+uid="uid://d1lm0hsytrtb1"
+path="res://.godot/imported/Player Side-Climb 48x48.png-13966628b6ef0b723b3fa31bccc1531d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Art/2D-Pixel-Art-Character-Template/2D-Pixel-Art-Character-Template/Climb (facing side of player)/Player Side-Climb 48x48.png"
-dest_files=["res://.godot/imported/Player Side-Climb 48x48.png-f941bd1c8635552cc58f634ed7fbf922.ctex"]
+source_file="res://art/2D-Pixel-Art-Character-Template/2D-Pixel-Art-Character-Template/Climb (facing side of player)/Player Side-Climb 48x48.png"
+dest_files=["res://.godot/imported/Player Side-Climb 48x48.png-13966628b6ef0b723b3fa31bccc1531d.ctex"]
 
 [params]
 
