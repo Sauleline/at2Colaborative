@@ -9,7 +9,7 @@
 [ext_resource type="Script" uid="uid://bb5lyqv8fai8r" path="res://Main_Game/tutorialplayer.gd" id="7_c4v3y"]
 [ext_resource type="PackedScene" uid="uid://4n7aivnwu15g" path="res://Main_Game/hud.tscn" id="8_60qsc"]
 [ext_resource type="PackedScene" uid="uid://bsii2bg3dsoji" path="res://Main_Game/pausemenu.tscn" id="8_mnflg"]
-[ext_resource type="AudioStream" uid="uid://b3vvs3ay45ym2" path="res://Art/sound/music/Monkeys Spinning Monkeys.mp3" id="9_mnflg"]
+[ext_resource type="AudioStream" uid="uid://txpb8wgqnmcn" path="res://art/sound/music/Monkeys Spinning Monkeys.mp3" id="9_mnflg"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2p5ui"]
 size = Vector2(64, 64)

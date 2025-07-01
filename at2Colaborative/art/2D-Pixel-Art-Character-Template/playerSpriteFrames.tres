@@ -1,14 +1,14 @@
 [gd_resource type="SpriteFrames" load_steps=75 format=3 uid="uid://ci0sfvtne1n1r"]
 
-[ext_resource type="Texture2D" uid="uid://fs7m4vbr7jr8" path="res://Art/2D-Pixel-Art-Character-Template/2D-Pixel-Art-Character-Template/Crouch-Idle/Player Crouch-Idle 48x48.png" id="1_dw4tq"]
-[ext_resource type="Texture2D" uid="uid://hv1br05i7hqk" path="res://Art/2D-Pixel-Art-Character-Template/2D-Pixel-Art-Character-Template/Idle/Player Idle 48x48.png" id="1_tp5l0"]
-[ext_resource type="Texture2D" uid="uid://btb56bfv6jgck" path="res://Art/2D-Pixel-Art-Character-Template/2D-Pixel-Art-Character-Template/Jump/player new jump 48x48.png" id="2_dw4tq"]
-[ext_resource type="Texture2D" uid="uid://haxnxa6ugucw" path="res://Art/2D-Pixel-Art-Character-Template/2D-Pixel-Art-Character-Template/Punch Jab/Player Jab 48x48.png" id="3_538re"]
-[ext_resource type="Texture2D" uid="uid://dbiibsy6ncn4v" path="res://Art/2D-Pixel-Art-Character-Template/2D-Pixel-Art-Character-Template/Run/player run 48x48.png" id="4_3ei7d"]
-[ext_resource type="Texture2D" uid="uid://bwqjng1j8tbv6" path="res://Art/2D-Pixel-Art-Character-Template/2D-Pixel-Art-Character-Template/Slide/Player Slide 48x48.png" id="5_hkhgr"]
-[ext_resource type="Texture2D" uid="uid://x0dk0elc6v7o" path="res://Art/2D-Pixel-Art-Character-Template/2D-Pixel-Art-Character-Template/Walk/PlayerWalk 48x48.png" id="6_7ipuy"]
-[ext_resource type="Texture2D" uid="uid://dsdumvnfjjbt6" path="res://Art/2D-Pixel-Art-Character-Template/2D-Pixel-Art-Character-Template/Roll/Player Roll 48x48.png" id="6_538re"]
-[ext_resource type="Texture2D" uid="uid://g8m13muigqo5" path="res://Art/2D-Pixel-Art-Character-Template/2D-Pixel-Art-Character-Template/Wall Land/player wall land 48x48.png" id="7_2jc51"]
+[ext_resource type="Texture2D" uid="uid://bubgokyey8a0t" path="res://art/2D-Pixel-Art-Character-Template/2D-Pixel-Art-Character-Template/Crouch-Idle/Player Crouch-Idle 48x48.png" id="1_dw4tq"]
+[ext_resource type="Texture2D" uid="uid://df0lhppkavin5" path="res://art/2D-Pixel-Art-Character-Template/2D-Pixel-Art-Character-Template/Idle/Player Idle 48x48.png" id="1_tp5l0"]
+[ext_resource type="Texture2D" uid="uid://bbt8qeu6gax0b" path="res://art/2D-Pixel-Art-Character-Template/2D-Pixel-Art-Character-Template/Jump/player new jump 48x48.png" id="2_dw4tq"]
+[ext_resource type="Texture2D" uid="uid://bygvyh722vw3p" path="res://art/2D-Pixel-Art-Character-Template/2D-Pixel-Art-Character-Template/Punch Jab/Player Jab 48x48.png" id="3_538re"]
+[ext_resource type="Texture2D" uid="uid://bhroaqbhmrv61" path="res://art/2D-Pixel-Art-Character-Template/2D-Pixel-Art-Character-Template/Run/player run 48x48.png" id="4_3ei7d"]
+[ext_resource type="Texture2D" uid="uid://c7ei16chbmqad" path="res://art/2D-Pixel-Art-Character-Template/2D-Pixel-Art-Character-Template/Slide/Player Slide 48x48.png" id="5_hkhgr"]
+[ext_resource type="Texture2D" uid="uid://wpgh741te55x" path="res://art/2D-Pixel-Art-Character-Template/2D-Pixel-Art-Character-Template/Walk/PlayerWalk 48x48.png" id="6_7ipuy"]
+[ext_resource type="Texture2D" uid="uid://4b38prufek6t" path="res://art/2D-Pixel-Art-Character-Template/2D-Pixel-Art-Character-Template/Roll/Player Roll 48x48.png" id="6_538re"]
+[ext_resource type="Texture2D" uid="uid://cblimv233rjsb" path="res://art/2D-Pixel-Art-Character-Template/2D-Pixel-Art-Character-Template/Wall Land/player wall land 48x48.png" id="7_2jc51"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_538re"]
 atlas = ExtResource("1_dw4tq")
