@@ -48,6 +48,7 @@ position = Vector2(32, 96)
 [node name="Music" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("8_sq7vt")
 autoplay = true
+bus = &"mus"
 parameters/looping = true
 
 [connection signal="beatStage" from="Player" to="." method="_on_player_beat_stage"]
