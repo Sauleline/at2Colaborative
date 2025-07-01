@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bwqjng1j8tbv6"
-path="res://.godot/imported/Player Slide 48x48.png-b0218f0103818deaaeb913ccb5d1f60c.ctex"
+path="res://.godot/imported/Player Slide 48x48.png-7ecd303fe1ce67634bc7fe9aaffe4c94.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://art/2D-Pixel-Art-Character-Template/2D-Pixel-Art-Character-Template/Slide/Player Slide 48x48.png"
-dest_files=["res://.godot/imported/Player Slide 48x48.png-b0218f0103818deaaeb913ccb5d1f60c.ctex"]
+source_file="res://Art/2D-Pixel-Art-Character-Template/2D-Pixel-Art-Character-Template/Slide/Player Slide 48x48.png"
+dest_files=["res://.godot/imported/Player Slide 48x48.png-7ecd303fe1ce67634bc7fe9aaffe4c94.ctex"]
 
 [params]
 

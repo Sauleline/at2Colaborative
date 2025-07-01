@@ -3,12 +3,12 @@
 importer="mp3"
 type="AudioStreamMP3"
 uid="uid://b3vvs3ay45ym2"
-path="res://.godot/imported/Monkeys Spinning Monkeys.mp3-8a1aff3caf89984c828a1f18f860e90d.mp3str"
+path="res://.godot/imported/Monkeys Spinning Monkeys.mp3-bf2975146ae03d995c0987df0103f6cc.mp3str"
 
 [deps]
 
-source_file="res://art/sound/music/Monkeys Spinning Monkeys.mp3"
-dest_files=["res://.godot/imported/Monkeys Spinning Monkeys.mp3-8a1aff3caf89984c828a1f18f860e90d.mp3str"]
+source_file="res://Art/sound/music/Monkeys Spinning Monkeys.mp3"
+dest_files=["res://.godot/imported/Monkeys Spinning Monkeys.mp3-bf2975146ae03d995c0987df0103f6cc.mp3str"]
 
 [params]
 
