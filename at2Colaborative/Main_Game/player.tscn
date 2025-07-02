@@ -1,9 +1,9 @@
 [gd_scene load_steps=8 format=3 uid="uid://dyjri6mtn6mqa"]
 
-[ext_resource type="Script" uid="uid://dh2q4d51je4yd" path="res://Main_Game/player.gd" id="1_rvp0r"]
+[ext_resource type="Script" uid="uid://djv7jm31e5am5" path="res://Main_Game/player.gd" id="1_g6ucm"]
 [ext_resource type="SpriteFrames" uid="uid://ci0sfvtne1n1r" path="res://art/2D-Pixel-Art-Character-Template/playerSpriteFrames.tres" id="2_g6ucm"]
-[ext_resource type="Texture2D" uid="uid://cpdp378h02gdv" path="res://art/hats/team captain.png" id="6_wr33q"]
-[ext_resource type="AudioStream" uid="uid://c6wkjsr2xmduf" path="res://art/sound/sfx/jump.wav" id="12_0nq3h"]
+[ext_resource type="Texture2D" uid="uid://v22gg168a0ae" path="res://art/hats/team captain.png" id="6_wr33q"]
+[ext_resource type="AudioStream" uid="uid://dlccqkfe65a6p" path="res://art/sound/sfx/jump.wav" id="12_0nq3h"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_gragq"]
 size = Vector2(106.667, 106.667)
@@ -14,9 +14,9 @@ size = Vector2(33, 33)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_64xtq"]
 size = Vector2(12, 12)
 
-[node name="Player2" type="CharacterBody2D"]
+[node name="Player" type="CharacterBody2D"]
 scale = Vector2(2, 2)
-script = ExtResource("1_rvp0r")
+script = ExtResource("1_g6ucm")
 
 [node name="Sprite" type="AnimatedSprite2D" parent="."]
 position = Vector2(4.76837e-07, 4.76837e-07)

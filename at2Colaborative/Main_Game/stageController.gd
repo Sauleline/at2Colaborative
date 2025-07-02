@@ -37,8 +37,6 @@ func _on_player_hit_area(area: Area2D, number: int) -> void:
 			$Checkpoints.get_child(i).find_child('Activated1').color = Color(0,1,0)
 			$Checkpoints.get_child(i).find_child('Activated2').color = Color(0,1,0)
 
-
-
 func _on_score_timer_timeout() -> void:
 	score += 1
 
