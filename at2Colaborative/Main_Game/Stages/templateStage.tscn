@@ -51,5 +51,8 @@ autoplay = true
 bus = &"mus"
 parameters/looping = true
 
+[connection signal="beatStage" from="Player" to="." method="_on_player_beat_stage"]
+[connection signal="hitArea" from="Player" to="." method="_on_player_hit_area"]
+[connection signal="respawn" from="Player" to="." method="_on_player_respawn"]
 [connection signal="menuRespawn" from="Player/Camera/Pause Menu" to="." method="_on_player_respawn"]
 [connection signal="timeout" from="Score Timer" to="." method="_on_score_timer_timeout"]

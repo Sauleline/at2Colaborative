@@ -66,6 +66,7 @@ offset = Vector2(0, -16)
 
 [node name="Jump" type="AudioStreamPlayer" parent="SFX"]
 stream = ExtResource("4_rskqm")
+bus = &"SFX"
 
 [connection signal="animation_finished" from="Sprite" to="." method="_on_sprite_animation_finished"]
 [connection signal="area_entered" from="Hitbox" to="." method="_on_area_2d_area_entered"]
