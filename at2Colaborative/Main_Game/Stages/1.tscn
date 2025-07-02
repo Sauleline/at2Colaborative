@@ -1,0 +1,59 @@
+[gd_scene load_steps=9 format=4 uid="uid://ch5kp8hk8wnwo"]
+
+[ext_resource type="Script" uid="uid://kj8jfnh4gi6u" path="res://Main_Game/stageController.gd" id="1_5wj30"]
+[ext_resource type="PackedScene" uid="uid://bfsd75ne6drno" path="res://Main_Game/Damage_Tilemap.tscn" id="2_lpwhg"]
+[ext_resource type="PackedScene" uid="uid://scl3b7ko3tw4" path="res://Main_Game/Terrain_Tilemap.tscn" id="3_8vc5u"]
+[ext_resource type="PackedScene" uid="uid://bt6nqr1i764ly" path="res://Main_Game/checkpoint.tscn" id="4_m17ff"]
+[ext_resource type="PackedScene" uid="uid://ye7aaq7i6vg" path="res://Main_Game/player.tscn" id="5_5wj30"]
+[ext_resource type="PackedScene" uid="uid://4n7aivnwu15g" path="res://Main_Game/hud.tscn" id="6_n7dx7"]
+[ext_resource type="PackedScene" uid="uid://bsii2bg3dsoji" path="res://Main_Game/pausemenu.tscn" id="7_5bt0p"]
+[ext_resource type="AudioStream" uid="uid://txpb8wgqnmcn" path="res://art/sound/music/Monkeys Spinning Monkeys.mp3" id="8_bepi2"]
+
+[node name="Stage0" type="Node"]
+script = ExtResource("1_5wj30")
+
+[node name="Damage" parent="." instance=ExtResource("2_lpwhg")]
+
+[node name="Back" parent="." instance=ExtResource("3_8vc5u")]
+
+[node name="Terrain" parent="." instance=ExtResource("3_8vc5u")]
+tile_map_data = PackedByteArray("AAD+/wUAAQASAAAAAAD//wUAAQATAAAAAAAAAAUAAQATAAAAAAABAAUAAQATAAAAAAACAAUAAQATAAAAAAADAAUAAQATAAAAAAAEAAUAAQAUAAAAAAA=")
+
+[node name="End" parent="." instance=ExtResource("4_m17ff")]
+position = Vector2(-96, 96)
+
+[node name="Checkpoints" type="Node" parent="."]
+
+[node name="0" parent="Checkpoints" instance=ExtResource("4_m17ff")]
+position = Vector2(-192, 96)
+
+[node name="Player" parent="." instance=ExtResource("5_5wj30")]
+
+[node name="Camera" type="Camera2D" parent="Player"]
+scale = Vector2(0.25, 0.25)
+position_smoothing_enabled = true
+position_smoothing_speed = 15.0
+
+[node name="HUD" parent="Player/Camera" instance=ExtResource("6_n7dx7")]
+
+[node name="Pause Menu" parent="Player/Camera" instance=ExtResource("7_5bt0p")]
+visible = false
+
+[node name="PlayerSpawn" type="Marker2D" parent="."]
+position = Vector2(32, 96)
+
+[node name="Fore" parent="." instance=ExtResource("3_8vc5u")]
+
+[node name="Score Timer" type="Timer" parent="."]
+
+[node name="Music" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("8_bepi2")
+autoplay = true
+bus = &"mus"
+parameters/looping = true
+
+[connection signal="beatStage" from="Player" to="." method="_on_player_beat_stage"]
+[connection signal="hitArea" from="Player" to="." method="_on_player_hit_area"]
+[connection signal="respawn" from="Player" to="." method="_on_player_respawn"]
+[connection signal="menuRespawn" from="Player/Camera/Pause Menu" to="." method="_on_player_respawn"]
+[connection signal="timeout" from="Score Timer" to="." method="_on_score_timer_timeout"]
