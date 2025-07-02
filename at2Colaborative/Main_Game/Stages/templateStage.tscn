@@ -4,10 +4,10 @@
 [ext_resource type="Script" uid="uid://kj8jfnh4gi6u" path="res://Main_Game/stageController.gd" id="1_6voqf"]
 [ext_resource type="PackedScene" uid="uid://bfsd75ne6drno" path="res://Main_Game/Damage_Tilemap.tscn" id="2_meonu"]
 [ext_resource type="PackedScene" uid="uid://bt6nqr1i764ly" path="res://Main_Game/checkpoint.tscn" id="3_ynmmp"]
-[ext_resource type="PackedScene" uid="uid://dyjri6mtn6mqa" path="res://Main_Game/2Player/player2.tscn" id="4_ypmr7"]
+[ext_resource type="PackedScene" uid="uid://ye7aaq7i6vg" path="res://Main_Game/player.tscn" id="5_sq7vt"]
 [ext_resource type="PackedScene" uid="uid://4n7aivnwu15g" path="res://Main_Game/hud.tscn" id="7_0giw5"]
 [ext_resource type="PackedScene" uid="uid://bsii2bg3dsoji" path="res://Main_Game/pausemenu.tscn" id="7_sq7vt"]
-[ext_resource type="AudioStream" uid="uid://b3vvs3ay45ym2" path="res://art/sound/music/Monkeys Spinning Monkeys.mp3" id="8_sq7vt"]
+[ext_resource type="AudioStream" uid="uid://txpb8wgqnmcn" path="res://art/sound/music/Monkeys Spinning Monkeys.mp3" id="8_sq7vt"]
 
 [node name="Stage0" type="Node"]
 script = ExtResource("1_6voqf")
@@ -26,7 +26,7 @@ position = Vector2(-96, 96)
 [node name="0" parent="Checkpoints" instance=ExtResource("3_ynmmp")]
 position = Vector2(-192, 96)
 
-[node name="Player" parent="." instance=ExtResource("4_ypmr7")]
+[node name="Player" parent="." instance=ExtResource("5_sq7vt")]
 
 [node name="Camera" type="Camera2D" parent="Player"]
 scale = Vector2(0.5, 0.5)
@@ -51,8 +51,5 @@ autoplay = true
 bus = &"mus"
 parameters/looping = true
 
-[connection signal="beatStage" from="Player" to="." method="_on_player_beat_stage"]
-[connection signal="hitArea" from="Player" to="." method="_on_player_hit_area"]
-[connection signal="respawn" from="Player" to="." method="_on_player_respawn"]
 [connection signal="menuRespawn" from="Player/Camera/Pause Menu" to="." method="_on_player_respawn"]
 [connection signal="timeout" from="Score Timer" to="." method="_on_score_timer_timeout"]
