@@ -28,6 +28,7 @@ var crouchAnimation = false
 var checkPointTouch = 0 
 var dJCheckPointTouch = false
 var crouchanimation = false
+var slopeGravity = false
 
 func mapRange(x, inMin, inMax, outMin, outMax):
 	return ((x - inMin) * (outMax - outMin) / (inMax - inMin) + outMin)
@@ -67,6 +68,7 @@ func _physics_process(delta):
 	
 	if is_on_floor():
 		jumpCount = maxJumps
+		slope = get_floor_normal().y
 	
 	if Input.is_action_just_pressed("p1jump") and (jumpCount > 0) and (wallSlide == false) and not punching:
 		velocity.y = jump_speed
@@ -100,27 +102,37 @@ func _physics_process(delta):
 	if Input.is_action_pressed("p1slide") and (crouch == false):
 		gravity = gravity * 2
 		crouch = true
-		if is_on_floor():
-			slope = get_floor_normal().y
+		
 	if not Input.is_action_pressed("p1slide") and (crouch == true):
 		gravity = gravity * 0.5
 		crouch = false
 		crouchAnimation = false
 		
 		
-	if (crouch == true) and is_on_floor() and (slope == -1) and (velocity.x != 0) and (slide == false) and checkPointTouch >2:
+	if (crouch == true) and is_on_floor() and (velocity.x != 0) and (slide == false) and checkPointTouch >2:
 		slide = true
 		counter = 0 
 		friction -= 0.04
 		
-	if ((crouch == false) or not is_on_floor() or (slope != -1) or  (velocity.x == 0)) and (slide ==true) :
+	if ((crouch == false) or not is_on_floor() or  (velocity.x == 0)) and (slide ==true) :
 		slide = false
 		friction += 0.04
 		slideAnimation = false
 		
-	if (crouch == true) and is_on_floor() and (slope != -1) and (velocity.x != 0) and checkPointTouch > 2:
+	if slide == true and slope != -1:
 		slopeSlide = true 
-	
+		velocity.x = velocity.x * 1.1
+		print("sloped")
+		if slopeGravity == false:
+			gravity = gravity * 100
+			slopeGravity = true
+		
+	if slopeSlide == true and (slope == -1 or not is_on_floor() or velocity.x == 0):
+		slopeSlide = false
+		slopeGravity = false
+		gravity = gravity * 0.01
+		print("unsloped")
+		
 	if dir != 0 and (slide == false):
 		if is_on_floor():
 			if slideAnimation == false:
@@ -161,6 +173,7 @@ func _physics_process(delta):
 			$Sprite.play(character+"Slide")
 		if slide == false and crouchAnimation == false and velocity.x == 0 :
 			crouchAnimation = true
+			print("crouched")
 			$Sprite.play(character+"Crouch")
 	
 
@@ -178,8 +191,12 @@ func player_punch():
 
 func _on_area_2d_area_entered(area: Area2D) -> void:
 	if (area.get_parent().name == "Checkpoints"):
+		if area.find_child("Activated1").color == Color(1, 1, 1):
+			checkPointTouch += 1
 		emit_signal("hitArea", area, int(area.name))
-		checkPointTouch += 1
+		
+		print(checkPointTouch)
+
 	if (area.name == "End"):
 		emit_signal("beatStage")
 

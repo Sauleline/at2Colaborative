@@ -21,8 +21,7 @@ script = ExtResource("1_t02tv")
 [node name="Sprite" type="AnimatedSprite2D" parent="."]
 position = Vector2(4.76837e-07, 4.76837e-07)
 sprite_frames = ExtResource("2_mx3j7")
-animation = &"steveCrouch"
-frame_progress = 0.658849
+animation = &"steveRoll"
 
 [node name="Level Display" type="Label" parent="."]
 offset_left = -64.0

@@ -14,15 +14,14 @@ size = Vector2(33, 33)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_64xtq"]
 size = Vector2(12, 12)
 
-[node name="Player" type="CharacterBody2D"]
+[node name="Player2" type="CharacterBody2D"]
 scale = Vector2(2, 2)
 script = ExtResource("1_rvp0r")
 
 [node name="Sprite" type="AnimatedSprite2D" parent="."]
 position = Vector2(4.76837e-07, 4.76837e-07)
 sprite_frames = ExtResource("2_g6ucm")
-animation = &"steveCrouch"
-frame_progress = 0.628003
+animation = &"steveRoll"
 
 [node name="Level Display" type="Label" parent="."]
 offset_left = -64.0
