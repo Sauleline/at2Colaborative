@@ -39,25 +39,13 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 offset_left = 32.0
 offset_top = -408.0
-offset_right = -320.0
+offset_right = -32.0
 offset_bottom = -40.0
 grow_horizontal = 2
 grow_vertical = 0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 columns = 5
-
-[node name="Leaderboard" type="ScrollContainer" parent="."]
-offset_left = 864.0
-offset_top = 240.0
-offset_right = 1128.0
-offset_bottom = 608.0
-draw_focus_border = true
-
-[node name="vertContainer" type="VBoxContainer" parent="Leaderboard"]
-layout_mode = 2
-theme = ExtResource("3_32dk2")
-theme_type_variation = &"fontSize"
 
 [node name="Back" parent="." instance=ExtResource("4_bn6n3")]
 offset_left = 992.0
@@ -66,3 +54,5 @@ offset_right = 1120.0
 offset_bottom = 70.0
 text = "Back"
 fontSize = 20
+
+[connection signal="pressed" from="Back" to="." method="_on_back_pressed"]

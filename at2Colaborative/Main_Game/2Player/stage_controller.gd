@@ -6,6 +6,8 @@ func _ready():
 	$Damage.modulate = Color(1,1,1,0)
 	$"Score Timer".wait_time = 0.1
 	$"Score Timer".start()
+	$Camera/HUD/Gameplay/Time.visible = false
+	$Camera/HUD/Gameplay/DeathCount.visible = false
 	_on_player_1_respawn()
 	_on_player_2_respawn()
 
@@ -52,7 +54,11 @@ func _on_player_2_hit_area(area: Area2D, number: int) -> void:
 			$Checkpoints.get_child(i).find_child('Activated2').color = Color(1,1,1)
 
 func stageWon(playerNum: int):
-	$"Camera/Pause Menu".show()
-	get_tree().paused = true
+	if playerNum == 1:
+		$Camera/HUD/WinScreen.text = Global.PlayerOne.userName + " Wins!"
+	else:
+		$Camera/HUD/WinScreen.text = Global.PlayerTwo.userName + " Wins!"
+	$Camera/HUD/WinScreen.visible = true
+	$Camera/HUD/Blur.visible = true
 	print(playerNum)
 	

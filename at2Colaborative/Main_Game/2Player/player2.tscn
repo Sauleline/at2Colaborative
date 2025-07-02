@@ -2,8 +2,8 @@
 
 [ext_resource type="Script" uid="uid://dh2q4d51je4yd" path="res://Main_Game/2Player/player2.gd" id="1_rvp0r"]
 [ext_resource type="SpriteFrames" uid="uid://ci0sfvtne1n1r" path="res://art/2D-Pixel-Art-Character-Template/playerSpriteFrames.tres" id="2_g6ucm"]
-[ext_resource type="Texture2D" uid="uid://cpdp378h02gdv" path="res://art/hats/team captain.png" id="6_wr33q"]
-[ext_resource type="AudioStream" uid="uid://c6wkjsr2xmduf" path="res://art/sound/sfx/jump.wav" id="12_0nq3h"]
+[ext_resource type="Texture2D" uid="uid://v22gg168a0ae" path="res://art/hats/team captain.png" id="6_wr33q"]
+[ext_resource type="AudioStream" uid="uid://dlccqkfe65a6p" path="res://art/sound/sfx/jump.wav" id="12_0nq3h"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_gragq"]
 size = Vector2(106.667, 106.667)
