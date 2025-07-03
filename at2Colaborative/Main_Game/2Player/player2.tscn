@@ -1,9 +1,9 @@
 [gd_scene load_steps=8 format=3 uid="uid://dyjri6mtn6mqa"]
 
-[ext_resource type="Script" uid="uid://dh2q4d51je4yd" path="res://Main_Game/2Player/player2.gd" id="1_rvp0r"]
-[ext_resource type="SpriteFrames" uid="uid://ci0sfvtne1n1r" path="res://art/2D-Pixel-Art-Character-Template/playerSpriteFrames.tres" id="2_g6ucm"]
-[ext_resource type="Texture2D" uid="uid://v22gg168a0ae" path="res://art/hats/team captain.png" id="6_wr33q"]
-[ext_resource type="AudioStream" uid="uid://dlccqkfe65a6p" path="res://art/sound/sfx/jump.wav" id="12_0nq3h"]
+[ext_resource type="Script" uid="uid://dh2q4d51je4yd" path="res://Main_Game/2Player/player2.gd" id="1_wdtbf"]
+[ext_resource type="SpriteFrames" uid="uid://ci0sfvtne1n1r" path="res://art/2D-Pixel-Art-Character-Template/playerSpriteFrames.tres" id="2_cq8a4"]
+[ext_resource type="Texture2D" uid="uid://v22gg168a0ae" path="res://art/hats/team captain.png" id="3_p608s"]
+[ext_resource type="AudioStream" uid="uid://dlccqkfe65a6p" path="res://art/sound/sfx/jump.wav" id="4_q51r4"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_gragq"]
 size = Vector2(106.667, 106.667)
@@ -16,13 +16,12 @@ size = Vector2(12, 12)
 
 [node name="Player" type="CharacterBody2D"]
 scale = Vector2(2, 2)
-script = ExtResource("1_rvp0r")
+script = ExtResource("1_wdtbf")
 
 [node name="Sprite" type="AnimatedSprite2D" parent="."]
 position = Vector2(4.76837e-07, 4.76837e-07)
-sprite_frames = ExtResource("2_g6ucm")
+sprite_frames = ExtResource("2_cq8a4")
 animation = &"steveCrouch"
-frame_progress = 0.628003
 
 [node name="Level Display" type="Label" parent="."]
 offset_left = -64.0
@@ -59,13 +58,13 @@ debug_color = Color(0.98055, 0.0671374, 0.312238, 0.42)
 [node name="Hat" type="Sprite2D" parent="."]
 position = Vector2(0, -16)
 scale = Vector2(0.25, 0.25)
-texture = ExtResource("6_wr33q")
+texture = ExtResource("3_p608s")
 offset = Vector2(0, -16)
 
 [node name="SFX" type="Node" parent="."]
 
 [node name="Jump" type="AudioStreamPlayer" parent="SFX"]
-stream = ExtResource("12_0nq3h")
+stream = ExtResource("4_q51r4")
 bus = &"SFX"
 
 [connection signal="animation_finished" from="Sprite" to="." method="_on_sprite_animation_finished"]

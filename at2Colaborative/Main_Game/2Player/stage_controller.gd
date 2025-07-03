@@ -61,4 +61,3 @@ func stageWon(playerNum: int):
 	$Camera/HUD/WinScreen.visible = true
 	$Camera/HUD/Blur.visible = true
 	print(playerNum)
-	
