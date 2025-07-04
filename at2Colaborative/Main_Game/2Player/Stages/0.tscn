@@ -5,7 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://bpfr4nng2lm37" path="res://Main_Game/2Player/player1.tscn" id="2_v8yvg"]
 [ext_resource type="PackedScene" uid="uid://scl3b7ko3tw4" path="res://Main_Game/Terrain_Tilemap.tscn" id="3_a3gg2"]
 [ext_resource type="PackedScene" uid="uid://b8asnrpev842c" path="res://Main_Game/checkpoint.tscn" id="4_eefhg"]
-[ext_resource type="PackedScene" uid="uid://dyjri6mtn6mqa" path="res://Main_Game/player.tscn" id="5_kgcny"]
+[ext_resource type="PackedScene" uid="uid://ba7k7ce0gunl1" path="res://Main_Game/2Player/player2.tscn" id="5_kgcny"]
 [ext_resource type="PackedScene" uid="uid://bsii2bg3dsoji" path="res://Main_Game/pausemenu.tscn" id="6_a3gg2"]
 [ext_resource type="PackedScene" uid="uid://4n7aivnwu15g" path="res://Main_Game/hud.tscn" id="8_kgcny"]
 
