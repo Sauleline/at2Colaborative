@@ -153,8 +153,6 @@ func _physics_process(delta):
 			crouchAnimation = true
 			$Sprite.play(character+"Crouch")
 			print(crouchAnimation)
-			
-	
 	move_and_slide()
 
 func player_shoot():
