@@ -1,18 +1,18 @@
 [gd_scene load_steps=5 format=3 uid="uid://cglj7rree4gbi"]
 
-[ext_resource type="Texture2D" uid="uid://bhkjx73xqiuhh" path="res://art/UI/button1.png" id="1_rh7dd"]
-[ext_resource type="Theme" uid="uid://dwdqkuxyspo32" path="res://Game_User_Interface/Theme.tres" id="1_x3mwi"]
-[ext_resource type="Texture2D" uid="uid://cigp2jr5utp00" path="res://art/UI/buttonPressed1.png" id="2_rcxaq"]
-[ext_resource type="Texture2D" uid="uid://ulxrnuuhys3c" path="res://art/UI/buttonHover1.png" id="3_l5bpe"]
+[ext_resource type="Texture2D" uid="uid://bhkjx73xqiuhh" path="res://art/UI/button1.png" id="1_0own8"]
+[ext_resource type="Texture2D" uid="uid://cigp2jr5utp00" path="res://art/UI/buttonPressed1.png" id="2_2mgid"]
+[ext_resource type="Texture2D" uid="uid://ulxrnuuhys3c" path="res://art/UI/buttonHover1.png" id="3_cqalq"]
+[ext_resource type="Theme" uid="uid://dwdqkuxyspo32" path="res://Theme.tres" id="4_ps6pd"]
 
 [node name="Level 0" type="TextureButton"]
 offset_right = 192.0
 offset_bottom = 192.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
-texture_normal = ExtResource("1_rh7dd")
-texture_pressed = ExtResource("2_rcxaq")
-texture_hover = ExtResource("3_l5bpe")
+texture_normal = ExtResource("1_0own8")
+texture_pressed = ExtResource("2_2mgid")
+texture_hover = ExtResource("3_cqalq")
 ignore_texture_size = true
 stretch_mode = 0
 
@@ -28,7 +28,7 @@ offset_top = -80.0
 offset_right = 47.0
 grow_horizontal = 2
 grow_vertical = 0
-theme = ExtResource("1_x3mwi")
+theme = ExtResource("4_ps6pd")
 theme_override_font_sizes/font_size = 24
 text = "PB: 0:00"
 horizontal_alignment = 1
@@ -42,7 +42,7 @@ offset_left = -66.0
 offset_right = 66.0
 offset_bottom = 80.0
 grow_horizontal = 2
-theme = ExtResource("1_x3mwi")
+theme = ExtResource("4_ps6pd")
 theme_override_font_sizes/font_size = 35
 text = "Level 0"
 horizontal_alignment = 1

@@ -4,8 +4,8 @@
 [ext_resource type="PackedScene" uid="uid://dyn2qf6aui3uv" path="res://Game_User_Interface/UI_Background.tscn" id="1_3wu08"]
 [ext_resource type="PackedScene" uid="uid://br4jpc6hlpimu" path="res://global_button.tscn" id="3_igvr4"]
 [ext_resource type="SpriteFrames" uid="uid://ci0sfvtne1n1r" path="res://art/2D-Pixel-Art-Character-Template/playerSpriteFrames.tres" id="4_j3igh"]
-[ext_resource type="Theme" uid="uid://dwdqkuxyspo32" path="res://Game_User_Interface/Theme.tres" id="4_n3qb1"]
-[ext_resource type="Texture2D" uid="uid://dserid5i8upoi" path="res://art/hats/jackson.png" id="5_qy5g6"]
+[ext_resource type="Theme" uid="uid://dwdqkuxyspo32" path="res://Theme.tres" id="4_n3qb1"]
+[ext_resource type="Texture2D" uid="uid://dyfvyriuywu3t" path="res://art/hats/jackson.png" id="5_qy5g6"]
 
 [node name="Wardrobe" type="CanvasLayer"]
 script = ExtResource("1_1tqt2")
