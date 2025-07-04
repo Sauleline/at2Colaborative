@@ -1,10 +1,10 @@
 [gd_scene load_steps=9 format=4 uid="uid://cdu7b0q7731gb"]
 
 [ext_resource type="Script" uid="uid://beae411h3ly3q" path="res://Main_Game/2Player/stage_controller.gd" id="1_v8yvg"]
-[ext_resource type="PackedScene" uid="uid://bfsd75ne6drno" path="res://Main_Game/Damage_Tilemap.tscn" id="2_kb3f5"]
+[ext_resource type="PackedScene" uid="uid://bfsd75ne6drno" path="res://Main_Game/stageElements/Damage_Tilemap.tscn" id="2_kb3f5"]
 [ext_resource type="PackedScene" uid="uid://bpfr4nng2lm37" path="res://Main_Game/2Player/player1.tscn" id="2_v8yvg"]
-[ext_resource type="PackedScene" uid="uid://scl3b7ko3tw4" path="res://Main_Game/Terrain_Tilemap.tscn" id="3_a3gg2"]
-[ext_resource type="PackedScene" uid="uid://b8asnrpev842c" path="res://Main_Game/checkpoint.tscn" id="4_eefhg"]
+[ext_resource type="PackedScene" uid="uid://scl3b7ko3tw4" path="res://Main_Game/stageElements/Terrain_Tilemap.tscn" id="3_a3gg2"]
+[ext_resource type="PackedScene" uid="uid://b8asnrpev842c" path="res://Main_Game/stageElements/checkpoint.tscn" id="4_eefhg"]
 [ext_resource type="PackedScene" uid="uid://ba7k7ce0gunl1" path="res://Main_Game/2Player/player2.tscn" id="5_kgcny"]
 [ext_resource type="PackedScene" uid="uid://bsii2bg3dsoji" path="res://Main_Game/pausemenu.tscn" id="6_a3gg2"]
 [ext_resource type="PackedScene" uid="uid://4n7aivnwu15g" path="res://Main_Game/hud.tscn" id="8_kgcny"]
