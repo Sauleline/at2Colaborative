@@ -1,5 +1,7 @@
 extends CanvasLayer
 
+@export var button: PackedScene
+
 func _ready() -> void:
 	var p1 = "Guest"
 	var p2 = "Guest"
@@ -11,9 +13,8 @@ func _ready() -> void:
 	$"Users Logged".text = 'Welcome Back '+ p1 + ' and '+p2
 	
 	var levelCount = 10
-	var scene = preload("res://Game_User_Interface/singlePlayerButton.tscn")
 	for i in range(levelCount):
-		var instance = scene.instantiate()
+		var instance = button.instantiate()
 		instance.pressed.connect(_goToLevel.bind(i))
 		instance.get_children()[1].text = "Level " + str(i+1)
 		$Grid.add_child(instance)

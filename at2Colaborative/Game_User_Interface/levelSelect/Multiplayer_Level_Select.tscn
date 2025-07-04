@@ -1,12 +1,14 @@
-[gd_scene load_steps=5 format=3 uid="uid://ccvjumxyd5f5v"]
+[gd_scene load_steps=6 format=3 uid="uid://ccvjumxyd5f5v"]
 
-[ext_resource type="Script" uid="uid://c1q87p2mq2f3" path="res://Game_User_Interface/multiplayer_level_select.gd" id="1_ajjew"]
+[ext_resource type="Script" uid="uid://c1q87p2mq2f3" path="res://Game_User_Interface/levelSelect/multiplayer_level_select.gd" id="1_ajjew"]
 [ext_resource type="PackedScene" uid="uid://dyn2qf6aui3uv" path="res://Game_User_Interface/UI_Background.tscn" id="1_s3t23"]
+[ext_resource type="PackedScene" uid="uid://cglj7rree4gbi" path="res://Game_User_Interface/levelSelect/gridMenuButton.tscn" id="2_32dk2"]
 [ext_resource type="Theme" uid="uid://dwdqkuxyspo32" path="res://Game_User_Interface/Theme.tres" id="3_32dk2"]
 [ext_resource type="PackedScene" uid="uid://br4jpc6hlpimu" path="res://global_button.tscn" id="4_bn6n3"]
 
 [node name="MultiplayerLevelSelect" type="CanvasLayer"]
 script = ExtResource("1_ajjew")
+button = ExtResource("2_32dk2")
 
 [node name="Background" parent="." instance=ExtResource("1_s3t23")]
 metadata/_edit_lock_ = true

@@ -4,7 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://bfsd75ne6drno" path="res://Main_Game/Damage_Tilemap.tscn" id="2_lpwhg"]
 [ext_resource type="PackedScene" uid="uid://scl3b7ko3tw4" path="res://Main_Game/Terrain_Tilemap.tscn" id="3_8vc5u"]
 [ext_resource type="PackedScene" uid="uid://b8asnrpev842c" path="res://Main_Game/checkpoint.tscn" id="4_m17ff"]
-[ext_resource type="PackedScene" uid="uid://dyjri6mtn6mqa" path="res://Main_Game/player.tscn" id="5_5wj30"]
+[ext_resource type="PackedScene" uid="uid://dyjri6mtn6mqa" path="res://Main_Game/1Player/player.tscn" id="5_5wj30"]
 [ext_resource type="PackedScene" uid="uid://4n7aivnwu15g" path="res://Main_Game/hud.tscn" id="6_n7dx7"]
 [ext_resource type="PackedScene" uid="uid://bsii2bg3dsoji" path="res://Main_Game/pausemenu.tscn" id="7_5bt0p"]
 [ext_resource type="AudioStream" uid="uid://txpb8wgqnmcn" path="res://art/sound/music/Monkeys Spinning Monkeys.mp3" id="8_bepi2"]
