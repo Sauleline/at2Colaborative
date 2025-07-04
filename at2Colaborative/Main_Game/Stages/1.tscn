@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=4 uid="uid://ch5kp8hk8wnwo"]
+[gd_scene load_steps=9 format=4 uid="uid://cdngwliwy3x65"]
 
 [ext_resource type="Script" uid="uid://kj8jfnh4gi6u" path="res://Main_Game/stageController.gd" id="1_5wj30"]
 [ext_resource type="PackedScene" uid="uid://bfsd75ne6drno" path="res://Main_Game/Damage_Tilemap.tscn" id="2_lpwhg"]
@@ -17,7 +17,7 @@ script = ExtResource("1_5wj30")
 [node name="Back" parent="." instance=ExtResource("3_8vc5u")]
 
 [node name="Terrain" parent="." instance=ExtResource("3_8vc5u")]
-tile_map_data = PackedByteArray("AAD+/wUAAQASAAAAAAD//wUAAQATAAAAAAAAAAUAAQATAAAAAAABAAUAAQATAAAAAAACAAUAAQATAAAAAAADAAUAAQATAAAAAAAEAAUAAQAUAAAAAAA=")
+tile_map_data = PackedByteArray("AAD+/wUAAQASAAAAAAD//wUAAQATAAAAAAAAAAUAAQATAAAAAAABAAUAAQATAAAAAAACAAUAAQATAAAAAAADAAUAAQATAAAAAAAEAAUAAQAUAAAAAAAFAAUAAQAWAAAAAAAGAAYAAQAWAAAAAAAHAAcAAQAWAAAAAAAIAAgAAQAWAAAAAAAJAAkAAQAWAAAAAAA=")
 
 [node name="End" parent="." instance=ExtResource("4_m17ff")]
 position = Vector2(-96, 96)
@@ -49,7 +49,6 @@ position = Vector2(32, 96)
 [node name="Music" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("8_bepi2")
 autoplay = true
-bus = &"mus"
 parameters/looping = true
 
 [connection signal="beatStage" from="Player" to="." method="_on_player_beat_stage"]
