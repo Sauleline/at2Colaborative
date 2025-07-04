@@ -168,11 +168,6 @@ func _physics_process(delta):
 		if slide == false and crouchAnimation == false and velocity.x == 0 :
 			crouchAnimation = true
 			$Sprite.play(character+"Crouch")
-	
-
-			
-	
-	
 
 func player_shoot():
 	pass

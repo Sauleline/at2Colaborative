@@ -161,8 +161,6 @@ func _physics_process(delta):
 	elif velocity.x < 0:
 		$Hat.rotation = deg_to_rad(mapRange(abs(velocity.x), 0, 600, 0, 30))
 	
-	
-	
 	if wallSlide:
 		$Sprite.play(character+"WallHold")
 		
