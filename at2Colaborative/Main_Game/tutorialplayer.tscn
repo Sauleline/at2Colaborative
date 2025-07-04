@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://di3cplydq03nc"]
+[gd_scene load_steps=8 format=3 uid="uid://b6y2yitwfmx53"]
 
 [ext_resource type="Script" uid="uid://bb5lyqv8fai8r" path="res://Main_Game/tutorialplayer.gd" id="1_t02tv"]
 [ext_resource type="SpriteFrames" uid="uid://ci0sfvtne1n1r" path="res://art/2D-Pixel-Art-Character-Template/playerSpriteFrames.tres" id="2_mx3j7"]
@@ -14,7 +14,7 @@ size = Vector2(33, 33)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_64xtq"]
 size = Vector2(12, 12)
 
-[node name="Player" type="CharacterBody2D"]
+[node name="Player2" type="CharacterBody2D"]
 scale = Vector2(2, 2)
 script = ExtResource("1_t02tv")
 
