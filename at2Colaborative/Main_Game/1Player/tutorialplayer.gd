@@ -49,8 +49,8 @@ func _physics_process(delta):
 	if slopeSlide == false:
 		velocity.y += gravity * delta
 
-	if Input.is_action_just_pressed("p1punch") and is_on_floor():
-		player_punch()
+	#if Input.is_action_just_pressed("p1punch") and is_on_floor():
+		#player_punch()
 	if Input.is_action_just_pressed("p1shoot"):
 		player_shoot()
 	
@@ -177,10 +177,10 @@ func _physics_process(delta):
 func player_shoot():
 	pass
 
-func player_punch():
-	punching = true
-	$Sprite.play(character+"Punch")
-	$Fist/FistHitbox.disabled = false
+#func player_punch():
+	#punching = true
+	#$Sprite.play(character+"Punch")
+	#$Fist/FistHitbox.disabled = false
 
 func _on_area_2d_area_entered(area: Area2D) -> void:
 	if (area.get_parent().name == "Checkpoints"):
