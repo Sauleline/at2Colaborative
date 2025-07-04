@@ -28,18 +28,30 @@ var crouchAnimation = false
 var checkPointTouch = 0 
 var dJCheckPointTouch = false
 var crouchanimation = false
+var playerNum = 1
 
 func mapRange(x, inMin, inMax, outMin, outMax):
 	return ((x - inMin) * (outMax - outMin) / (inMax - inMin) + outMin)
 
 func _ready():
+	if(name.ends_with("2")):
+		playerNum = 2
 	var hat = "none"
-	if (Global.PlayerOne):
-		var player = Global.PlayerOne
-		hat = player.currentHat
-		$"Level Display".text = player.userName
-	else:
-		$"Level Display".text = "Guest"
+	if playerNum == 1:
+		if (Global.PlayerOne):
+			var player = Global.PlayerOne
+			hat = player.currentHat
+			$"Level Display".text = player.userName
+		else:
+			$"Level Display".text = "Guest"
+	elif playerNum == 2:
+		if (Global.PlayerTwo):
+			var player = Global.PlayerTwo
+			hat = player.currentHat
+			$"Level Display".text = player.userName
+		else:
+			$"Level Display".text = "Guest"
+
 	var hatTexture = "res://art/hats/"+hat+".png"
 	$Hat.texture = load(hatTexture)
 	$Sprite.play(character+'Idle')
@@ -49,12 +61,12 @@ func _physics_process(delta):
 	if slopeSlide == false:
 		velocity.y += gravity * delta
 
-	if Input.is_action_just_pressed("p1punch") and is_on_floor():
+	if Input.is_action_just_pressed(playerNumInput("punch")) and is_on_floor():
 		player_punch()
-	if Input.is_action_just_pressed("p1shoot"):
+	if Input.is_action_just_pressed(playerNumInput("shoot")):
 		player_shoot()
 	
-	var dir = Input.get_axis("p1left", "p1right")
+	var dir = Input.get_axis(playerNumInput("left"), playerNumInput(("right")))
 	if punching:
 		dir = 0
 	if (dir == -1):
@@ -70,13 +82,13 @@ func _physics_process(delta):
 		jumpCount = maxJumps
 		slope = get_floor_normal().y
 	
-	if Input.is_action_just_pressed("p1jump") and (jumpCount > 0) and (wallSlide == false) and not punching:
+	if Input.is_action_just_pressed(playerNumInput("jump")) and (jumpCount > 0) and (wallSlide == false) and not punching:
 		velocity.y = jump_speed
 		jumpCount -= 1
 		$SFX/Jump.play()
 	
 	if (is_on_wall() and not is_on_floor()) and (velocity.y > 0) and wallSlide == false :
-		if Input.is_action_pressed("p1left") or ("p1right"):
+		if Input.is_action_pressed(playerNumInput("left")) or (playerNumInput("right")):
 			wallSlide = true
 			gravity = gravity * 0.5
 			
@@ -86,21 +98,21 @@ func _physics_process(delta):
 		wallSlide = false
 		gravity = gravity * 2
 	
-	if Input.is_action_just_pressed("p1jump") and (wallSlide == true):
+	if Input.is_action_just_pressed(playerNumInput("jump")) and (wallSlide == true):
 		velocity.y = wallJumpSpeed
 		$SFX/Jump.play()
-		if Input.is_action_pressed("p1left"):
+		if Input.is_action_pressed(playerNumInput("left")):
 			velocity.x = wallJumpHorizontal
-		if Input.is_action_pressed("p1right"):
+		if Input.is_action_pressed(playerNumInput("right")):
 			velocity.x = wallJumpHorizontal * -1
 		wallSlide = false
 		gravity = gravity * 2
 		
-	if Input.is_action_pressed("p1slide") and (crouch == false):
+	if Input.is_action_pressed(playerNumInput("slide")) and (crouch == false):
 		gravity = gravity * 2
 		crouch = true
 		
-	if not Input.is_action_pressed("p1slide") and (crouch == true):
+	if not Input.is_action_pressed(playerNumInput("slide")) and (crouch == true):
 		gravity = gravity * 0.5
 		crouch = false
 		crouchAnimation = false
@@ -166,18 +178,14 @@ func _physics_process(delta):
 			crouchAnimation = true
 			$Sprite.play(character+"Crouch")
 	
-
-			
-	
-	
-
 func player_shoot():
 	pass
 
 func player_punch():
-	punching = true
-	$Sprite.play(character+"Punch")
-	$Fist/FistHitbox.disabled = false
+	pass
+	#punching = true
+	#$Sprite.play(character+"Punch")
+	#$Fist/FistHitbox.disabled = false
 
 func _on_area_2d_area_entered(area: Area2D) -> void:
 	if (area.get_parent().name == "Checkpoints"):
@@ -194,3 +202,7 @@ func _on_sprite_animation_finished() -> void:
 	if $Sprite.animation == character+"Punch":
 		punching = false
 		$Fist/FistHitbox.disabled = true
+
+func playerNumInput(cmd: String):
+	return "p"+str(playerNum)+cmd
+	

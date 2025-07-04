@@ -1,6 +1,6 @@
 [gd_scene load_steps=8 format=3 uid="uid://bpfr4nng2lm37"]
 
-[ext_resource type="Script" uid="uid://cqd651c8au83v" path="res://Main_Game/2Player/player1.gd" id="1_h0030"]
+[ext_resource type="Script" uid="uid://djv7jm31e5am5" path="res://Main_Game/player.gd" id="1_h0030"]
 [ext_resource type="SpriteFrames" uid="uid://ci0sfvtne1n1r" path="res://art/2D-Pixel-Art-Character-Template/playerSpriteFrames.tres" id="2_g6ucm"]
 [ext_resource type="Texture2D" uid="uid://cplsh584tss2q" path="res://art/hats/joel.png" id="3_h0030"]
 [ext_resource type="AudioStream" uid="uid://dlccqkfe65a6p" path="res://art/sound/sfx/jump.wav" id="12_0nq3h"]
