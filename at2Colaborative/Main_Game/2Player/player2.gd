@@ -30,7 +30,6 @@ func mapRange(x, inMin, inMax, outMin, outMax):
 	return ((x - inMin) * (outMax - outMin) / (inMax - inMin) + outMin)
 
 func _ready():
-	
 	var hat = "none"
 	if (Global.PlayerTwo):
 		var player = Global.PlayerTwo

@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=4 uid="uid://dvkaea1di4ngo"]
+[gd_scene load_steps=10 format=4 uid="uid://dvkaea1di4ngo"]
 
 [ext_resource type="Script" uid="uid://kj8jfnh4gi6u" path="res://Main_Game/stageController.gd" id="1_87jwh"]
 [ext_resource type="PackedScene" uid="uid://bfsd75ne6drno" path="res://Main_Game/Damage_Tilemap.tscn" id="3_mnflg"]
@@ -9,9 +9,6 @@
 [ext_resource type="PackedScene" uid="uid://4n7aivnwu15g" path="res://Main_Game/hud.tscn" id="8_60qsc"]
 [ext_resource type="PackedScene" uid="uid://bsii2bg3dsoji" path="res://Main_Game/pausemenu.tscn" id="8_mnflg"]
 [ext_resource type="AudioStream" uid="uid://txpb8wgqnmcn" path="res://art/sound/music/Monkeys Spinning Monkeys.mp3" id="9_mnflg"]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_2p5ui"]
-size = Vector2(64, 64)
 
 [node name="Tutorial" type="Node"]
 script = ExtResource("1_87jwh")
@@ -125,22 +122,8 @@ theme_override_font_sizes/font_size = 16
 text = "This lagoon cost 70k"
 horizontal_alignment = 1
 
-[node name="Hat Pickup" type="Area2D" parent="."]
-position = Vector2(-1696, -144)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Hat Pickup"]
-position = Vector2(0, 48)
-shape = SubResource("RectangleShape2D_2p5ui")
-
-[node name="Nothing Here" type="Label" parent="Hat Pickup"]
-offset_left = -112.0
-offset_top = -64.0
-offset_right = 112.0
-offset_bottom = -15.0
-text = "Did you really expect there
-to be something here?"
-horizontal_alignment = 1
-vertical_alignment = 1
+[node name="End" parent="." instance=ExtResource("6_jreen")]
+position = Vector2(-288, -2048)
 
 [node name="Checkpoints" type="Node" parent="."]
 
@@ -152,9 +135,6 @@ position = Vector2(-1344, -704)
 
 [node name="2" parent="Checkpoints" instance=ExtResource("6_jreen")]
 position = Vector2(-1968, -1504)
-
-[node name="End" parent="Checkpoints" instance=ExtResource("6_jreen")]
-position = Vector2(-288, -2048)
 
 [node name="Player" parent="." instance=ExtResource("6_mnflg")]
 
@@ -179,6 +159,7 @@ tile_map_data = PackedByteArray("AAAPAAQAAQABAAYAAAAeAAMAAQAEAAcAAAAxAP3/AQAGAAc
 [node name="Music" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("9_mnflg")
 autoplay = true
+bus = &"mus"
 parameters/looping = true
 
 [connection signal="beatStage" from="Player" to="." method="_on_player_beat_stage"]
