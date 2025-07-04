@@ -1,7 +1,7 @@
 [gd_scene load_steps=8 format=3 uid="uid://dyjri6mtn6mqa"]
 
 [ext_resource type="Script" uid="uid://djv7jm31e5am5" path="res://Main_Game/1Player/player.gd" id="1_g6ucm"]
-[ext_resource type="SpriteFrames" uid="uid://ci0sfvtne1n1r" path="res://art/2D-Pixel-Art-Character-Template/playerSpriteFrames.tres" id="2_g6ucm"]
+[ext_resource type="SpriteFrames" uid="uid://ci0sfvtne1n1r" path="res://art/sprites/playerSpriteFrames.tres" id="2_g6ucm"]
 [ext_resource type="Texture2D" uid="uid://cucn4srbjesxg" path="res://art/hats/icon.png" id="3_5e17s"]
 [ext_resource type="AudioStream" uid="uid://dlccqkfe65a6p" path="res://art/sound/sfx/jump.wav" id="12_0nq3h"]
 
