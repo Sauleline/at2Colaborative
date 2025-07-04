@@ -24,14 +24,13 @@ func _ready():
 	populate_user_list()
 	returningUser()
 
-	
 func returningUser():
 	if globalSaveFile.PlayerOne is not bool:
 		PlayerOne = open_user(globalSaveFile.PlayerOne.userName)
 		OptionUserSelect.set_item_disabled(PlayerOne.buttonIndex, true)
 		PlayerOneLabel.text = PlayerOne.userName
 		OptionUserSelect.select(0)
-	
+
 	if globalSaveFile.PlayerTwo is not bool:
 		PlayerTwo = open_user(globalSaveFile.PlayerTwo)
 		OptionUserSelect.set_item_disabled(PlayerTwo.buttonIndex, true)
