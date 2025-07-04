@@ -49,7 +49,7 @@ visible = false
 position = Vector2(-128, 96)
 
 [node name="Player1Spawn" type="Marker2D" parent="."]
-position = Vector2(-112, 0)
+position = Vector2(-128, 96)
 
 [node name="Score Timer" type="Timer" parent="."]
 
