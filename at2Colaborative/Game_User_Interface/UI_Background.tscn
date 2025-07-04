@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://dyn2qf6aui3uv"]
 
-[ext_resource type="Shader" uid="uid://c0xbt0jdme1rs" path="res://main.gdshader" id="1_v1baa"]
+[ext_resource type="Shader" uid="uid://c0xbt0jdme1rs" path="res://balatro.gdshader" id="1_v1baa"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_cpmu6"]
 shader = ExtResource("1_v1baa")

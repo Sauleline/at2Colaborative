@@ -1,5 +1,7 @@
 extends CanvasLayer
 
+@export var button: PackedScene
+
 func _ready() -> void:
 	var p1 = "Guest"
 	AccessUsers.returningUsers()
@@ -8,9 +10,8 @@ func _ready() -> void:
 	$"Users Logged".text = 'Welcome Back '+ p1
 	
 	var levelCount = 10
-	var scene = preload("res://Game_User_Interface/singlePlayerButton.tscn")
 	for i in range(levelCount):
-		var instance = scene.instantiate()
+		var instance = button.instantiate()
 		instance.pressed.connect(_goToLevel.bind(i))
 		instance.mouse_entered.connect(_populateLeaderboard.bind(i))
 		instance.get_children()[1].text = "Level " + str(i)
@@ -32,7 +33,7 @@ var _populateLeaderboard = func populateLeaderboard(level: int):
 		$Leaderboard/vertContainer.add_child(insertLabel)
 
 var _goToLevel = func goToLevel(level: int):
-	get_tree().change_scene_to_file("res://Main_Game/Stages/"+str(level)+".tscn")
+	get_tree().change_scene_to_file("res://Main_Game/1Player/Stages/"+str(level)+".tscn")
 
 func _on_back_pressed() -> void:
 	get_tree().change_scene_to_file("res://Game_User_Interface/Title_Screen.tscn")

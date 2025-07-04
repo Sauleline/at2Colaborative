@@ -1,12 +1,14 @@
-[gd_scene load_steps=5 format=3 uid="uid://d24sjpjxm4pxl"]
+[gd_scene load_steps=6 format=3 uid="uid://d24sjpjxm4pxl"]
 
-[ext_resource type="Script" uid="uid://dw2vfnm8rkagw" path="res://Game_User_Interface/single_player_level_select.gd" id="1_ndrbo"]
-[ext_resource type="Theme" uid="uid://dwdqkuxyspo32" path="res://Game_User_Interface/Theme.tres" id="2_b4mwh"]
+[ext_resource type="Script" uid="uid://dw2vfnm8rkagw" path="res://Game_User_Interface/levelSelect/single_player_level_select.gd" id="1_ndrbo"]
+[ext_resource type="PackedScene" uid="uid://cglj7rree4gbi" path="res://Game_User_Interface/levelSelect/gridMenuButton.tscn" id="2_7jrfi"]
+[ext_resource type="Theme" uid="uid://dwdqkuxyspo32" path="res://Theme.tres" id="2_b4mwh"]
 [ext_resource type="PackedScene" uid="uid://dyn2qf6aui3uv" path="res://Game_User_Interface/UI_Background.tscn" id="2_boqba"]
 [ext_resource type="PackedScene" uid="uid://br4jpc6hlpimu" path="res://global_button.tscn" id="4_boqba"]
 
 [node name="SinglePlayerLevelSelect" type="CanvasLayer"]
 script = ExtResource("1_ndrbo")
+button = ExtResource("2_7jrfi")
 
 [node name="Background" parent="." instance=ExtResource("2_boqba")]
 metadata/_edit_use_anchors_ = true
