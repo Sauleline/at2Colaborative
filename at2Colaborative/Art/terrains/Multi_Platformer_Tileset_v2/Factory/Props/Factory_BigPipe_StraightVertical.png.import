@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cyrxydp3a0jtj"
-path="res://.godot/imported/Factory_BigPipe_StraightVertical.png-e4535ea62ae58d3ec0ba7b0d8d928535.ctex"
+path="res://.godot/imported/Factory_BigPipe_StraightVertical.png-eb06928855139329fe53a3c5184a435a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://art/terrains/Multi_Platformer_Tileset_v2/Factory/Props/Factory_BigPipe_StraightVertical.png"
-dest_files=["res://.godot/imported/Factory_BigPipe_StraightVertical.png-e4535ea62ae58d3ec0ba7b0d8d928535.ctex"]
+source_file="res://Art/terrains/Multi_Platformer_Tileset_v2/Factory/Props/Factory_BigPipe_StraightVertical.png"
+dest_files=["res://.godot/imported/Factory_BigPipe_StraightVertical.png-eb06928855139329fe53a3c5184a435a.ctex"]
 
 [params]
 

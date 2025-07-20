@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://dcgxx33j2yye1" path="res://User_Profile_L/user_profile_create.gd" id="1_n7lnn"]
 [ext_resource type="PackedScene" uid="uid://dyn2qf6aui3uv" path="res://Game_User_Interface/UI_Background.tscn" id="2_o6pgg"]
-[ext_resource type="PackedScene" uid="uid://br4jpc6hlpimu" path="res://art/UI/global_button.tscn" id="3_bwmfq"]
+[ext_resource type="PackedScene" uid="uid://br4jpc6hlpimu" path="res://Art/UI/global_button.tscn" id="3_bwmfq"]
 [ext_resource type="Theme" uid="uid://dwdqkuxyspo32" path="res://Theme.tres" id="3_o6pgg"]
 
 [node name="UserCreate" type="CanvasLayer"]

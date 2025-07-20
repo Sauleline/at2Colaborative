@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://botrvv60ti6x7"
-path="res://.godot/imported/Cave_JewelFloor_Big.png-c2bece91d28d551aa47f707bb0513642.ctex"
+path="res://.godot/imported/Cave_JewelFloor_Big.png-73b6da084151d775979fab09c8eb1abb.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://art/terrains/Multi_Platformer_Tileset_v2/Cave/Props/Cave_JewelFloor_Big.png"
-dest_files=["res://.godot/imported/Cave_JewelFloor_Big.png-c2bece91d28d551aa47f707bb0513642.ctex"]
+source_file="res://Art/terrains/Multi_Platformer_Tileset_v2/Cave/Props/Cave_JewelFloor_Big.png"
+dest_files=["res://.godot/imported/Cave_JewelFloor_Big.png-73b6da084151d775979fab09c8eb1abb.ctex"]
 
 [params]
 
