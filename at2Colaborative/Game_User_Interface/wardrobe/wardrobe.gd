@@ -1,12 +1,14 @@
 extends CanvasLayer
 
-var p1 = "Guest"
+var p1 = User.new()
 var hatButtonGroup = ButtonGroup.new()
 
 func _ready():
 	AccessUsers.returningUsers()
 	if(Global.PlayerOne):
 		p1 = Global.PlayerOne
+	else:
+		p1.userName = "Guest"
 	$"Users Logged".text = 'Welcome Back '+ p1.userName
 	var hatTexture = "res://art/hats/"+p1.currentHat+".png"
 	$PlayerDisp/Hat.texture = load(hatTexture)
@@ -30,7 +32,7 @@ func _ready():
 func _on_back_pressed() -> void:
 	if(Global.PlayerOne):
 		p1 = AccessUsers.open_user(Global.PlayerOne.userName)
-		p1.colour = $ColorPicker.color
+		p1.colour = $ColorPicker.colo
 		p1.currentHat = hatButtonGroup.get_pressed_button().name.lstrip("&")
 		AccessUsers.save_user(p1)
 	get_tree().change_scene_to_file("res://Game_User_Interface/Title_Screen.tscn")
