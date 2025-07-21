@@ -32,7 +32,7 @@ func _ready():
 func _on_back_pressed() -> void:
 	if(Global.PlayerOne):
 		p1 = AccessUsers.open_user(Global.PlayerOne.userName)
-		p1.colour = $ColorPicker.colo
+		p1.colour = $ColorPicker.color
 		p1.currentHat = hatButtonGroup.get_pressed_button().name.lstrip("&")
 		AccessUsers.save_user(p1)
 	get_tree().change_scene_to_file("res://Game_User_Interface/Title_Screen.tscn")
