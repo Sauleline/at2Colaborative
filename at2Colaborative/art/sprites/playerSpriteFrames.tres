@@ -1,14 +1,13 @@
-[gd_resource type="SpriteFrames" load_steps=75 format=3 uid="uid://ci0sfvtne1n1r"]
+[gd_resource type="SpriteFrames" load_steps=68 format=3 uid="uid://ci0sfvtne1n1r"]
 
-[ext_resource type="Texture2D" uid="uid://cmacfr6tslg4b" path="res://art/sprites/2D-Pixel-Art-Character-Template/Crouch-Idle/Player Crouch-Idle 48x48.png" id="1_dw4tq"]
-[ext_resource type="Texture2D" uid="uid://ooio15lyb6av" path="res://art/sprites/2D-Pixel-Art-Character-Template/Idle/Player Idle 48x48.png" id="1_tp5l0"]
-[ext_resource type="Texture2D" uid="uid://chqfe4igsvpin" path="res://art/sprites/2D-Pixel-Art-Character-Template/Jump/player new jump 48x48.png" id="2_dw4tq"]
-[ext_resource type="Texture2D" uid="uid://cxj1hkpio8rbn" path="res://art/sprites/2D-Pixel-Art-Character-Template/Punch Jab/Player Jab 48x48.png" id="3_538re"]
-[ext_resource type="Texture2D" uid="uid://dlxdbngg8w0f0" path="res://art/sprites/2D-Pixel-Art-Character-Template/Run/player run 48x48.png" id="4_3ei7d"]
-[ext_resource type="Texture2D" uid="uid://ci8qben614uev" path="res://art/sprites/2D-Pixel-Art-Character-Template/Slide/Player Slide 48x48.png" id="5_hkhgr"]
-[ext_resource type="Texture2D" uid="uid://6w0egu6q3uel" path="res://art/sprites/2D-Pixel-Art-Character-Template/Walk/PlayerWalk 48x48.png" id="6_7ipuy"]
-[ext_resource type="Texture2D" uid="uid://bus4am4ylnmej" path="res://art/sprites/2D-Pixel-Art-Character-Template/Roll/Player Roll 48x48.png" id="6_538re"]
-[ext_resource type="Texture2D" uid="uid://d11nr5crh8ic4" path="res://art/sprites/2D-Pixel-Art-Character-Template/Wall Land/player wall land 48x48.png" id="7_2jc51"]
+[ext_resource type="Texture2D" uid="uid://bubgokyey8a0t" path="res://art/sprites/2D-Pixel-Art-Character-Template/Crouch-Idle/Player Crouch-Idle 48x48.png" id="1_dw4tq"]
+[ext_resource type="Texture2D" uid="uid://df0lhppkavin5" path="res://art/sprites/2D-Pixel-Art-Character-Template/Idle/Player Idle 48x48.png" id="1_tp5l0"]
+[ext_resource type="Texture2D" uid="uid://bbt8qeu6gax0b" path="res://art/sprites/2D-Pixel-Art-Character-Template/Jump/player new jump 48x48.png" id="2_dw4tq"]
+[ext_resource type="Texture2D" uid="uid://bhroaqbhmrv61" path="res://art/sprites/2D-Pixel-Art-Character-Template/Run/player run 48x48.png" id="4_3ei7d"]
+[ext_resource type="Texture2D" uid="uid://c7ei16chbmqad" path="res://art/sprites/2D-Pixel-Art-Character-Template/Slide/Player Slide 48x48.png" id="5_hkhgr"]
+[ext_resource type="Texture2D" uid="uid://wpgh741te55x" path="res://art/sprites/2D-Pixel-Art-Character-Template/Walk/PlayerWalk 48x48.png" id="6_7ipuy"]
+[ext_resource type="Texture2D" uid="uid://4b38prufek6t" path="res://art/sprites/2D-Pixel-Art-Character-Template/Roll/Player Roll 48x48.png" id="6_538re"]
+[ext_resource type="Texture2D" uid="uid://cblimv233rjsb" path="res://art/sprites/2D-Pixel-Art-Character-Template/Wall Land/player wall land 48x48.png" id="7_2jc51"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_538re"]
 atlas = ExtResource("1_dw4tq")
@@ -113,30 +112,6 @@ region = Rect2(192, 0, 48, 48)
 [sub_resource type="AtlasTexture" id="AtlasTexture_ok8sj"]
 atlas = ExtResource("2_dw4tq")
 region = Rect2(240, 0, 48, 48)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_k7wyw"]
-atlas = ExtResource("3_538re")
-region = Rect2(0, 0, 48, 48)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_qlhri"]
-atlas = ExtResource("3_538re")
-region = Rect2(48, 0, 48, 48)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_e101w"]
-atlas = ExtResource("3_538re")
-region = Rect2(96, 0, 48, 48)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_ddg38"]
-atlas = ExtResource("3_538re")
-region = Rect2(144, 0, 48, 48)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_xvyc8"]
-atlas = ExtResource("3_538re")
-region = Rect2(240, 0, 48, 48)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_p0i0x"]
-atlas = ExtResource("3_538re")
-region = Rect2(288, 0, 48, 48)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_0rm3q"]
 atlas = ExtResource("6_538re")
@@ -304,7 +279,7 @@ animations = [{
 "texture": SubResource("AtlasTexture_mqcv6")
 }],
 "loop": true,
-"name": &"steveCrouch",
+"name": &"Crouch",
 "speed": 10.0
 }, {
 "frames": [{
@@ -339,7 +314,7 @@ animations = [{
 "texture": SubResource("AtlasTexture_o4gg4")
 }],
 "loop": true,
-"name": &"steveIdle",
+"name": &"Idle",
 "speed": 10.0
 }, {
 "frames": [{
@@ -362,30 +337,7 @@ animations = [{
 "texture": SubResource("AtlasTexture_ok8sj")
 }],
 "loop": false,
-"name": &"steveJump",
-"speed": 10.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_k7wyw")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_qlhri")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_e101w")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_ddg38")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_xvyc8")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_p0i0x")
-}],
-"loop": false,
-"name": &"stevePunch",
+"name": &"Jump",
 "speed": 10.0
 }, {
 "frames": [{
@@ -402,7 +354,7 @@ animations = [{
 "texture": SubResource("AtlasTexture_drhyb")
 }],
 "loop": true,
-"name": &"steveRoll",
+"name": &"Roll",
 "speed": 10.0
 }, {
 "frames": [{
@@ -431,7 +383,7 @@ animations = [{
 "texture": SubResource("AtlasTexture_71p5n")
 }],
 "loop": true,
-"name": &"steveRun",
+"name": &"Run",
 "speed": 10.0
 }, {
 "frames": [{
@@ -460,7 +412,7 @@ animations = [{
 "texture": SubResource("AtlasTexture_02uos")
 }],
 "loop": true,
-"name": &"steveSlide",
+"name": &"Slide",
 "speed": 10.0
 }, {
 "frames": [{
@@ -489,7 +441,7 @@ animations = [{
 "texture": SubResource("AtlasTexture_bago8")
 }],
 "loop": true,
-"name": &"steveWalk",
+"name": &"Walk",
 "speed": 10.0
 }, {
 "frames": [{
@@ -509,6 +461,6 @@ animations = [{
 "texture": SubResource("AtlasTexture_of1w2")
 }],
 "loop": false,
-"name": &"steveWallHold",
+"name": &"WallHold",
 "speed": 10.0
 }]

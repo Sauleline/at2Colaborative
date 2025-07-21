@@ -1,6 +1,7 @@
 extends CanvasLayer
 
 var p1 = "Guest"
+var hatButtonGroup = ButtonGroup.new()
 
 func _ready():
 	AccessUsers.returningUsers()
@@ -9,7 +10,9 @@ func _ready():
 	$"Users Logged".text = 'Welcome Back '+ p1.userName
 	var hatTexture = "res://art/hats/"+p1.currentHat+".png"
 	$PlayerDisp/Hat.texture = load(hatTexture)
-	var hatButtonGroup = ButtonGroup.new()
+	$PlayerDisp.self_modulate = p1.colour
+	$ColorPicker.color = p1.colour
+	hatButtonGroup.allow_unpress = false
 	for i in p1.userHats:
 		hatTexture = "res://art/hats/"+i+".png"
 		var hatButton = Button.new()
@@ -19,11 +22,23 @@ func _ready():
 		hatButton.button_group = hatButtonGroup
 		$Hats.add_child(hatButton)
 	hatButtonGroup.pressed.connect(_hatButtonPressed)
-		
+	for i in hatButtonGroup.get_buttons():
+		if i.name == p1.currentHat:
+			i.set_pressed_no_signal(true)
+
+
 func _on_back_pressed() -> void:
+	if(Global.PlayerOne):
+		p1 = AccessUsers.open_user(Global.PlayerOne.userName)
+		print(p1)
+		p1.colour = $ColorPicker.color
+		p1.currentHat = hatButtonGroup.get_pressed_button().name.lstrip("&")
+		AccessUsers.save_user(p1)
 	get_tree().change_scene_to_file("res://Game_User_Interface/Title_Screen.tscn")
 
 var _hatButtonPressed = func hatButtonPressed(pressedButton: BaseButton):
 	var hatTexture = "res://art/hats/"+pressedButton.name+".png"
 	$PlayerDisp/Hat.texture = load(hatTexture)
-	
+
+func _on_color_picker_color_changed(color: Color) -> void:
+	$PlayerDisp.self_modulate = color

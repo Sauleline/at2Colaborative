@@ -1,9 +1,9 @@
 [gd_scene load_steps=8 format=3 uid="uid://dyjri6mtn6mqa"]
 
 [ext_resource type="Script" uid="uid://djv7jm31e5am5" path="res://Main_Game/1Player/player.gd" id="1_g6ucm"]
-[ext_resource type="SpriteFrames" uid="uid://ci0sfvtne1n1r" path="res://Art/sprites/playerSpriteFrames.tres" id="2_g6ucm"]
-[ext_resource type="Texture2D" uid="uid://veyxs8g7nax7" path="res://art/hats/icon.png" id="3_5e17s"]
-[ext_resource type="AudioStream" uid="uid://dlccqkfe65a6p" path="res://Art/sound/sfx/jump.wav" id="12_0nq3h"]
+[ext_resource type="SpriteFrames" uid="uid://ci0sfvtne1n1r" path="res://art/sprites/playerSpriteFrames.tres" id="2_g6ucm"]
+[ext_resource type="Texture2D" uid="uid://cucn4srbjesxg" path="res://art/hats/icon.png" id="3_5e17s"]
+[ext_resource type="AudioStream" uid="uid://dlccqkfe65a6p" path="res://art/sound/sfx/jump.wav" id="12_0nq3h"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_gragq"]
 size = Vector2(106.667, 106.667)
@@ -21,7 +21,7 @@ script = ExtResource("1_g6ucm")
 [node name="Sprite" type="AnimatedSprite2D" parent="."]
 position = Vector2(4.76837e-07, 4.76837e-07)
 sprite_frames = ExtResource("2_g6ucm")
-animation = &"steveIdle"
+animation = &"WallHold"
 
 [node name="Level Display" type="Label" parent="."]
 offset_left = -64.0
@@ -38,17 +38,20 @@ vertical_alignment = 2
 autowrap_mode = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
 position = Vector2(2.38419e-07, 2.38419e-07)
 scale = Vector2(0.3, 0.3)
 shape = SubResource("RectangleShape2D_gragq")
 
 [node name="Hitbox" type="Area2D" parent="."]
+visible = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Hitbox"]
 shape = SubResource("RectangleShape2D_boqdv")
 debug_color = Color(0.699314, 0.277037, 1, 0.42)
 
 [node name="Fist" type="Area2D" parent="."]
+visible = false
 
 [node name="FistHitbox" type="CollisionShape2D" parent="Fist"]
 position = Vector2(16, 0)
