@@ -30,7 +30,6 @@ func _ready():
 func _on_back_pressed() -> void:
 	if(Global.PlayerOne):
 		p1 = AccessUsers.open_user(Global.PlayerOne.userName)
-		print(p1)
 		p1.colour = $ColorPicker.color
 		p1.currentHat = hatButtonGroup.get_pressed_button().name.lstrip("&")
 		AccessUsers.save_user(p1)
