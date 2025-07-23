@@ -192,8 +192,3 @@ func _on_area_2d_area_entered(area: Area2D) -> void:
 func _on_area_2d_body_entered(body: Node2D) -> void:
 	if(body.name == "Damage"):
 		emit_signal("respawn")
-
-func _on_sprite_animation_finished() -> void:
-	if $Sprite.animation == character+"Punch":
-		punching = false
-		$Fist/FistHitbox.disabled = true

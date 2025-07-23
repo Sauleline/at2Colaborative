@@ -201,11 +201,6 @@ func _on_area_2d_body_entered(body: Node2D) -> void:
 	if(body.name == "Damage"):
 		emit_signal("respawn")
 
-func _on_Sprite_animation_finished() -> void:
-	if $Sprite.animation == character+"Punch":
-		punching = false
-		$Fist/FistHitbox.disabled = true
-
 func playerNumInput(cmd: String):
 	return "p"+str(playerNum)+cmd
 	
