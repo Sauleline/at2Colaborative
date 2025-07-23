@@ -1,11 +1,9 @@
-[gd_scene load_steps=9 format=3 uid="uid://bd7sfwiwehvqn"]
+[gd_scene load_steps=7 format=3 uid="uid://bd7sfwiwehvqn"]
 
 [ext_resource type="Script" uid="uid://ceptjivr6wceq" path="res://Game_User_Interface/wardrobe/wardrobe.gd" id="1_1tqt2"]
 [ext_resource type="PackedScene" uid="uid://dyn2qf6aui3uv" path="res://Game_User_Interface/UI_Background.tscn" id="1_3wu08"]
 [ext_resource type="PackedScene" uid="uid://br4jpc6hlpimu" path="res://art/UI/global_button.tscn" id="3_igvr4"]
-[ext_resource type="SpriteFrames" uid="uid://ci0sfvtne1n1r" path="res://art/sprites/playerSpriteFrames.tres" id="4_j3igh"]
 [ext_resource type="Theme" uid="uid://dwdqkuxyspo32" path="res://Theme.tres" id="4_n3qb1"]
-[ext_resource type="Texture2D" uid="uid://dyfvyriuywu3t" path="res://art/hats/jackson.png" id="5_qy5g6"]
 
 [sub_resource type="SystemFont" id="SystemFont_igvr4"]
 font_names = PackedStringArray("Comic Sans MS")
@@ -63,21 +61,6 @@ picker_shape = 2
 can_add_swatches = false
 sampler_visible = false
 presets_visible = false
-
-[node name="PlayerDisp" type="AnimatedSprite2D" parent="."]
-position = Vector2(576, 368)
-scale = Vector2(4.66667, 4.66667)
-sprite_frames = ExtResource("4_j3igh")
-animation = &"Idle"
-autoplay = "Idle"
-frame_progress = 0.70241
-flip_h = true
-
-[node name="Hat" type="Sprite2D" parent="PlayerDisp"]
-position = Vector2(0, -16)
-scale = Vector2(0.25, 0.25)
-texture = ExtResource("5_qy5g6")
-offset = Vector2(0, -16)
 
 [connection signal="pressed" from="Back" to="." method="_on_back_pressed"]
 [connection signal="color_changed" from="ColorPicker" to="." method="_on_color_picker_color_changed"]
