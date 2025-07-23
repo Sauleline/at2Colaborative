@@ -29,6 +29,7 @@ var checkPointTouch = 0
 var dJCheckPointTouch = false
 var crouchanimation = false
 var playerNum = 1
+@onready var front_raycast = $Col_det
 
 func mapRange(x, inMin, inMax, outMin, outMax):
 	return ((x - inMin) * (outMax - outMin) / (inMax - inMin) + outMin)
@@ -129,9 +130,12 @@ func _physics_process(delta):
 		slideAnimation = false
 		
 	if slide == true and slope != -1:
-		slopeSlide = true 
-		velocity.x = velocity.x * 1.2
-		velocity.y = velocity.x
+		front_raycast.force_raycast_update()
+		if not front_raycast.is_colliding():
+			print(velocity.y)
+			slopeSlide = true 
+			velocity.x = velocity.x * 1.2
+			velocity.y = velocity.x
 		
 	if slopeSlide == true and (slope == -1 or not is_on_floor() or velocity.x == 0):
 		slopeSlide = false
