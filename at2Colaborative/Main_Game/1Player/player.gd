@@ -43,6 +43,7 @@ func _ready():
 			var player = Global.PlayerOne
 			hat = player.currentHat
 			$"Level Display".text = player.userName
+			$Sprite.self_modulate = player.colour
 		else:
 			$"Level Display".text = "Guest"
 	elif playerNum == 2:
@@ -50,12 +51,12 @@ func _ready():
 			var player = Global.PlayerTwo
 			hat = player.currentHat
 			$"Level Display".text = player.userName
+			$Sprite.self_modulate = player.colour
 		else:
 			$"Level Display".text = "Guest"
-
 	var hatTexture = "res://art/hats/"+hat+".png"
 	$Hat.texture = load(hatTexture)
-	$Sprite.play(character+'Idle')
+	$sprite.play('Idle')
 
 func _physics_process(delta):
 	move_and_slide()
@@ -143,21 +144,21 @@ func _physics_process(delta):
 	if dir != 0 and (slide == false):
 		if is_on_floor():
 			if slideAnimation == false:
-				$Sprite.play(character+'Run')
+				$sprite.play('Run')
 		else:
 			if slideAnimation == false:
-				$Sprite.play(character+"Jump")
+				$sprite.play("Jump")
 		velocity.x = lerp(velocity.x, dir * speed, acceleration)
 	else:
 		if is_on_floor() and not punching:
 			if velocity.x != 0:
 				if slideAnimation == false:
-					$Sprite.play(character+"Walk")
+					$sprite.play("Walk")
 			else:
 				if slideAnimation == false and crouchAnimation == false:
-					$Sprite.play(character+"Idle")
+					$sprite.play("Idle")
 		else:
-			$Sprite.play(character+"Jump")
+			$sprite.play("Jump")
 		velocity.x = lerp(velocity.x, 0.0, friction)
 
 	if velocity.x > 0:
@@ -166,19 +167,19 @@ func _physics_process(delta):
 		$Hat.rotation = deg_to_rad(mapRange(abs(velocity.x), 0, 600, 0, 30))
 	
 	if wallSlide:
-		$Sprite.play(character+"WallHold")
+		$sprite.play("WallHold")
 		
 	if crouch:
 		if slide == true:
 			counter += 1
 		if slide == true and slideAnimation == false and (counter <= 20):
-			$Sprite.play(character+"Roll")
+			$sprite.play("Roll")
 			slideAnimation = true
 		if slide == true and slideAnimation == true and (counter  > 20):
-			$Sprite.play(character+"Slide")
+			$sprite.play("Slide")
 		if slide == false and crouchAnimation == false and velocity.x == 0 :
 			crouchAnimation = true
-			$Sprite.play(character+"Crouch")
+			$sprite.play("Crouch")
 	
 func player_shoot():
 	pass
@@ -186,7 +187,7 @@ func player_shoot():
 func player_punch():
 	pass
 	#punching = true
-	#$Sprite.play(character+"Punch")
+	#$sprite.play("Punch")
 	#$Fist/FistHitbox.disabled = false
 
 func _on_area_2d_area_entered(area: Area2D) -> void:

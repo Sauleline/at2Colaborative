@@ -34,15 +34,18 @@ func mapRange(x, inMin, inMax, outMin, outMax):
 
 func _ready():
 	var hat = "none"
+	var colour = Color(1,1,1)
 	if (Global.PlayerOne):
 		var player = Global.PlayerOne
 		hat = player.currentHat
+		colour = player.colour
 		$"Level Display".text = player.userName
 	else:
 		$"Level Display".text = "Guest"
 	var hatTexture = "res://art/hats/"+hat+".png"
 	$Hat.texture = load(hatTexture)
-	$Sprite.play(character+'Idle')
+	$Sprite.self_modulate = colour
+	$Sprite.play('Idle')
 
 func _physics_process(delta):
 	move_and_slide()
@@ -130,21 +133,21 @@ func _physics_process(delta):
 	if dir != 0 and (slide == false):
 		if is_on_floor():
 			if slideAnimation == false:
-				$Sprite.play(character+'Run')
+				$Sprite.play('Run')
 		else:
 			if slideAnimation == false:
-				$Sprite.play(character+"Jump")
+				$Sprite.play("Jump")
 		velocity.x = lerp(velocity.x, dir * speed, acceleration)
 	else:
 		if is_on_floor() and not punching:
 			if velocity.x != 0:
 				if slideAnimation == false:
-					$Sprite.play(character+"Walk")
+					$Sprite.play("Walk")
 			else:
 				if slideAnimation == false and crouchAnimation == false:
-					$Sprite.play(character+"Idle")
+					$Sprite.play("Idle")
 		else:
-			$Sprite.play(character+"Jump")
+			$Sprite.play("Jump")
 		velocity.x = lerp(velocity.x, 0.0, friction)
 
 	if velocity.x > 0:
@@ -155,26 +158,26 @@ func _physics_process(delta):
 	
 	
 	if wallSlide:
-		$Sprite.play(character+"WallHold")
+		$Sprite.play("WallHold")
 		
 	if crouch:
 		if slide == true:
 			counter += 1
 		if slide == true and slideAnimation == false and (counter <= 20):
-			$Sprite.play(character+"Roll")
+			$Sprite.play("Roll")
 			slideAnimation = true
 		if slide == true and slideAnimation == true and (counter  > 20):
-			$Sprite.play(character+"Slide")
+			$Sprite.play("Slide")
 		if slide == false and crouchAnimation == false and velocity.x == 0 :
 			crouchAnimation = true
-			$Sprite.play(character+"Crouch")
+			$Sprite.play("Crouch")
 
 func player_shoot():
 	pass
 
 #func player_punch():
 	#punching = true
-	#$Sprite.play(character+"Punch")
+	#$Sprite.play("Punch")
 	#$Fist/FistHitbox.disabled = false
 
 func _on_area_2d_area_entered(area: Area2D) -> void:

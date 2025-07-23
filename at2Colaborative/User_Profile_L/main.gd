@@ -32,7 +32,7 @@ func returningUser():
 		OptionUserSelect.select(0)
 
 	if globalSaveFile.PlayerTwo is not bool:
-		PlayerTwo = open_user(globalSaveFile.PlayerTwo)
+		PlayerTwo = open_user(globalSaveFile.PlayerTwo.userName)
 		OptionUserSelect.set_item_disabled(PlayerTwo.buttonIndex, true)
 		PlayerTwoLabel.text = PlayerTwo.userName
 		OptionUserSelect.select(0)
