@@ -18,7 +18,7 @@ script = ExtResource("1_wdtbf")
 [node name="Sprite" type="AnimatedSprite2D" parent="."]
 position = Vector2(4.76837e-07, 4.76837e-07)
 sprite_frames = ExtResource("2_btvcb")
-animation = &"WallHold"
+animation = &"Idle"
 
 [node name="Level Display" type="Label" parent="."]
 offset_left = -64.0
