@@ -137,6 +137,8 @@ func _physics_process(delta):
 			slopeSlide = true 
 			velocity.x = velocity.x * 1.15
 			velocity.y = velocity.x
+		else:
+			velocity.x = velocity.x * 0.95
 		
 	if slopeSlide == true and (slope == -1 or not is_on_floor() or velocity.x == 0):
 		slopeSlide = false

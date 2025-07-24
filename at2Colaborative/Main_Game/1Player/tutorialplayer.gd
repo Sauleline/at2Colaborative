@@ -131,6 +131,8 @@ func _physics_process(delta):
 			slopeSlide = true 
 			velocity.x = velocity.x * 1.15
 			velocity.y = velocity.x
+		else:
+			velocity.x = velocity.x * 0.95
 
 			
 			
