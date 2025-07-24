@@ -79,4 +79,5 @@ texture = ExtResource("5_qy5g6")
 offset = Vector2(0, -16)
 
 [connection signal="pressed" from="Back" to="." method="_on_back_pressed"]
+[connection signal="pressed" from="Shop" to="." method="_on_shop_pressed"]
 [connection signal="color_changed" from="ColorPicker" to="." method="_on_color_picker_color_changed"]
