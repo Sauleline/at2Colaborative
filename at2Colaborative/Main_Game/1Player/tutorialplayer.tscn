@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://b6y2yitwfmx53"]
+[gd_scene load_steps=7 format=3 uid="uid://b6y2yitwfmx53"]
 
 [ext_resource type="Script" uid="uid://bb5lyqv8fai8r" path="res://Main_Game/1Player/tutorialplayer.gd" id="1_t02tv"]
 [ext_resource type="SpriteFrames" uid="uid://ci0sfvtne1n1r" path="res://art/sprites/playerSpriteFrames.tres" id="2_mx3j7"]
@@ -11,9 +11,6 @@ size = Vector2(106.667, 106.667)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_boqdv"]
 size = Vector2(33, 33)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_64xtq"]
-size = Vector2(12, 12)
-
 [node name="Player" type="CharacterBody2D"]
 scale = Vector2(2, 2)
 script = ExtResource("1_t02tv")
@@ -22,6 +19,7 @@ script = ExtResource("1_t02tv")
 position = Vector2(4.76837e-07, 4.76837e-07)
 sprite_frames = ExtResource("2_mx3j7")
 animation = &"Idle"
+autoplay = "Idle"
 
 [node name="Level Display" type="Label" parent="."]
 offset_left = -64.0
@@ -48,13 +46,6 @@ shape = SubResource("RectangleShape2D_gragq")
 shape = SubResource("RectangleShape2D_boqdv")
 debug_color = Color(0.699314, 0.277037, 1, 0.42)
 
-[node name="Fist" type="Area2D" parent="."]
-
-[node name="FistHitbox" type="CollisionShape2D" parent="Fist"]
-position = Vector2(16, 0)
-shape = SubResource("RectangleShape2D_64xtq")
-debug_color = Color(0.98055, 0.0671374, 0.312238, 0.42)
-
 [node name="Hat" type="Sprite2D" parent="."]
 position = Vector2(0, -16)
 scale = Vector2(0.25, 0.25)
@@ -67,6 +58,5 @@ offset = Vector2(0, -16)
 stream = ExtResource("4_avyud")
 bus = &"SFX"
 
-[connection signal="animation_finished" from="Sprite" to="." method="_on_sprite_animation_finished"]
 [connection signal="area_entered" from="Hitbox" to="." method="_on_area_2d_area_entered"]
 [connection signal="body_entered" from="Hitbox" to="." method="_on_area_2d_body_entered"]
