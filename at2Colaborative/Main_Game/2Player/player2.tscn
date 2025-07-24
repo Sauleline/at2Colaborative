@@ -18,7 +18,7 @@ script = ExtResource("1_wdtbf")
 [node name="Sprite" type="AnimatedSprite2D" parent="."]
 position = Vector2(4.76837e-07, 4.76837e-07)
 sprite_frames = ExtResource("2_btvcb")
-animation = &"WallHold"
+animation = &"Idle"
 
 [node name="Level Display" type="Label" parent="."]
 offset_left = -64.0
@@ -56,6 +56,10 @@ offset = Vector2(0, -16)
 [node name="Jump" type="AudioStreamPlayer" parent="SFX"]
 stream = ExtResource("4_7aa25")
 bus = &"SFX"
+
+[node name="Col_det" type="RayCast2D" parent="."]
+position = Vector2(0, 16.5)
+target_position = Vector2(25, 0)
 
 [connection signal="area_entered" from="Hitbox" to="." method="_on_area_2d_area_entered"]
 [connection signal="body_entered" from="Hitbox" to="." method="_on_area_2d_body_entered"]

@@ -8,4 +8,4 @@ extends Resource
 @export var colour = Color(1,1,1)
 @export var currentHat = "none"
 @export var userHats = ["none"]
-@export var scores = {}
+@export var personalBestScores = {}

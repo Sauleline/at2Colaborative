@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://csuq803y6aa6t"
-path="res://.godot/imported/Stronghold_Sword3.png-91d17aa6849800cd9577a64a3e6f2f18.ctex"
+path="res://.godot/imported/Stronghold_Sword3.png-890e9180fc4b8f343dd37c214f1b04d7.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://art/terrains/Multi_Platformer_Tileset_v2/Stronghold/Props/Stronghold_Sword3.png"
-dest_files=["res://.godot/imported/Stronghold_Sword3.png-91d17aa6849800cd9577a64a3e6f2f18.ctex"]
+source_file="res://Art/terrains/Multi_Platformer_Tileset_v2/Stronghold/Props/Stronghold_Sword3.png"
+dest_files=["res://.godot/imported/Stronghold_Sword3.png-890e9180fc4b8f343dd37c214f1b04d7.ctex"]
 
 [params]
 

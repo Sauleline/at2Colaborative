@@ -9,7 +9,7 @@ signal respawn()
 @export var wallJumpSpeed = -750
 @export var wallJumpHorizontal = 1000
 @export var gravity = 2000
-@export_range(0.0, 2000) var wallSlideGravity = 1000
+@export_range(0.0, 2000) var wallSlideGravity = 250
 @export var wall_jump_multiplier = 0.8
 @export_range(0.0, 1.0) var friction = 0.06
 @export_range(0.0 , 1.0) var acceleration = 0.03
@@ -74,11 +74,9 @@ func _physics_process(delta):
 	if (dir == -1):
 		$Sprite.flip_h = true
 		$Hat.flip_h = false
-		$Fist.rotation = deg_to_rad(180)
 	elif (dir == 1):
 		$Sprite.flip_h = false
 		$Hat.flip_h = true
-		$Fist.rotation = deg_to_rad(0)
 	
 	if is_on_floor():
 		jumpCount = maxJumps
