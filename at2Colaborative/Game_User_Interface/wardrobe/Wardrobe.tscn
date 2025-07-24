@@ -68,9 +68,8 @@ presets_visible = false
 position = Vector2(576, 368)
 scale = Vector2(4.66667, 4.66667)
 sprite_frames = ExtResource("4_j3igh")
-animation = &"Idle"
+animation = &"Roll"
 autoplay = "Idle"
-frame_progress = 0.70241
 flip_h = true
 
 [node name="Hat" type="Sprite2D" parent="PlayerDisp"]

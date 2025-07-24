@@ -304,7 +304,7 @@ animations = [{
 "texture": SubResource("AtlasTexture_mqcv6")
 }],
 "loop": true,
-"name": &"steveCrouch",
+"name": &"Crouch",
 "speed": 10.0
 }, {
 "frames": [{
@@ -339,7 +339,7 @@ animations = [{
 "texture": SubResource("AtlasTexture_o4gg4")
 }],
 "loop": true,
-"name": &"steveIdle",
+"name": &"Idle",
 "speed": 10.0
 }, {
 "frames": [{
@@ -362,7 +362,7 @@ animations = [{
 "texture": SubResource("AtlasTexture_ok8sj")
 }],
 "loop": false,
-"name": &"steveJump",
+"name": &"Jump",
 "speed": 10.0
 }, {
 "frames": [{
@@ -385,7 +385,7 @@ animations = [{
 "texture": SubResource("AtlasTexture_p0i0x")
 }],
 "loop": false,
-"name": &"stevePunch",
+"name": &"Punch",
 "speed": 10.0
 }, {
 "frames": [{
@@ -402,7 +402,7 @@ animations = [{
 "texture": SubResource("AtlasTexture_drhyb")
 }],
 "loop": true,
-"name": &"steveRoll",
+"name": &"Roll",
 "speed": 10.0
 }, {
 "frames": [{
@@ -431,7 +431,7 @@ animations = [{
 "texture": SubResource("AtlasTexture_71p5n")
 }],
 "loop": true,
-"name": &"steveRun",
+"name": &"Run",
 "speed": 10.0
 }, {
 "frames": [{
@@ -460,7 +460,7 @@ animations = [{
 "texture": SubResource("AtlasTexture_02uos")
 }],
 "loop": true,
-"name": &"steveSlide",
+"name": &"Slide",
 "speed": 10.0
 }, {
 "frames": [{
@@ -489,7 +489,7 @@ animations = [{
 "texture": SubResource("AtlasTexture_bago8")
 }],
 "loop": true,
-"name": &"steveWalk",
+"name": &"Walk",
 "speed": 10.0
 }, {
 "frames": [{
@@ -509,6 +509,6 @@ animations = [{
 "texture": SubResource("AtlasTexture_of1w2")
 }],
 "loop": false,
-"name": &"steveWallHold",
+"name": &"WallHold",
 "speed": 10.0
 }]

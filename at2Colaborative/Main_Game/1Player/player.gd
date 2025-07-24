@@ -56,7 +56,7 @@ func _ready():
 			$"Level Display".text = "Guest"
 	var hatTexture = "res://art/hats/"+hat+".png"
 	$Hat.texture = load(hatTexture)
-	$sprite.play('Idle')
+	$Sprite.play('Idle')
 
 func _physics_process(delta):
 	move_and_slide()
@@ -72,7 +72,7 @@ func _physics_process(delta):
 	if punching:
 		dir = 0
 	if (dir == -1):
-		$Sprite.flip_h = true
+
 		$Hat.flip_h = false
 		$Fist.rotation = deg_to_rad(180)
 	elif (dir == 1):
@@ -144,21 +144,21 @@ func _physics_process(delta):
 	if dir != 0 and (slide == false):
 		if is_on_floor():
 			if slideAnimation == false:
-				$sprite.play('Run')
+				$Sprite.play('Run')
 		else:
 			if slideAnimation == false:
-				$sprite.play("Jump")
+				$Sprite.play("Jump")
 		velocity.x = lerp(velocity.x, dir * speed, acceleration)
 	else:
 		if is_on_floor() and not punching:
 			if velocity.x != 0:
 				if slideAnimation == false:
-					$sprite.play("Walk")
+					$Sprite.play("Walk")
 			else:
 				if slideAnimation == false and crouchAnimation == false:
-					$sprite.play("Idle")
+					$Sprite.play("Idle")
 		else:
-			$sprite.play("Jump")
+			$Sprite.play("Jump")
 		velocity.x = lerp(velocity.x, 0.0, friction)
 
 	if velocity.x > 0:
@@ -167,19 +167,19 @@ func _physics_process(delta):
 		$Hat.rotation = deg_to_rad(mapRange(abs(velocity.x), 0, 600, 0, 30))
 	
 	if wallSlide:
-		$sprite.play("WallHold")
+		$Sprite.play("WallHold")
 		
 	if crouch:
 		if slide == true:
 			counter += 1
 		if slide == true and slideAnimation == false and (counter <= 20):
-			$sprite.play("Roll")
+			$Sprite.play("Roll")
 			slideAnimation = true
 		if slide == true and slideAnimation == true and (counter  > 20):
-			$sprite.play("Slide")
+			$Sprite.play("Slide")
 		if slide == false and crouchAnimation == false and velocity.x == 0 :
 			crouchAnimation = true
-			$sprite.play("Crouch")
+			$Sprite.play("Crouch")
 	
 func player_shoot():
 	pass
