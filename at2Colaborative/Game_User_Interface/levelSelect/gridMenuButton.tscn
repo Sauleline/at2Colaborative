@@ -1,8 +1,8 @@
 [gd_scene load_steps=5 format=3 uid="uid://cglj7rree4gbi"]
 
-[ext_resource type="Texture2D" uid="uid://bhkjx73xqiuhh" path="res://art/UI/button1.png" id="1_0own8"]
-[ext_resource type="Texture2D" uid="uid://cigp2jr5utp00" path="res://art/UI/buttonPressed1.png" id="2_2mgid"]
-[ext_resource type="Texture2D" uid="uid://ulxrnuuhys3c" path="res://art/UI/buttonHover1.png" id="3_cqalq"]
+[ext_resource type="Texture2D" uid="uid://bhkjx73xqiuhh" path="res://Art/UI/button1.png" id="1_0own8"]
+[ext_resource type="Texture2D" uid="uid://cigp2jr5utp00" path="res://Art/UI/buttonPressed1.png" id="2_2mgid"]
+[ext_resource type="Texture2D" uid="uid://ulxrnuuhys3c" path="res://Art/UI/buttonHover1.png" id="3_cqalq"]
 [ext_resource type="Theme" uid="uid://dwdqkuxyspo32" path="res://Theme.tres" id="4_ps6pd"]
 
 [node name="Level 0" type="TextureButton"]

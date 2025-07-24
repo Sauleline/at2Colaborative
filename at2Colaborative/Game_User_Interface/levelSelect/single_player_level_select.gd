@@ -14,10 +14,20 @@ func _ready() -> void:
 		var instance = button.instantiate()
 		instance.pressed.connect(_goToLevel.bind(i))
 		instance.mouse_entered.connect(_populateLeaderboard.bind(i))
-		instance.get_children()[1].text = "Level " + str(i)
+		instance.find_child("Level").text = "Level " + str(i)
+		var score = Global.PlayerOne.personalBestScores[0]
+		instance.find_child("PB").text = " : " + str(Global.intToSecMin(floor(score/10)))
 		if i == 0:
 			instance.get_children()[1].text = "Tutorial"
 		$Grid.add_child(instance)
+		
+func _get_leaderboard(level):
+	var leaderboard = []
+	AccessUsers.openUserProfiles()
+	for x in AccessUsers.globalSaveFile.userProfilesDict.items():
+		var user = AccessUsers.open_user(x)
+		leaderboard.append(user.userName + " : " )
+		
 
 var _populateLeaderboard = func populateLeaderboard(level: int):
 	for i in $Leaderboard/vertContainer.get_children():
@@ -26,7 +36,8 @@ var _populateLeaderboard = func populateLeaderboard(level: int):
 	insertLabel.add_theme_font_size_override("font_size", 20)
 	insertLabel.text = "Level "+str(level)
 	$Leaderboard/vertContainer.add_child(insertLabel)
-	for i in range(40):
+	var leaderboard = _get_leaderboard(level) 
+	for i in leaderboard:
 		insertLabel = Label.new()
 		insertLabel.add_theme_font_size_override("font_size", 20)
 		insertLabel.text = str(i).pad_zeros(2)

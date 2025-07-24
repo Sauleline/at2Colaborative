@@ -9,7 +9,7 @@ signal respawn()
 @export var wallJumpSpeed = -750
 @export var wallJumpHorizontal = 1000
 @export var gravity = 2000
-@export_range(0.0, 2000) var wallSlideGravity = 1000
+@export_range(0.0, 2000) var wallSlideGravity = 250
 @export var wall_jump_multiplier = 0.8
 @export_range(0.0, 1.0) var friction = 0.06
 @export_range(0.0 , 1.0) var acceleration = 0.03

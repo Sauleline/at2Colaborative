@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://6dxy7va3ohy2"
-path="res://.godot/imported/Desert_Terrain_BgdTiles.png-c1cfce9f0460e6a3836fdb4d5d9a4eb3.ctex"
+path="res://.godot/imported/Desert_Terrain_BgdTiles.png-fc18b6dbabaf0306bfe2183d455e08bf.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://art/terrains/Multi_Platformer_Tileset_v2/Desert/Terrain/Desert_Terrain_BgdTiles.png"
-dest_files=["res://.godot/imported/Desert_Terrain_BgdTiles.png-c1cfce9f0460e6a3836fdb4d5d9a4eb3.ctex"]
+source_file="res://Art/terrains/Multi_Platformer_Tileset_v2/Desert/Terrain/Desert_Terrain_BgdTiles.png"
+dest_files=["res://.godot/imported/Desert_Terrain_BgdTiles.png-fc18b6dbabaf0306bfe2183d455e08bf.ctex"]
 
 [params]
 
