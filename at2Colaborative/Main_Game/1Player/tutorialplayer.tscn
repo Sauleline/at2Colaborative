@@ -15,6 +15,10 @@ size = Vector2(33, 33)
 scale = Vector2(2, 2)
 script = ExtResource("1_t02tv")
 
+[node name="Col_det" type="RayCast2D" parent="."]
+position = Vector2(0, 16.5)
+target_position = Vector2(25, 0)
+
 [node name="Sprite" type="AnimatedSprite2D" parent="."]
 position = Vector2(4.76837e-07, 4.76837e-07)
 sprite_frames = ExtResource("2_mx3j7")

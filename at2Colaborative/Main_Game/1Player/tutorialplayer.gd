@@ -28,6 +28,8 @@ var crouchAnimation = false
 var checkPointTouch = 0 
 var dJCheckPointTouch = false
 var crouchanimation = false
+@onready var front_raycast = $Col_det
+var slideFriction = false
 
 func mapRange(x, inMin, inMax, outMin, outMax):
 	return ((x - inMin) * (outMax - outMin) / (inMax - inMin) + outMin)
@@ -63,11 +65,11 @@ func _physics_process(delta):
 	if (dir == -1):
 		$Sprite.flip_h = true
 		$Hat.flip_h = false
-		$Fist.rotation = deg_to_rad(180)
+
 	elif (dir == 1):
 		$Sprite.flip_h = false
 		$Hat.flip_h = true
-		$Fist.rotation = deg_to_rad(0)
+
 	
 	if is_on_floor():
 		jumpCount = maxJumps
@@ -123,12 +125,19 @@ func _physics_process(delta):
 		slideAnimation = false
 		
 	if slide == true and slope != -1:
-		slopeSlide = true 
-		velocity.x = velocity.x * 1.2
-		velocity.y = velocity.x
+		front_raycast.force_raycast_update()
+		if not front_raycast.is_colliding():
+			print(velocity.y)
+			slopeSlide = true 
+			velocity.x = velocity.x * 1.15
+			velocity.y = velocity.x
+
+			
+			
 		
 	if slopeSlide == true and (slope == -1 or not is_on_floor() or velocity.x == 0):
 		slopeSlide = false
+
 		
 	if dir != 0 and (slide == false):
 		if is_on_floor():

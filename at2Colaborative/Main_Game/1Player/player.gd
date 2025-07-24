@@ -72,7 +72,7 @@ func _physics_process(delta):
 	if punching:
 		dir = 0
 	if (dir == -1):
-
+		$Sprite.flip_h = true
 		$Hat.flip_h = false
 		$Fist.rotation = deg_to_rad(180)
 	elif (dir == 1):
@@ -135,7 +135,7 @@ func _physics_process(delta):
 		if not front_raycast.is_colliding():
 			print(velocity.y)
 			slopeSlide = true 
-			velocity.x = velocity.x * 1.2
+			velocity.x = velocity.x * 1.15
 			velocity.y = velocity.x
 		
 	if slopeSlide == true and (slope == -1 or not is_on_floor() or velocity.x == 0):
