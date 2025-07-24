@@ -69,7 +69,6 @@ func _physics_process(delta):
 	elif (dir == 1):
 		$Sprite.flip_h = false
 		$Hat.flip_h = true
-
 	
 	if is_on_floor():
 		jumpCount = maxJumps
