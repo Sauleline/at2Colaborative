@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://kp6eh8cipp63"
-path="res://.godot/imported/Dungeon_Terrain_BgdTiles.png-4759cb1d9457abe830f81a61280ceffc.ctex"
+path="res://.godot/imported/Dungeon_Terrain_BgdTiles.png-7a5a6e429c64bc3d623816a0680f3626.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://art/terrains/Multi_Platformer_Tileset_v2/Dungeon/Terrain/Dungeon_Terrain_BgdTiles.png"
-dest_files=["res://.godot/imported/Dungeon_Terrain_BgdTiles.png-4759cb1d9457abe830f81a61280ceffc.ctex"]
+source_file="res://Art/terrains/Multi_Platformer_Tileset_v2/Dungeon/Terrain/Dungeon_Terrain_BgdTiles.png"
+dest_files=["res://.godot/imported/Dungeon_Terrain_BgdTiles.png-7a5a6e429c64bc3d623816a0680f3626.ctex"]
 
 [params]
 

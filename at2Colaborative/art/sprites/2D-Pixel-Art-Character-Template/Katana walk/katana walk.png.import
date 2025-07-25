@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://caqhboo5lv3tm"
-path="res://.godot/imported/katana walk.png-28e2963c06e47f7340b538b31efa3dbf.ctex"
+path="res://.godot/imported/katana walk.png-00668ffe42be10b7354ce3e8ea99991a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://art/sprites/2D-Pixel-Art-Character-Template/Katana walk/katana walk.png"
-dest_files=["res://.godot/imported/katana walk.png-28e2963c06e47f7340b538b31efa3dbf.ctex"]
+source_file="res://Art/sprites/2D-Pixel-Art-Character-Template/Katana walk/katana walk.png"
+dest_files=["res://.godot/imported/katana walk.png-00668ffe42be10b7354ce3e8ea99991a.ctex"]
 
 [params]
 

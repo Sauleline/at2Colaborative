@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://3p87qbsl7iej"
-path="res://.godot/imported/witch.png-f1e5ce96d3c682d0e4a7e2fa1f24c887.ctex"
+path="res://.godot/imported/witch.png-d5828d787bf67c10b8950bb0319ac159.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://art/hats/witch.png"
-dest_files=["res://.godot/imported/witch.png-f1e5ce96d3c682d0e4a7e2fa1f24c887.ctex"]
+source_file="res://Art/hats/witch.png"
+dest_files=["res://.godot/imported/witch.png-d5828d787bf67c10b8950bb0319ac159.ctex"]
 
 [params]
 

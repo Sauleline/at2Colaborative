@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bo7x4kf8d3x7c"
-path="res://.godot/imported/Desert_LittleLizard_Run.png-0d933f9f1d5d070b42f108a8951e44e2.ctex"
+path="res://.godot/imported/Desert_LittleLizard_Run.png-502804712f3dc373d0d638ba4300c1c1.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://art/terrains/Multi_Platformer_Tileset_v2/Desert/Props/Animated/Desert_LittleLizard_Run.png"
-dest_files=["res://.godot/imported/Desert_LittleLizard_Run.png-0d933f9f1d5d070b42f108a8951e44e2.ctex"]
+source_file="res://Art/terrains/Multi_Platformer_Tileset_v2/Desert/Props/Animated/Desert_LittleLizard_Run.png"
+dest_files=["res://.godot/imported/Desert_LittleLizard_Run.png-502804712f3dc373d0d638ba4300c1c1.ctex"]
 
 [params]
 
