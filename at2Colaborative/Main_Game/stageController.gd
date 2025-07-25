@@ -2,8 +2,10 @@ extends Node
 
 @onready var score = 0
 @onready var deaths = -1
+@export var lvlNumIn: int
 
 func _ready():
+	var lvlNum = str(lvlNumIn)
 	$Damage.modulate = Color(1,1,1,0)
 	$"Score Timer".wait_time = 0.1
 	$"Score Timer".start()
@@ -39,7 +41,6 @@ func _on_player_hit_area(area: Area2D, number: int) -> void:
 
 func _on_score_timer_timeout() -> void:
 	score += 1
-	
 
 func _update_personal_best_score(score):
 	var p1 = AccessUsers.open_user(Global.PlayerOne.userName)
