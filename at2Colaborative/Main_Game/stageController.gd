@@ -4,11 +4,16 @@ extends Node
 @onready var deaths = -1
 @export var lvlNumIn: int
 
+@onready var lvlNum = str(lvlNumIn)
+var coins: int
+
 func _ready():
-	var lvlNum = str(lvlNumIn)
 	$Damage.modulate = Color(1,1,1,0)
 	$"Score Timer".wait_time = 0.1
 	$"Score Timer".start()
+	for i in $Coins.get_children():
+		i.area_entered.connect(_coinPickup.bind(i.val, i))
+		
 	_on_player_respawn()
 
 func _process(_delta):
@@ -42,25 +47,36 @@ func _on_player_hit_area(area: Area2D, number: int) -> void:
 func _on_score_timer_timeout() -> void:
 	score += 1
 
-func _update_personal_best_score(score):
+func _update_personal_best_score(newScore):
 	var p1 = AccessUsers.open_user(Global.PlayerOne.userName)
-	if "0" in p1.personalBestScores.keys():
-		if p1.personalBestScores["0"] > score:
-			p1.personalBestScores["0"] = score
+	if lvlNum in p1.personalBestScores:
+		if p1.personalBestScores[lvlNum] > newScore:
+			p1.personalBestScores[lvlNum] = newScore
 			AccessUsers.save_user(p1)
 		else:
 			pass
 	else:
-		p1.personalBestScores["0"] = score
+		p1.personalBestScores[lvlNum] = score
 		AccessUsers.save_user(p1)
+
+func update_player_coins(coinCount: int):
+	var p1 = AccessUsers.open_user(Global.PlayerOne.userName)
+	p1.piggyBank += coinCount
+	AccessUsers.save_user(p1)
 
 func _on_player_beat_stage() -> void:
 	$"Score Timer".stop()
 	if Global.PlayerOne:
 		_update_personal_best_score(score)
+		update_player_coins(coins)
 	for i in $Player/Camera/HUD/Gameplay.get_children():
 		i.visible = false
 	$Player/Camera/HUD/ScoreScreen.visible = true
 	$Player/Camera/HUD/Blur.visible = true
 	@warning_ignore("integer_division")
 	$Player/Camera/HUD/ScoreScreen.text = "You died " + str(deaths) + " times\nand took " + str(Global.intToSecMin(floor(score/10)))
+
+var _coinPickup = func coinPickup(area: Area2D, val: int, coin: Area2D):
+	if area.get_parent().name == "Player":
+		coins += val
+		coin.queue_free()
