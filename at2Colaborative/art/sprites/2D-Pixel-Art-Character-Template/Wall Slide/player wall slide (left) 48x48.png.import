@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dmvt18nk28qsg"
-path="res://.godot/imported/player wall slide (left) 48x48.png-c0f422bff39e5519d661a77b11718b57.ctex"
+path="res://.godot/imported/player wall slide (left) 48x48.png-4a431b626186fd95522bf3586d89e7ba.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Art/sprites/2D-Pixel-Art-Character-Template/Wall Slide/player wall slide (left) 48x48.png"
-dest_files=["res://.godot/imported/player wall slide (left) 48x48.png-c0f422bff39e5519d661a77b11718b57.ctex"]
+source_file="res://art/sprites/2D-Pixel-Art-Character-Template/Wall Slide/player wall slide (left) 48x48.png"
+dest_files=["res://.godot/imported/player wall slide (left) 48x48.png-4a431b626186fd95522bf3586d89e7ba.ctex"]
 
 [params]
 

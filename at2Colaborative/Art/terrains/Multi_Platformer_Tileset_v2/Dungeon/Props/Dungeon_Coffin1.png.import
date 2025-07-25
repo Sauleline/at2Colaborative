@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://b7rdqbhcp36r2"
-path="res://.godot/imported/Dungeon_Coffin1.png-c68df680c6b54ecc8427b4c51d4effc4.ctex"
+path="res://.godot/imported/Dungeon_Coffin1.png-4db4bb759d22ffdf41df0c45ec7b38dd.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Art/terrains/Multi_Platformer_Tileset_v2/Dungeon/Props/Dungeon_Coffin1.png"
-dest_files=["res://.godot/imported/Dungeon_Coffin1.png-c68df680c6b54ecc8427b4c51d4effc4.ctex"]
+source_file="res://art/terrains/Multi_Platformer_Tileset_v2/Dungeon/Props/Dungeon_Coffin1.png"
+dest_files=["res://.godot/imported/Dungeon_Coffin1.png-4db4bb759d22ffdf41df0c45ec7b38dd.ctex"]
 
 [params]
 
