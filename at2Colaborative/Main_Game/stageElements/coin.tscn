@@ -1,0 +1,19 @@
+[gd_scene load_steps=5 format=3 uid="uid://cln2pra0uqmtc"]
+
+[ext_resource type="Script" uid="uid://bwue60ww36ugh" path="res://Main_Game/stageElements/coin.gd" id="1_3khsu"]
+[ext_resource type="Texture2D" uid="uid://bqas66x5na6ot" path="res://art/sprites/hemercoin1.png" id="2_dootb"]
+[ext_resource type="Texture2D" uid="uid://bve111n5yvl5g" path="res://art/sprites/coin1.png" id="2_jg2gd"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_dootb"]
+radius = 32.0
+
+[node name="Coin" type="Area2D"]
+script = ExtResource("1_3khsu")
+hemer = ExtResource("2_dootb")
+
+[node name="Sprite" type="Sprite2D" parent="."]
+scale = Vector2(2, 2)
+texture = ExtResource("2_jg2gd")
+
+[node name="Hitbox" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_dootb")
