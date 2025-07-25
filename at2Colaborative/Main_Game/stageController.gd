@@ -43,11 +43,15 @@ func _on_score_timer_timeout() -> void:
 
 func _update_personal_best_score(score):
 	var p1 = AccessUsers.open_user(Global.PlayerOne.userName)
-	if p1.personalBestScores[0] > score:
-		p1.personalBestScores.update({0:score})
-		AccessUsers.save_user(p1)
+	if "0" in p1.personalBestScores.keys():
+		if p1.personalBestScores["0"] > score:
+			p1.personalBestScores["0"] = score
+			AccessUsers.save_user(p1)
+		else:
+			pass
 	else:
-		pass
+		p1.personalBestScores["0"] = score
+		AccessUsers.save_user(p1)
 
 func _on_player_beat_stage() -> void:
 	$"Score Timer".stop()

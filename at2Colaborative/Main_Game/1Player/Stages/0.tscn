@@ -169,7 +169,7 @@ position_smoothing_speed = 15.0
 visible = false
 
 [node name="PlayerSpawn" type="Marker2D" parent="."]
-position = Vector2(128, 128)
+position = Vector2(734, -2233)
 
 [node name="Fore" parent="." instance=ExtResource("4_c4v3y")]
 tile_map_data = PackedByteArray("AAAPAAQAAQABAAYAAAAeAAMAAQAEAAcAAAAxAP3/AQAGAAcAAAAyAP3/AQACAAYAAAAiAPj/AQAFAAcAABAHAPP/AQADAAcAAAA=")

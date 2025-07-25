@@ -13,13 +13,13 @@ metadata/_edit_use_anchors_ = true
 metadata/_edit_lock_ = true
 
 [node name="Title" type="Label" parent="."]
-offset_left = 217.0
-offset_top = 50.0
-offset_right = 917.0
-offset_bottom = 225.0
+offset_left = 104.0
+offset_top = 48.0
+offset_right = 1048.0
+offset_bottom = 224.0
 theme = ExtResource("1_wjfn0")
-theme_override_font_sizes/font_size = 125
-text = "Game Name"
+theme_override_font_sizes/font_size = 100
+text = "Dashin' Doom"
 horizontal_alignment = 1
 vertical_alignment = 1
 
