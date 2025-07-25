@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cjcbynvl7k4dw"
-path="res://.godot/imported/Desert_Background_1.png-3f4e9cea7282c6fd68ddcba6c4e5b6b6.ctex"
+path="res://.godot/imported/Desert_Background_1.png-b0a46b49435e164804208556ab1a3d22.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Art/terrains/Multi_Platformer_Tileset_v2/Desert/Background/Desert_Background_1.png"
-dest_files=["res://.godot/imported/Desert_Background_1.png-3f4e9cea7282c6fd68ddcba6c4e5b6b6.ctex"]
+source_file="res://art/terrains/Multi_Platformer_Tileset_v2/Desert/Background/Desert_Background_1.png"
+dest_files=["res://.godot/imported/Desert_Background_1.png-b0a46b49435e164804208556ab1a3d22.ctex"]
 
 [params]
 
