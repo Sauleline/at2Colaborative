@@ -11,9 +11,9 @@ radius = 32.0
 script = ExtResource("1_3khsu")
 hemer = ExtResource("2_dootb")
 
+[node name="Hitbox" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_dootb")
+
 [node name="Sprite" type="Sprite2D" parent="."]
 scale = Vector2(2, 2)
 texture = ExtResource("2_jg2gd")
-
-[node name="Hitbox" type="CollisionShape2D" parent="."]
-shape = SubResource("CircleShape2D_dootb")
