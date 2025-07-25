@@ -2,6 +2,30 @@ extends CanvasLayer
 
 var p1 = User.new()
 var hatDir = "res://art/hats/"
+var hatPrice = {
+	"banana.png" : 10, 
+	"boat.png" : 10, 
+	"bucket.png" : 15, 
+	"cap.png" : 15, 
+	"cat ears.png" : 50, 
+	"crown.png" : 70, 
+	"dame da ne guy.png" : 100, 
+	"dave.png" : 900, 
+	"gibus.png" : 70, 
+	"icon.png" : 50, 
+	"jackson.png" : 40, 
+	"joel.png" : 30, 
+	"none.png" : 0, 
+	"party hat.png" : 20, 
+	"propeller cap.png" : 30, 
+	"pumpkin.png" : 20, 
+	"santa.png" : 40, 
+	"summer hat.png" : 20, 
+	"team captain.png" : 40, 
+	"top hat.png" : 80, 
+	"unicorn.png" : 30, 
+	"witch.png" : 20}
+
 
 func _ready():
 	AccessUsers.returningUsers()
@@ -10,6 +34,7 @@ func _ready():
 	else:
 		p1.userName = "Guest"
 	$"Users Logged".text = 'Welcome Back '+ p1.userName
+	$"User Money".text = "You have $" + str(p1.piggyBank)
 	var dir = DirAccess.get_files_at(hatDir)
 	var hatArr = []
 	for i in dir:
@@ -17,7 +42,6 @@ func _ready():
 			pass
 		else:
 			hatArr.append(i)
-	print(hatArr)
 	for i in hatArr:
 		if i.rstrip(".png") in p1.userHats:
 			pass
@@ -26,7 +50,23 @@ func _ready():
 			var hatButton = Button.new()
 			hatButton.name = i
 			hatButton.icon = load(hatTexture)
+			if i in hatPrice:
+				hatButton.text = "$" + str(hatPrice[i])
+				hatButton.pressed.connect(_buyHat.bind(i.rstrip(".png"), hatPrice[i]))
+			else:
+				hatButton.text = str("$10")
+				hatButton.pressed.connect(_buyHat.bind(i.rstrip(".png"), 10))
 			$Hats.add_child(hatButton)
 
 func _on_back_pressed() -> void:
-	get_tree().change_scene_to_file("res://Game_User_Interface/Title_Screen.tscn")
+	get_tree().change_scene_to_file("res://Game_User_Interface/wardrobe/Wardrobe.tscn")
+
+var _buyHat = func buyHat(hat: String, price: int):
+	#if Global.PlayerOne.piggyBank < price:
+		#pass
+	#else:
+		p1.currentHat = hat
+		p1.userHats.append(hat)
+		#p1.piggyBank = p1.piggyBank - price
+		AccessUsers.save_user(p1)
+		get_tree().reload_current_scene()

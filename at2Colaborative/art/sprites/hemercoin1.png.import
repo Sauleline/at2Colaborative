@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://6kw1470wmo6i"
-path="res://.godot/imported/unicorn horn.png-b74ac8d59a3dca607513a37a5e3ef84e.ctex"
+uid="uid://bqas66x5na6ot"
+path="res://.godot/imported/hemercoin1.png-5ecd883aef436bffe3f8861446c57aaa.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://art/hats/unicorn horn.png"
-dest_files=["res://.godot/imported/unicorn horn.png-b74ac8d59a3dca607513a37a5e3ef84e.ctex"]
+source_file="res://art/sprites/hemercoin1.png"
+dest_files=["res://.godot/imported/hemercoin1.png-5ecd883aef436bffe3f8861446c57aaa.ctex"]
 
 [params]
 
