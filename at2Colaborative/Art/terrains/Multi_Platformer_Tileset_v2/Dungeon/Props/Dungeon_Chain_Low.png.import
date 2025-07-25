@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://h2i5qoxaf724"
-path="res://.godot/imported/Dungeon_Chain_Low.png-f88787542b6b1f47e44cfaae5bbb360b.ctex"
+path="res://.godot/imported/Dungeon_Chain_Low.png-64171f3426c82d904b18ed82e417f499.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://art/terrains/Multi_Platformer_Tileset_v2/Dungeon/Props/Dungeon_Chain_Low.png"
-dest_files=["res://.godot/imported/Dungeon_Chain_Low.png-f88787542b6b1f47e44cfaae5bbb360b.ctex"]
+source_file="res://Art/terrains/Multi_Platformer_Tileset_v2/Dungeon/Props/Dungeon_Chain_Low.png"
+dest_files=["res://.godot/imported/Dungeon_Chain_Low.png-64171f3426c82d904b18ed82e417f499.ctex"]
 
 [params]
 

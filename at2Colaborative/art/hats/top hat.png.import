@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dg5gjvlajt1up"
-path="res://.godot/imported/top hat.png-22d27437e7220a38c2eb1017b7f297f0.ctex"
+path="res://.godot/imported/top hat.png-925e3dd5e95800cc0bf2a5f0c642cd2f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://art/hats/top hat.png"
-dest_files=["res://.godot/imported/top hat.png-22d27437e7220a38c2eb1017b7f297f0.ctex"]
+source_file="res://Art/hats/top hat.png"
+dest_files=["res://.godot/imported/top hat.png-925e3dd5e95800cc0bf2a5f0c642cd2f.ctex"]
 
 [params]
 

@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://djv7jm31e5am5" path="res://Main_Game/1Player/player.gd" id="1_g6ucm"]
 [ext_resource type="SpriteFrames" uid="uid://ci0sfvtne1n1r" path="res://Art/sprites/playerSpriteFrames.tres" id="2_g6ucm"]
-[ext_resource type="Texture2D" uid="uid://ca8p5eti7y4f3" path="res://art/hats/icon.png" id="3_5e17s"]
+[ext_resource type="Texture2D" uid="uid://cucn4srbjesxg" path="res://art/hats/icon.png" id="3_5e17s"]
 [ext_resource type="AudioStream" uid="uid://dlccqkfe65a6p" path="res://Art/sound/sfx/jump.wav" id="12_0nq3h"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_gragq"]

@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://3f0np16hb0kj"
-path="res://.godot/imported/Dungeon_Background_2.png-eaecc12ef3a9d62941bdf34f2f852240.ctex"
+path="res://.godot/imported/Dungeon_Background_2.png-aebe74d0f346e4da2bf1a50a9c7fd595.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://art/terrains/Multi_Platformer_Tileset_v2/Dungeon/Background/Dungeon_Background_2.png"
-dest_files=["res://.godot/imported/Dungeon_Background_2.png-eaecc12ef3a9d62941bdf34f2f852240.ctex"]
+source_file="res://Art/terrains/Multi_Platformer_Tileset_v2/Dungeon/Background/Dungeon_Background_2.png"
+dest_files=["res://.godot/imported/Dungeon_Background_2.png-aebe74d0f346e4da2bf1a50a9c7fd595.ctex"]
 
 [params]
 
