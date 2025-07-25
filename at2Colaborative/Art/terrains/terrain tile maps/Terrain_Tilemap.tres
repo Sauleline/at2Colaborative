@@ -1,12 +1,12 @@
 [gd_resource type="TileSet" load_steps=15 format=3 uid="uid://c6x3hsvlwj7hl"]
 
-[ext_resource type="Texture2D" uid="uid://csqg6wd18u8y6" path="res://Art/terrains/terrain tile maps/caveFull.png" id="1_67xl3"]
-[ext_resource type="Texture2D" uid="uid://dlvegnxfiy0d2" path="res://Art/terrains/terrain tile maps/desert full.png" id="2_ivx0q"]
-[ext_resource type="Texture2D" uid="uid://dnndvrj85ttwr" path="res://Art/terrains/terrain tile maps/dungeon full.png" id="3_crevn"]
-[ext_resource type="Texture2D" uid="uid://dhytqx5iqx4vw" path="res://Art/terrains/terrain tile maps/factory full.png" id="4_i6y0d"]
-[ext_resource type="Texture2D" uid="uid://llmnnb1bylpd" path="res://Art/terrains/terrain tile maps/grassland full.png" id="5_unxr0"]
-[ext_resource type="Texture2D" uid="uid://b7igia6ne3vee" path="res://Art/terrains/terrain tile maps/snowland full.png" id="6_tkjpb"]
-[ext_resource type="Texture2D" uid="uid://d1sx88mnbhgr3" path="res://Art/terrains/terrain tile maps/stronghold full.png" id="7_a7xx5"]
+[ext_resource type="Texture2D" uid="uid://csqg6wd18u8y6" path="res://art/terrains/terrain tile maps/caveFull.png" id="1_67xl3"]
+[ext_resource type="Texture2D" uid="uid://dlvegnxfiy0d2" path="res://art/terrains/terrain tile maps/desert full.png" id="2_ivx0q"]
+[ext_resource type="Texture2D" uid="uid://dnndvrj85ttwr" path="res://art/terrains/terrain tile maps/dungeon full.png" id="3_crevn"]
+[ext_resource type="Texture2D" uid="uid://dhytqx5iqx4vw" path="res://art/terrains/terrain tile maps/factory full.png" id="4_i6y0d"]
+[ext_resource type="Texture2D" uid="uid://llmnnb1bylpd" path="res://art/terrains/terrain tile maps/grassland full.png" id="5_unxr0"]
+[ext_resource type="Texture2D" uid="uid://b7igia6ne3vee" path="res://art/terrains/terrain tile maps/snowland full.png" id="6_tkjpb"]
+[ext_resource type="Texture2D" uid="uid://d1sx88mnbhgr3" path="res://art/terrains/terrain tile maps/stronghold full.png" id="7_a7xx5"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_yqugj"]
 resource_name = "Cave"
@@ -1958,11 +1958,13 @@ texture = ExtResource("5_unxr0")
 12:1/0/terrains_peering_bit/top_right_corner = 4
 12:2/0 = 0
 12:2/0/terrain_set = 1
+12:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(2, 2, 8, 2, 8, 8, 2, 8)
 12:2/0/terrains_peering_bit/right_side = 4
 12:2/0/terrains_peering_bit/bottom_right_corner = 4
 12:2/0/terrains_peering_bit/bottom_side = 4
 12:3/0 = 0
 12:3/0/terrain_set = 1
+12:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(2, -8, 8, -8, 8, 8, 2, 8)
 12:3/0/terrains_peering_bit/right_side = 4
 12:3/0/terrains_peering_bit/bottom_right_corner = 4
 12:3/0/terrains_peering_bit/bottom_side = 4
@@ -1970,6 +1972,7 @@ texture = ExtResource("5_unxr0")
 12:3/0/terrains_peering_bit/top_right_corner = 4
 12:4/0 = 0
 12:4/0/terrain_set = 1
+12:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(2, -8, 8, -8, 8, 8, 2, 8)
 12:4/0/terrains_peering_bit/right_side = 4
 12:4/0/terrains_peering_bit/bottom_right_corner = 4
 12:4/0/terrains_peering_bit/bottom_side = 4
@@ -1977,6 +1980,7 @@ texture = ExtResource("5_unxr0")
 12:4/0/terrains_peering_bit/top_right_corner = 4
 12:5/0 = 0
 12:5/0/terrain_set = 1
+12:5/0/physics_layer_0/polygon_0/points = PackedVector2Array(2, -8, 8, -8, 8, -2, 2, -2)
 12:5/0/terrains_peering_bit/right_side = 4
 12:5/0/terrains_peering_bit/top_side = 4
 12:5/0/terrains_peering_bit/top_right_corner = 4
@@ -1988,6 +1992,7 @@ texture = ExtResource("5_unxr0")
 13:1/0/terrains_peering_bit/top_left_corner = 4
 13:2/0 = 0
 13:2/0/terrain_set = 1
+13:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, 1, 8, 2, 8, 8, -8, 8)
 13:2/0/terrains_peering_bit/right_side = 4
 13:2/0/terrains_peering_bit/bottom_right_corner = 4
 13:2/0/terrains_peering_bit/bottom_side = 4
@@ -1995,6 +2000,7 @@ texture = ExtResource("5_unxr0")
 13:2/0/terrains_peering_bit/left_side = 4
 13:3/0 = 0
 13:3/0/terrain_set = 1
+13:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 13:3/0/terrains_peering_bit/right_side = 4
 13:3/0/terrains_peering_bit/bottom_right_corner = 4
 13:3/0/terrains_peering_bit/bottom_side = 4
@@ -2005,6 +2011,7 @@ texture = ExtResource("5_unxr0")
 13:3/0/terrains_peering_bit/top_right_corner = 4
 13:4/0 = 0
 13:4/0/terrain_set = 1
+13:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 13:4/0/terrains_peering_bit/right_side = 4
 13:4/0/terrains_peering_bit/bottom_right_corner = 4
 13:4/0/terrains_peering_bit/bottom_side = 4
@@ -2015,6 +2022,7 @@ texture = ExtResource("5_unxr0")
 13:4/0/terrains_peering_bit/top_right_corner = 4
 13:5/0 = 0
 13:5/0/terrain_set = 1
+13:5/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, -2, -8, -2)
 13:5/0/terrains_peering_bit/right_side = 4
 13:5/0/terrains_peering_bit/left_side = 4
 13:5/0/terrains_peering_bit/top_left_corner = 4
@@ -2040,6 +2048,7 @@ texture = ExtResource("5_unxr0")
 14:1/0/terrains_peering_bit/top_right_corner = 4
 14:2/0 = 0
 14:2/0/terrain_set = 1
+14:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, 1, 8, 2, 8, 8, -8, 8)
 14:2/0/terrains_peering_bit/right_side = 4
 14:2/0/terrains_peering_bit/bottom_right_corner = 4
 14:2/0/terrains_peering_bit/bottom_side = 4
@@ -2047,6 +2056,7 @@ texture = ExtResource("5_unxr0")
 14:2/0/terrains_peering_bit/left_side = 4
 14:3/0 = 0
 14:3/0/terrain_set = 1
+14:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 14:3/0/terrains_peering_bit/right_side = 4
 14:3/0/terrains_peering_bit/bottom_right_corner = 4
 14:3/0/terrains_peering_bit/bottom_side = 4
@@ -2057,6 +2067,7 @@ texture = ExtResource("5_unxr0")
 14:3/0/terrains_peering_bit/top_right_corner = 4
 14:4/0 = 0
 14:4/0/terrain_set = 1
+14:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 14:4/0/terrains_peering_bit/right_side = 4
 14:4/0/terrains_peering_bit/bottom_right_corner = 4
 14:4/0/terrains_peering_bit/bottom_side = 4
@@ -2067,6 +2078,7 @@ texture = ExtResource("5_unxr0")
 14:4/0/terrains_peering_bit/top_right_corner = 4
 14:5/0 = 0
 14:5/0/terrain_set = 1
+14:5/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, -2, -8, -2)
 14:5/0/terrains_peering_bit/right_side = 4
 14:5/0/terrains_peering_bit/left_side = 4
 14:5/0/terrains_peering_bit/top_left_corner = 4
@@ -2092,11 +2104,13 @@ texture = ExtResource("5_unxr0")
 15:1/0/terrains_peering_bit/top_right_corner = 4
 15:2/0 = 0
 15:2/0/terrain_set = 1
+15:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, 2, -2, 2, -2, 8, -8, 8)
 15:2/0/terrains_peering_bit/bottom_side = 4
 15:2/0/terrains_peering_bit/bottom_left_corner = 4
 15:2/0/terrains_peering_bit/left_side = 4
 15:3/0 = 0
 15:3/0/terrain_set = 1
+15:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, -2, -8, -2, 8, -8, 8)
 15:3/0/terrains_peering_bit/bottom_side = 4
 15:3/0/terrains_peering_bit/bottom_left_corner = 4
 15:3/0/terrains_peering_bit/left_side = 4
@@ -2104,6 +2118,7 @@ texture = ExtResource("5_unxr0")
 15:3/0/terrains_peering_bit/top_side = 4
 15:4/0 = 0
 15:4/0/terrain_set = 1
+15:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, -2, -8, -2, 8, -8, 8)
 15:4/0/terrains_peering_bit/bottom_side = 4
 15:4/0/terrains_peering_bit/bottom_left_corner = 4
 15:4/0/terrains_peering_bit/left_side = 4
@@ -2111,6 +2126,7 @@ texture = ExtResource("5_unxr0")
 15:4/0/terrains_peering_bit/top_side = 4
 15:5/0 = 0
 15:5/0/terrain_set = 1
+15:5/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, -2, -8, -2, -2, -8, -2)
 15:5/0/terrains_peering_bit/left_side = 4
 15:5/0/terrains_peering_bit/top_left_corner = 4
 15:5/0/terrains_peering_bit/top_side = 4
@@ -2212,12 +2228,15 @@ texture = ExtResource("5_unxr0")
 28:1/0 = 0
 28:3/0 = 0
 29:0/0 = 0
+29:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(8, -8, 8, -1, 8, 8, -8, 8)
 29:1/0 = 0
 29:2/0 = 0
 29:3/0 = 0
 30:0/0 = 0
+30:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 0, 0, 8, 8, -8, 8)
 30:1/0 = 0
 30:2/0 = 0
+30:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 30:3/0 = 0
 31:2/0 = 0
 31:3/0 = 0

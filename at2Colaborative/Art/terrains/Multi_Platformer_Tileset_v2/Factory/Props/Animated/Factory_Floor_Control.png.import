@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dkl7vt1u4vdy4"
-path="res://.godot/imported/Factory_Floor_Control.png-460fdea8ea2e825b746804c3b8831d4c.ctex"
+path="res://.godot/imported/Factory_Floor_Control.png-474176c5ae4c24bb677529d653471441.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Art/terrains/Multi_Platformer_Tileset_v2/Factory/Props/Animated/Factory_Floor_Control.png"
-dest_files=["res://.godot/imported/Factory_Floor_Control.png-460fdea8ea2e825b746804c3b8831d4c.ctex"]
+source_file="res://art/terrains/Multi_Platformer_Tileset_v2/Factory/Props/Animated/Factory_Floor_Control.png"
+dest_files=["res://.godot/imported/Factory_Floor_Control.png-474176c5ae4c24bb677529d653471441.ctex"]
 
 [params]
 
