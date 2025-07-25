@@ -4,7 +4,7 @@
 [ext_resource type="Script" uid="uid://d2nd3w5upjk8a" path="res://User_Profile_L/main.gd" id="1_8hsud"]
 [ext_resource type="Script" uid="uid://c3eigbtuqj7ba" path="res://global.gd" id="2_arqv2"]
 [ext_resource type="Theme" uid="uid://dwdqkuxyspo32" path="res://Theme.tres" id="4_5oaw7"]
-[ext_resource type="PackedScene" uid="uid://br4jpc6hlpimu" path="res://Art/UI/global_button.tscn" id="5_vk3n7"]
+[ext_resource type="PackedScene" uid="uid://br4jpc6hlpimu" path="res://art/UI/global_button.tscn" id="5_vk3n7"]
 
 [sub_resource type="ButtonGroup" id="ButtonGroup_5oaw7"]
 

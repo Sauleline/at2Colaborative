@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cblimv233rjsb"
-path="res://.godot/imported/player wall land 48x48.png-01688f12c0251dc5920f23f7cac6740e.ctex"
+path="res://.godot/imported/player wall land 48x48.png-5f30d7ae99487825a6bc001ac6820fe1.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Art/sprites/2D-Pixel-Art-Character-Template/Wall Land/player wall land 48x48.png"
-dest_files=["res://.godot/imported/player wall land 48x48.png-01688f12c0251dc5920f23f7cac6740e.ctex"]
+source_file="res://art/sprites/2D-Pixel-Art-Character-Template/Wall Land/player wall land 48x48.png"
+dest_files=["res://.godot/imported/player wall land 48x48.png-5f30d7ae99487825a6bc001ac6820fe1.ctex"]
 
 [params]
 

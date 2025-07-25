@@ -7,7 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://dyjri6mtn6mqa" path="res://Main_Game/1Player/player.tscn" id="5_sq7vt"]
 [ext_resource type="PackedScene" uid="uid://4n7aivnwu15g" path="res://Main_Game/hud.tscn" id="7_0giw5"]
 [ext_resource type="PackedScene" uid="uid://bsii2bg3dsoji" path="res://Main_Game/pausemenu.tscn" id="7_sq7vt"]
-[ext_resource type="AudioStream" uid="uid://txpb8wgqnmcn" path="res://Art/sound/music/Monkeys Spinning Monkeys.mp3" id="8_sq7vt"]
+[ext_resource type="AudioStream" uid="uid://txpb8wgqnmcn" path="res://art/sound/music/Monkeys Spinning Monkeys.mp3" id="8_sq7vt"]
 
 [node name="Stage0" type="Node"]
 script = ExtResource("1_6voqf")

@@ -21,20 +21,29 @@ theme_override_font_sizes/font_size = 19
 text = "Welcome back Guest"
 vertical_alignment = 1
 
+[node name="User Money" type="Label" parent="."]
+offset_left = 34.0
+offset_top = 58.0
+offset_right = 386.0
+offset_bottom = 106.0
+theme = ExtResource("3_fpy2i")
+theme_override_font_sizes/font_size = 19
+vertical_alignment = 1
+
 [node name="Back" parent="." instance=ExtResource("4_amlxd")]
 offset_left = 1040.0
 offset_top = 24.0
 offset_right = 1120.0
 offset_bottom = 104.0
-text = "Save"
+text = "Back"
 fontSize = 24
 
 [node name="Hats" type="GridContainer" parent="."]
 offset_left = 64.0
 offset_top = 128.0
-offset_right = 1088.0
+offset_right = 1008.0
 offset_bottom = 576.0
 size_flags_vertical = 0
-columns = 10
+columns = 8
 
 [connection signal="pressed" from="Back" to="." method="_on_back_pressed"]

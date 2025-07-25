@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://hokymavv6do5"
-path="res://.godot/imported/GrassLand_WaterBubbles.png-6a37044fb54f817e1a0f6e0a0c7ffc67.ctex"
+path="res://.godot/imported/GrassLand_WaterBubbles.png-12d72dd4f1021ad946acd16adf6a58ea.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Art/terrains/Multi_Platformer_Tileset_v2/GrassLand/Props/Animated/GrassLand_WaterBubbles.png"
-dest_files=["res://.godot/imported/GrassLand_WaterBubbles.png-6a37044fb54f817e1a0f6e0a0c7ffc67.ctex"]
+source_file="res://art/terrains/Multi_Platformer_Tileset_v2/GrassLand/Props/Animated/GrassLand_WaterBubbles.png"
+dest_files=["res://.godot/imported/GrassLand_WaterBubbles.png-12d72dd4f1021ad946acd16adf6a58ea.ctex"]
 
 [params]
 
