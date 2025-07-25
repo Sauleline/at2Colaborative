@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dlp0kyu2kaxoi"
-path="res://.godot/imported/Cave_Stalactite_Left.png-d066ab1e92bb6bf20dd1ddb8eb3c577d.ctex"
+path="res://.godot/imported/Cave_Stalactite_Left.png-85b437d9122587c03182ba2f99241445.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Art/terrains/Multi_Platformer_Tileset_v2/Cave/Props/Cave_Stalactite_Left.png"
-dest_files=["res://.godot/imported/Cave_Stalactite_Left.png-d066ab1e92bb6bf20dd1ddb8eb3c577d.ctex"]
+source_file="res://art/terrains/Multi_Platformer_Tileset_v2/Cave/Props/Cave_Stalactite_Left.png"
+dest_files=["res://.godot/imported/Cave_Stalactite_Left.png-85b437d9122587c03182ba2f99241445.ctex"]
 
 [params]
 
