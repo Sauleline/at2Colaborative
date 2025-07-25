@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://xgg654qto8b1"
-path="res://.godot/imported/propeller cap.png-d0b5dbaf62a8c35d42ee29c5a1146e65.ctex"
+path="res://.godot/imported/propeller cap.png-f1255268bce16a97d782efb477f8eac8.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Art/hats/propeller cap.png"
-dest_files=["res://.godot/imported/propeller cap.png-d0b5dbaf62a8c35d42ee29c5a1146e65.ctex"]
+source_file="res://art/hats/propeller cap.png"
+dest_files=["res://.godot/imported/propeller cap.png-f1255268bce16a97d782efb477f8eac8.ctex"]
 
 [params]
 

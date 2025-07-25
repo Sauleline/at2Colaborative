@@ -9,7 +9,7 @@ signal respawn()
 @export var wallJumpSpeed = -750
 @export var wallJumpHorizontal = 1000
 @export var gravity = 2000
-@export_range(0.0, 2000) var wallSlideGravity = 1000
+@export_range(0.0, 2000) var wallSlideGravity = 250
 @export var wall_jump_multiplier = 0.8
 @export_range(0.0, 1.0) var friction = 0.06
 @export_range(0.0 , 1.0) var acceleration = 0.03
@@ -82,7 +82,7 @@ func _physics_process(delta):
 	if (is_on_wall() and not is_on_floor()) and (velocity.y > 0) and wallSlide == false :
 		if Input.is_action_pressed("p1left") or ("p1right"):
 			wallSlide = true
-			gravity = gravity * 0.5
+			gravity = gravity * 0.125
 			
 	if checkPointTouch > 2 and dJCheckPointTouch == false:
 		maxJumps = 2
@@ -91,7 +91,7 @@ func _physics_process(delta):
 
 	if (is_on_floor() or not is_on_wall() or (velocity.y <= 0)) and wallSlide == true :
 		wallSlide = false
-		gravity = gravity * 2
+		gravity = gravity * 8
 	
 	if Input.is_action_just_pressed("p1jump") and (wallSlide == true) and checkPointTouch >1:
 		velocity.y = wallJumpSpeed
@@ -101,7 +101,7 @@ func _physics_process(delta):
 		if Input.is_action_pressed("p1right"):
 			velocity.x = wallJumpHorizontal * -1
 		wallSlide = false
-		gravity = gravity * 2
+		gravity = gravity * 8
 		
 	if Input.is_action_pressed("p1slide") and (crouch == false):
 		gravity = gravity * 2

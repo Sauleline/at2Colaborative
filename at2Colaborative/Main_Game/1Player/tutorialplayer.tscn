@@ -1,9 +1,9 @@
 [gd_scene load_steps=7 format=3 uid="uid://b6y2yitwfmx53"]
 
 [ext_resource type="Script" uid="uid://bb5lyqv8fai8r" path="res://Main_Game/1Player/tutorialplayer.gd" id="1_t02tv"]
-[ext_resource type="SpriteFrames" uid="uid://ci0sfvtne1n1r" path="res://Art/sprites/playerSpriteFrames.tres" id="2_mx3j7"]
-[ext_resource type="Texture2D" uid="uid://cucn4srbjesxg" path="res://Art/hats/icon.png" id="3_v15xt"]
-[ext_resource type="AudioStream" uid="uid://dlccqkfe65a6p" path="res://Art/sound/sfx/jump.wav" id="4_avyud"]
+[ext_resource type="SpriteFrames" uid="uid://ci0sfvtne1n1r" path="res://art/sprites/playerSpriteFrames.tres" id="2_mx3j7"]
+[ext_resource type="Texture2D" uid="uid://cucn4srbjesxg" path="res://art/hats/icon.png" id="3_v15xt"]
+[ext_resource type="AudioStream" uid="uid://dlccqkfe65a6p" path="res://art/sound/sfx/jump.wav" id="4_avyud"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_gragq"]
 size = Vector2(106.667, 106.667)
