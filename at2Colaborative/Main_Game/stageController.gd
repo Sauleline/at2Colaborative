@@ -56,7 +56,8 @@ func _update_personal_best_score(score):
 
 func _on_player_beat_stage() -> void:
 	$"Score Timer".stop()
-	_update_personal_best_score(score)
+	if Global.PlayerOne:
+		_update_personal_best_score(score)
 	for i in $Player/Camera/HUD/Gameplay.get_children():
 		i.visible = false
 	$Player/Camera/HUD/ScoreScreen.visible = true

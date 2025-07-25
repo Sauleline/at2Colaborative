@@ -15,9 +15,10 @@ func _ready() -> void:
 		instance.pressed.connect(_goToLevel.bind(i))
 		instance.mouse_entered.connect(_populateLeaderboard.bind(i))
 		instance.find_child("Level").text = "Level " + str(i)
-		if str(i) in Global.PlayerOne.personalBestScores.keys():
-			var score = Global.PlayerOne.personalBestScores[str(i)]
-			instance.find_child("PB").text = "PB : " + str(Global.intToSecMin(floor(score/10)))
+		if Global.PlayerOne:
+			if str(i) in Global.PlayerOne.personalBestScores.keys():
+				var score = Global.PlayerOne.personalBestScores[str(i)]
+				instance.find_child("PB").text = "PB : " + str(Global.intToSecMin(floor(score/10)))
 		if i == 0:
 			instance.get_children()[1].text = "Tutorial"
 		$Grid.add_child(instance)
