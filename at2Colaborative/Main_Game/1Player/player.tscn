@@ -55,6 +55,7 @@ offset = Vector2(0, -16)
 
 [node name="Jump" type="AudioStreamPlayer" parent="SFX"]
 stream = ExtResource("12_0nq3h")
+bus = &"SFX"
 
 [node name="Col_det" type="RayCast2D" parent="."]
 position = Vector2(0, 16)
