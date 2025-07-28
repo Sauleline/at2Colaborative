@@ -48,7 +48,7 @@ size_flags_horizontal = 4
 theme = ExtResource("5_8qvap")
 theme_override_font_sizes/font_size = 16
 text = "Sliding can give high speeds on slopes
-Hold D to slide"
+Hold S to slide"
 horizontal_alignment = 1
 
 [node name="DoubleJumping" type="Label" parent="Tutorial Text"]
@@ -169,7 +169,7 @@ position_smoothing_speed = 15.0
 visible = false
 
 [node name="PlayerSpawn" type="Marker2D" parent="."]
-position = Vector2(-6, 99)
+position = Vector2(0, 128)
 
 [node name="Fore" parent="." instance=ExtResource("4_c4v3y")]
 tile_map_data = PackedByteArray("AAAPAAQAAQABAAYAAAAeAAMAAQAEAAcAAAAxAP3/AQAGAAcAAAAyAP3/AQACAAYAAAAiAPj/AQAFAAcAABAHAPP/AQADAAcAAAA=")
