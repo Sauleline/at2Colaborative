@@ -58,10 +58,11 @@ var _populateLeaderboard = func populateLeaderboard(level: int):
 		insertLabel.add_theme_font_size_override("font_size", 20)
 		var text = " "
 		if str(i[1]) == "null":
-			text = i[0] + " : TBC" 
+			text = i[0] + " : NA" 
+			insertLabel.text = text
 		else:
 			text = str(count) + ". " + i[0] + " : " + str(Global.intToSecMin(floor(i[1]/10)))
-		insertLabel.text = text.pad_zeros(2)
+			insertLabel.text = text.pad_zeros(2)
 		$Leaderboard/vertContainer.add_child(insertLabel)
 		count = count + 1
 
