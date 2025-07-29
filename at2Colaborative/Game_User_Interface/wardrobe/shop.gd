@@ -77,7 +77,7 @@ var _buyHat = func buyHat(hat: String, price: int):
 		AccessUsers.save_user(p1)
 		get_tree().reload_current_scene()
 
-func _on_free_money_pressed() -> void:
+func on_kromer() -> void:
 	AccessUsers.returningUsers()
 	if(Global.PlayerOne):
 		p1 = Global.PlayerOne
