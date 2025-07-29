@@ -1,5 +1,7 @@
 extends CanvasLayer
 
+@export var kromerButton: bool
+
 var p1 = User.new()
 var hatDir = "res://art/hats/"
 var hatPrice = {
@@ -34,8 +36,11 @@ func _ready():
 		p1.userName = "Guest"
 	$"Users Logged".text = 'Welcome Back '+ p1.userName
 	$"User Money".text = "You have $" + str(p1.piggyBank)
-	$KROMER.hide()
-	$KROMER.disabled = true
+	if kromerButton:
+		pass
+	else:
+		$KROMER.hide()
+		$KROMER.disabled = true
 	var dir = DirAccess.get_files_at(hatDir)
 	var hatArr = []
 	for i in dir:

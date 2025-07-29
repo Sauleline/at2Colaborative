@@ -32,17 +32,17 @@ vertical_alignment = 1
 
 [node name="Back" parent="." instance=ExtResource("4_amlxd")]
 offset_left = 1040.0
-offset_top = 24.0
+offset_top = 32.0
 offset_right = 1120.0
-offset_bottom = 104.0
+offset_bottom = 112.0
 text = "Back"
 fontSize = 24
 
 [node name="KROMER" parent="." instance=ExtResource("4_amlxd")]
 offset_left = 1040.0
-offset_top = 128.0
+offset_top = 144.0
 offset_right = 1120.0
-offset_bottom = 208.0
+offset_bottom = 224.0
 text = "[[KROMER]]"
 fontSize = 12
 
