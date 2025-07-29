@@ -38,6 +38,14 @@ offset_bottom = 104.0
 text = "Back"
 fontSize = 24
 
+[node name="KROMER" parent="." instance=ExtResource("4_amlxd")]
+offset_left = 1040.0
+offset_top = 128.0
+offset_right = 1120.0
+offset_bottom = 208.0
+text = "[[KROMER]]"
+fontSize = 12
+
 [node name="Hats" type="GridContainer" parent="."]
 offset_left = 64.0
 offset_top = 128.0
@@ -47,3 +55,4 @@ size_flags_vertical = 0
 columns = 8
 
 [connection signal="pressed" from="Back" to="." method="_on_back_pressed"]
+[connection signal="pressed" from="KROMER" to="." method="_on_free_money_pressed"]

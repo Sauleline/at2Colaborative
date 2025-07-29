@@ -126,7 +126,6 @@ func _physics_process(delta):
 	if slide == true and slope != -1:
 		front_raycast.force_raycast_update()
 		if not front_raycast.is_colliding():
-			print(velocity.y)
 			slopeSlide = true 
 			velocity.x = velocity.x * 1.15
 			velocity.y = velocity.x
