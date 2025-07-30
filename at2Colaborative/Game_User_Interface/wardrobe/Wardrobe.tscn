@@ -39,9 +39,9 @@ fontSize = 24
 
 [node name="Shop" parent="." instance=ExtResource("3_igvr4")]
 offset_left = 448.0
-offset_top = 488.0
+offset_top = 480.0
 offset_right = 704.0
-offset_bottom = 608.0
+offset_bottom = 592.0
 text = "Shop"
 
 [node name="Hats" type="GridContainer" parent="."]
