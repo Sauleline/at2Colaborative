@@ -35,14 +35,14 @@ vertical_alignment = 1
 
 [node name="Single_Player" parent="." instance=ExtResource("4_tl6ip")]
 offset_left = 584.0
-offset_top = 252.0
+offset_top = 256.0
 offset_right = 1048.0
 offset_bottom = 408.0
 text = "Singleplayer"
 
 [node name="Multi_Player" parent="." instance=ExtResource("4_tl6ip")]
 offset_left = 104.0
-offset_top = 252.0
+offset_top = 256.0
 offset_right = 568.0
 offset_bottom = 408.0
 text = "Multiplayer"
