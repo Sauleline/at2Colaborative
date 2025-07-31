@@ -73,9 +73,11 @@ func _physics_process(delta):
 		dir = 0
 	if (dir == -1):
 		$Sprite.flip_h = true
+		front_raycast.rotation_degrees = 180
 		$Hat.flip_h = false
 	elif (dir == 1):
 		$Sprite.flip_h = false
+		front_raycast.rotation_degrees = 0
 		$Hat.flip_h = true
 	
 	if is_on_floor():
