@@ -16,7 +16,7 @@ func _ready() -> void:
 		instance.mouse_entered.connect(_populateLeaderboard.bind(i))
 		instance.find_child("Level").text = "Level " + str(i)
 		if Global.PlayerOne:
-			if str(i) in Global.PlayerOne.personalBestScores.keys():
+			if str(i) in Global.PlayerOne.personalBestScores:
 				var score = Global.PlayerOne.personalBestScores[str(i)]
 				instance.find_child("PB").text = "PB : " + str(Global.intToSecMin(floor(score/10)))
 		if i == 0:

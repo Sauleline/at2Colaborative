@@ -1,5 +1,7 @@
 extends CanvasLayer
 
+@export var kromerButton: bool
+
 var p1 = User.new()
 var hatDir = "res://art/hats/"
 var hatPrice = {
@@ -26,7 +28,6 @@ var hatPrice = {
 	"unicorn.png" : 30, 
 	"witch.png" : 20}
 
-
 func _ready():
 	AccessUsers.returningUsers()
 	if(Global.PlayerOne):
@@ -35,6 +36,11 @@ func _ready():
 		p1.userName = "Guest"
 	$"Users Logged".text = 'Welcome Back '+ p1.userName
 	$"User Money".text = "You have $" + str(p1.piggyBank)
+	if kromerButton:
+		pass
+	else:
+		$KROMER.hide()
+		$KROMER.disabled = true
 	var dir = DirAccess.get_files_at(hatDir)
 	var hatArr = []
 	for i in dir:
@@ -43,7 +49,7 @@ func _ready():
 		else:
 			hatArr.append(i)
 	for i in hatArr:
-		if i.rstrip(".png") in p1.userHats:
+		if i.trim_suffix(".png") in p1.userHats:
 			pass
 		else:
 			var hatTexture = "res://art/hats/"+i
@@ -52,21 +58,32 @@ func _ready():
 			hatButton.icon = load(hatTexture)
 			if i in hatPrice:
 				hatButton.text = "$" + str(hatPrice[i])
-				hatButton.pressed.connect(_buyHat.bind(i.rstrip(".png"), hatPrice[i]))
+				hatButton.pressed.connect(_buyHat.bind(i.trim_suffix(".png"), hatPrice[i]))
 			else:
 				hatButton.text = str("$10")
-				hatButton.pressed.connect(_buyHat.bind(i.rstrip(".png"), 10))
+				hatButton.pressed.connect(_buyHat.bind(i.trim_suffix(".png"), 10))
 			$Hats.add_child(hatButton)
 
 func _on_back_pressed() -> void:
 	get_tree().change_scene_to_file("res://Game_User_Interface/wardrobe/Wardrobe.tscn")
 
 var _buyHat = func buyHat(hat: String, price: int):
-	#if Global.PlayerOne.piggyBank < price:
-		#pass
-	#else:
+	if Global.PlayerOne.piggyBank < price:
+		pass
+	else:
 		p1.currentHat = hat
 		p1.userHats.append(hat)
-		#p1.piggyBank = p1.piggyBank - price
+		p1.piggyBank = p1.piggyBank - price
 		AccessUsers.save_user(p1)
 		get_tree().reload_current_scene()
+
+func on_kromer() -> void:
+	AccessUsers.returningUsers()
+	if(Global.PlayerOne):
+		p1 = Global.PlayerOne
+		p1.piggyBank += 1000
+		AccessUsers.save_user(p1)
+	else:
+		p1.userName = "Guest"
+	
+	$"User Money".text = "You have $" + str(p1.piggyBank)

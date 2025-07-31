@@ -31,17 +31,17 @@ vertical_alignment = 1
 
 [node name="Back" parent="." instance=ExtResource("3_igvr4")]
 offset_left = 1040.0
-offset_top = 24.0
+offset_top = 32.0
 offset_right = 1120.0
-offset_bottom = 104.0
+offset_bottom = 112.0
 text = "Save"
 fontSize = 24
 
 [node name="Shop" parent="." instance=ExtResource("3_igvr4")]
 offset_left = 448.0
-offset_top = 488.0
+offset_top = 480.0
 offset_right = 704.0
-offset_bottom = 608.0
+offset_bottom = 592.0
 text = "Shop"
 
 [node name="Hats" type="GridContainer" parent="."]
@@ -54,7 +54,7 @@ columns = 5
 
 [node name="ColorPicker" type="ColorPicker" parent="."]
 offset_left = 768.0
-offset_top = 136.0
+offset_top = 128.0
 offset_right = 1088.0
 offset_bottom = 575.0
 theme = SubResource("Theme_uhaod")
@@ -68,7 +68,7 @@ presets_visible = false
 position = Vector2(576, 368)
 scale = Vector2(4.66667, 4.66667)
 sprite_frames = ExtResource("4_j3igh")
-animation = &"Roll"
+animation = &"Idle"
 autoplay = "Idle"
 flip_h = true
 
