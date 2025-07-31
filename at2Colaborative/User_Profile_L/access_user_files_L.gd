@@ -16,8 +16,6 @@ func openUserProfiles():
 		settings = globalSaveFile.settings
 	
 func _ready():
-	verifySaveDirectory(saveFilePath)
-	openUserProfiles()
 	returningUsers()
 	
 func returningUsers():

@@ -1,7 +1,7 @@
 extends "access_user_files_L.gd"
 
 @onready var UserNameInput = $UserInputName 
-var bannedNames = ['settings',"UserProfiles"]
+var bannedNames = ["GlobalSaveFile"]
 
 func addUser():
 	var username = UserNameInput.text

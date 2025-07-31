@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cujvnqm0wnthe"
-path="res://.godot/imported/cat ears.png-84fe679ec1f9ca1142409f5666c9777b.ctex"
+path="res://.godot/imported/cat ears.png-80b8be043f497d5b4636c27fd4a58c2d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://art/hats/cat ears.png"
-dest_files=["res://.godot/imported/cat ears.png-84fe679ec1f9ca1142409f5666c9777b.ctex"]
+source_file="res://Art/hats/cat ears.png"
+dest_files=["res://.godot/imported/cat ears.png-80b8be043f497d5b4636c27fd4a58c2d.ctex"]
 
 [params]
 
