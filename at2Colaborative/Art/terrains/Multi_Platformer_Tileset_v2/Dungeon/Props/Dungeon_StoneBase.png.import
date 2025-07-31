@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cve1ifd5qsaeb"
-path="res://.godot/imported/Dungeon_StoneBase.png-ac4725a4e6989fc4c2e5ec898d9ab0fd.ctex"
+path="res://.godot/imported/Dungeon_StoneBase.png-c7bdb9d5c264f540622143b45bb7aa0c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Art/terrains/Multi_Platformer_Tileset_v2/Dungeon/Props/Dungeon_StoneBase.png"
-dest_files=["res://.godot/imported/Dungeon_StoneBase.png-ac4725a4e6989fc4c2e5ec898d9ab0fd.ctex"]
+source_file="res://art/terrains/Multi_Platformer_Tileset_v2/Dungeon/Props/Dungeon_StoneBase.png"
+dest_files=["res://.godot/imported/Dungeon_StoneBase.png-c7bdb9d5c264f540622143b45bb7aa0c.ctex"]
 
 [params]
 
