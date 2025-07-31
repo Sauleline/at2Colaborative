@@ -37,13 +37,34 @@ position = Vector2(4944, 448)
 [node name="2" parent="Checkpoints" instance=ExtResource("4_m17ff")]
 position = Vector2(8960, 16)
 
-[node name="3" parent="Checkpoints" instance=ExtResource("4_m17ff")]
-position = Vector2(11456, -160)
-
 [node name="Coins" type="Node" parent="."]
 
 [node name="0" parent="Coins" instance=ExtResource("5_6iqsb")]
-position = Vector2(3904, 352)
+position = Vector2(1632, 64)
+
+[node name="1" parent="Coins" instance=ExtResource("5_6iqsb")]
+position = Vector2(2432, 320)
+
+[node name="2" parent="Coins" instance=ExtResource("5_6iqsb")]
+position = Vector2(3536, 448)
+
+[node name="3" parent="Coins" instance=ExtResource("5_6iqsb")]
+position = Vector2(5440, -48)
+
+[node name="4" parent="Coins" instance=ExtResource("5_6iqsb")]
+position = Vector2(6912, 240)
+
+[node name="5" parent="Coins" instance=ExtResource("5_6iqsb")]
+position = Vector2(8160, -240)
+
+[node name="6" parent="Coins" instance=ExtResource("5_6iqsb")]
+position = Vector2(9360, -384)
+
+[node name="7" parent="Coins" instance=ExtResource("5_6iqsb")]
+position = Vector2(9200, -768)
+
+[node name="8" parent="Coins" instance=ExtResource("5_6iqsb")]
+position = Vector2(11488, -160)
 
 [node name="Player" parent="." instance=ExtResource("5_5wj30")]
 position = Vector2(-96, 128)

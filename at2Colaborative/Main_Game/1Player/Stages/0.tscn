@@ -1,9 +1,10 @@
-[gd_scene load_steps=10 format=4 uid="uid://dvkaea1di4ngo"]
+[gd_scene load_steps=11 format=4 uid="uid://dvkaea1di4ngo"]
 
 [ext_resource type="Script" uid="uid://kj8jfnh4gi6u" path="res://Main_Game/stageController.gd" id="1_87jwh"]
 [ext_resource type="PackedScene" uid="uid://bfsd75ne6drno" path="res://Main_Game/stageElements/Damage_Tilemap.tscn" id="3_mnflg"]
 [ext_resource type="PackedScene" uid="uid://scl3b7ko3tw4" path="res://Main_Game/stageElements/Terrain_Tilemap.tscn" id="4_c4v3y"]
 [ext_resource type="Theme" uid="uid://dwdqkuxyspo32" path="res://Theme.tres" id="5_8qvap"]
+[ext_resource type="PackedScene" uid="uid://cln2pra0uqmtc" path="res://Main_Game/stageElements/coin.tscn" id="5_xohcf"]
 [ext_resource type="PackedScene" uid="uid://b8asnrpev842c" path="res://Main_Game/stageElements/checkpoint.tscn" id="6_jreen"]
 [ext_resource type="PackedScene" uid="uid://b6y2yitwfmx53" path="res://Main_Game/1Player/tutorialplayer.tscn" id="6_mnflg"]
 [ext_resource type="PackedScene" uid="uid://4n7aivnwu15g" path="res://Main_Game/hud.tscn" id="8_60qsc"]
@@ -26,10 +27,10 @@ tile_map_data = PackedByteArray("AAACAAYAAQABAAEAAAACAAcAAQABAAEAAAACAAgAAQABAAE
 [node name="Tutorial Text" type="Node" parent="."]
 
 [node name="Slide End" type="Label" parent="Tutorial Text"]
-offset_left = -1154.0
-offset_top = -2060.0
-offset_right = -875.0
-offset_bottom = -2011.0
+offset_left = -1024.0
+offset_top = -2048.0
+offset_right = -864.0
+offset_bottom = -2016.0
 size_flags_horizontal = 4
 theme = ExtResource("5_8qvap")
 theme_override_font_sizes/font_size = 16
@@ -113,6 +114,24 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="Coins" type="Node" parent="."]
+
+[node name="0" parent="Coins" instance=ExtResource("5_xohcf")]
+position = Vector2(-1632, -1984)
+
+[node name="1" parent="Coins" instance=ExtResource("5_xohcf")]
+position = Vector2(-1072, -640)
+
+[node name="2" parent="Coins" instance=ExtResource("5_xohcf")]
+position = Vector2(-496, -480)
+
+[node name="3" parent="Coins" instance=ExtResource("5_xohcf")]
+position = Vector2(384, -352)
+
+[node name="4" parent="Coins" instance=ExtResource("5_xohcf")]
+position = Vector2(1312, 64)
+
+[node name="5" parent="Coins" instance=ExtResource("5_xohcf")]
+position = Vector2(-960, -1984)
 
 [node name="Checkpoints" type="Node" parent="."]
 
