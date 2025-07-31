@@ -13,6 +13,7 @@
 
 [node name="Tutorial" type="Node"]
 script = ExtResource("1_87jwh")
+background = Color(0.216, 0.216, 0.48, 1)
 
 [node name="Damage" parent="." instance=ExtResource("3_mnflg")]
 modulate = Color(1, 1, 1, 0.5)

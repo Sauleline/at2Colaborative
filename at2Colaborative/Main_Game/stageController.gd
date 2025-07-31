@@ -3,11 +3,13 @@ extends Node
 @onready var score = 0
 @onready var deaths = -1
 @export var lvlNumIn: int
+@export_color_no_alpha var background: Color
 
 @onready var lvlNum = str(lvlNumIn)
 var coins: int
 
 func _ready():
+	RenderingServer.set_default_clear_color(background)
 	$Damage.modulate = Color(1,1,1,0)
 	$"Score Timer".wait_time = 0.1
 	$"Score Timer".start()
