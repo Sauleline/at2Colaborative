@@ -7,6 +7,7 @@
 
 [node name="Shop" type="CanvasLayer"]
 script = ExtResource("1_k5sxp")
+kromerButton = true
 
 [node name="Background" parent="." instance=ExtResource("1_7k7w4")]
 metadata/_edit_lock_ = true
