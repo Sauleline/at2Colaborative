@@ -29,9 +29,9 @@ position = Vector2(384, -32)
 position = Vector2(-224, -32)
 
 [node name="Player2" parent="." instance=ExtResource("5_kgcny")]
+position = Vector2(-128, 96)
 
 [node name="Player1" parent="." instance=ExtResource("2_v8yvg")]
-position = Vector2(192, 0)
 collision_layer = 2
 collision_mask = 2
 
